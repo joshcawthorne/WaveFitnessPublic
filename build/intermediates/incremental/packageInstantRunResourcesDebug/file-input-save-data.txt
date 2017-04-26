@@ -1,0 +1,36 @@
+#Internal package file, do not edit.
+#Wed Apr 26 22:41:26 BST 2017
+2.base=C\:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\build\\intermediates\\res\\resources-debug.ap_
+5.file=C\:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\buttons.xml
+5.set=ANDROID_RESOURCE
+3.base=C\:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\build\\intermediates\\res\\resources-debug.ap_
+6.file=C\:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\build\\intermediates\\res\\resources-debug.ap_\\AndroidManifest.xml
+2.set=ANDROID_RESOURCE
+10.set=ANDROID_RESOURCE
+10.file=C\:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\activity_demo.xml
+4.base=C\:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\build\\intermediates\\res\\resources-debug.ap_
+7.file=C\:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\build\\intermediates\\res\\resources-debug.ap_\\res\\mipmap-mdpi-v4\\ic_launcher.png
+7.set=ANDROID_RESOURCE
+count=11
+0.file=C\:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\build\\intermediates\\res\\resources-debug.ap_\\res\\mipmap-hdpi-v4\\ic_launcher.png
+5.base=C\:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\build\\intermediates\\res\\resources-debug.ap_
+8.file=C\:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\build\\intermediates\\res\\resources-debug.ap_\\res\\mipmap-xxxhdpi-v4\\ic_launcher.png
+4.set=ANDROID_RESOURCE
+6.base=C\:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\build\\intermediates\\res\\resources-debug.ap_
+1.file=C\:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\com_spotify_sdk_login_dialog.xml
+9.set=ANDROID_RESOURCE
+9.file=C\:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\build\\intermediates\\res\\resources-debug.ap_\\res\\mipmap-xxhdpi-v4\\ic_launcher.png
+10.base=C\:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\build\\intermediates\\res\\resources-debug.ap_
+1.set=ANDROID_RESOURCE
+7.base=C\:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\build\\intermediates\\res\\resources-debug.ap_
+2.file=C\:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\build\\intermediates\\res\\resources-debug.ap_\\res\\mipmap-xhdpi-v4\\ic_launcher.png
+6.set=ANDROID_RESOURCE
+0.base=C\:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\build\\intermediates\\res\\resources-debug.ap_
+8.base=C\:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\build\\intermediates\\res\\resources-debug.ap_
+3.file=C\:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\com_spotify_sdk_login_activity.xml
+3.set=ANDROID_RESOURCE
+1.base=C\:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\build\\intermediates\\res\\resources-debug.ap_
+9.base=C\:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\build\\intermediates\\res\\resources-debug.ap_
+4.file=C\:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\build\\intermediates\\res\\resources-debug.ap_\\resources.arsc
+8.set=ANDROID_RESOURCE
+0.set=ANDROID_RESOURCE

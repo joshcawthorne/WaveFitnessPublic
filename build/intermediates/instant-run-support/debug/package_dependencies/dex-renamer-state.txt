@@ -1,0 +1,22 @@
+#Wed Apr 26 22:41:34 BST 2017
+renamed.6=classes6.dex
+renamed.5=classes7.dex
+renamed.4=classes.dex
+renamed.3=classes2.dex
+renamed.2=classes3.dex
+renamed.1=classes5.dex
+renamed.0=classes4.dex
+base.6=C\:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\picasso-2.5.2_57b8336bcde4f15b1a49bd7daa477581f60d1661
+base.5=C\:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\support-annotations-25.1.1_322577f33ea6c976a79874b4712f3581ba0ef4ac
+base.4=C\:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_0499c6518728483a020b3398d61ce2b280b17f2d
+base.3=C\:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_146eb7fd8e5af78a936b6f6f65e8a8c9b6b5b79f
+base.2=C\:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_401a0874e4544ab2c9e86483b4b95b80ef3d7805
+base.1=C\:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\jnihelpers-1.0_3aedbb6822cde9be9eb166809fa88cd29f256d82
+base.0=C\:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_72a79c21054582f470bc342ff715cbdbbede179d
+file.6=C\:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\picasso-2.5.2_57b8336bcde4f15b1a49bd7daa477581f60d1661\\classes.dex
+file.5=C\:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\support-annotations-25.1.1_322577f33ea6c976a79874b4712f3581ba0ef4ac\\classes.dex
+file.4=C\:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_0499c6518728483a020b3398d61ce2b280b17f2d\\classes.dex
+file.3=C\:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_146eb7fd8e5af78a936b6f6f65e8a8c9b6b5b79f\\classes.dex
+file.2=C\:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_401a0874e4544ab2c9e86483b4b95b80ef3d7805\\classes.dex
+file.1=C\:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\jnihelpers-1.0_3aedbb6822cde9be9eb166809fa88cd29f256d82\\classes.dex
+file.0=C\:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_72a79c21054582f470bc342ff715cbdbbede179d\\classes.dex

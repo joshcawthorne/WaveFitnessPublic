@@ -1,0 +1,7 @@
+#Wed Apr 26 22:41:35 BST 2017
+base.0=C\:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_8cae87933b2cf5ee1b9817b689ce42f937796277
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=C\:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_ea9f0cbd8cfe6057879de015e1acf2303c729e5f\\classes.dex
+base.1=C\:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_ea9f0cbd8cfe6057879de015e1acf2303c729e5f
+file.0=C\:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_8cae87933b2cf5ee1b9817b689ce42f937796277\\classes.dex
