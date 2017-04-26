@@ -1,4 +1,4 @@
-#Wed Apr 26 22:41:34 BST 2017
-base.0=C\:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_9
+#Wed Apr 26 23:05:50 BST 2017
+base.0=C\:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\github\\WaveFitness\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_9
 renamed.0=classes.dex
-file.0=C\:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_9\\classes.dex
+file.0=C\:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\github\\WaveFitness\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_9\\classes.dex

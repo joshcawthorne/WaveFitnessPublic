@@ -2,5 +2,9 @@
     {
         "merged": "C:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ic_launcher.png",
         "source": "C:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\github\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ic_launcher.png",
+        "source": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\github\\WaveFitness\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     }
 ]

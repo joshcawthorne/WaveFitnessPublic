@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="C:\Users\Josh Cawthorne\Desktop\android-sdk-master\samples\DemoProject\src\main\shaders"/></dataSet><dataSet config="debug"><source path="C:\Users\Josh Cawthorne\Desktop\android-sdk-master\samples\DemoProject\src\debug\shaders"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="C:\Users\Josh Cawthorne\AndroidStudioProjects\github\WaveFitness\src\main\shaders"/></dataSet><dataSet config="debug"><source path="C:\Users\Josh Cawthorne\AndroidStudioProjects\github\WaveFitness\src\debug\shaders"/></dataSet></merger>

@@ -1,5 +1,13 @@
 [
     {
+        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\github\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\layout\\activity_demo.xml",
+        "source": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\github\\WaveFitness\\src\\main\\res\\layout\\activity_demo.xml"
+    },
+    {
+        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\github\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\layout\\com_spotify_sdk_login_activity.xml",
+        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\96f5da7ea56e7fe346ad19cab9f04b093613f1c0\\output\\res\\layout\\com_spotify_sdk_login_activity.xml"
+    },
+    {
         "merged": "C:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\build\\intermediates\\res\\merged\\debug\\layout\\activity_demo.xml",
         "source": "C:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\src\\main\\res\\layout\\activity_demo.xml"
     },
@@ -12,7 +20,15 @@
         "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\96f5da7ea56e7fe346ad19cab9f04b093613f1c0\\output\\res\\layout\\com_spotify_sdk_login_dialog.xml"
     },
     {
+        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\github\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\layout\\buttons.xml",
+        "source": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\github\\WaveFitness\\src\\main\\res\\layout\\buttons.xml"
+    },
+    {
         "merged": "C:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\build\\intermediates\\res\\merged\\debug\\layout\\buttons.xml",
         "source": "C:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\src\\main\\res\\layout\\buttons.xml"
+    },
+    {
+        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\github\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\layout\\com_spotify_sdk_login_dialog.xml",
+        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\96f5da7ea56e7fe346ad19cab9f04b093613f1c0\\output\\res\\layout\\com_spotify_sdk_login_dialog.xml"
     }
 ]
