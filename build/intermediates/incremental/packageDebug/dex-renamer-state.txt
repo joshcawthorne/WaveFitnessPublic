@@ -1,7 +1,7 @@
-#Wed Apr 26 23:05:50 BST 2017
-base.0=C\:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\github\\WaveFitness\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_f2f646c7d484e2b4c419bc36e983a1d30c5055b8
+#Wed Apr 26 23:16:08 BST 2017
+base.0=C\:\\Users\\Aaron\\Desktop\\WaveFitness\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_56989027d61daab63428ea29ed173a4062c0bf70
 renamed.1=classes.dex
 renamed.0=classes2.dex
-file.1=C\:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\github\\WaveFitness\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_cd40839f8346ecb2ac767fccf19e01cd6b2a8aa9\\classes.dex
-base.1=C\:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\github\\WaveFitness\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_cd40839f8346ecb2ac767fccf19e01cd6b2a8aa9
-file.0=C\:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\github\\WaveFitness\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_f2f646c7d484e2b4c419bc36e983a1d30c5055b8\\classes.dex
+file.1=C\:\\Users\\Aaron\\Desktop\\WaveFitness\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_02e891b36b34f1390851d10ff26ee46315d7b839\\classes.dex
+base.1=C\:\\Users\\Aaron\\Desktop\\WaveFitness\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_02e891b36b34f1390851d10ff26ee46315d7b839
+file.0=C\:\\Users\\Aaron\\Desktop\\WaveFitness\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_56989027d61daab63428ea29ed173a4062c0bf70\\classes.dex

@@ -3,57 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\Josh Cawthorne\Desktop\android-sdk-master\samples\DemoProject\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jar="C:\Users\Aaron\Desktop\WaveFitness\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="9b40a7711103342a97596e5a28f753eefe16a2c0">
-        <dex dex="C:\Users\Josh Cawthorne\Desktop\android-sdk-master\samples\DemoProject\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_ea9f0cbd8cfe6057879de015e1acf2303c729e5f\classes.dex" />
+        sha1="d2da0508d9e4ca0cf0c5971ad642b1b39bf89e69">
+        <dex dex="C:\Users\Aaron\Desktop\WaveFitness\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_56989027d61daab63428ea29ed173a4062c0bf70\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Josh Cawthorne\AndroidStudioProjects\github\WaveFitness\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jar="C:\Users\Aaron\Desktop\WaveFitness\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
-        <dex dex="C:\Users\Josh Cawthorne\AndroidStudioProjects\github\WaveFitness\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_cd40839f8346ecb2ac767fccf19e01cd6b2a8aa9\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Josh Cawthorne\AndroidStudioProjects\github\WaveFitness\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="4357c269d761264fd91cb57d53fd47dc00baaeca">
-        <dex dex="C:\Users\Josh Cawthorne\AndroidStudioProjects\github\WaveFitness\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_f2f646c7d484e2b4c419bc36e983a1d30c5055b8\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Josh Cawthorne\.android\build-cache\8c498f0b6169c63d000a6b978f1e817bd5e158ac\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="55220cc71bd23fff8fc339a67f55be3cfd11cdec">
-        <dex dex="C:\Users\Josh Cawthorne\AndroidStudioProjects\github\WaveFitness\build\intermediates\transforms\dex\debug\folders\1000\10\classes_50978fdfbb7af718b05dae0609d89896b858a080\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Josh Cawthorne\.android\build-cache\8c498f0b6169c63d000a6b978f1e817bd5e158ac\output\jars\libs\jnihelpers-1.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="b54aab38b4f87a6682331b511fec0db6b952bb7e">
-        <dex dex="C:\Users\Josh Cawthorne\AndroidStudioProjects\github\WaveFitness\build\intermediates\transforms\dex\debug\folders\1000\10\jnihelpers-1.0_3bbcb066c8f62e0830fb722b46194fda95df79ba\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Josh Cawthorne\Desktop\android-sdk-master\samples\DemoProject\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
-        <dex dex="C:\Users\Josh Cawthorne\Desktop\android-sdk-master\samples\DemoProject\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_8cae87933b2cf5ee1b9817b689ce42f937796277\classes.dex" />
+        <dex dex="C:\Users\Aaron\Desktop\WaveFitness\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_02e891b36b34f1390851d10ff26ee46315d7b839\classes.dex" />
     </item>
 
 </items>

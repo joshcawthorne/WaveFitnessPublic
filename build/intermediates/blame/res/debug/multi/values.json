@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+        "outputFile": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
         "map": [
             {
                 "to": {
@@ -11,506 +11,7 @@
                     "endOffset": 108
                 },
                 "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\src\\main\\res\\values\\dimens.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 4,
-                        "startOffset": 88,
-                        "endColumn": 57,
-                        "endOffset": 141
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 3,
-                    "startColumn": 4,
-                    "startOffset": 113,
-                    "endColumn": 55,
-                    "endOffset": 164
-                },
-                "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\src\\main\\res\\values\\dimens.xml",
-                    "position": {
-                        "startLine": 3,
-                        "startColumn": 4,
-                        "startOffset": 146,
-                        "endColumn": 55,
-                        "endOffset": 197
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 4,
-                    "startColumn": 4,
-                    "startOffset": 169,
-                    "endColumn": 49,
-                    "endOffset": 214
-                },
-                "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 4,
-                        "startOffset": 55,
-                        "endColumn": 49,
-                        "endOffset": 100
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 5,
-                    "startColumn": 4,
-                    "startOffset": 219,
-                    "endColumn": 67,
-                    "endOffset": 282
-                },
-                "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\96f5da7ea56e7fe346ad19cab9f04b093613f1c0\\output\\res\\values\\values.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 4,
-                        "startOffset": 55,
-                        "endColumn": 67,
-                        "endOffset": 118
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 6,
-                    "startColumn": 4,
-                    "startOffset": 287,
-                    "endColumn": 50,
-                    "endOffset": 333
-                },
-                "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\96f5da7ea56e7fe346ad19cab9f04b093613f1c0\\output\\res\\values\\values.xml",
-                    "position": {
-                        "startLine": 3,
-                        "startColumn": 4,
-                        "startOffset": 123,
-                        "endColumn": 50,
-                        "endOffset": 169
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 7,
-                    "startColumn": 4,
-                    "startOffset": 338,
-                    "endColumn": 52,
-                    "endOffset": 386
-                },
-                "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\96f5da7ea56e7fe346ad19cab9f04b093613f1c0\\output\\res\\values\\values.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 174,
-                        "endColumn": 52,
-                        "endOffset": 222
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 8,
-                    "startColumn": 4,
-                    "startOffset": 391,
-                    "endColumn": 61,
-                    "endOffset": 448
-                },
-                "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 19,
-                        "startColumn": 4,
-                        "startOffset": 1103,
-                        "endColumn": 61,
-                        "endOffset": 1160
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 9,
-                    "startColumn": 4,
-                    "startOffset": 453,
-                    "endColumn": 52,
-                    "endOffset": 501
-                },
-                "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 166,
-                        "endColumn": 52,
-                        "endOffset": 214
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 10,
-                    "startColumn": 4,
-                    "startOffset": 506,
-                    "endColumn": 54,
-                    "endOffset": 556
-                },
-                "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 5,
-                        "startColumn": 4,
-                        "startOffset": 219,
-                        "endColumn": 54,
-                        "endOffset": 269
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 11,
-                    "startColumn": 4,
-                    "startOffset": 561,
-                    "endColumn": 59,
-                    "endOffset": 616
-                },
-                "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 21,
-                        "startColumn": 4,
-                        "startOffset": 1229,
-                        "endColumn": 59,
-                        "endOffset": 1284
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 12,
-                    "startColumn": 4,
-                    "startOffset": 621,
-                    "endColumn": 51,
-                    "endOffset": 668
-                },
-                "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 22,
-                        "startColumn": 4,
-                        "startOffset": 1289,
-                        "endColumn": 51,
-                        "endOffset": 1336
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 13,
-                    "startColumn": 4,
-                    "startOffset": 673,
-                    "endColumn": 63,
-                    "endOffset": 732
-                },
-                "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 20,
-                        "startColumn": 4,
-                        "startOffset": 1165,
-                        "endColumn": 63,
-                        "endOffset": 1224
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 14,
-                    "startColumn": 4,
-                    "startOffset": 737,
-                    "endColumn": 66,
-                    "endOffset": 799
-                },
-                "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 11,
-                        "startColumn": 4,
-                        "startOffset": 602,
-                        "endColumn": 66,
-                        "endOffset": 664
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 15,
-                    "startColumn": 4,
-                    "startOffset": 804,
-                    "endColumn": 74,
-                    "endOffset": 874
-                },
-                "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 9,
-                        "startColumn": 4,
-                        "startOffset": 469,
-                        "endColumn": 74,
-                        "endOffset": 539
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 16,
-                    "startColumn": 4,
-                    "startOffset": 879,
-                    "endColumn": 57,
-                    "endOffset": 932
-                },
-                "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 10,
-                        "startColumn": 4,
-                        "startOffset": 544,
-                        "endColumn": 57,
-                        "endOffset": 597
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 17,
-                    "startColumn": 4,
-                    "startOffset": 937,
-                    "endColumn": 72,
-                    "endOffset": 1005
-                },
-                "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 8,
-                        "startColumn": 4,
-                        "startOffset": 396,
-                        "endColumn": 72,
-                        "endOffset": 464
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 18,
-                    "startColumn": 4,
-                    "startOffset": 1010,
-                    "endColumn": 63,
-                    "endOffset": 1069
-                },
-                "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 7,
-                        "startColumn": 4,
-                        "startOffset": 332,
-                        "endColumn": 63,
-                        "endOffset": 391
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 19,
-                    "startColumn": 4,
-                    "startOffset": 1074,
-                    "endColumn": 57,
-                    "endOffset": 1127
-                },
-                "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 6,
-                        "startColumn": 4,
-                        "startOffset": 274,
-                        "endColumn": 57,
-                        "endOffset": 327
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 20,
-                    "startColumn": 4,
-                    "startOffset": 1132,
-                    "endColumn": 59,
-                    "endOffset": 1187
-                },
-                "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 17,
-                        "startColumn": 4,
-                        "startOffset": 984,
-                        "endColumn": 59,
-                        "endOffset": 1039
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 21,
-                    "startColumn": 4,
-                    "startOffset": 1192,
-                    "endColumn": 50,
-                    "endOffset": 1238
-                },
-                "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 16,
-                        "startColumn": 4,
-                        "startOffset": 933,
-                        "endColumn": 50,
-                        "endOffset": 979
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 22,
-                    "startColumn": 4,
-                    "startOffset": 1243,
-                    "endColumn": 55,
-                    "endOffset": 1294
-                },
-                "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 12,
-                        "startColumn": 4,
-                        "startOffset": 669,
-                        "endColumn": 55,
-                        "endOffset": 720
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 23,
-                    "startColumn": 4,
-                    "startOffset": 1299,
-                    "endColumn": 59,
-                    "endOffset": 1354
-                },
-                "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 13,
-                        "startColumn": 4,
-                        "startOffset": 725,
-                        "endColumn": 59,
-                        "endOffset": 780
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 24,
-                    "startColumn": 4,
-                    "startOffset": 1359,
-                    "endColumn": 58,
-                    "endOffset": 1413
-                },
-                "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 18,
-                        "startColumn": 4,
-                        "startOffset": 1044,
-                        "endColumn": 58,
-                        "endOffset": 1098
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 25,
-                    "startColumn": 4,
-                    "startOffset": 1418,
-                    "endColumn": 60,
-                    "endOffset": 1474
-                },
-                "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 3,
-                        "startColumn": 4,
-                        "startOffset": 105,
-                        "endColumn": 60,
-                        "endOffset": 161
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 26,
-                    "startColumn": 4,
-                    "startOffset": 1479,
-                    "endColumn": 75,
-                    "endOffset": 1550
-                },
-                "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 15,
-                        "startColumn": 4,
-                        "startOffset": 857,
-                        "endColumn": 75,
-                        "endOffset": 928
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 27,
-                    "startColumn": 4,
-                    "startOffset": 1555,
-                    "endColumn": 71,
-                    "endOffset": 1622
-                },
-                "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\Desktop\\android-sdk-master\\samples\\DemoProject\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 14,
-                        "startColumn": 4,
-                        "startOffset": 785,
-                        "endColumn": 71,
-                        "endOffset": 852
-                    }
-                }
-            }
-        ]
-    },
-    {
-        "outputFile": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\github\\WaveFitness\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endColumn": 57,
-                    "endOffset": 108
-                },
-                "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\github\\WaveFitness\\src\\main\\res\\values\\dimens.xml",
+                    "file": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\values\\dimens.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -529,7 +30,7 @@
                     "endOffset": 164
                 },
                 "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\github\\WaveFitness\\src\\main\\res\\values\\dimens.xml",
+                    "file": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\values\\dimens.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -548,7 +49,7 @@
                     "endOffset": 214
                 },
                 "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\github\\WaveFitness\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -567,7 +68,7 @@
                     "endOffset": 282
                 },
                 "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\96f5da7ea56e7fe346ad19cab9f04b093613f1c0\\output\\res\\values\\values.xml",
+                    "file": "C:\\Users\\Aaron\\.android\\build-cache\\0cf3bf98f0923133c01c1a39068a7f4725792f10\\output\\res\\values\\values.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -586,7 +87,7 @@
                     "endOffset": 333
                 },
                 "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\96f5da7ea56e7fe346ad19cab9f04b093613f1c0\\output\\res\\values\\values.xml",
+                    "file": "C:\\Users\\Aaron\\.android\\build-cache\\0cf3bf98f0923133c01c1a39068a7f4725792f10\\output\\res\\values\\values.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -605,7 +106,7 @@
                     "endOffset": 386
                 },
                 "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\96f5da7ea56e7fe346ad19cab9f04b093613f1c0\\output\\res\\values\\values.xml",
+                    "file": "C:\\Users\\Aaron\\.android\\build-cache\\0cf3bf98f0923133c01c1a39068a7f4725792f10\\output\\res\\values\\values.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -624,7 +125,7 @@
                     "endOffset": 448
                 },
                 "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\github\\WaveFitness\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
@@ -643,7 +144,7 @@
                     "endOffset": 501
                 },
                 "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\github\\WaveFitness\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -662,7 +163,7 @@
                     "endOffset": 556
                 },
                 "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\github\\WaveFitness\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -681,7 +182,7 @@
                     "endOffset": 616
                 },
                 "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\github\\WaveFitness\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,
@@ -700,7 +201,7 @@
                     "endOffset": 668
                 },
                 "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\github\\WaveFitness\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 22,
                         "startColumn": 4,
@@ -719,7 +220,7 @@
                     "endOffset": 732
                 },
                 "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\github\\WaveFitness\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
@@ -738,7 +239,7 @@
                     "endOffset": 799
                 },
                 "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\github\\WaveFitness\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -757,7 +258,7 @@
                     "endOffset": 874
                 },
                 "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\github\\WaveFitness\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -776,7 +277,7 @@
                     "endOffset": 932
                 },
                 "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\github\\WaveFitness\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -795,7 +296,7 @@
                     "endOffset": 1005
                 },
                 "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\github\\WaveFitness\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -814,7 +315,7 @@
                     "endOffset": 1069
                 },
                 "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\github\\WaveFitness\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -833,7 +334,7 @@
                     "endOffset": 1127
                 },
                 "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\github\\WaveFitness\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -852,7 +353,7 @@
                     "endOffset": 1187
                 },
                 "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\github\\WaveFitness\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
@@ -871,7 +372,7 @@
                     "endOffset": 1238
                 },
                 "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\github\\WaveFitness\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
@@ -890,7 +391,7 @@
                     "endOffset": 1294
                 },
                 "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\github\\WaveFitness\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -909,7 +410,7 @@
                     "endOffset": 1354
                 },
                 "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\github\\WaveFitness\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -928,7 +429,7 @@
                     "endOffset": 1413
                 },
                 "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\github\\WaveFitness\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
@@ -947,7 +448,7 @@
                     "endOffset": 1474
                 },
                 "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\github\\WaveFitness\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -966,7 +467,7 @@
                     "endOffset": 1550
                 },
                 "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\github\\WaveFitness\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -985,7 +486,7 @@
                     "endOffset": 1622
                 },
                 "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\github\\WaveFitness\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
