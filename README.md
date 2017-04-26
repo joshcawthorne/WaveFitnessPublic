@@ -11,4 +11,4 @@ If you're unsure on your commits, commit to a new branch and *don't* pull to mas
 - Split the methods into new classes, for example, authentication, so that we can pull the app into sections to be nicely slotted into the running experience. 
 - Allow a user to search or choose a genre, and then have the app search the spotify library, and plug in a song/album/artist/playlist ID into the "private static final String TEST_SONG_URI = "id";" field.
 - Updated the UI to better represent the mockups created.
-- Impliment the code with had in previous repo's, such as the running/map functionality.
+- Impliment the code with functionality that could be found in previous repo's, such as the running/map functionality.
