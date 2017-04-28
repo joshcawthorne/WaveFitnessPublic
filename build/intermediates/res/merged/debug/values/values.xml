@@ -6,16 +6,11 @@
     <string name="com_spotify_sdk_login_progress">Loading…</string>
     <string name="com_spotify_sdk_redirect_host"/>
     <string name="com_spotify_sdk_redirect_scheme"/>
-    <string name="high_bitrate_button_label">320kbps</string>
     <string name="login_button_label">Login</string>
     <string name="logout_button_label">Logout</string>
-    <string name="low_bitrate_button_label">96kbps</string>
     <string name="no_metadata">no metadata</string>
-    <string name="normal_bitrate_button_label">160kbps</string>
     <string name="pause_button_label_toggle">Pause/Resume</string>
-    <string name="play_48khz_track_button_label">Play 48kHz track</string>
     <string name="play_album_button_label">Album</string>
-    <string name="play_mono_track_button_label">Play mono track</string>
     <string name="play_playlist_button_label">Playlist</string>
     <string name="play_track_button_label">Track</string>
     <string name="queue_button_label">Queue a song</string>

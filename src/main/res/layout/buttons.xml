@@ -111,70 +111,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/seek_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="onSeekButtonClicked"
-            android:text="@string/seek_button_label"/>
-
-        <EditText
-            android:id="@+id/seek_edittext"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:inputType="number"
-            android:text="0"/>
-
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/low_bitrate_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:width="0dp"
-            android:onClick="onLowBitrateButtonPressed"
-            android:text="@string/low_bitrate_button_label"/>
-
-        <Button
-            android:id="@+id/normal_bitrate_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:width="0dp"
-            android:onClick="onNormalBitrateButtonPressed"
-            android:text="@string/normal_bitrate_button_label"/>
-
-        <Button
-            android:id="@+id/high_bitrate_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:width="0dp"
-            android:onClick="onHighBitrateButtonPressed"
-            android:text="@string/high_bitrate_button_label"/>
-
-        <Button
-            android:id="@+id/play_mono_track_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="onPlayButtonClicked"
-            android:text="@string/play_mono_track_button_label"/>
-
-        <Button
-            android:id="@+id/play_48khz_track_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="onPlayButtonClicked"
-            android:text="@string/play_48khz_track_button_label"/>
     </LinearLayout>
 
 

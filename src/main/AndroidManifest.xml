@@ -15,7 +15,8 @@
 
         <activity
             android:name="com.wave.fitness.DemoActivity"
-            android:label="@string/title_activity_demo">
+            android:label="@string/title_activity_demo"
+            android:windowSoftInputMode="stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>

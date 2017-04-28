@@ -1,18 +1,18 @@
 [
     {
-        "merged": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\layout\\com_spotify_sdk_login_activity.xml",
-        "source": "C:\\Users\\Aaron\\.android\\build-cache\\0cf3bf98f0923133c01c1a39068a7f4725792f10\\output\\res\\layout\\com_spotify_sdk_login_activity.xml"
+        "merged": "/Users/q5065885/Desktop/WaveFitness/build/intermediates/res/merged/debug/layout/com_spotify_sdk_login_dialog.xml",
+        "source": "/Users/q5065885/.android/build-cache/badec100a2f0244b347d9ad5ed07fca52f87161f/output/res/layout/com_spotify_sdk_login_dialog.xml"
     },
     {
-        "merged": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\layout\\com_spotify_sdk_login_dialog.xml",
-        "source": "C:\\Users\\Aaron\\.android\\build-cache\\0cf3bf98f0923133c01c1a39068a7f4725792f10\\output\\res\\layout\\com_spotify_sdk_login_dialog.xml"
+        "merged": "/Users/q5065885/Desktop/WaveFitness/build/intermediates/res/merged/debug/layout/activity_demo.xml",
+        "source": "/Users/q5065885/Desktop/WaveFitness/src/main/res/layout/activity_demo.xml"
     },
     {
-        "merged": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\layout\\activity_demo.xml",
-        "source": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\layout\\activity_demo.xml"
+        "merged": "/Users/q5065885/Desktop/WaveFitness/build/intermediates/res/merged/debug/layout/buttons.xml",
+        "source": "/Users/q5065885/Desktop/WaveFitness/src/main/res/layout/buttons.xml"
     },
     {
-        "merged": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\layout\\buttons.xml",
-        "source": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\layout\\buttons.xml"
+        "merged": "/Users/q5065885/Desktop/WaveFitness/build/intermediates/res/merged/debug/layout/com_spotify_sdk_login_activity.xml",
+        "source": "/Users/q5065885/.android/build-cache/badec100a2f0244b347d9ad5ed07fca52f87161f/output/res/layout/com_spotify_sdk_login_activity.xml"
     }
 ]

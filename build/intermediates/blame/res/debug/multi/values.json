@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+        "outputFile": "/Users/q5065885/Desktop/WaveFitness/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
         "map": [
             {
                 "to": {
@@ -11,14 +11,7 @@
                     "endOffset": 108
                 },
                 "from": {
-                    "file": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\values\\dimens.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 4,
-                        "startOffset": 90,
-                        "endColumn": 57,
-                        "endOffset": 143
-                    }
+                    "file": "/Users/q5065885/Desktop/WaveFitness/src/main/res/values/dimens.xml"
                 }
             },
             {
@@ -30,14 +23,7 @@
                     "endOffset": 164
                 },
                 "from": {
-                    "file": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\values\\dimens.xml",
-                    "position": {
-                        "startLine": 3,
-                        "startColumn": 4,
-                        "startOffset": 149,
-                        "endColumn": 55,
-                        "endOffset": 200
-                    }
+                    "file": "/Users/q5065885/Desktop/WaveFitness/src/main/res/values/dimens.xml"
                 }
             },
             {
@@ -49,14 +35,7 @@
                     "endOffset": 214
                 },
                 "from": {
-                    "file": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 4,
-                        "startOffset": 57,
-                        "endColumn": 49,
-                        "endOffset": 102
-                    }
+                    "file": "/Users/q5065885/Desktop/WaveFitness/src/main/res/values/strings.xml"
                 }
             },
             {
@@ -68,14 +47,7 @@
                     "endOffset": 282
                 },
                 "from": {
-                    "file": "C:\\Users\\Aaron\\.android\\build-cache\\0cf3bf98f0923133c01c1a39068a7f4725792f10\\output\\res\\values\\values.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 4,
-                        "startOffset": 55,
-                        "endColumn": 67,
-                        "endOffset": 118
-                    }
+                    "file": "/Users/q5065885/.android/build-cache/badec100a2f0244b347d9ad5ed07fca52f87161f/output/res/values/values.xml"
                 }
             },
             {
@@ -87,14 +59,7 @@
                     "endOffset": 333
                 },
                 "from": {
-                    "file": "C:\\Users\\Aaron\\.android\\build-cache\\0cf3bf98f0923133c01c1a39068a7f4725792f10\\output\\res\\values\\values.xml",
-                    "position": {
-                        "startLine": 3,
-                        "startColumn": 4,
-                        "startOffset": 123,
-                        "endColumn": 50,
-                        "endOffset": 169
-                    }
+                    "file": "/Users/q5065885/.android/build-cache/badec100a2f0244b347d9ad5ed07fca52f87161f/output/res/values/values.xml"
                 }
             },
             {
@@ -106,14 +71,7 @@
                     "endOffset": 386
                 },
                 "from": {
-                    "file": "C:\\Users\\Aaron\\.android\\build-cache\\0cf3bf98f0923133c01c1a39068a7f4725792f10\\output\\res\\values\\values.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 174,
-                        "endColumn": 52,
-                        "endOffset": 222
-                    }
+                    "file": "/Users/q5065885/.android/build-cache/badec100a2f0244b347d9ad5ed07fca52f87161f/output/res/values/values.xml"
                 }
             },
             {
@@ -121,379 +79,179 @@
                     "startLine": 8,
                     "startColumn": 4,
                     "startOffset": 391,
-                    "endColumn": 61,
-                    "endOffset": 448
+                    "endColumn": 52,
+                    "endOffset": 439
                 },
                 "from": {
-                    "file": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 19,
-                        "startColumn": 4,
-                        "startOffset": 1122,
-                        "endColumn": 61,
-                        "endOffset": 1179
-                    }
+                    "file": "/Users/q5065885/Desktop/WaveFitness/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 9,
                     "startColumn": 4,
-                    "startOffset": 453,
-                    "endColumn": 52,
-                    "endOffset": 501
+                    "startOffset": 444,
+                    "endColumn": 54,
+                    "endOffset": 494
                 },
                 "from": {
-                    "file": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 170,
-                        "endColumn": 52,
-                        "endOffset": 218
-                    }
+                    "file": "/Users/q5065885/Desktop/WaveFitness/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 10,
                     "startColumn": 4,
-                    "startOffset": 506,
-                    "endColumn": 54,
-                    "endOffset": 556
+                    "startOffset": 499,
+                    "endColumn": 51,
+                    "endOffset": 546
                 },
                 "from": {
-                    "file": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 5,
-                        "startColumn": 4,
-                        "startOffset": 224,
-                        "endColumn": 54,
-                        "endOffset": 274
-                    }
+                    "file": "/Users/q5065885/Desktop/WaveFitness/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 11,
                     "startColumn": 4,
-                    "startOffset": 561,
-                    "endColumn": 59,
-                    "endOffset": 616
+                    "startOffset": 551,
+                    "endColumn": 66,
+                    "endOffset": 613
                 },
                 "from": {
-                    "file": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 21,
-                        "startColumn": 4,
-                        "startOffset": 1250,
-                        "endColumn": 59,
-                        "endOffset": 1305
-                    }
+                    "file": "/Users/q5065885/Desktop/WaveFitness/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 12,
                     "startColumn": 4,
-                    "startOffset": 621,
-                    "endColumn": 51,
-                    "endOffset": 668
+                    "startOffset": 618,
+                    "endColumn": 57,
+                    "endOffset": 671
                 },
                 "from": {
-                    "file": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 22,
-                        "startColumn": 4,
-                        "startOffset": 1311,
-                        "endColumn": 51,
-                        "endOffset": 1358
-                    }
+                    "file": "/Users/q5065885/Desktop/WaveFitness/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 13,
                     "startColumn": 4,
-                    "startOffset": 673,
+                    "startOffset": 676,
                     "endColumn": 63,
-                    "endOffset": 732
+                    "endOffset": 735
                 },
                 "from": {
-                    "file": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 20,
-                        "startColumn": 4,
-                        "startOffset": 1185,
-                        "endColumn": 63,
-                        "endOffset": 1244
-                    }
+                    "file": "/Users/q5065885/Desktop/WaveFitness/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 14,
                     "startColumn": 4,
-                    "startOffset": 737,
-                    "endColumn": 66,
-                    "endOffset": 799
+                    "startOffset": 740,
+                    "endColumn": 57,
+                    "endOffset": 793
                 },
                 "from": {
-                    "file": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 11,
-                        "startColumn": 4,
-                        "startOffset": 613,
-                        "endColumn": 66,
-                        "endOffset": 675
-                    }
+                    "file": "/Users/q5065885/Desktop/WaveFitness/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 15,
                     "startColumn": 4,
-                    "startOffset": 804,
-                    "endColumn": 74,
-                    "endOffset": 874
+                    "startOffset": 798,
+                    "endColumn": 59,
+                    "endOffset": 853
                 },
                 "from": {
-                    "file": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 9,
-                        "startColumn": 4,
-                        "startOffset": 478,
-                        "endColumn": 74,
-                        "endOffset": 548
-                    }
+                    "file": "/Users/q5065885/Desktop/WaveFitness/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 16,
                     "startColumn": 4,
-                    "startOffset": 879,
-                    "endColumn": 57,
-                    "endOffset": 932
+                    "startOffset": 858,
+                    "endColumn": 50,
+                    "endOffset": 904
                 },
                 "from": {
-                    "file": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 10,
-                        "startColumn": 4,
-                        "startOffset": 554,
-                        "endColumn": 57,
-                        "endOffset": 607
-                    }
+                    "file": "/Users/q5065885/Desktop/WaveFitness/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 17,
                     "startColumn": 4,
-                    "startOffset": 937,
-                    "endColumn": 72,
-                    "endOffset": 1005
+                    "startOffset": 909,
+                    "endColumn": 55,
+                    "endOffset": 960
                 },
                 "from": {
-                    "file": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 8,
-                        "startColumn": 4,
-                        "startOffset": 404,
-                        "endColumn": 72,
-                        "endOffset": 472
-                    }
+                    "file": "/Users/q5065885/Desktop/WaveFitness/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 18,
                     "startColumn": 4,
-                    "startOffset": 1010,
-                    "endColumn": 63,
-                    "endOffset": 1069
+                    "startOffset": 965,
+                    "endColumn": 59,
+                    "endOffset": 1020
                 },
                 "from": {
-                    "file": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 7,
-                        "startColumn": 4,
-                        "startOffset": 339,
-                        "endColumn": 63,
-                        "endOffset": 398
-                    }
+                    "file": "/Users/q5065885/Desktop/WaveFitness/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 19,
                     "startColumn": 4,
-                    "startOffset": 1074,
-                    "endColumn": 57,
-                    "endOffset": 1127
+                    "startOffset": 1025,
+                    "endColumn": 58,
+                    "endOffset": 1079
                 },
                 "from": {
-                    "file": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 6,
-                        "startColumn": 4,
-                        "startOffset": 280,
-                        "endColumn": 57,
-                        "endOffset": 333
-                    }
+                    "file": "/Users/q5065885/Desktop/WaveFitness/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 20,
                     "startColumn": 4,
-                    "startOffset": 1132,
-                    "endColumn": 59,
-                    "endOffset": 1187
+                    "startOffset": 1084,
+                    "endColumn": 60,
+                    "endOffset": 1140
                 },
                 "from": {
-                    "file": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 17,
-                        "startColumn": 4,
-                        "startOffset": 1001,
-                        "endColumn": 59,
-                        "endOffset": 1056
-                    }
+                    "file": "/Users/q5065885/Desktop/WaveFitness/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 21,
                     "startColumn": 4,
-                    "startOffset": 1192,
-                    "endColumn": 50,
-                    "endOffset": 1238
+                    "startOffset": 1145,
+                    "endColumn": 75,
+                    "endOffset": 1216
                 },
                 "from": {
-                    "file": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 16,
-                        "startColumn": 4,
-                        "startOffset": 949,
-                        "endColumn": 50,
-                        "endOffset": 995
-                    }
+                    "file": "/Users/q5065885/Desktop/WaveFitness/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 22,
                     "startColumn": 4,
-                    "startOffset": 1243,
-                    "endColumn": 55,
-                    "endOffset": 1294
-                },
-                "from": {
-                    "file": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 12,
-                        "startColumn": 4,
-                        "startOffset": 681,
-                        "endColumn": 55,
-                        "endOffset": 732
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 23,
-                    "startColumn": 4,
-                    "startOffset": 1299,
-                    "endColumn": 59,
-                    "endOffset": 1354
-                },
-                "from": {
-                    "file": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 13,
-                        "startColumn": 4,
-                        "startOffset": 738,
-                        "endColumn": 59,
-                        "endOffset": 793
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 24,
-                    "startColumn": 4,
-                    "startOffset": 1359,
-                    "endColumn": 58,
-                    "endOffset": 1413
-                },
-                "from": {
-                    "file": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 18,
-                        "startColumn": 4,
-                        "startOffset": 1062,
-                        "endColumn": 58,
-                        "endOffset": 1116
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 25,
-                    "startColumn": 4,
-                    "startOffset": 1418,
-                    "endColumn": 60,
-                    "endOffset": 1474
-                },
-                "from": {
-                    "file": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 3,
-                        "startColumn": 4,
-                        "startOffset": 108,
-                        "endColumn": 60,
-                        "endOffset": 164
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 26,
-                    "startColumn": 4,
-                    "startOffset": 1479,
-                    "endColumn": 75,
-                    "endOffset": 1550
-                },
-                "from": {
-                    "file": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 15,
-                        "startColumn": 4,
-                        "startOffset": 872,
-                        "endColumn": 75,
-                        "endOffset": 943
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 27,
-                    "startColumn": 4,
-                    "startOffset": 1555,
+                    "startOffset": 1221,
                     "endColumn": 71,
-                    "endOffset": 1622
+                    "endOffset": 1288
                 },
                 "from": {
-                    "file": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 14,
-                        "startColumn": 4,
-                        "startOffset": 799,
-                        "endColumn": 71,
-                        "endOffset": 866
-                    }
+                    "file": "/Users/q5065885/Desktop/WaveFitness/src/main/res/values/strings.xml"
                 }
             }
         ]

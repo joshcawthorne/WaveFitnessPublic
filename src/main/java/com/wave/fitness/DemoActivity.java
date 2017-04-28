@@ -67,8 +67,6 @@ public class DemoActivity extends Activity implements
     @SuppressWarnings("SpellCheckingInspection")
     private static final String TEST_SONG_URI = "spotify:track:7v9qEzfnEuJDjBg8B7GppL";
     @SuppressWarnings("SpellCheckingInspection")
-    private static final String TEST_SONG_MONO_URI = "spotify:track:1FqY3uJypma5wkYw66QOUi";
-    @SuppressWarnings("SpellCheckingInspection")
     private static final String TEST_SONG_48kHz_URI = "spotify:track:3wxTNS3aqb9RbBLZgJdZgH";
     @SuppressWarnings("SpellCheckingInspection")
     //NOTE: It took me an age to work out that playlists require both the playlist creator (User) AND the ID!
@@ -84,16 +82,10 @@ public class DemoActivity extends Activity implements
     //These are UI controls, which can only be used after a user has logged into spotify.
     private static final int[] REQUIRES_INITIALIZED_STATE = {
             R.id.play_track_button,
-            R.id.play_mono_track_button,
-            R.id.play_48khz_track_button,
             R.id.play_album_button,
             R.id.play_playlist_button,
+            R.id.play_playlist_button,
             R.id.pause_button,
-            R.id.seek_button,
-            R.id.low_bitrate_button,
-            R.id.normal_bitrate_button,
-            R.id.high_bitrate_button,
-            R.id.seek_edittext,
     };
 
     //These are UI controls which can only be used once a song is playing.
@@ -143,7 +135,6 @@ public class DemoActivity extends Activity implements
 
         // Get a reference to any UI widgets that will be needed.
         mMetadataText = (TextView) findViewById(R.id.metadata);
-        mSeekEditText = (EditText) findViewById(R.id.seek_edittext);
         mStatusTextScrollView = (ScrollView) findViewById(R.id.status_text_container);
 
         updateView();
@@ -284,7 +275,7 @@ public class DemoActivity extends Activity implements
                             final Bitmap copy = source.copy(source.getConfig(), true);
                             source.recycle();
                             final Canvas canvas = new Canvas(copy);
-                            canvas.drawColor(0xbb000000);
+                            //canvas.drawColor(0xbb000000);
                             return copy;
                         }
 
@@ -295,7 +286,9 @@ public class DemoActivity extends Activity implements
                     })
                     .into(coverArtView);
         } else {
-            mMetadataText.setText("<nothing is playing>");
+            mMetadataText.setText("You're not playing anything yet! " +
+                                    "\n" +
+                                    "Are you signed in?");
             coverArtView.setBackground(null);
         }
 
@@ -320,12 +313,6 @@ public class DemoActivity extends Activity implements
         switch (view.getId()) {
             case R.id.play_track_button:
                 uri = TEST_SONG_URI;
-                break;
-            case R.id.play_mono_track_button:
-                uri = TEST_SONG_MONO_URI;
-                break;
-            case R.id.play_48khz_track_button:
-                uri = TEST_SONG_48kHz_URI;
                 break;
             case R.id.play_playlist_button:
                 uri = TEST_PLAYLIST_URI;

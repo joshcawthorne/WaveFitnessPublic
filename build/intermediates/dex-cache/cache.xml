@@ -2,22 +2,67 @@
 <items version="2" >
 
     <item
-        is-multidex="true"
-        jar="C:\Users\Aaron\Desktop\WaveFitness\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/Users/q5065885/.android/build-cache/015cb79e83bd338b3d0c7c90ae96738f910fc93f/output/jars/classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="d2da0508d9e4ca0cf0c5971ad642b1b39bf89e69">
-        <dex dex="C:\Users\Aaron\Desktop\WaveFitness\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_56989027d61daab63428ea29ed173a4062c0bf70\classes.dex" />
+        sha1="55220cc71bd23fff8fc339a67f55be3cfd11cdec">
+        <dex dex="/Users/q5065885/Desktop/WaveFitness/build/intermediates/pre-dexed/debug/classes_48b1be66ee96eb14988508fadec5d32b3eb99ea3.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\Aaron\Desktop\WaveFitness\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/Users/q5065885/.android/build-cache/015cb79e83bd338b3d0c7c90ae96738f910fc93f/output/jars/libs/jnihelpers-1.0.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
-        <dex dex="C:\Users\Aaron\Desktop\WaveFitness\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_02e891b36b34f1390851d10ff26ee46315d7b839\classes.dex" />
+        sha1="b54aab38b4f87a6682331b511fec0db6b952bb7e">
+        <dex dex="/Users/q5065885/Desktop/WaveFitness/build/intermediates/pre-dexed/debug/jnihelpers-1.0_3cb973360dcb64862f1b3e1f0f0055eba66a279e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Shared/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.1.1/support-annotations-25.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b59b6ee8d6ecc03e672d253800430343493a6ed8">
+        <dex dex="/Users/q5065885/Desktop/WaveFitness/build/intermediates/pre-dexed/debug/support-annotations-25.1.1_60fab04f73ba56a6173aec4d5c84568991e17a88.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/q5065885/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="/Users/q5065885/Desktop/WaveFitness/build/intermediates/pre-dexed/debug/picasso-2.5.2_723c0df26edbf5548a366534dbd45bdd0bcf91e0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/q5065885/.android/build-cache/9777e937f1707e2e064f654432607ba0d78b7dbc/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0558e5b6c171bd6719581340f9ac6be4af5ae265">
+        <dex dex="/Users/q5065885/Desktop/WaveFitness/build/intermediates/pre-dexed/debug/classes_a0bef6b02797d8067dbfbcde218b97f477fe2d0a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/q5065885/.android/build-cache/badec100a2f0244b347d9ad5ed07fca52f87161f/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="fec8abac787cf06ce08ae8f7a17af908ba253e28">
+        <dex dex="/Users/q5065885/Desktop/WaveFitness/build/intermediates/pre-dexed/debug/classes_0a5691ae426f326a2c1f05596cc64fc1f5cc789e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/q5065885/.android/build-cache/a2514a661ddf8aaca187a9fd977d424dd7916072/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="02741d05d4b697fba5e279e9881aaa1da0ca7c7f">
+        <dex dex="/Users/q5065885/Desktop/WaveFitness/build/intermediates/pre-dexed/debug/classes_bac39426e3ba4c8e5fc243f2879a14de1391e1c9.jar" />
     </item>
 
 </items>
