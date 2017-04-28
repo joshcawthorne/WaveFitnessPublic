@@ -50,6 +50,8 @@ import com.spotify.sdk.android.player.SpotifyPlayer;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Transformation;
 
+import java.util.concurrent.TimeUnit;
+
 public class DemoActivity extends Activity implements
         Player.NotificationCallback, ConnectionStateCallback {
 
@@ -264,9 +266,14 @@ public class DemoActivity extends Activity implements
 
         final ImageView coverArtView = (ImageView) findViewById(R.id.cover_art);
         if (mMetadata != null && mMetadata.currentTrack != null) {
-            final String durationStr = String.format(" (%dms)", mMetadata.currentTrack.durationMs);
+            //Set the metadata from song length to Minutes:Seconds, rather than milliseconds.
+            final String durationStr =
+                    String.format("\n %02d:%02d",
+                    TimeUnit.MILLISECONDS.toMinutes(mMetadata.currentTrack.durationMs),
+                    TimeUnit.MILLISECONDS.toSeconds(mMetadata.currentTrack.durationMs) -
+                            TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(mMetadata.currentTrack.durationMs))
+            );
             mMetadataText.setText(mMetadata.contextName + "\n" + mMetadata.currentTrack.name + " - " + mMetadata.currentTrack.artistName + durationStr);
-
             Picasso.with(this)
                     .load(mMetadata.currentTrack.albumCoverWebUrl)
                     .transform(new Transformation() {
@@ -275,7 +282,6 @@ public class DemoActivity extends Activity implements
                             final Bitmap copy = source.copy(source.getConfig(), true);
                             source.recycle();
                             final Canvas canvas = new Canvas(copy);
-                            //canvas.drawColor(0xbb000000);
                             return copy;
                         }
 
