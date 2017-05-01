@@ -1,4 +1,7 @@
-#Fri Apr 28 16:46:19 BST 2017
-base.0=/Users/q5065885/Desktop/WaveFitness/build/intermediates/transforms/dex/debug/folders/1000/1f/main
-renamed.0=classes.dex
-file.0=/Users/q5065885/Desktop/WaveFitness/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex
+#Tue May 02 00:29:13 BST 2017
+base.0=C\:\\Users\\Aaron\\Desktop\\WaveFitness\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_56989027d61daab63428ea29ed173a4062c0bf70
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=C\:\\Users\\Aaron\\Desktop\\WaveFitness\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_02e891b36b34f1390851d10ff26ee46315d7b839\\classes.dex
+base.1=C\:\\Users\\Aaron\\Desktop\\WaveFitness\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_02e891b36b34f1390851d10ff26ee46315d7b839
+file.0=C\:\\Users\\Aaron\\Desktop\\WaveFitness\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_56989027d61daab63428ea29ed173a4062c0bf70\\classes.dex

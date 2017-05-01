@@ -4,8 +4,8 @@
       <root url="jar://$USER_HOME$/.android/build-cache/a2514a661ddf8aaca187a9fd977d424dd7916072/output/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$USER_HOME$/.android/build-cache/a2514a661ddf8aaca187a9fd977d424dd7916072/output/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.android/build-cache/a2514a661ddf8aaca187a9fd977d424dd7916072/output/res" />
+      <root url="file://$USER_HOME$/.android/build-cache/68de4d1ca2da610565727c5892c8dcfe0d5ed70e/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/68de4d1ca2da610565727c5892c8dcfe0d5ed70e/output/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

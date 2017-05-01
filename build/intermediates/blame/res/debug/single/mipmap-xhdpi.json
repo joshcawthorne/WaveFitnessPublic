@@ -1,6 +1,10 @@
 [
     {
-        "merged": "/Users/q5065885/Desktop/WaveFitness/build/intermediates/res/merged/debug/mipmap-xhdpi/ic_launcher.png",
-        "source": "/Users/q5065885/Desktop/WaveFitness/src/main/res/mipmap-xhdpi/ic_launcher.png"
+        "merged": "C:\\Users\\q5065885\\Desktop\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\ic_launcher.png",
+        "source": "C:\\Users\\q5065885\\Desktop\\WaveFitness\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\ic_launcher.png",
+        "source": "C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     }
 ]
