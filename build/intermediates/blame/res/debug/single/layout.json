@@ -12,12 +12,16 @@
         "source": "/Users/s6236422/.android/build-cache/be30d991dfaf60db0400bdde9fb0fbb6a817c42e/output/res/layout/abc_action_bar_title_item.xml"
     },
     {
-        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/layout/select_dialog_item_material.xml",
-        "source": "/Users/s6236422/.android/build-cache/be30d991dfaf60db0400bdde9fb0fbb6a817c42e/output/res/layout/select_dialog_item_material.xml"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/layout/activity_register.xml",
+        "source": "/Users/s6236422/Desktop/WaveFitness/src/main/res/layout/activity_register.xml"
     },
     {
         "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/layout/cast_mini_controller.xml",
         "source": "/Users/s6236422/.android/build-cache/b39b8f27904a9e44ea916b702d55d39fd710774a/output/res/layout/cast_mini_controller.xml"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/layout/select_dialog_item_material.xml",
+        "source": "/Users/s6236422/.android/build-cache/be30d991dfaf60db0400bdde9fb0fbb6a817c42e/output/res/layout/select_dialog_item_material.xml"
     },
     {
         "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/layout/buttons.xml",
@@ -270,6 +274,10 @@
     {
         "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/layout/abc_screen_content_include.xml",
         "source": "/Users/s6236422/.android/build-cache/be30d991dfaf60db0400bdde9fb0fbb6a817c42e/output/res/layout/abc_screen_content_include.xml"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/layout/activity_login.xml",
+        "source": "/Users/s6236422/Desktop/WaveFitness/src/main/res/layout/activity_login.xml"
     },
     {
         "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/layout/com_spotify_sdk_login_dialog.xml",

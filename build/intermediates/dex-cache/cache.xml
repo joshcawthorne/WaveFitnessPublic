@@ -984,6 +984,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/s6236422/.android/build-cache/4046e8f3bd25637a33eb5d4dea15335c8e6b925f/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="987adec819c9a98faf215814f41195da48fc724e">
+        <dex dex="/Users/s6236422/Desktop/WaveFitness/build/intermediates/transforms/dex/debug/folders/1000/10/classes_ccf4fd8716945c10a2e426c9f5ecc81e09458cf0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/s6236422/.android/build-cache/adc3722db01f48f3a198fb9b50eb0a250ddc99ea/output/jars/classes.jar"
         jumboMode="false"
         optimize="true"

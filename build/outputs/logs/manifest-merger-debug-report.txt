@@ -101,15 +101,16 @@ MERGED from [com.google.android.gms:play-services-wearable:10.2.0] /Users/s62364
 MERGED from [com.google.android.gms:play-services-base:10.2.0] /Users/s6236422/.android/build-cache/3d7bc7f474337f9ef4bd1dd831ff70a0ea2ffb05/output/AndroidManifest.xml:18:5-20:19
 MERGED from [com.google.android.gms:play-services-tasks:10.2.0] /Users/s6236422/.android/build-cache/7c97a0f73f96bc758fd4c2f5ff31cf82f4bfe72b/output/AndroidManifest.xml:4:5-19
 MERGED from [com.google.android.gms:play-services-basement:10.2.0] /Users/s6236422/.android/build-cache/4e8e85971680b5168d50f02bdb4e6834a6976fd9/output/AndroidManifest.xml:19:5-21:19
+MERGED from [com.spotify.android:auth:1.0.0-alpha] /Users/s6236422/.android/build-cache/f2ce559b10eec5199b0bfe69f864f3f1d9edd44e/output/AndroidManifest.xml:33:5-53:19
+MERGED from [com.android.support:customtabs:25.1.1] /Users/s6236422/.android/build-cache/4ba99a447679e9c7a5be8e3275439d400533d8c0/output/AndroidManifest.xml:22:5-20
+MERGED from [com.spotify.sdk:spotify-player-24-noconnect-2.20b:] /Users/s6236422/.android/build-cache/960ecf33027104f0f0d5821aa7adec74ddba1650/output/AndroidManifest.xml:30:5-20
+MERGED from [com.jjoe64:graphview:4.2.1] /Users/s6236422/.android/build-cache/4046e8f3bd25637a33eb5d4dea15335c8e6b925f/output/AndroidManifest.xml:11:5-12:19
 MERGED from [com.android.support:support-v4:25.2.0] /Users/s6236422/.android/build-cache/c7881df2eb27bd0bde3069558d5e59ae396040b3/output/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-fragment:25.2.0] /Users/s6236422/.android/build-cache/d7849d06e419af8d6280a200ba57043ca6430e4a/output/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-media-compat:25.2.0] /Users/s6236422/.android/build-cache/98e1658a42e91551db8a9bacff1082818c82fcfa/output/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-core-ui:25.2.0] /Users/s6236422/.android/build-cache/3156e2e7ae60cb70bd879cb2a1c50d15f338ce14/output/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-core-utils:25.2.0] /Users/s6236422/.android/build-cache/d78cba94361db2dd8c7a0f185b779ca804dadebc/output/AndroidManifest.xml:25:5-20
-MERGED from [com.spotify.android:auth:1.0.0-alpha] /Users/s6236422/.android/build-cache/f2ce559b10eec5199b0bfe69f864f3f1d9edd44e/output/AndroidManifest.xml:33:5-53:19
-MERGED from [com.android.support:customtabs:25.1.1] /Users/s6236422/.android/build-cache/4ba99a447679e9c7a5be8e3275439d400533d8c0/output/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-compat:25.2.0] /Users/s6236422/.android/build-cache/820c8e14b03341083c735bd4e9fc54069b6023ca/output/AndroidManifest.xml:25:5-20
-MERGED from [com.spotify.sdk:spotify-player-24-noconnect-2.20b:] /Users/s6236422/.android/build-cache/960ecf33027104f0f0d5821aa7adec74ddba1650/output/AndroidManifest.xml:30:5-20
 	android:label
 		ADDED from /Users/s6236422/Desktop/WaveFitness/src/main/AndroidManifest.xml:13:9-41
 	android:allowBackup
@@ -245,15 +246,16 @@ MERGED from [com.google.android.gms:play-services-wearable:10.2.0] /Users/s62364
 MERGED from [com.google.android.gms:play-services-base:10.2.0] /Users/s6236422/.android/build-cache/3d7bc7f474337f9ef4bd1dd831ff70a0ea2ffb05/output/AndroidManifest.xml:17:5-43
 MERGED from [com.google.android.gms:play-services-tasks:10.2.0] /Users/s6236422/.android/build-cache/7c97a0f73f96bc758fd4c2f5ff31cf82f4bfe72b/output/AndroidManifest.xml:3:5-43
 MERGED from [com.google.android.gms:play-services-basement:10.2.0] /Users/s6236422/.android/build-cache/4e8e85971680b5168d50f02bdb4e6834a6976fd9/output/AndroidManifest.xml:17:5-43
+MERGED from [com.spotify.android:auth:1.0.0-alpha] /Users/s6236422/.android/build-cache/f2ce559b10eec5199b0bfe69f864f3f1d9edd44e/output/AndroidManifest.xml:27:5-29:41
+MERGED from [com.android.support:customtabs:25.1.1] /Users/s6236422/.android/build-cache/4ba99a447679e9c7a5be8e3275439d400533d8c0/output/AndroidManifest.xml:20:5-44
+MERGED from [com.spotify.sdk:spotify-player-24-noconnect-2.20b:] /Users/s6236422/.android/build-cache/960ecf33027104f0f0d5821aa7adec74ddba1650/output/AndroidManifest.xml:26:5-28:41
+MERGED from [com.jjoe64:graphview:4.2.1] /Users/s6236422/.android/build-cache/4046e8f3bd25637a33eb5d4dea15335c8e6b925f/output/AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:support-v4:25.2.0] /Users/s6236422/.android/build-cache/c7881df2eb27bd0bde3069558d5e59ae396040b3/output/AndroidManifest.xml:21:5-23:54
 MERGED from [com.android.support:support-fragment:25.2.0] /Users/s6236422/.android/build-cache/d7849d06e419af8d6280a200ba57043ca6430e4a/output/AndroidManifest.xml:21:5-23:60
 MERGED from [com.android.support:support-media-compat:25.2.0] /Users/s6236422/.android/build-cache/98e1658a42e91551db8a9bacff1082818c82fcfa/output/AndroidManifest.xml:21:5-23:63
 MERGED from [com.android.support:support-core-ui:25.2.0] /Users/s6236422/.android/build-cache/3156e2e7ae60cb70bd879cb2a1c50d15f338ce14/output/AndroidManifest.xml:21:5-23:58
 MERGED from [com.android.support:support-core-utils:25.2.0] /Users/s6236422/.android/build-cache/d78cba94361db2dd8c7a0f185b779ca804dadebc/output/AndroidManifest.xml:21:5-23:61
-MERGED from [com.spotify.android:auth:1.0.0-alpha] /Users/s6236422/.android/build-cache/f2ce559b10eec5199b0bfe69f864f3f1d9edd44e/output/AndroidManifest.xml:27:5-29:41
-MERGED from [com.android.support:customtabs:25.1.1] /Users/s6236422/.android/build-cache/4ba99a447679e9c7a5be8e3275439d400533d8c0/output/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-compat:25.2.0] /Users/s6236422/.android/build-cache/820c8e14b03341083c735bd4e9fc54069b6023ca/output/AndroidManifest.xml:21:5-23:58
-MERGED from [com.spotify.sdk:spotify-player-24-noconnect-2.20b:] /Users/s6236422/.android/build-cache/960ecf33027104f0f0d5821aa7adec74ddba1650/output/AndroidManifest.xml:26:5-28:41
 	tools:overrideLibrary
 		ADDED from [com.android.support:design:25.2.0] /Users/s6236422/.android/build-cache/5ea02d9a4acaafb3535f5e20b9189a49726b7136/output/AndroidManifest.xml:23:9-59
 	android:targetSdkVersion

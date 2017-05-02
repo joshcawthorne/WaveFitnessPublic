@@ -35,4 +35,5 @@
         android:layout_marginTop="30dp"
         android:text=""
         app:layout_anchor="@+id/map" />
+
 </android.support.design.widget.CoordinatorLayout>

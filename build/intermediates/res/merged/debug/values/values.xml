@@ -563,6 +563,7 @@
 <enum name="thing_proto" value="9"/>
 
 </attr><attr format="string" name="sectionContent"/></declare-styleable>
+    <declare-styleable name="GraphViewXML"><attr format="string" name="seriesData"/><attr format="string" name="seriesType"/><attr format="string" name="seriesTitle"/><attr name="android:title"/><attr format="color" name="seriesColor"/></declare-styleable>
     <declare-styleable name="IMECorpus"><attr format="boolean" name="inputEnabled"/><attr name="sourceClass">
 <enum name="email" value="0"/>
 
