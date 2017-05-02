@@ -11,11 +11,15 @@
     <string name="skip_next_button_label">Next</string>
     <string name="skip_prev_button_label">Previous</string>
     <string name="toggle_shuffle_button_toggle">Toggle shuffle</string>
+    <string name="genre_button_label">Genre</string>
     <string name="toggle_repeat_button_label_toggle">Toggle repeat</string>
     <string name="seek_button_label">Seek</string>
     <string name="queue_button_label">Queue a song</string>
     <string name="song_queued_toast">Song queued!</string>
     <string name="no_metadata">no metadata</string>
+    <string name="alertbox_yes">Box</string>
+    <string name="alertbox_no">Not Box</string>
+    <string name="alertbox_title">TitleBox</string>
 
     <!-- Pedometer Value -->
     <string name="started">Pedometer started.</string>

@@ -1,4 +1,5 @@
-<RelativeLayout android:id="@+id/root"
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
                 xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
@@ -9,21 +10,31 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:clipToPadding="false"
-        android:orientation="vertical">
-
+        android:orientation="vertical"
+        android:gravity="top"
+        >
 
         <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:scaleType="fitEnd"
+            android:layout_height="175dp"
+            android:layout_gravity="top|center"
+            android:scaleType="fitCenter"
             android:id="@+id/cover_art"
             android:adjustViewBounds="true"
             android:maxWidth="150dp"
             android:maxHeight="150dp"
-            android:paddingBottom="25dp"
-            />
+        />
+
+        <TextView
+            android:id="@+id/metadata"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top|center"
+            android:text="@string/no_metadata"
+            android:paddingBottom="15px"
+            android:paddingTop="15px"
+        />
+
 
     </LinearLayout>
 
@@ -33,13 +44,34 @@
         android:layout_below="@+id/status_text_container">
 
         <FrameLayout
+
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom">
             <include layout="@layout/buttons"/>
+
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:clickable="true"
+                app:borderWidth="0dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                />
+
         </FrameLayout>
 
     </ScrollView>
 
+    <TextView
+        android:id="@+id/alertbox_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:textSize="17sp" />
 
 
 </RelativeLayout>
