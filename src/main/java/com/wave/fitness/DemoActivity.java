@@ -15,8 +15,11 @@
 package com.wave.fitness;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.graphics.Bitmap;
@@ -25,10 +28,15 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.Window;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -50,6 +58,7 @@ import com.spotify.sdk.android.player.SpotifyPlayer;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Transformation;
 
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 public class DemoActivity extends Activity implements
@@ -72,22 +81,22 @@ public class DemoActivity extends Activity implements
     private static final String TEST_SONG_48kHz_URI = "spotify:track:3wxTNS3aqb9RbBLZgJdZgH";
     @SuppressWarnings("SpellCheckingInspection")
     //NOTE: It took me an age to work out that playlists require both the playlist creator (User) AND the ID!
-    private static final String TEST_PLAYLIST_URI = "spotify:user:4joshua-cawthorne:playlist:4vr1l7iKUXfsmxEFlQabwG";
+    private static String TEST_PLAYLIST_URI = "spotify:user:4joshua-cawthorne:playlist:4vr1l7iKUXfsmxEFlQabwG";
     @SuppressWarnings("SpellCheckingInspection")
     private static final String TEST_ALBUM_URI = "spotify:album:4ei0RkOn29dn174wallj5w";
     @SuppressWarnings("SpellCheckingInspection")
     private static final String TEST_QUEUE_SONG_URI = "spotify:track:5EEOjaJyWvfMglmEwf9bG3";
+
+    //Generate bool for genre switch
+    boolean genreSwitchResume = false;
 
     //Request code that will be passed together with authentication result to the onAuthenticationResult
     private static final int REQUEST_CODE = 1337;
 
     //These are UI controls, which can only be used after a user has logged into spotify.
     private static final int[] REQUIRES_INITIALIZED_STATE = {
-            R.id.play_track_button,
-            R.id.play_album_button,
-            R.id.play_playlist_button,
-            R.id.play_playlist_button,
             R.id.pause_button,
+            R.id.genre_switch_button,
     };
 
     //These are UI controls which can only be used once a song is playing.
@@ -314,22 +323,7 @@ public class DemoActivity extends Activity implements
     }
 
     public void onPlayButtonClicked(View view) {
-
-        String uri;
-        switch (view.getId()) {
-            case R.id.play_track_button:
-                uri = TEST_SONG_URI;
-                break;
-            case R.id.play_playlist_button:
-                uri = TEST_PLAYLIST_URI;
-                break;
-            case R.id.play_album_button:
-                uri = TEST_ALBUM_URI;
-                break;
-            default:
-                throw new IllegalArgumentException("View ID does not have an associated URI to play");
-        }
-
+        String uri = TEST_PLAYLIST_URI;
         logStatus("Starting playback for " + uri);
         mPlayer.playUri(mOperationCallback, uri, 0, 0);
     }
@@ -359,6 +353,160 @@ public class DemoActivity extends Activity implements
     public void onToggleShuffleButtonClicked(View view) {
         mPlayer.setShuffle(mOperationCallback, !mCurrentPlaybackState.isShuffling);
     }
+
+    public void onGenreButtonClicked(View view) {
+        //Array that contains all potential playlists.
+        String[] playlists = {"spotify:user:4joshua-cawthorne:playlist:4vr1l7iKUXfsmxEFlQabwG",
+                              "spotify:user:spotify:playlist:37i9dQZF1DX6VdMW310YC7"};
+        //Create random
+        Random random = new Random();
+        //Pause Music if user is playing some.
+        if (mCurrentPlaybackState != null && mCurrentPlaybackState.isPlaying) {
+            onPauseButtonClicked(view);
+            genreSwitchResume = true;
+        }
+        //Set genre to be random selection from above array
+        int index = random.nextInt(playlists.length);
+        TEST_PLAYLIST_URI = playlists[index];
+
+        if(genreSwitchResume = true){
+            onPauseButtonClicked(view);
+            mPlayer.playUri(mOperationCallback, TEST_PLAYLIST_URI, 0, 0);
+        }
+        Log.e("CREATION", playlists[index]);
+    }
+
+    AlertDialog alert;
+    String selectedFromList = "null";
+
+    final public void showAlertbox(View view) {
+        {String names[] ={"Pop","Classical","Electronic","Funk"};
+            final AlertDialog.Builder alertDialog = new AlertDialog.Builder(DemoActivity.this);
+            LayoutInflater inflater = getLayoutInflater();
+            View convertView = (View) inflater.inflate(R.layout.list, null);
+            alertDialog.setView(convertView);
+            alertDialog.setTitle("Choose a genre:");
+            final ListView lv = (ListView) convertView.findViewById(R.id.listView1);
+            ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,names);
+            lv.setAdapter(adapter);
+            alert = alertDialog.create();
+            alert.show();
+
+            lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                public void onItemClick(AdapterView<?> myAdapter, View myView, int myItemInt, long mylng) {
+                    selectedFromList =(String) (lv.getItemAtPosition(myItemInt));
+                    Log.e("PLAYLISTS", selectedFromList);
+                    setGenre();
+                    alert.dismiss();
+                }
+            });
+        }
+    }
+
+    public void setGenre() {
+        if (selectedFromList == "Pop") {
+            String[] popGenre = {
+                    "spotify:user:spotify:playlist:37i9dQZF1DWY4lFlS4Pnso",
+                    "spotify:user:spotify:playlist:37i9dQZF1DWSVtp02hITpN",
+                    "spotify:user:spotify:playlist:37i9dQZF1DXdc6Ams1C6tL",
+            };
+            //Create random
+            Random random = new Random();
+            //Pause Music if user is playing some.
+            if (mCurrentPlaybackState != null && mCurrentPlaybackState.isPlaying) {
+                genreSwitchResume = true;
+            }
+            //Set genre to be random selection from above array
+            int index = random.nextInt(popGenre.length);
+            TEST_PLAYLIST_URI = popGenre[index];
+
+            if(genreSwitchResume = true){
+                mPlayer.playUri(mOperationCallback, TEST_PLAYLIST_URI, 0, 0);
+            }
+        }
+        else if (selectedFromList == "Classical") {
+            String[] classicalGenre = {
+                    "spotify:user:spotify:playlist:7MizIujRqHWLFVZAfQ21h4",
+                    "spotify:user:spotify:playlist:37i9dQZF1DX561TxkFttR4",
+                    "spotify:user:spotify:playlist:37i9dQZF1DXah8e1pvF5oE",
+            };
+            //Create random
+            Random random = new Random();
+            //Pause Music if user is playing some.
+            if (mCurrentPlaybackState != null && mCurrentPlaybackState.isPlaying) {
+                genreSwitchResume = true;
+            }
+            //Set genre to be random selection from above array
+            int index = random.nextInt(classicalGenre.length);
+            TEST_PLAYLIST_URI = classicalGenre[index];
+
+            if(genreSwitchResume = true){
+                mPlayer.playUri(mOperationCallback, TEST_PLAYLIST_URI, 0, 0);
+            }
+
+        }
+        else if(selectedFromList == "Electronic") {
+            String[] electronicGenre = {
+                    "spotify:user:spotify:playlist:37i9dQZF1DX5uokaTN4FTR",
+                    "spotify:user:spotify:playlist:37i9dQZF1DWSqPHam7LOqC",
+                    "spotify:user:spotify:playlist:37i9dQZF1DWSrVdvTl1tVY",
+            };
+            //Create random
+            Random random = new Random();
+            //Pause Music if user is playing some.
+            if (mCurrentPlaybackState != null && mCurrentPlaybackState.isPlaying) {
+                genreSwitchResume = true;
+            }
+            //Set genre to be random selection from above array
+            int index = random.nextInt(electronicGenre.length);
+            TEST_PLAYLIST_URI = electronicGenre[index];
+
+            if(genreSwitchResume = true){
+                mPlayer.playUri(mOperationCallback, TEST_PLAYLIST_URI, 0, 0);
+            }
+        }
+        else if(selectedFromList == "Funk") {
+            String[] funkyGenre = {
+                    "spotify:user:spotify:playlist:37i9dQZF1DX23YPJntYMnh",
+                    "spotify:user:spotify:playlist:37i9dQZF1DX6drTZKzZwSo",
+                    "spotify:user:spotify:playlist:37i9dQZF1DWSrVdvTl1tVY",
+            };
+            //Create random
+            Random random = new Random();
+            //Pause Music if user is playing some.
+            if (mCurrentPlaybackState != null && mCurrentPlaybackState.isPlaying) {
+                genreSwitchResume = true;
+            }
+            //Set genre to be random selection from above array
+            int index = random.nextInt(funkyGenre.length);
+            TEST_PLAYLIST_URI = funkyGenre[index];
+
+            if(genreSwitchResume = true){
+                mPlayer.playUri(mOperationCallback, TEST_PLAYLIST_URI, 0, 0);
+            }
+        }
+        else if(selectedFromList == "Not") {
+            String[] funkGenre = {
+                    "spotify:user:spotify:playlist:4Ebgfxsss10NoZbpRq1E06",
+                    "spotify:user:spotify:playlist:37i9dQZF1DX23YPJntYMnh",
+                    "spotify:user:spotify:playlist:37i9dQZF1DX7Q7o98uPeg1",
+            };
+            //Create random
+            Random random = new Random();
+            //Pause Music if user is playing some.
+            if (mCurrentPlaybackState != null && mCurrentPlaybackState.isPlaying) {
+                genreSwitchResume = true;
+            }
+            //Set genre to be random selection from above array
+            int index = random.nextInt(funkGenre.length);
+            TEST_PLAYLIST_URI = funkGenre[index];
+
+            if(genreSwitchResume = true){
+                mPlayer.playUri(mOperationCallback, TEST_PLAYLIST_URI, 0, 0);
+            }
+        }
+    }
+
 
     public void onToggleRepeatButtonClicked(View view) {
         mPlayer.setRepeat(mOperationCallback, !mCurrentPlaybackState.isRepeating);
