@@ -140,6 +140,7 @@ public class DemoActivity extends Activity implements
         mStatusTextScrollView = (ScrollView) findViewById(R.id.status_text_container);
 
         updateView();
+
     }
 
     @Override
@@ -447,4 +448,6 @@ public class DemoActivity extends Activity implements
     public void onPlaybackError(Error error) {
         logStatus("Err: " + error);
     }
+
+
 }
