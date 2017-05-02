@@ -3,102 +3,66 @@
 
     <item
         is-multidex="false"
-        jar="C:\Users\Aaron\.android\build-cache\581ff429f19952490865f2b806f1717b657717d0\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="55220cc71bd23fff8fc339a67f55be3cfd11cdec">
-        <dex dex="C:\Users\Aaron\Desktop\WaveFitness\build\intermediates\pre-dexed\debug\classes_9d75f4b2367248c21bddfdb90f958a5922016516.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Aaron\Desktop\WaveFitness\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="772a15e9005c5b9730469a1589fd72f8d152c18c">
-        <dex dex="C:\Users\Aaron\Desktop\WaveFitness\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_56989027d61daab63428ea29ed173a4062c0bf70\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Aaron\.android\build-cache\68de4d1ca2da610565727c5892c8dcfe0d5ed70e\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="02741d05d4b697fba5e279e9881aaa1da0ca7c7f">
-        <dex dex="C:\Users\Aaron\Desktop\WaveFitness\build\intermediates\pre-dexed\debug\classes_6f5665bb1269595905980e88297c7e626c5bb29a.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Aaron\.android\build-cache\581ff429f19952490865f2b806f1717b657717d0\output\jars\libs\jnihelpers-1.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="b54aab38b4f87a6682331b511fec0db6b952bb7e">
-        <dex dex="C:\Users\Aaron\Desktop\WaveFitness\build\intermediates\pre-dexed\debug\jnihelpers-1.0_8060e9fe7f6331b8ed87dbd854a127d45862a05f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Aaron\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.1.1\support-annotations-25.1.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="b59b6ee8d6ecc03e672d253800430343493a6ed8">
-        <dex dex="C:\Users\Aaron\Desktop\WaveFitness\build\intermediates\pre-dexed\debug\support-annotations-25.1.1_880441d90d453236ccbc3d4fada581077f4740e4.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Aaron\.android\build-cache\6232acccc8384947538834acdfc1b518acd68417\output\jars\classes.jar"
+        jar="/Users/s6236422/.android/build-cache/4ba99a447679e9c7a5be8e3275439d400533d8c0/output/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="0558e5b6c171bd6719581340f9ac6be4af5ae265">
-        <dex dex="C:\Users\Aaron\Desktop\WaveFitness\build\intermediates\pre-dexed\debug\classes_343b4340fd27b6575bc8aab299b761dd83d4ee64.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Aaron\Desktop\WaveFitness\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
-        <dex dex="C:\Users\Aaron\Desktop\WaveFitness\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_02e891b36b34f1390851d10ff26ee46315d7b839\classes.dex" />
+        <dex dex="/Users/s6236422/Desktop/WaveFitness/build/intermediates/pre-dexed/debug/classes_92395af159859776a287aebcf31157eec2dd4fef.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Aaron\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
+        jar="/Users/s6236422/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
-        <dex dex="C:\Users\Aaron\Desktop\WaveFitness\build\intermediates\pre-dexed\debug\picasso-2.5.2_c7ab1254e127416db1070b0ab6dfa6645c3cdd66.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Aaron\.android\build-cache\581ff429f19952490865f2b806f1717b657717d0\output\jars\libs\jnihelpers-1.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="b54aab38b4f87a6682331b511fec0db6b952bb7e">
-        <dex dex="C:\Users\Aaron\Desktop\WaveFitness\build\intermediates\transforms\dex\debug\folders\1000\10\jnihelpers-1.0_8060e9fe7f6331b8ed87dbd854a127d45862a05f\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Aaron\.android\build-cache\581ff429f19952490865f2b806f1717b657717d0\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="55220cc71bd23fff8fc339a67f55be3cfd11cdec">
-        <dex dex="C:\Users\Aaron\Desktop\WaveFitness\build\intermediates\transforms\dex\debug\folders\1000\10\classes_9d75f4b2367248c21bddfdb90f958a5922016516\classes.dex" />
+        <dex dex="/Users/s6236422/Desktop/WaveFitness/build/intermediates/pre-dexed/debug/picasso-2.5.2_b1256731247b27025bc12ec4d7a26b7c201d0bc9.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Aaron\.android\build-cache\0cf3bf98f0923133c01c1a39068a7f4725792f10\output\jars\classes.jar"
+        jar="/Users/s6236422/.android/build-cache/960ecf33027104f0f0d5821aa7adec74ddba1650/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="55220cc71bd23fff8fc339a67f55be3cfd11cdec">
+        <dex dex="/Users/s6236422/Desktop/WaveFitness/build/intermediates/pre-dexed/debug/classes_d58913e1261e28e0d5d1c7e413d46c640456eec0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/s6236422/.android/build-cache/5519cdd76cd6a530389e0bdc539d6546e79adefa/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="02741d05d4b697fba5e279e9881aaa1da0ca7c7f">
+        <dex dex="/Users/s6236422/Desktop/WaveFitness/build/intermediates/pre-dexed/debug/classes_b60082e5726c33690c89434a380e6b07f308a93e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/s6236422/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.1.1/support-annotations-25.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b59b6ee8d6ecc03e672d253800430343493a6ed8">
+        <dex dex="/Users/s6236422/Desktop/WaveFitness/build/intermediates/pre-dexed/debug/support-annotations-25.1.1_68e564eb94ac9dda1e0d75a7a8aaf881ae482b91.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/s6236422/.android/build-cache/960ecf33027104f0f0d5821aa7adec74ddba1650/output/jars/libs/jnihelpers-1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b54aab38b4f87a6682331b511fec0db6b952bb7e">
+        <dex dex="/Users/s6236422/Desktop/WaveFitness/build/intermediates/pre-dexed/debug/jnihelpers-1.0_dd8e53dc1a2e338e53e796bb54b3e6020667d1b7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/s6236422/.android/build-cache/f2ce559b10eec5199b0bfe69f864f3f1d9edd44e/output/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="fec8abac787cf06ce08ae8f7a17af908ba253e28">
-        <dex dex="C:\Users\Aaron\Desktop\WaveFitness\build\intermediates\pre-dexed\debug\classes_bcc09490fe62b69415817590de4f3fde771a3e59.jar" />
+        <dex dex="/Users/s6236422/Desktop/WaveFitness/build/intermediates/pre-dexed/debug/classes_616671afcfffd13be0a3b53fe0dd216aa92b585f.jar" />
     </item>
 
 </items>
