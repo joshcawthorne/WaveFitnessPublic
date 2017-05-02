@@ -8,12 +8,12 @@ package com.spotify.sdk.android.authentication;
 
 public final class R {
     public static final class id {
-        public static final int com_spotify_sdk_login_webview = 0x7f0d0081;
-        public static final int com_spotify_sdk_login_webview_container = 0x7f0d0080;
+        public static final int com_spotify_sdk_login_webview = 0x7f0d0088;
+        public static final int com_spotify_sdk_login_webview_container = 0x7f0d0087;
     }
     public static final class layout {
-        public static final int com_spotify_sdk_login_activity = 0x7f04001d;
-        public static final int com_spotify_sdk_login_dialog = 0x7f04001e;
+        public static final int com_spotify_sdk_login_activity = 0x7f04001e;
+        public static final int com_spotify_sdk_login_dialog = 0x7f04001f;
     }
     public static final class string {
         public static final int com_spotify_sdk_login_progress = 0x7f07002e;

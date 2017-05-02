@@ -1,164 +1,164 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml:2:1-46:12
+ADDED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml:2:1-48:12
 	package
-		ADDED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml:3:5-31
-		INJECTED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml
-		INJECTED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml
+		ADDED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml:3:5-31
+		INJECTED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml
-		INJECTED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml:2:11-69
 	android:versionCode
-		INJECTED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml
-		INJECTED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml
 uses-permission#android.permission.INTERNET
-ADDED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml:5:5-67
-MERGED from [com.spotify.android:auth:1.0.0-alpha] /Users/q5045715/.android/build-cache/845f9898edd920d267ba397434efe4bb2646c6dd/output/AndroidManifest.xml:31:5-67
+ADDED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml:5:5-67
+MERGED from [com.spotify.android:auth:1.0.0-alpha] C:\Users\Aaron\.android\build-cache\0cf3bf98f0923133c01c1a39068a7f4725792f10\output\AndroidManifest.xml:31:5-67
 	android:name
-		ADDED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml:5:22-64
+		ADDED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml:5:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml:6:5-79
+ADDED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml:6:5-79
 	android:name
-		ADDED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml:6:22-76
+		ADDED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml:6:22-76
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml:7:5-81
+ADDED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml:7:5-81
 	android:name
-		ADDED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml:7:22-78
+		ADDED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml:7:22-78
 application
-ADDED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml:9:5-44:19
-MERGED from [com.spotify.android:auth:1.0.0-alpha] /Users/q5045715/.android/build-cache/845f9898edd920d267ba397434efe4bb2646c6dd/output/AndroidManifest.xml:33:5-53:19
-MERGED from [com.spotify.sdk:spotify-player-24-noconnect-2.20b:] /Users/q5045715/.android/build-cache/78cf42232a6ea17ca8ffa6cb5f9f6f6acbd4d815/output/AndroidManifest.xml:30:5-20
-MERGED from [com.android.support:customtabs:25.1.1] /Users/q5045715/.android/build-cache/08808829b45d53102af11317776c2bd24328d003/output/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:design:25.3.1] /Users/q5045715/.android/build-cache/f07b15e8502307706a583e491aff320a1bac3f71/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/q5045715/.android/build-cache/e1b41365baccf5f93a6cab446dd4928bb2e3def8/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/q5045715/.android/build-cache/75d5c232f3d190df3c1226cc487d9453df7aabd6/output/AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/q5045715/.android/build-cache/eaa60f60b05506f83a4337dc2567922671aadbab/output/AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:transition:25.3.1] /Users/q5045715/.android/build-cache/fd4cbd3b2c02dc5d3ccca48a84f5d03c4c4a574f/output/AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-v4:25.3.1] /Users/q5045715/.android/build-cache/48cab6727437294651f9c280fe511b76ade18690/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-fragment:25.3.1] /Users/q5045715/.android/build-cache/1b41e96269e6d31d48dc558d84a1ef90414c2d65/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-media-compat:25.3.1] /Users/q5045715/.android/build-cache/550674500bfd5e73f990cfe1e8bbcf6ccdbddbaf/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-ui:25.3.1] /Users/q5045715/.android/build-cache/4989a1ffb8fb117981fda6801ae0491a64c018c9/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-utils:25.3.1] /Users/q5045715/.android/build-cache/df50422ba4443181c72e1670f880f39782fae39d/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-compat:25.3.1] /Users/q5045715/.android/build-cache/f6bd96af8974ba70ffd3687229e93fb298e8bbd7/output/AndroidManifest.xml:29:5-20
+ADDED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml:9:5-46:19
+MERGED from [com.spotify.android:auth:1.0.0-alpha] C:\Users\Aaron\.android\build-cache\0cf3bf98f0923133c01c1a39068a7f4725792f10\output\AndroidManifest.xml:33:5-53:19
+MERGED from [com.spotify.sdk:spotify-player-24-noconnect-2.20b:] C:\Users\Aaron\.android\build-cache\ad7ec3c9321c21cd97dd78bdf7ddb8ac84226ce9\output\AndroidManifest.xml:30:5-20
+MERGED from [com.android.support:customtabs:25.1.1] C:\Users\Aaron\.android\build-cache\a3d04a3a0a42a34fcacfd652d98d62748c167dd7\output\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:25.3.1] C:\Users\Aaron\.android\build-cache\d3beaa7653f55ead34680d164faf51f1a64cb0c0\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Aaron\.android\build-cache\0ff63c6f7ab5e6eaa66df408209d6a4ba549da4f\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Aaron\.android\build-cache\2f3b8a4121f60feec674ccfbd649a71c4f2c18b0\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Aaron\.android\build-cache\93cbf961d9004137f86ce3e2efe6e6e5ee709d16\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:25.3.1] C:\Users\Aaron\.android\build-cache\5f18614f1979b3c94e15b8d58efd932cb133fcad\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Aaron\.android\build-cache\c9bac59cb506841efe0d1b29b74055a3fec2649d\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Aaron\.android\build-cache\044842c36ba4e68daa6b7defe6f0deee612d1b80\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Aaron\.android\build-cache\d43ad6dd7e23f505d0f26f1e5d0177b7e802edc5\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Aaron\.android\build-cache\d08ddff3b4572117aef91cec76ca1c8607ec86c4\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Aaron\.android\build-cache\7b6fe1547474adb9b666a110fa0a7df9562734c6\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Aaron\.android\build-cache\5a8012c0fcdb772cbb9939d61476eb6525670037\output\AndroidManifest.xml:29:5-20
 	android:label
-		ADDED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml:12:9-41
+		ADDED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml:12:9-41
 	android:allowBackup
-		ADDED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml:10:9-35
+		ADDED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml:10:9-35
 	android:icon
-		ADDED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml:11:9-43
+		ADDED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml:11:9-43
 	android:theme
-		ADDED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml:13:9-54
+		ADDED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml:13:9-54
 activity#com.wave.fitness.DemoActivity
-ADDED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml:14:9-23:20
+ADDED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml:14:9-19:20
 	android:label
-		ADDED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml:16:13-56
+		ADDED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml:16:13-56
 	android:windowSoftInputMode
-		ADDED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml:17:13-54
+		ADDED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml:17:13-54
 	android:name
-		ADDED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml:15:13-41
-intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml:18:13-22:29
-action#android.intent.action.MAIN
-ADDED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml:19:17-69
-	android:name
-		ADDED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml:19:25-66
-category#android.intent.category.LAUNCHER
-ADDED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml:21:17-77
-	android:name
-		ADDED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml:21:27-74
+		ADDED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml:15:13-41
 activity#com.wave.fitness.authentication.WebAuthResultActivity
-ADDED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml:24:9-37:20
+ADDED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml:20:9-33:20
 	android:theme
-		ADDED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml:26:13-72
+		ADDED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml:22:13-72
 	android:name
-		ADDED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml:25:13-65
+		ADDED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml:21:13-65
 intent-filter#android.intent.action.VIEW+android.intent.category.BROWSABLE+android.intent.category.DEFAULT
-ADDED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml:27:13-36:29
+ADDED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml:23:13-32:29
 action#android.intent.action.VIEW
-ADDED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml:28:17-69
+ADDED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml:24:17-69
 	android:name
-		ADDED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml:28:25-66
+		ADDED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml:24:25-66
 category#android.intent.category.DEFAULT
-ADDED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml:30:17-76
+ADDED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml:26:17-76
 	android:name
-		ADDED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml:30:27-73
+		ADDED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml:26:27-73
 category#android.intent.category.BROWSABLE
-ADDED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml:31:17-78
+ADDED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml:27:17-78
 	android:name
-		ADDED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml:31:27-75
+		ADDED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml:27:27-75
 data
-ADDED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml:33:17-35:51
+ADDED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml:29:17-31:51
 	android:host
-		ADDED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml:34:21-44
+		ADDED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml:30:21-44
 	android:scheme
-		ADDED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml:35:21-48
+		ADDED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml:31:21-48
 activity#com..wave.fitness.LoginActivity
-ADDED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml:38:9-40:84
+ADDED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml:34:9-36:84
 	android:theme
-		ADDED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml:40:13-72
+		ADDED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml:36:13-72
 	android:name
-		ADDED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml:39:13-59
+		ADDED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml:35:13-59
 activity#com.wave.fitness.DashboardActivity
-ADDED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml:41:9-43:73
+ADDED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml:37:9-45:20
 	android:label
-		ADDED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml:43:13-61
+		ADDED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml:39:13-61
 	android:name
-		ADDED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml:42:13-46
+		ADDED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml:38:13-46
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml:40:13-44:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml:41:17-69
+	android:name
+		ADDED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml:41:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml:43:17-77
+	android:name
+		ADDED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml:43:27-74
 uses-sdk
-INJECTED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.spotify.android:auth:1.0.0-alpha] /Users/q5045715/.android/build-cache/845f9898edd920d267ba397434efe4bb2646c6dd/output/AndroidManifest.xml:27:5-29:41
-MERGED from [com.spotify.sdk:spotify-player-24-noconnect-2.20b:] /Users/q5045715/.android/build-cache/78cf42232a6ea17ca8ffa6cb5f9f6f6acbd4d815/output/AndroidManifest.xml:26:5-28:41
-MERGED from [com.android.support:customtabs:25.1.1] /Users/q5045715/.android/build-cache/08808829b45d53102af11317776c2bd24328d003/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:design:25.3.1] /Users/q5045715/.android/build-cache/f07b15e8502307706a583e491aff320a1bac3f71/output/AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/q5045715/.android/build-cache/e1b41365baccf5f93a6cab446dd4928bb2e3def8/output/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/q5045715/.android/build-cache/75d5c232f3d190df3c1226cc487d9453df7aabd6/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/q5045715/.android/build-cache/eaa60f60b05506f83a4337dc2567922671aadbab/output/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:recyclerview-v7:25.3.1] /Users/q5045715/.android/build-cache/49595323474dba7f541992d271fb995fbc7be7a9/output/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:transition:25.3.1] /Users/q5045715/.android/build-cache/fd4cbd3b2c02dc5d3ccca48a84f5d03c4c4a574f/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:25.3.1] /Users/q5045715/.android/build-cache/48cab6727437294651f9c280fe511b76ade18690/output/AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:25.3.1] /Users/q5045715/.android/build-cache/1b41e96269e6d31d48dc558d84a1ef90414c2d65/output/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:25.3.1] /Users/q5045715/.android/build-cache/550674500bfd5e73f990cfe1e8bbcf6ccdbddbaf/output/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-ui:25.3.1] /Users/q5045715/.android/build-cache/4989a1ffb8fb117981fda6801ae0491a64c018c9/output/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:25.3.1] /Users/q5045715/.android/build-cache/df50422ba4443181c72e1670f880f39782fae39d/output/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:25.3.1] /Users/q5045715/.android/build-cache/f6bd96af8974ba70ffd3687229e93fb298e8bbd7/output/AndroidManifest.xml:21:5-23:58
+INJECTED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.spotify.android:auth:1.0.0-alpha] C:\Users\Aaron\.android\build-cache\0cf3bf98f0923133c01c1a39068a7f4725792f10\output\AndroidManifest.xml:27:5-29:41
+MERGED from [com.spotify.sdk:spotify-player-24-noconnect-2.20b:] C:\Users\Aaron\.android\build-cache\ad7ec3c9321c21cd97dd78bdf7ddb8ac84226ce9\output\AndroidManifest.xml:26:5-28:41
+MERGED from [com.android.support:customtabs:25.1.1] C:\Users\Aaron\.android\build-cache\a3d04a3a0a42a34fcacfd652d98d62748c167dd7\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:25.3.1] C:\Users\Aaron\.android\build-cache\d3beaa7653f55ead34680d164faf51f1a64cb0c0\output\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Aaron\.android\build-cache\0ff63c6f7ab5e6eaa66df408209d6a4ba549da4f\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Aaron\.android\build-cache\2f3b8a4121f60feec674ccfbd649a71c4f2c18b0\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Aaron\.android\build-cache\93cbf961d9004137f86ce3e2efe6e6e5ee709d16\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\Aaron\.android\build-cache\12b07ea25a66067b9085b9bc72a25b5c08db28c4\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:25.3.1] C:\Users\Aaron\.android\build-cache\5f18614f1979b3c94e15b8d58efd932cb133fcad\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Aaron\.android\build-cache\c9bac59cb506841efe0d1b29b74055a3fec2649d\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Aaron\.android\build-cache\044842c36ba4e68daa6b7defe6f0deee612d1b80\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Aaron\.android\build-cache\d43ad6dd7e23f505d0f26f1e5d0177b7e802edc5\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Aaron\.android\build-cache\d08ddff3b4572117aef91cec76ca1c8607ec86c4\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Aaron\.android\build-cache\7b6fe1547474adb9b666a110fa0a7df9562734c6\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Aaron\.android\build-cache\5a8012c0fcdb772cbb9939d61476eb6525670037\output\AndroidManifest.xml:21:5-23:58
 	tools:overrideLibrary
-		ADDED from [com.android.support:design:25.3.1] /Users/q5045715/.android/build-cache/f07b15e8502307706a583e491aff320a1bac3f71/output/AndroidManifest.xml:23:9-59
+		ADDED from [com.android.support:design:25.3.1] C:\Users\Aaron\.android\build-cache\d3beaa7653f55ead34680d164faf51f1a64cb0c0\output\AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
-		INJECTED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml
-		INJECTED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml
-		INJECTED from /Users/q5045715/Desktop/WaveFitness/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Aaron\Desktop\WaveFitness\src\main\AndroidManifest.xml
 activity#com.spotify.sdk.android.authentication.AuthCallbackActivity
-ADDED from [com.spotify.android:auth:1.0.0-alpha] /Users/q5045715/.android/build-cache/845f9898edd920d267ba397434efe4bb2646c6dd/output/AndroidManifest.xml:34:9-48:20
+ADDED from [com.spotify.android:auth:1.0.0-alpha] C:\Users\Aaron\.android\build-cache\0cf3bf98f0923133c01c1a39068a7f4725792f10\output\AndroidManifest.xml:34:9-48:20
 	android:exported
-		ADDED from [com.spotify.android:auth:1.0.0-alpha] /Users/q5045715/.android/build-cache/845f9898edd920d267ba397434efe4bb2646c6dd/output/AndroidManifest.xml:36:13-36
+		ADDED from [com.spotify.android:auth:1.0.0-alpha] C:\Users\Aaron\.android\build-cache\0cf3bf98f0923133c01c1a39068a7f4725792f10\output\AndroidManifest.xml:36:13-36
 	android:theme
-		ADDED from [com.spotify.android:auth:1.0.0-alpha] /Users/q5045715/.android/build-cache/845f9898edd920d267ba397434efe4bb2646c6dd/output/AndroidManifest.xml:37:13-72
+		ADDED from [com.spotify.android:auth:1.0.0-alpha] C:\Users\Aaron\.android\build-cache\0cf3bf98f0923133c01c1a39068a7f4725792f10\output\AndroidManifest.xml:37:13-72
 	android:name
-		ADDED from [com.spotify.android:auth:1.0.0-alpha] /Users/q5045715/.android/build-cache/845f9898edd920d267ba397434efe4bb2646c6dd/output/AndroidManifest.xml:35:13-87
+		ADDED from [com.spotify.android:auth:1.0.0-alpha] C:\Users\Aaron\.android\build-cache\0cf3bf98f0923133c01c1a39068a7f4725792f10\output\AndroidManifest.xml:35:13-87
 activity#com.spotify.sdk.android.authentication.LoginActivity
-ADDED from [com.spotify.android:auth:1.0.0-alpha] /Users/q5045715/.android/build-cache/845f9898edd920d267ba397434efe4bb2646c6dd/output/AndroidManifest.xml:49:9-52:20
+ADDED from [com.spotify.android:auth:1.0.0-alpha] C:\Users\Aaron\.android\build-cache\0cf3bf98f0923133c01c1a39068a7f4725792f10\output\AndroidManifest.xml:49:9-52:20
 	android:theme
-		ADDED from [com.spotify.android:auth:1.0.0-alpha] /Users/q5045715/.android/build-cache/845f9898edd920d267ba397434efe4bb2646c6dd/output/AndroidManifest.xml:51:13-72
+		ADDED from [com.spotify.android:auth:1.0.0-alpha] C:\Users\Aaron\.android\build-cache\0cf3bf98f0923133c01c1a39068a7f4725792f10\output\AndroidManifest.xml:51:13-72
 	android:name
-		ADDED from [com.spotify.android:auth:1.0.0-alpha] /Users/q5045715/.android/build-cache/845f9898edd920d267ba397434efe4bb2646c6dd/output/AndroidManifest.xml:50:13-80
+		ADDED from [com.spotify.android:auth:1.0.0-alpha] C:\Users\Aaron\.android\build-cache\0cf3bf98f0923133c01c1a39068a7f4725792f10\output\AndroidManifest.xml:50:13-80
 meta-data#android.support.VERSION
-ADDED from [com.android.support:design:25.3.1] /Users/q5045715/.android/build-cache/f07b15e8502307706a583e491aff320a1bac3f71/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/q5045715/.android/build-cache/e1b41365baccf5f93a6cab446dd4928bb2e3def8/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/q5045715/.android/build-cache/75d5c232f3d190df3c1226cc487d9453df7aabd6/output/AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/q5045715/.android/build-cache/eaa60f60b05506f83a4337dc2567922671aadbab/output/AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:recyclerview-v7:25.3.1] /Users/q5045715/.android/build-cache/49595323474dba7f541992d271fb995fbc7be7a9/output/AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:transition:25.3.1] /Users/q5045715/.android/build-cache/fd4cbd3b2c02dc5d3ccca48a84f5d03c4c4a574f/output/AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-v4:25.3.1] /Users/q5045715/.android/build-cache/48cab6727437294651f9c280fe511b76ade18690/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-fragment:25.3.1] /Users/q5045715/.android/build-cache/1b41e96269e6d31d48dc558d84a1ef90414c2d65/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-media-compat:25.3.1] /Users/q5045715/.android/build-cache/550674500bfd5e73f990cfe1e8bbcf6ccdbddbaf/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-ui:25.3.1] /Users/q5045715/.android/build-cache/4989a1ffb8fb117981fda6801ae0491a64c018c9/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-utils:25.3.1] /Users/q5045715/.android/build-cache/df50422ba4443181c72e1670f880f39782fae39d/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-compat:25.3.1] /Users/q5045715/.android/build-cache/f6bd96af8974ba70ffd3687229e93fb298e8bbd7/output/AndroidManifest.xml:25:5-27:34
+ADDED from [com.android.support:design:25.3.1] C:\Users\Aaron\.android\build-cache\d3beaa7653f55ead34680d164faf51f1a64cb0c0\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Aaron\.android\build-cache\0ff63c6f7ab5e6eaa66df408209d6a4ba549da4f\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Aaron\.android\build-cache\2f3b8a4121f60feec674ccfbd649a71c4f2c18b0\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Aaron\.android\build-cache\93cbf961d9004137f86ce3e2efe6e6e5ee709d16\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\Aaron\.android\build-cache\12b07ea25a66067b9085b9bc72a25b5c08db28c4\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:transition:25.3.1] C:\Users\Aaron\.android\build-cache\5f18614f1979b3c94e15b8d58efd932cb133fcad\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Aaron\.android\build-cache\c9bac59cb506841efe0d1b29b74055a3fec2649d\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Aaron\.android\build-cache\044842c36ba4e68daa6b7defe6f0deee612d1b80\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Aaron\.android\build-cache\d43ad6dd7e23f505d0f26f1e5d0177b7e802edc5\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Aaron\.android\build-cache\d08ddff3b4572117aef91cec76ca1c8607ec86c4\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Aaron\.android\build-cache\7b6fe1547474adb9b666a110fa0a7df9562734c6\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Aaron\.android\build-cache\5a8012c0fcdb772cbb9939d61476eb6525670037\output\AndroidManifest.xml:25:5-27:34
 	android:value
-		ADDED from [com.android.support:design:25.3.1] /Users/q5045715/.android/build-cache/f07b15e8502307706a583e491aff320a1bac3f71/output/AndroidManifest.xml:27:9-31
+		ADDED from [com.android.support:design:25.3.1] C:\Users\Aaron\.android\build-cache\d3beaa7653f55ead34680d164faf51f1a64cb0c0\output\AndroidManifest.xml:27:9-31
 	android:name
-		ADDED from [com.android.support:design:25.3.1] /Users/q5045715/.android/build-cache/f07b15e8502307706a583e491aff320a1bac3f71/output/AndroidManifest.xml:26:9-47
+		ADDED from [com.android.support:design:25.3.1] C:\Users\Aaron\.android\build-cache\d3beaa7653f55ead34680d164faf51f1a64cb0c0\output\AndroidManifest.xml:26:9-47
