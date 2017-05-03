@@ -14,12 +14,9 @@
  */
 package com.wave.fitness;
 
-import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.graphics.Bitmap;
@@ -27,19 +24,20 @@ import android.graphics.Canvas;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ScrollView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.spotify.sdk.android.authentication.AuthenticationClient;
 import com.spotify.sdk.android.authentication.AuthenticationRequest;
@@ -61,7 +59,7 @@ import com.squareup.picasso.Transformation;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-public class DemoActivity extends Activity implements
+public class DemoActivity extends AppCompatActivity implements
         Player.NotificationCallback, ConnectionStateCallback {
 
     //Constants
@@ -73,19 +71,9 @@ public class DemoActivity extends Activity implements
     @SuppressWarnings("SpellCheckingInspection")
     private static final String REDIRECT_URI = "testschema://callback";
 
-    //Tempoary strings containing the test_song_uri's - at the moment the app only calls these strings.
-    //// TODO: 26/04/2017 Imppliment genre/search to place tracks into these strings, instead of having static music.
-    @SuppressWarnings("SpellCheckingInspection")
-    private static final String TEST_SONG_URI = "spotify:track:7v9qEzfnEuJDjBg8B7GppL";
-    @SuppressWarnings("SpellCheckingInspection")
-    private static final String TEST_SONG_48kHz_URI = "spotify:track:3wxTNS3aqb9RbBLZgJdZgH";
-    @SuppressWarnings("SpellCheckingInspection")
-    //NOTE: It took me an age to work out that playlists require both the playlist creator (User) AND the ID!
-    private static String TEST_PLAYLIST_URI = "spotify:user:4joshua-cawthorne:playlist:4vr1l7iKUXfsmxEFlQabwG";
-    @SuppressWarnings("SpellCheckingInspection")
-    private static final String TEST_ALBUM_URI = "spotify:album:4ei0RkOn29dn174wallj5w";
-    @SuppressWarnings("SpellCheckingInspection")
-    private static final String TEST_QUEUE_SONG_URI = "spotify:track:5EEOjaJyWvfMglmEwf9bG3";
+    public String TEST_PLAYLIST_URI = "";
+
+    //// TODO: 03/05/17 Create an array of liked/disliked songs via metadata, and then compare new songs to the array. If the song was previously disliked, skip it.
 
     //Generate bool for genre switch
     boolean genreSwitchResume = false;
@@ -99,13 +87,11 @@ public class DemoActivity extends Activity implements
             R.id.genre_switch_button,
     };
 
+
     //These are UI controls which can only be used once a song is playing.
     private static final int[] REQUIRES_PLAYING_STATE = {
             R.id.skip_next_button,
             R.id.skip_prev_button,
-            R.id.queue_song_button,
-            R.id.toggle_shuffle_button,
-            R.id.toggle_repeat_button,
     };
     public static final String TAG = "SpotifySdkDemo";
 
@@ -125,10 +111,13 @@ public class DemoActivity extends Activity implements
     private ScrollView mStatusTextScrollView;
     private Metadata mMetadata;
 
+    public boolean logIn = false;
+
     private final Player.OperationCallback mOperationCallback = new Player.OperationCallback() {
         @Override
         public void onSuccess() {
             logStatus("OK!");
+            logIn = true;
         }
 
         @Override
@@ -144,11 +133,51 @@ public class DemoActivity extends Activity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_demo);
 
+        onLoginButtonClicked(null);
+
         // Get a reference to any UI widgets that will be needed.
         mMetadataText = (TextView) findViewById(R.id.metadata);
         mStatusTextScrollView = (ScrollView) findViewById(R.id.status_text_container);
 
         updateView();
+
+        final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.pause_button);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (mCurrentPlaybackState != null && mCurrentPlaybackState.isPlaying) {
+                    mPlayer.pause(mOperationCallback);
+                    fab.setImageDrawable(getResources().getDrawable(R.drawable.play));
+                } else {
+                    mPlayer.resume(mOperationCallback);
+                    fab.setImageDrawable(getResources().getDrawable(R.drawable.pause));
+                }
+            }
+        });
+    }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        super.onCreateOptionsMenu(menu);
+        getMenuInflater().inflate(R.menu.menu_scrolling, menu);
+
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.login_button) {
+            onLoginButtonClicked(null);
+        }
+        if (id == R.id.genre_switch_button) {
+            showAlertbox(null);
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
@@ -253,12 +282,12 @@ public class DemoActivity extends Activity implements
         boolean loggedIn = isLoggedIn();
 
         // Login button should be the inverse of the logged in state
-        Button loginButton = (Button) findViewById(R.id.login_button);
-        loginButton.setText(loggedIn ? R.string.logout_button_label : R.string.login_button_label);
+        //Button loginButton = (Button) findViewById(R.id.login_button);
+        //loginButton.setText(loggedIn ? R.string.logout_button_label : R.string.login_button_label);
 
         // Set enabled for all widgets which depend on initialized state
         for (int id : REQUIRES_INITIALIZED_STATE) {
-            findViewById(id).setEnabled(loggedIn);
+        //    findViewById(id).setEnabled(loggedIn);
         }
 
         // Same goes for the playing state
@@ -282,7 +311,7 @@ public class DemoActivity extends Activity implements
                     TimeUnit.MILLISECONDS.toSeconds(mMetadata.currentTrack.durationMs) -
                             TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(mMetadata.currentTrack.durationMs))
             );
-            mMetadataText.setText(mMetadata.contextName + "\n" + mMetadata.currentTrack.name + " - " + mMetadata.currentTrack.artistName + durationStr);
+            mMetadataText.setText(mMetadata.currentTrack.name + " - " + mMetadata.currentTrack.artistName + durationStr);
             Picasso.with(this)
                     .load(mMetadata.currentTrack.albumCoverWebUrl)
                     .transform(new Transformation() {
@@ -317,15 +346,17 @@ public class DemoActivity extends Activity implements
         if (!isLoggedIn()) {
             logStatus("Logging in");
             openLoginWindow();
+            showAlertbox(null);
         } else {
             mPlayer.logout();
         }
     }
 
-    public void onPlayButtonClicked(View view) {
-        String uri = TEST_PLAYLIST_URI;
+    public void onPlayButtonClicked(View view, FloatingActionButton fab) {
+        String uri = "spotify:user:spotify:playlist:7MizIujRqHWLFVZAfQ21h4";
         logStatus("Starting playback for " + uri);
         mPlayer.playUri(mOperationCallback, uri, 0, 0);
+        fab.setImageDrawable(getResources().getDrawable(R.drawable.pause));
     }
 
     public void onPauseButtonClicked(View view) {
@@ -344,14 +375,10 @@ public class DemoActivity extends Activity implements
         mPlayer.skipToNext(mOperationCallback);
     }
 
-    public void onQueueSongButtonClicked(View view) {
-        mPlayer.queue(mOperationCallback, TEST_QUEUE_SONG_URI);
-        Toast toast = Toast.makeText(this, R.string.song_queued_toast, Toast.LENGTH_SHORT);
-        toast.show();
-    }
 
     public void onToggleShuffleButtonClicked(View view) {
-        mPlayer.setShuffle(mOperationCallback, !mCurrentPlaybackState.isShuffling);
+        Intent intent = new Intent(this, ScrollingActivity.class);
+        startActivity(intent);
     }
 
     public void onGenreButtonClicked(View view) {
@@ -401,6 +428,10 @@ public class DemoActivity extends Activity implements
                 }
             });
         }
+    }
+
+    public void toggleFab(FloatingActionButton fab) {
+        fab.setImageDrawable(getResources().getDrawable(R.drawable.pause));
     }
 
     public void setGenre() {

@@ -11,36 +11,15 @@
               android:paddingRight="@dimen/activity_horizontal_margin"
               android:paddingTop="@dimen/activity_vertical_margin">
 
-    <Button
-        android:id="@+id/login_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:focusable="true"
-        android:onClick="onLoginButtonClicked"
-        android:text="@string/login_button_label"/>
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/genre_switch_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="showAlertbox"
-            android:text="Choose your poison"/>
-
 
     </LinearLayout>
-
-    <Button
-        android:id="@+id/pause_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="onPauseButtonClicked"
-        android:text="@string/pause_button_label_toggle"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -62,29 +41,7 @@
             android:layout_weight="1"
             android:onClick="onSkipToNextButtonClicked"
             android:text="@string/skip_next_button_label"/>
-
     </LinearLayout>
-
-    <Button
-        android:id="@+id/queue_song_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="onQueueSongButtonClicked"
-        android:text="@string/queue_button_label"/>
-
-    <Button
-        android:id="@+id/toggle_shuffle_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="onToggleShuffleButtonClicked"
-        android:text="@string/toggle_shuffle_button_toggle"/>
-
-    <Button
-        android:id="@+id/toggle_repeat_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="onToggleRepeatButtonClicked"
-        android:text="@string/toggle_repeat_button_label_toggle"/>
 
     <LinearLayout
         android:layout_width="match_parent"
