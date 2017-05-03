@@ -75,6 +75,10 @@ public class DemoActivity extends AppCompatActivity implements
 
     //// TODO: 03/05/17 Create an array of liked/disliked songs via metadata, and then compare new songs to the array. If the song was previously disliked, skip it.
 
+    //// TODO: Toggle menu label on login, so that when a user is logged in, to then say "logout" and visaversa
+
+    //// TODO: Work out how to toggle fab icon on genre select.
+
     //Generate bool for genre switch
     boolean genreSwitchResume = false;
 
