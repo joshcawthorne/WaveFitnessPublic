@@ -41,14 +41,15 @@ android {
 }
 
 dependencies {
-    compile 'com.spotify.android:auth:1.0.0-alpha'
     compile 'com.spotify.sdk:spotify-player-24-noconnect-2.20b@aar'
 
+    compile 'com.spotify.android:auth:1.0.0-alpha'
     compile 'com.squareup.picasso:picasso:+'
     compile 'com.android.support:recyclerview-v7:25.3.1'
-    compile "com.android.support:support-v4:25.3.1"
-    compile "com.android.support:support-core-utils:25.3.1"
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.android.support:support-core-utils:25.3.1'
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support:design:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
     androidTestCompile 'org.hamcrest:hamcrest-core:1.3'
 }

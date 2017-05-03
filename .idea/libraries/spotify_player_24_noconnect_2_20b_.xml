@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="spotify-player-24-noconnect-2.20b-">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.android/build-cache/de3c046f168d9909381da48651e1d16f48d1af4e/output/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.android/build-cache/de3c046f168d9909381da48651e1d16f48d1af4e/output/res" />
-      <root url="jar://$USER_HOME$/.android/build-cache/de3c046f168d9909381da48651e1d16f48d1af4e/output/jars/libs/jnihelpers-1.0.jar!/" />
+      <root url="jar://$USER_HOME$/.android/build-cache/2f3eea456a19eeab7049afe93677cd5574a361bf/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/2f3eea456a19eeab7049afe93677cd5574a361bf/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/2f3eea456a19eeab7049afe93677cd5574a361bf/output/jars/libs/jnihelpers-1.0.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

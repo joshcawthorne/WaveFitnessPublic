@@ -1,10 +1,10 @@
 <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/root"
-                xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                tools:context="com.wave.fitness.DemoActivity">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wave.fitness.DemoActivity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"
@@ -12,21 +12,6 @@
         android:layout_height="@dimen/app_bar_height"
         android:fitsSystemWindows="true"
         android:theme="@style/AppTheme.AppBarOverlay">
-
-        <android.support.design.widget.CollapsingToolbarLayout
-            android:id="@+id/toolbar_layout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fitsSystemWindows="true"
-            app:contentScrim="?attr/colorPrimary"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed">
-
-            <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                app:layout_collapseMode="pin"
-                app:popupTheme="@style/AppTheme.PopupOverlay" />
 
             <ImageView
                 android:layout_width="match_parent"
@@ -39,7 +24,6 @@
                 android:maxHeight="150dp"
                 />
 
-        </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
 
     <include layout="@layout/music_scrolling" />
@@ -50,15 +34,15 @@
         android:clipToPadding="false"
         android:orientation="vertical"
         android:gravity="top"
-    >
+        >
         <TextView
             android:id="@+id/metadata"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
             android:text="@string/no_metadata"
-            android:textSize="16dp"
-            android:textColor="#000"
+            android:textSize="21dp"
+            android:textColor="#fff"
             android:paddingBottom="5dp"
             />
     </LinearLayout>
@@ -88,7 +72,7 @@
         android:gravity="center"
         android:textColor="#fff"
         android:textSize="17sp"
-    />
+        />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/pause_button"
