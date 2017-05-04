@@ -6,6 +6,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -24,6 +25,7 @@ import com.mikepenz.materialdrawer.model.ProfileDrawerItem;
 import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
+import com.spotify.sdk.android.player.SpotifyPlayer;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -32,12 +34,21 @@ public class DashboardActivity extends AppCompatActivity {
 
     Drawer menu;
 
+    private SpotifyPlayer mPlayer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        if (!isLoggedIn()) {
+            Intent i = new Intent(getBaseContext(), SpotifyAuthentication.class);
+            startActivity(i);
+        } else {
+            Log.i("Login Status", "Logged in");
+        }
 
         //FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         //fab.setOnClickListener(new View.OnClickListener() {
@@ -90,9 +101,12 @@ public class DashboardActivity extends AppCompatActivity {
 
     }
 
-
     public void onRunButtonClicked(View view) {
         startActivity(new Intent(DashboardActivity.this, RunActivity.class));
+    }
+
+    private boolean isLoggedIn() {
+        return mPlayer != null && mPlayer.isLoggedIn();
     }
 
     @Override

@@ -28,7 +28,12 @@
             android:name=".MusicPlayerActivity"
             android:label="Music Player"
             android:theme="@style/AppTheme.NoActionBar">
+        </activity>
 
+        <activity
+            android:name=".SpotifyAuthentication"
+            android:label="Authenticate"
+            android:theme="@style/AppTheme.NoActionBar">
         </activity>
 
         <activity

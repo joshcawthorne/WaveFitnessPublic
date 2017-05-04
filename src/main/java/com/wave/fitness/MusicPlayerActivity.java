@@ -129,6 +129,8 @@ public class MusicPlayerActivity extends AppCompatActivity implements
 
     public boolean logIn = false;
 
+    int hasLoggedIn = 0;
+
     private final Player.OperationCallback mOperationCallback = new Player.OperationCallback() {
         @Override
         public void onSuccess() {
@@ -149,7 +151,13 @@ public class MusicPlayerActivity extends AppCompatActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_musicplayer);
 
-        onLoginButtonClicked(null);
+        if (hasLoggedIn == 0) {
+            logStatus("Logging in");
+            openLoginWindow();
+            hasLoggedIn = 1;
+        }
+
+        showAlertbox(null);
 
         // Get a reference to any UI widgets that will be needed.
         mMetadataText = (TextView) findViewById(R.id.metadata);
@@ -270,11 +278,14 @@ public class MusicPlayerActivity extends AppCompatActivity implements
     //Authentication
 
     private void openLoginWindow() {
-        final AuthenticationRequest request = new AuthenticationRequest.Builder(CLIENT_ID, AuthenticationResponse.Type.TOKEN, REDIRECT_URI)
-                .setScopes(new String[]{"user-read-private", "playlist-read", "playlist-read-private", "streaming"})
-                .build();
+        /*if(hasLoggedIn == 0) {
+            hasLoggedIn = 1;
+            final AuthenticationRequest request = new AuthenticationRequest.Builder(CLIENT_ID, AuthenticationResponse.Type.TOKEN, REDIRECT_URI)
+                    .setScopes(new String[]{"user-read-private", "playlist-read", "playlist-read-private", "streaming"})
+                    .build();
 
-        AuthenticationClient.openLoginActivity(this, REQUEST_CODE, request);
+            AuthenticationClient.openLoginActivity(this, REQUEST_CODE, request);
+        }*/
     }
 
     @Override
@@ -501,9 +512,11 @@ public class MusicPlayerActivity extends AppCompatActivity implements
             int index = random.nextInt(popGenre.length);
             TEST_PLAYLIST_URI = popGenre[index];
 
-            if(genreSwitchResume = true){
-                mPlayer.playUri(mOperationCallback, TEST_PLAYLIST_URI, 0, 0);
-            }
+            mPlayer.playUri(mOperationCallback, TEST_PLAYLIST_URI, 0, 0);
+
+            //if(genreSwitchResume = true){
+            //    mPlayer.playUri(mOperationCallback, TEST_PLAYLIST_URI, 0, 0);
+            //}
         }
         else if (selectedFromList == "Classical") {
             String[] classicalGenre = {
@@ -650,10 +663,10 @@ public class MusicPlayerActivity extends AppCompatActivity implements
         super.onPause();
         unregisterReceiver(mNetworkStateReceiver);
 
-        if (mPlayer != null) {
+        /*if (mPlayer != null) {
             mPlayer.removeNotificationCallback(MusicPlayerActivity.this);
             mPlayer.removeConnectionStateCallback(MusicPlayerActivity.this);
-        }
+        }*/
     }
 
     @Override
