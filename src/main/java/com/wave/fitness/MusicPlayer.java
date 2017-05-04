@@ -26,6 +26,7 @@ import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -58,8 +59,8 @@ import com.squareup.picasso.Transformation;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-public class MusicPlayer extends BaseActivity implements
-        Player.NotificationCallback, ConnectionStateCallback, NavigationView.OnNavigationItemSelectedListener {
+public class MusicPlayer extends AppCompatActivity implements
+        Player.NotificationCallback, ConnectionStateCallback{
 
     //Constants
 

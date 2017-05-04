@@ -1,4 +1,4 @@
-#Tue May 02 17:23:29 BST 2017
-base.0=/Users/q5045715/Desktop/WaveFitness/build/intermediates/transforms/dex/debug/folders/1000/1f/main
+#Thu May 04 19:03:28 BST 2017
+base.0=/Users/s6236422/Desktop/WaveFitness/build/intermediates/transforms/dex/debug/folders/1000/1f/main
 renamed.0=classes.dex
-file.0=/Users/q5045715/Desktop/WaveFitness/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex
+file.0=/Users/s6236422/Desktop/WaveFitness/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex

@@ -3,147 +3,21 @@
 
     <item
         is-multidex="false"
-        jar="/Users/q5045715/.android/build-cache/75d5c232f3d190df3c1226cc487d9453df7aabd6/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
-        <dex dex="/Users/q5045715/Desktop/WaveFitness/build/intermediates/pre-dexed/debug/classes_edbecc95c2167783a8d975ecbfcc26207c58d9c4.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/q5045715/.android/build-cache/08808829b45d53102af11317776c2bd24328d003/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="0558e5b6c171bd6719581340f9ac6be4af5ae265">
-        <dex dex="/Users/q5045715/Desktop/WaveFitness/build/intermediates/pre-dexed/debug/classes_f92d225ff0540770403b199bf6326e5b419413b9.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/q5045715/.android/build-cache/fd4cbd3b2c02dc5d3ccca48a84f5d03c4c4a574f/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
-        <dex dex="/Users/q5045715/Desktop/WaveFitness/build/intermediates/pre-dexed/debug/classes_8e98bf03a2b722b722177b240216923211509565.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/q5045715/.android/build-cache/f6bd96af8974ba70ffd3687229e93fb298e8bbd7/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
-        <dex dex="/Users/q5045715/Desktop/WaveFitness/build/intermediates/pre-dexed/debug/classes_05ba7bc33eca06be072ca4d2331f10f2f6b98d97.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/q5045715/.android/build-cache/4989a1ffb8fb117981fda6801ae0491a64c018c9/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
-        <dex dex="/Users/q5045715/Desktop/WaveFitness/build/intermediates/pre-dexed/debug/classes_64175378fadfff4c82b396c12f4264ac7b4e9e20.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/q5045715/.android/build-cache/48cab6727437294651f9c280fe511b76ade18690/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/Users/q5045715/Desktop/WaveFitness/build/intermediates/pre-dexed/debug/classes_d450ebf4a4e9cae97f4a4619e1c110d6427dca7b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/q5045715/.android/build-cache/f07b15e8502307706a583e491aff320a1bac3f71/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
-        <dex dex="/Users/q5045715/Desktop/WaveFitness/build/intermediates/pre-dexed/debug/classes_fd75065cfaa78aebead1034444e4cc6e73243916.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/q5045715/.android/build-cache/78cf42232a6ea17ca8ffa6cb5f9f6f6acbd4d815/output/jars/classes.jar"
+        jar="/Users/s6236422/.android/build-cache/4617f804f664a663e7e2b76b30ffefade5c2f8d8/output/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="55220cc71bd23fff8fc339a67f55be3cfd11cdec">
-        <dex dex="/Users/q5045715/Desktop/WaveFitness/build/intermediates/pre-dexed/debug/classes_7f31cf97656417e0853d8d13a9111225ccebc276.jar" />
+        <dex dex="/Users/s6236422/Desktop/WaveFitness/build/intermediates/pre-dexed/debug/classes_d02ea76ac75429c38f3c27aeeba93bdd9d75a348.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/q5045715/.android/build-cache/eaa60f60b05506f83a4337dc2567922671aadbab/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
-        <dex dex="/Users/q5045715/Desktop/WaveFitness/build/intermediates/pre-dexed/debug/classes_30b599366d77e35d073cf8c56f9c5fc082f6748b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Shared/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.3.1/support-annotations-25.3.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
-        <dex dex="/Users/q5045715/Desktop/WaveFitness/build/intermediates/pre-dexed/debug/support-annotations-25.3.1_a824dfa0c7ffd6ac5d03b65866973642ead8ca33.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/q5045715/.android/build-cache/df50422ba4443181c72e1670f880f39782fae39d/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
-        <dex dex="/Users/q5045715/Desktop/WaveFitness/build/intermediates/pre-dexed/debug/classes_d177e70a4d8857b06b0d65e625a977ab4d92a623.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/q5045715/.android/build-cache/e1b41365baccf5f93a6cab446dd4928bb2e3def8/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
-        <dex dex="/Users/q5045715/Desktop/WaveFitness/build/intermediates/pre-dexed/debug/classes_1f76272b7a1e9beaeb1eb58216a41c6878d40ef2.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/q5045715/.android/build-cache/550674500bfd5e73f990cfe1e8bbcf6ccdbddbaf/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
-        <dex dex="/Users/q5045715/Desktop/WaveFitness/build/intermediates/pre-dexed/debug/classes_e6bb495cc3bfe55a7c4abd8bac3b29e66060467c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/q5045715/.android/build-cache/78cf42232a6ea17ca8ffa6cb5f9f6f6acbd4d815/output/jars/libs/jnihelpers-1.0.jar"
+        jar="/Users/s6236422/.android/build-cache/4617f804f664a663e7e2b76b30ffefade5c2f8d8/output/jars/libs/jnihelpers-1.0.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="b54aab38b4f87a6682331b511fec0db6b952bb7e">
-        <dex dex="/Users/q5045715/Desktop/WaveFitness/build/intermediates/pre-dexed/debug/jnihelpers-1.0_48892404a93e615d43ca659e8f6b3bb16a2e5701.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/q5045715/.android/build-cache/1b41e96269e6d31d48dc558d84a1ef90414c2d65/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
-        <dex dex="/Users/q5045715/Desktop/WaveFitness/build/intermediates/pre-dexed/debug/classes_a8446213fdbfc824de2cf7c5729eba15f1d54585.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/q5045715/.android/build-cache/49595323474dba7f541992d271fb995fbc7be7a9/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="95519720620b553f63afc789beba9ad582807f7c">
-        <dex dex="/Users/q5045715/Desktop/WaveFitness/build/intermediates/pre-dexed/debug/classes_0052989fcaa1427b6392fc9e5a8003eb4f1fd190.jar" />
+        <dex dex="/Users/s6236422/Desktop/WaveFitness/build/intermediates/pre-dexed/debug/jnihelpers-1.0_96700331fbdaeee35ca1909d091d9425bc3fc9ae.jar" />
     </item>
 
 </items>
