@@ -56,7 +56,7 @@
             android:layout_gravity="center"
             android:paddingTop="175dp">
 
-            <include layout="@layout/buttons"/>
+            <include layout="@layout/musicplayer_buttons"/>
 
         </FrameLayout>
 

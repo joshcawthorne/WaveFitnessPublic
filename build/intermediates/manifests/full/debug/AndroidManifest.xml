@@ -36,7 +36,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.wave.fitness.MusicPlayer"
+            android:name="com.wave.fitness.MusicPlayerActivity"
             android:label="Music Player"
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>

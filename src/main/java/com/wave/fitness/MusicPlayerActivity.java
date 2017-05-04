@@ -25,7 +25,6 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.NavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -59,7 +58,7 @@ import com.squareup.picasso.Transformation;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-public class MusicPlayer extends AppCompatActivity implements
+public class MusicPlayerActivity extends AppCompatActivity implements
         Player.NotificationCallback, ConnectionStateCallback{
 
     //Constants
@@ -135,7 +134,7 @@ public class MusicPlayer extends AppCompatActivity implements
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_demo);
+        setContentView(R.layout.activity_musicplayer);
 
         onLoginButtonClicked(null);
 
@@ -187,8 +186,8 @@ public class MusicPlayer extends AppCompatActivity implements
         registerReceiver(mNetworkStateReceiver, filter);
 
         if (mPlayer != null) {
-            mPlayer.addNotificationCallback(MusicPlayer.this);
-            mPlayer.addConnectionStateCallback(MusicPlayer.this);
+            mPlayer.addNotificationCallback(MusicPlayerActivity.this);
+            mPlayer.addConnectionStateCallback(MusicPlayerActivity.this);
         }
     }
 
@@ -246,9 +245,9 @@ public class MusicPlayer extends AppCompatActivity implements
                 @Override
                 public void onInitialized(SpotifyPlayer player) {
                     logStatus("-- Player initialized --");
-                    mPlayer.setConnectivityStatus(mOperationCallback, getNetworkConnectivity(MusicPlayer.this));
-                    mPlayer.addNotificationCallback(MusicPlayer.this);
-                    mPlayer.addConnectionStateCallback(MusicPlayer.this);
+                    mPlayer.setConnectivityStatus(mOperationCallback, getNetworkConnectivity(MusicPlayerActivity.this));
+                    mPlayer.addNotificationCallback(MusicPlayerActivity.this);
+                    mPlayer.addConnectionStateCallback(MusicPlayerActivity.this);
                     // Trigger UI refresh
                     updateView();
                 }
@@ -394,9 +393,9 @@ public class MusicPlayer extends AppCompatActivity implements
 
     final public void showAlertbox(View view) {
         {String names[] ={"Pop","Classical","Electronic","Funk"};
-            final AlertDialog.Builder alertDialog = new AlertDialog.Builder(MusicPlayer.this);
+            final AlertDialog.Builder alertDialog = new AlertDialog.Builder(MusicPlayerActivity.this);
             LayoutInflater inflater = getLayoutInflater();
-            View convertView = (View) inflater.inflate(R.layout.list, null);
+            View convertView = (View) inflater.inflate(R.layout.musicplayer_list, null);
             alertDialog.setView(convertView);
             alertDialog.setTitle("Choose a genre:");
             final ListView lv = (ListView) convertView.findViewById(R.id.listView1);
@@ -587,8 +586,8 @@ public class MusicPlayer extends AppCompatActivity implements
         unregisterReceiver(mNetworkStateReceiver);
 
         if (mPlayer != null) {
-            mPlayer.removeNotificationCallback(MusicPlayer.this);
-            mPlayer.removeConnectionStateCallback(MusicPlayer.this);
+            mPlayer.removeNotificationCallback(MusicPlayerActivity.this);
+            mPlayer.removeConnectionStateCallback(MusicPlayerActivity.this);
         }
     }
 

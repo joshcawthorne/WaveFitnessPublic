@@ -8,6 +8,10 @@
         "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\q5065885\\.android\\build-cache\\66d6c715c17f241fd1f2bfaf4b21077207070ced\\output\\res\\layout\\notification_media_action.xml"
     },
     {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/layout/musicplayer_list.xml",
+        "source": "/Users/s6236422/Desktop/WaveFitness/src/main/res/layout/musicplayer_list.xml"
+    },
+    {
         "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml",
         "source": "/Users/s6236422/.android/build-cache/03c937ced635f82b0e66c938bf38d1db136f2716/output/res/layout/abc_action_bar_title_item.xml"
     },
@@ -112,12 +116,12 @@
         "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\q5045715\\.android\\build-cache\\f07b15e8502307706a583e491aff320a1bac3f71\\output\\res\\layout\\design_navigation_item_subheader.xml"
     },
     {
-        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\q5065885\\Desktop\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
-        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\q5065885\\.android\\build-cache\\26040674f61036a1f96e8f6b99f6f4b1324befa7\\output\\res\\layout\\abc_popup_menu_item_layout.xml"
-    },
-    {
         "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\q5065885\\Desktop\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_custom.xml",
         "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\q5065885\\.android\\build-cache\\66d6c715c17f241fd1f2bfaf4b21077207070ced\\output\\res\\layout\\notification_template_big_media_custom.xml"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\q5065885\\Desktop\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\q5065885\\.android\\build-cache\\26040674f61036a1f96e8f6b99f6f4b1324befa7\\output\\res\\layout\\abc_popup_menu_item_layout.xml"
     },
     {
         "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\q5065885\\Desktop\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
@@ -170,6 +174,10 @@
     {
         "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\q5065885\\Desktop\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
         "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\q5065885\\.android\\build-cache\\26040674f61036a1f96e8f6b99f6f4b1324befa7\\output\\res\\layout\\abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/layout/musicplayer_buttons.xml",
+        "source": "/Users/s6236422/Desktop/WaveFitness/src/main/res/layout/musicplayer_buttons.xml"
     },
     {
         "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/layout/com_spotify_sdk_login_dialog.xml",
@@ -306,6 +314,10 @@
     {
         "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Aaron\\Desktop\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
         "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Aaron\\.android\\build-cache\\0ff63c6f7ab5e6eaa66df408209d6a4ba549da4f\\output\\res\\layout\\abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/layout/activity_musicplayer.xml",
+        "source": "/Users/s6236422/Desktop/WaveFitness/src/main/res/layout/activity_musicplayer.xml"
     },
     {
         "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\q5045715\\Desktop\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_title_material.xml",
@@ -592,10 +604,6 @@
         "source": "/Users/s6236422/.android/build-cache/11b95aad7e537955698a00945bb96fb2c3176a84/output/res/layout/design_menu_item_action_area.xml"
     },
     {
-        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/layout/list.xml",
-        "source": "/Users/s6236422/Desktop/WaveFitness/src/main/res/layout/list.xml"
-    },
-    {
         "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Aaron\\Desktop\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\layout\\activity_demo.xml",
         "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\layout\\activity_demo.xml"
     },
@@ -740,10 +748,6 @@
         "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\q5045715\\.android\\build-cache\\845f9898edd920d267ba397434efe4bb2646c6dd\\output\\res\\layout\\com_spotify_sdk_login_dialog.xml"
     },
     {
-        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/layout/buttons.xml",
-        "source": "/Users/s6236422/Desktop/WaveFitness/src/main/res/layout/buttons.xml"
-    },
-    {
         "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\q5045715\\Desktop\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\layout\\design_menu_item_action_area.xml",
         "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\q5045715\\.android\\build-cache\\f07b15e8502307706a583e491aff320a1bac3f71\\output\\res\\layout\\design_menu_item_action_area.xml"
     },
@@ -794,10 +798,6 @@
     {
         "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\q5065885\\Desktop\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
         "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\q5065885\\.android\\build-cache\\26040674f61036a1f96e8f6b99f6f4b1324befa7\\output\\res\\layout\\abc_select_dialog_material.xml"
-    },
-    {
-        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/layout/activity_demo.xml",
-        "source": "/Users/s6236422/Desktop/WaveFitness/src/main/res/layout/activity_demo.xml"
     },
     {
         "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/layout/abc_list_menu_item_checkbox.xml",
