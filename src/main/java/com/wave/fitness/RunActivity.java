@@ -1,5 +1,6 @@
 package com.wave.fitness;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
@@ -9,6 +10,7 @@ import android.os.Handler;
 import android.os.SystemClock;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
@@ -31,6 +33,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.Dash;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.PolylineOptions;
 import com.mikepenz.materialdrawer.AccountHeader;
@@ -61,6 +64,7 @@ public class RunActivity extends AppCompatActivity implements OnMapReadyCallback
     Chronometer chrono;
     //Pedometer pedo;
     TextView speedView;
+    int clicked = 1;
 
     protected void requestPermissions() {
         if (ContextCompat.checkSelfPermission(this,
@@ -115,7 +119,7 @@ public class RunActivity extends AppCompatActivity implements OnMapReadyCallback
                 .withActivity(this)
                 //.withHeaderBackground(R.drawable.header)
                 .addProfiles(
-                        new ProfileDrawerItem().withName("Test").withEmail("test@gmail.com")/*.withIcon(getResources().getDrawable(R.drawable.profile))*/
+                        new ProfileDrawerItem().withName("Josh Cawthorne").withEmail("joshcawthorne97@gmail.com")/*.withIcon(getResources().getDrawable(R.drawable.profile))*/
                 )
                 .withOnAccountHeaderListener(new AccountHeader.OnAccountHeaderListener() {
                     @Override
@@ -125,7 +129,7 @@ public class RunActivity extends AppCompatActivity implements OnMapReadyCallback
                 })
                 .build();
 
-        PrimaryDrawerItem music = new PrimaryDrawerItem().withIdentifier(1).withName("music");
+        PrimaryDrawerItem music = new PrimaryDrawerItem().withIdentifier(1).withName("Music");
 
         menu = new DrawerBuilder()
                 .withActivity(this)
@@ -134,7 +138,8 @@ public class RunActivity extends AppCompatActivity implements OnMapReadyCallback
                 .withTranslucentStatusBar(true)
                 .withActionBarDrawerToggle(true)
                 .addDrawerItems(
-                        music, new DividerDrawerItem(), new SecondaryDrawerItem().withName("test")
+                        music, new SecondaryDrawerItem().withName("Start A Run"), new SecondaryDrawerItem().withName("Past Runs"),
+                        new DividerDrawerItem(), new SecondaryDrawerItem().withName("Settings"), new SecondaryDrawerItem().withName("Logout")
                 )
                 .withOnDrawerItemClickListener(
                         new Drawer.OnDrawerItemClickListener(){
@@ -149,6 +154,28 @@ public class RunActivity extends AppCompatActivity implements OnMapReadyCallback
                 .build();
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         menu.getActionBarDrawerToggle().setDrawerIndicatorEnabled(true);
+
+        final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.trackingFab);
+        final FloatingActionButton finishRun = (FloatingActionButton) findViewById(R.id.finishRun);
+        finishRun.hide();
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(clicked == 1){
+                    fab.setImageDrawable(getResources().getDrawable(R.drawable.stop));
+                    clicked = 0;
+                    toggleTracking(null);
+                    Log.e("CLICKED", "clicked");
+                    finishRun.hide();
+                }
+                else if(clicked == 0) {
+                    fab.setImageDrawable(getResources().getDrawable(R.drawable.play));
+                    clicked = 1;
+                    toggleTracking(null);
+                    finishRun.show();
+                }
+            }
+        });
     }
 
     protected void onStart() {
@@ -251,7 +278,6 @@ public class RunActivity extends AppCompatActivity implements OnMapReadyCallback
             Toast.makeText(this, "Run Finished!", Toast.LENGTH_LONG).show();
             chrono.stop();
             Log.d("RUN", "Run Tracking Stopped");
-
             //setContentView(R.layout.post_run); //Start the Post Run Screen (Just displays the layout, doesn't change to the PostRun activity)
 
         } else {
@@ -267,5 +293,9 @@ public class RunActivity extends AppCompatActivity implements OnMapReadyCallback
             Log.d("RUN", "Run Tracking Started");
         }
         tracking = !tracking;
+    }
+
+    public void finishRun(View _view) {
+        startActivity(new Intent(RunActivity.this, DashboardActivity.class));
     }
 }
