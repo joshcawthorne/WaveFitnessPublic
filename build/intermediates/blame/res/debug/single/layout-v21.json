@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "/Users/q5065885/Desktop/4thMay/WaveFitness/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
+        "source": "/Users/q5065885/.android/build-cache/7312eb86975fb14bd7b25b56e81de4f1e966f8f4/output/res/layout-v21/notification_action.xml"
+    },
+    {
+        "merged": "/Users/q5065885/Desktop/4thMay/WaveFitness/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
+        "source": "/Users/q5065885/.android/build-cache/7312eb86975fb14bd7b25b56e81de4f1e966f8f4/output/res/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/Users/q5065885/Desktop/4thMay/WaveFitness/build/intermediates/res/merged/debug/layout-v21/place_autocomplete_fragment.xml",
+        "source": "/Users/q5065885/.android/build-cache/ab878c7cc5286ce39e8c6c37b48e30e0222db8d6/output/res/layout-v21/place_autocomplete_fragment.xml"
+    },
+    {
+        "merged": "/Users/q5065885/Desktop/4thMay/WaveFitness/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
+        "source": "/Users/q5065885/.android/build-cache/7312eb86975fb14bd7b25b56e81de4f1e966f8f4/output/res/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/Users/q5065885/Desktop/4thMay/WaveFitness/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
+        "source": "/Users/q5065885/.android/build-cache/7312eb86975fb14bd7b25b56e81de4f1e966f8f4/output/res/layout-v21/notification_template_icon_group.xml"
+    }
+]

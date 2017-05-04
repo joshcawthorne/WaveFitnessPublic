@@ -1,0 +1,26 @@
+[
+    {
+        "outputFile": "/Users/q5065885/Desktop/4thMay/WaveFitness/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rCA/values-en-rCA.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 103,
+                    "endOffset": 154
+                },
+                "from": {
+                    "file": "/Users/q5065885/.android/build-cache/e0d34ae52b29794b15b00f24884e1ff6935cfe2c/output/res/values-en-rCA/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 0,
+                        "startOffset": 244,
+                        "endColumn": 99,
+                        "endOffset": 343
+                    }
+                }
+            }
+        ]
+    }
+]

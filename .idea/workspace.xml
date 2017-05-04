@@ -1255,7 +1255,6 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.3.1_af4f4567e5b06e6a1806cede707b6695b835c407/classes.dex" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/intermediates/transforms/mergeJavaRes/debug/jars/2/1f/main.jar" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/outputs/apk/WaveFitness-debug.apk" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/res/drawable/exit.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/android/support/constraint/R.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/android/support/coreui/R.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/android/support/coreutils/R.java" />
@@ -1490,6 +1489,7 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/layout-v11.json" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/layout-v16.json" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/layout-v21.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/anim-v21/design_bottom_sheet_slide_in.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/anim-v21/design_bottom_sheet_slide_out.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/anim/abc_fade_in.xml" />
@@ -1985,13 +1985,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/android/tools/fd/dummy/slice_7.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/com/android/tools/fd/dummy/slice_8.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_9/com/android/tools/fd/dummy/slice_9.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/spotify/sdk/android/authentication/R$id.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/spotify/sdk/android/authentication/R$id.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/wave/fitness/DemoActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/wave/fitness/DemoActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/wave/fitness/R$id.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/wave/fitness/R$id.class" />
@@ -2020,8 +2013,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/values/values.xml" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/values/values.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/build/intermediates/symbols/debug/R.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/build/outputs/logs/manifest-merger-debug-report.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wave/fitness/RunActivity.java" afterPath="$PROJECT_DIR$/src/main/java/com/wave/fitness/RunActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/activity_run.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_run.xml" />
     </list>
     <ignored path="DemoProject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -2058,43 +2049,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="RunActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wave/fitness/RunActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3353">
-              <caret line="275" column="44" selection-start-line="275" selection-start-column="44" selection-end-line="275" selection-end-column="44" />
-              <folding>
-                <element signature="e#5077#5337#0" expanded="true" />
-                <element signature="e#5336#5337#0" expanded="true" />
-                <element signature="e#6113#6567#0" expanded="true" />
-                <element signature="e#6566#6567#0" expanded="true" />
-                <element signature="e#7003#7681#0" expanded="true" />
-                <element signature="e#7680#7681#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RouteNode.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wave/fitness/RouteNode.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Data_RunStatistic.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wave/fitness/Data_RunStatistic.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="DBHelper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/wave/fitness/DBHelper.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -2126,8 +2080,8 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="40" column="39" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
+            <state relative-caret-position="510">
+              <caret line="37" column="39" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -2193,7 +2147,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Hamburger" />
+        <entry key="$PROJECT_DIR$" value="FinalUI" />
       </map>
     </option>
   </component>
@@ -4923,7 +4877,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493922146357</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Update Dashboard design, Improve maps logic, Add finish run fab, updated hamburger menu options and colours.">
+      <created>1493924470506</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1493924470506</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView">
@@ -5026,7 +4987,8 @@
     <MESSAGE value="Update SDK and customTabs versions within build.Gradle. Removed incorrect implementation of Dashboard and Login Screens.&#10;" />
     <MESSAGE value="Fix various bugs" />
     <MESSAGE value="Major UI updates. Implemented final dashboard. Added Hamburger Menu." />
-    <option name="LAST_COMMIT_MESSAGE" value="Major UI updates. Implemented final dashboard. Added Hamburger Menu." />
+    <MESSAGE value="Update Dashboard design, Improve maps logic, Add finish run fab, updated hamburger menu options and colours." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Dashboard design, Improve maps logic, Add finish run fab, updated hamburger menu options and colours." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -5348,8 +5310,8 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="40" column="39" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
+        <state relative-caret-position="510">
+          <caret line="37" column="39" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
           <folding />
         </state>
       </provider>

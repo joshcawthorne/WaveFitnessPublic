@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#101011">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:theme="@style/drawerTheme"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:textColor="#fff"
+        android:titleTextColor="#fff"
+        android:subtitleTextColor="#fff"
+        android:elevation="4dp" />
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView16"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:padding="10dp"
+                        android:text="Here's some stuff we think you'll like:"
+                        android:background="#101011"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="horizontal"
+                    android:background="#202022">
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scrollbars="none">
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal" >
+
+                            <com.makeramen.roundedimageview.RoundedImageView
+                                xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/oldbutgold"
+                                android:src="@drawable/oldbutgoldnew"
+                                android:scaleType="centerCrop"
+                                android:layout_height="100dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_width="150dp"
+                                app:riv_corner_radius="10dip" />
+
+                            <com.makeramen.roundedimageview.RoundedImageView
+                                xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/rock"
+                                android:src="@drawable/rockimage2"
+                                android:scaleType="centerCrop"
+                                android:layout_height="100dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_width="150dp"
+                                app:riv_corner_radius="10dip" />
+
+                            <com.makeramen.roundedimageview.RoundedImageView
+                                xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/vapor"
+                                android:src="@drawable/vapornew"
+                                android:scaleType="centerCrop"
+                                android:layout_height="100dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_width="150dp"
+                                app:riv_corner_radius="10dip" />
+
+                            <com.makeramen.roundedimageview.RoundedImageView
+                                xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/funk"
+                                android:src="@drawable/funkadelic"
+                                android:scaleType="centerCrop"
+                                android:layout_height="100dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_width="150dp"
+                                app:riv_corner_radius="10dip" />
+
+                            <com.makeramen.roundedimageview.RoundedImageView
+                                xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/dance"
+                                android:src="@drawable/dance"
+                                android:scaleType="centerCrop"
+                                android:layout_height="100dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_width="150dp"
+                                app:riv_corner_radius="10dip" />
+
+                            <com.makeramen.roundedimageview.RoundedImageView
+                                xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/bedtime"
+                                android:src="@drawable/bedtime"
+                                android:scaleType="centerCrop"
+                                android:layout_height="100dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_width="150dp"
+                                app:riv_corner_radius="10dip" />
+
+
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/vapor1"
+                        android:src="@drawable/runbanner2"
+                        android:scaleType="centerCrop"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_margin="15dp"
+                        app:riv_corner_radius="10dip"
+                        android:onClick="onRunButtonClicked" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/placeholder"
+                        android:src="@drawable/placeholder"
+                        android:scaleType="centerCrop"
+                        android:layout_width="160dp"
+                        android:layout_height="175dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        app:riv_corner_radius="10dip" />
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/alsoplaceholder"
+                        android:src="@drawable/alsoplaceholder"
+                        android:scaleType="centerCrop"
+                        android:layout_width="160dp"
+                        android:layout_height="175dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="1"
+                        app:riv_corner_radius="10dip" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/placeholder"
+                        android:src="@drawable/placeholder"
+                        android:scaleType="centerCrop"
+                        android:layout_width="160dp"
+                        android:layout_height="175dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        app:riv_corner_radius="10dip" />
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/alsoplaceholder"
+                        android:src="@drawable/alsoplaceholder"
+                        android:scaleType="centerCrop"
+                        android:layout_width="160dp"
+                        android:layout_height="175dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="1"
+                        app:riv_corner_radius="10dip" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/placeholder"
+                        android:src="@drawable/placeholder"
+                        android:scaleType="centerCrop"
+                        android:layout_width="160dp"
+                        android:layout_height="175dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        app:riv_corner_radius="10dip" />
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/alsoplaceholder"
+                        android:src="@drawable/alsoplaceholder"
+                        android:scaleType="centerCrop"
+                        android:layout_width="160dp"
+                        android:layout_height="175dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="1"
+                        app:riv_corner_radius="10dip" />
+                </LinearLayout>
+            </LinearLayout>
+    </ScrollView>
+</LinearLayout>
