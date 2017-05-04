@@ -69,6 +69,7 @@ dependencies {
         transitive = true
     }
 
+    //Rounded Images
     compile 'com.makeramen:roundedimageview:2.3.0'
 
     //Test

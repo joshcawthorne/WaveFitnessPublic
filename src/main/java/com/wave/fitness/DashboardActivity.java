@@ -52,7 +52,7 @@ public class DashboardActivity extends AppCompatActivity {
                 .withActivity(this)
                 //.withHeaderBackground(R.drawable.header)
                 .addProfiles(
-                        new ProfileDrawerItem().withName("Test").withEmail("test@gmail.com")/*.withIcon(getResources().getDrawable(R.drawable.profile))*/
+                        new ProfileDrawerItem().withName("Josh Cawthorne").withEmail("joshcawthorne97@gmail.com")/*.withIcon(getResources().getDrawable(R.drawable.profile))*/
                 )
                 .withOnAccountHeaderListener(new AccountHeader.OnAccountHeaderListener() {
                     @Override
@@ -62,7 +62,7 @@ public class DashboardActivity extends AppCompatActivity {
                 })
                 .build();
 
-        PrimaryDrawerItem music = new PrimaryDrawerItem().withIdentifier(1).withName("music");
+        PrimaryDrawerItem music = new PrimaryDrawerItem().withIdentifier(1).withName("Music");
 
          menu = new DrawerBuilder()
                 .withActivity(this)
@@ -71,7 +71,8 @@ public class DashboardActivity extends AppCompatActivity {
                 .withTranslucentStatusBar(true)
                 .withActionBarDrawerToggle(true)
                 .addDrawerItems(
-                        music, new DividerDrawerItem(), new SecondaryDrawerItem().withName("test")
+                        music, new SecondaryDrawerItem().withName("Start A Run"), new SecondaryDrawerItem().withName("Past Runs"),
+                        new DividerDrawerItem(), new SecondaryDrawerItem().withName("Settings"), new SecondaryDrawerItem().withName("Logout")
                 )
                 .withOnDrawerItemClickListener(
                         new Drawer.OnDrawerItemClickListener(){
@@ -87,17 +88,11 @@ public class DashboardActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         menu.getActionBarDrawerToggle().setDrawerIndicatorEnabled(true);
 
-
-        Button butt = (Button) findViewById(R.id.button3);
-
-        butt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(DashboardActivity.this, RunActivity.class ));
-            }
-        });
+    }
 
 
+    public void onRunButtonClicked(View view) {
+        startActivity(new Intent(DashboardActivity.this, RunActivity.class));
     }
 
     @Override

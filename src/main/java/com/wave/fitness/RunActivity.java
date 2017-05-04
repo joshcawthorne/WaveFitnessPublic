@@ -1,5 +1,6 @@
 package com.wave.fitness;
 
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.location.Location;
@@ -11,8 +12,11 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Chronometer;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -29,10 +33,20 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.PolylineOptions;
+import com.mikepenz.materialdrawer.AccountHeader;
+import com.mikepenz.materialdrawer.AccountHeaderBuilder;
+import com.mikepenz.materialdrawer.Drawer;
+import com.mikepenz.materialdrawer.DrawerBuilder;
+import com.mikepenz.materialdrawer.model.DividerDrawerItem;
+import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
+import com.mikepenz.materialdrawer.model.ProfileDrawerItem;
+import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
+import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
+import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 
 import java.util.ArrayList;
 
-public class RunActivity extends FragmentActivity implements OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, LocationListener {
+public class RunActivity extends AppCompatActivity implements OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, LocationListener {
 
     private Handler uiHandler = new Handler();
     private Runnable uiRunnable;
@@ -66,10 +80,14 @@ public class RunActivity extends FragmentActivity implements OnMapReadyCallback,
         }
     }
 
+    Drawer menu;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_run);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -92,6 +110,45 @@ public class RunActivity extends FragmentActivity implements OnMapReadyCallback,
         //pedo = new Pedometer();
         speedView = (TextView) findViewById(R.id.speed);
         Log.d("APP", "Pedometer Setup");
+
+        AccountHeader headerResult = new AccountHeaderBuilder()
+                .withActivity(this)
+                //.withHeaderBackground(R.drawable.header)
+                .addProfiles(
+                        new ProfileDrawerItem().withName("Test").withEmail("test@gmail.com")/*.withIcon(getResources().getDrawable(R.drawable.profile))*/
+                )
+                .withOnAccountHeaderListener(new AccountHeader.OnAccountHeaderListener() {
+                    @Override
+                    public boolean onProfileChanged(View view, IProfile profile, boolean currentProfile) {
+                        return false;
+                    }
+                })
+                .build();
+
+        PrimaryDrawerItem music = new PrimaryDrawerItem().withIdentifier(1).withName("music");
+
+        menu = new DrawerBuilder()
+                .withActivity(this)
+                .withAccountHeader(headerResult)
+                .withToolbar(toolbar)
+                .withTranslucentStatusBar(true)
+                .withActionBarDrawerToggle(true)
+                .addDrawerItems(
+                        music, new DividerDrawerItem(), new SecondaryDrawerItem().withName("test")
+                )
+                .withOnDrawerItemClickListener(
+                        new Drawer.OnDrawerItemClickListener(){
+                            @Override
+                            public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
+                                // do something with the clicked item :D
+                                startActivity(new Intent(RunActivity.this, DemoActivity.class));
+                                return true;
+                            }
+                        }
+                )
+                .build();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        menu.getActionBarDrawerToggle().setDrawerIndicatorEnabled(true);
     }
 
     protected void onStart() {
