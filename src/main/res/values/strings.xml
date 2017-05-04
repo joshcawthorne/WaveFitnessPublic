@@ -110,6 +110,8 @@
     <string name="tell_fasterslower_setting_details">Helps you maintain your desired pace or speed (interval doesn\'t apply)</string>
     <string name="incorrect_step_length">Incorrect step length format! Go to the Settings to change it!</string>
 
+    <string name="action_settings">Settings</string>
+
     <string name="quit">Quit</string>
     <string name="title_activity_dashboard">DashboardActivity</string>
 </resources>

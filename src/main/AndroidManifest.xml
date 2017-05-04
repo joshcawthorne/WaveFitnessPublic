@@ -25,6 +25,13 @@
         </activity>
 
         <activity
+            android:name=".MusicPlayerActivity"
+            android:label="Music Player"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+
+        <activity
             android:name=".DemoActivity"
             android:label="@string/title_activity_demo"
             android:windowSoftInputMode="stateHidden">

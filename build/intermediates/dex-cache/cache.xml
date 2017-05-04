@@ -38,15 +38,6 @@
         <dex dex="/Users/s6236422/Desktop/WaveFitness/build/intermediates/transforms/dex/debug/folders/1000/10/classes_44570fe7ebae779a162b7550f7962849499c7f9e/classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="/Users/s6236422/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
-        <dex dex="/Users/s6236422/Desktop/WaveFitness/build/intermediates/pre-dexed/debug/picasso-2.5.2_b1256731247b27025bc12ec4d7a26b7c201d0bc9.jar" />
-    </item>
-    <item
         is-multidex="true"
         jar="/Users/s6236422/.android/build-cache/06be5175b599cc9fcdc274e00b1d2c4ce9337489/output/jars/classes.jar"
         jumboMode="false"
@@ -426,6 +417,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/s6236422/.android/build-cache/a9634893d91d0b95ab3287ecc92bb31c429b48c8/output/jars/libs/jnihelpers-1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b54aab38b4f87a6682331b511fec0db6b952bb7e">
+        <dex dex="/Users/s6236422/Desktop/WaveFitness/build/intermediates/transforms/dex/debug/folders/1000/10/jnihelpers-1.0_6e8b76c8c78ab5e7788b7fddb8ec709d161c8b03/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/s6236422/.android/build-cache/3a2a82281c0584d5a1782cf00a85669b56de660a/output/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -597,24 +597,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/s6236422/.android/build-cache/338026abf378219f6691345a56f3976ce5aab890/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="55220cc71bd23fff8fc339a67f55be3cfd11cdec">
-        <dex dex="/Users/s6236422/Desktop/WaveFitness/build/intermediates/transforms/dex/debug/folders/1000/10/classes_2ff6800d2efddf850d94746ce27544d5218f0139/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/s6236422/.android/build-cache/338026abf378219f6691345a56f3976ce5aab890/output/jars/libs/jnihelpers-1.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="b54aab38b4f87a6682331b511fec0db6b952bb7e">
-        <dex dex="/Users/s6236422/Desktop/WaveFitness/build/intermediates/transforms/dex/debug/folders/1000/10/jnihelpers-1.0_688499d6bf1f1c0abc240fbc14aa4f5825906bf4/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/s6236422/.android/build-cache/0c580a654f8362faac6cef57e59a9b7904c01ea4/output/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -675,6 +657,15 @@
         revision="25.0.2"
         sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
         <dex dex="/Users/s6236422/Desktop/WaveFitness/build/intermediates/transforms/dex/debug/folders/1000/10/classes_94968a5bd352d5a63933b40c7765a8a2f4b56c65/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/s6236422/.android/build-cache/a9634893d91d0b95ab3287ecc92bb31c429b48c8/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="55220cc71bd23fff8fc339a67f55be3cfd11cdec">
+        <dex dex="/Users/s6236422/Desktop/WaveFitness/build/intermediates/transforms/dex/debug/folders/1000/10/classes_144c59b0f3e8141b30f909a8dc7a3d121ec61022/classes.dex" />
     </item>
     <item
         is-multidex="true"

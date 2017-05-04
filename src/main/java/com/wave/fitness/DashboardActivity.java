@@ -79,7 +79,7 @@ public class DashboardActivity extends AppCompatActivity {
                              @Override
                              public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
                                  // do something with the clicked item :D
-                                 startActivity(new Intent(DashboardActivity.this, DemoActivity.class));
+                                 startActivity(new Intent(DashboardActivity.this, MusicPlayerActivity.class));
                                 return true;
                              }
                         }

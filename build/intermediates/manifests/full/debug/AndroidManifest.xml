@@ -38,13 +38,19 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.wave.fitness.DashboardActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.wave.fitness.MusicPlayerActivity"
+            android:label="Music Player"
+            android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
             android:name="com.wave.fitness.DemoActivity"
