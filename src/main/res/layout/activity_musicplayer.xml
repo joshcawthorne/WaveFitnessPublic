@@ -6,12 +6,16 @@
     android:layout_height="match_parent"
     tools:context="com.wave.fitness.DemoActivity">
 
-    <android.support.design.widget.AppBarLayout
-        android:id="@+id/app_bar"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/app_bar_height"
-        android:fitsSystemWindows="true"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:theme="@style/drawerTheme"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:textColor="#fff"
+        android:titleTextColor="#fff"
+        android:subtitleTextColor="#fff"
+        android:elevation="4dp" />
 
             <ImageView
                 android:layout_width="match_parent"
@@ -24,7 +28,6 @@
                 android:maxHeight="150dp"
                 />
 
-    </android.support.design.widget.AppBarLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
