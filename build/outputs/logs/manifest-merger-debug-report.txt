@@ -98,7 +98,7 @@ MERGED from [com.google.android.gms:play-services-tasks:10.2.0] /Users/s6236422/
 MERGED from [com.google.android.gms:play-services-basement:10.2.0] /Users/s6236422/.android/build-cache/9e9c0e572ada070f23c8de4ee735c3bed87b1330/output/AndroidManifest.xml:19:5-21:19
 MERGED from [com.spotify.android:auth:1.0.0-alpha] /Users/s6236422/.android/build-cache/35b2ff086f83de8643932537bd179a4fc90b2dde/output/AndroidManifest.xml:33:5-53:19
 MERGED from [com.android.support:customtabs:25.1.1] /Users/s6236422/.android/build-cache/f073b0a32d42b397134a5d2eea2292f13d18a929/output/AndroidManifest.xml:22:5-20
-MERGED from [com.spotify.sdk:spotify-player-24-noconnect-2.20b:] /Users/s6236422/.android/build-cache/338026abf378219f6691345a56f3976ce5aab890/output/AndroidManifest.xml:30:5-20
+MERGED from [com.spotify.sdk:spotify-player-24-noconnect-2.20b:] /Users/s6236422/.android/build-cache/32bd2c1a8e14f819431795070bb4139ed5bf7311/output/AndroidManifest.xml:30:5-20
 MERGED from [com.jjoe64:graphview:4.2.1] /Users/s6236422/.android/build-cache/4bf3aec4005480fc30feaa3842ed1f3fb531832c/output/AndroidManifest.xml:11:5-12:19
 MERGED from [com.android.support:design:25.3.1] /Users/s6236422/.android/build-cache/11b95aad7e537955698a00945bb96fb2c3176a84/output/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/s6236422/.android/build-cache/03c937ced635f82b0e66c938bf38d1db136f2716/output/AndroidManifest.xml:29:5-20
@@ -242,7 +242,7 @@ MERGED from [com.google.android.gms:play-services-tasks:10.2.0] /Users/s6236422/
 MERGED from [com.google.android.gms:play-services-basement:10.2.0] /Users/s6236422/.android/build-cache/9e9c0e572ada070f23c8de4ee735c3bed87b1330/output/AndroidManifest.xml:17:5-43
 MERGED from [com.spotify.android:auth:1.0.0-alpha] /Users/s6236422/.android/build-cache/35b2ff086f83de8643932537bd179a4fc90b2dde/output/AndroidManifest.xml:27:5-29:41
 MERGED from [com.android.support:customtabs:25.1.1] /Users/s6236422/.android/build-cache/f073b0a32d42b397134a5d2eea2292f13d18a929/output/AndroidManifest.xml:20:5-44
-MERGED from [com.spotify.sdk:spotify-player-24-noconnect-2.20b:] /Users/s6236422/.android/build-cache/338026abf378219f6691345a56f3976ce5aab890/output/AndroidManifest.xml:26:5-28:41
+MERGED from [com.spotify.sdk:spotify-player-24-noconnect-2.20b:] /Users/s6236422/.android/build-cache/32bd2c1a8e14f819431795070bb4139ed5bf7311/output/AndroidManifest.xml:26:5-28:41
 MERGED from [com.jjoe64:graphview:4.2.1] /Users/s6236422/.android/build-cache/4bf3aec4005480fc30feaa3842ed1f3fb531832c/output/AndroidManifest.xml:7:5-9:41
 MERGED from [com.mikepenz:materialdrawer:5.9.1] /Users/s6236422/.android/build-cache/91a690bf851fc9c61a9fd96dab50b9f131881123/output/AndroidManifest.xml:8:5-10:41
 MERGED from [com.android.support:design:25.3.1] /Users/s6236422/.android/build-cache/11b95aad7e537955698a00945bb96fb2c3176a84/output/AndroidManifest.xml:21:5-23:62

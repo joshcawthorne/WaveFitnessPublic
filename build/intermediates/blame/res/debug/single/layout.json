@@ -12,12 +12,12 @@
         "source": "/Users/s6236422/.android/build-cache/03c937ced635f82b0e66c938bf38d1db136f2716/output/res/layout/select_dialog_item_material.xml"
     },
     {
-        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml",
-        "source": "/Users/s6236422/.android/build-cache/03c937ced635f82b0e66c938bf38d1db136f2716/output/res/layout/abc_list_menu_item_layout.xml"
-    },
-    {
         "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/layout/notification_template_big_media_narrow.xml",
         "source": "/Users/s6236422/.android/build-cache/5ed2f2bf588b4d3e06afbb8c68b2f6dfdc9dfd65/output/res/layout/notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml",
+        "source": "/Users/s6236422/.android/build-cache/03c937ced635f82b0e66c938bf38d1db136f2716/output/res/layout/abc_list_menu_item_layout.xml"
     },
     {
         "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml",
@@ -72,12 +72,12 @@
         "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\layout\\buttons.xml"
     },
     {
-        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/layout/select_dialog_multichoice_material.xml",
-        "source": "/Users/s6236422/.android/build-cache/03c937ced635f82b0e66c938bf38d1db136f2716/output/res/layout/select_dialog_multichoice_material.xml"
-    },
-    {
         "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_list_item.xml",
         "source": "/Users/s6236422/.android/build-cache/03c937ced635f82b0e66c938bf38d1db136f2716/output/res/layout/abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/layout/select_dialog_multichoice_material.xml",
+        "source": "/Users/s6236422/.android/build-cache/03c937ced635f82b0e66c938bf38d1db136f2716/output/res/layout/select_dialog_multichoice_material.xml"
     },
     {
         "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/layout/abc_dialog_title_material.xml",
@@ -148,12 +148,12 @@
         "source": "/Users/s6236422/.android/build-cache/35b2ff086f83de8643932537bd179a4fc90b2dde/output/res/layout/com_spotify_sdk_login_activity.xml"
     },
     {
-        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/layout/notification_template_part_chronometer.xml",
-        "source": "/Users/s6236422/.android/build-cache/03c937ced635f82b0e66c938bf38d1db136f2716/output/res/layout/notification_template_part_chronometer.xml"
-    },
-    {
         "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/layout/notification_template_lines_media.xml",
         "source": "/Users/s6236422/.android/build-cache/03c937ced635f82b0e66c938bf38d1db136f2716/output/res/layout/notification_template_lines_media.xml"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/layout/notification_template_part_chronometer.xml",
+        "source": "/Users/s6236422/.android/build-cache/03c937ced635f82b0e66c938bf38d1db136f2716/output/res/layout/notification_template_part_chronometer.xml"
     },
     {
         "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/layout/activity_login.xml",
