@@ -43,6 +43,7 @@ android {
 
 dependencies {
 
+
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
@@ -62,6 +63,13 @@ dependencies {
 
     //Graphview
     compile 'com.jjoe64:graphview:4.2.1'
+
+    //MaterialDrawer
+    compile('com.mikepenz:materialdrawer:5.9.1@aar') {
+        transitive = true
+    }
+
+    compile 'com.makeramen:roundedimageview:2.3.0'
 
     //Test
     androidTestCompile 'org.hamcrest:hamcrest-core:1.3'

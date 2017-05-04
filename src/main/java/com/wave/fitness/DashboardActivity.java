@@ -14,18 +14,30 @@ import com.jjoe64.graphview.GridLabelRenderer;
 import com.jjoe64.graphview.helper.DateAsXAxisLabelFormatter;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
+import com.mikepenz.materialdrawer.AccountHeader;
+import com.mikepenz.materialdrawer.AccountHeaderBuilder;
+import com.mikepenz.materialdrawer.Drawer;
+import com.mikepenz.materialdrawer.DrawerBuilder;
+import com.mikepenz.materialdrawer.model.DividerDrawerItem;
+import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
+import com.mikepenz.materialdrawer.model.ProfileDrawerItem;
+import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
+import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
+import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 
 import java.util.Calendar;
 import java.util.Date;
 
 public class DashboardActivity extends AppCompatActivity {
 
+    Drawer menu;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
-        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        //setSupportActionBar(toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         //FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         //fab.setOnClickListener(new View.OnClickListener() {
@@ -36,6 +48,46 @@ public class DashboardActivity extends AppCompatActivity {
         //    }
         //});
 
+        AccountHeader headerResult = new AccountHeaderBuilder()
+                .withActivity(this)
+                //.withHeaderBackground(R.drawable.header)
+                .addProfiles(
+                        new ProfileDrawerItem().withName("Test").withEmail("test@gmail.com")/*.withIcon(getResources().getDrawable(R.drawable.profile))*/
+                )
+                .withOnAccountHeaderListener(new AccountHeader.OnAccountHeaderListener() {
+                    @Override
+                    public boolean onProfileChanged(View view, IProfile profile, boolean currentProfile) {
+                        return false;
+                    }
+                })
+                .build();
+
+        PrimaryDrawerItem music = new PrimaryDrawerItem().withIdentifier(1).withName("music");
+
+         menu = new DrawerBuilder()
+                .withActivity(this)
+                .withAccountHeader(headerResult)
+                .withToolbar(toolbar)
+                .withTranslucentStatusBar(true)
+                .withActionBarDrawerToggle(true)
+                .addDrawerItems(
+                        music, new DividerDrawerItem(), new SecondaryDrawerItem().withName("test")
+                )
+                .withOnDrawerItemClickListener(
+                        new Drawer.OnDrawerItemClickListener(){
+                             @Override
+                             public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
+                                 // do something with the clicked item :D
+                                 startActivity(new Intent(DashboardActivity.this, DemoActivity.class));
+                                return true;
+                             }
+                        }
+                )
+                .build();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        menu.getActionBarDrawerToggle().setDrawerIndicatorEnabled(true);
+
+
         Button butt = (Button) findViewById(R.id.button3);
 
         butt.setOnClickListener(new View.OnClickListener() {
@@ -45,53 +97,18 @@ public class DashboardActivity extends AppCompatActivity {
             }
         });
 
-        GraphView graph1 = (GraphView) findViewById(R.id.graph1);
 
-        //Check http://www.android-graphview.org/style-options/ for style instruction
-        graph1.getGridLabelRenderer().setGridStyle(GridLabelRenderer.GridStyle.NONE);
+    }
 
-        LineGraphSeries<DataPoint> series1 = new LineGraphSeries<>(new DataPoint[] {
-                new DataPoint(0, 1),
-                new DataPoint(1, 5),
-                new DataPoint(2, 3),
-                new DataPoint(3, 2),
-                new DataPoint(4, 6)
-        });
-        graph1.addSeries(series1);
+    @Override
+    public void onBackPressed() {
+        if(menu.isDrawerOpen()){
+            menu.closeDrawer();
+        }
+        else{
+            super.onBackPressed();
+        }
 
-        // generate Dates
-        Calendar calendar = Calendar.getInstance();
-        Date d1 = calendar.getTime();
-        calendar.add(Calendar.DATE, 1);
-        Date d2 = calendar.getTime();
-        calendar.add(Calendar.DATE, 1);
-        Date d3 = calendar.getTime();
-
-        GraphView graph2 = (GraphView) findViewById(R.id.graph2);
-        graph2.getGridLabelRenderer().setGridStyle(GridLabelRenderer.GridStyle.NONE);
-
-// you can directly pass Date objects to DataPoint-Constructor
-// this will convert the Date to double via Date#getTime()
-        LineGraphSeries<DataPoint> series2 = new LineGraphSeries<>(new DataPoint[] {
-                new DataPoint(d1, 1),
-                new DataPoint(d2, 5),
-                new DataPoint(d3, 3)
-        });
-
-        graph2.addSeries(series2);
-
-// set date label formatter
-        graph2.getGridLabelRenderer().setLabelFormatter(new DateAsXAxisLabelFormatter(this));
-        graph2.getGridLabelRenderer().setNumHorizontalLabels(3); // only 4 because of the space
-
-// set manual x bounds to have nice steps
-        graph2.getViewport().setMinX(d1.getTime());
-        graph2.getViewport().setMaxX(d3.getTime());
-        graph2.getViewport().setXAxisBoundsManual(true);
-
-// as we use dates as labels, the human rounding to nice readable numbers
-// is not necessary
-        graph2.getGridLabelRenderer().setHumanRounding(false);
     }
 
 }
