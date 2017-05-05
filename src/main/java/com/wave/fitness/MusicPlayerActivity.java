@@ -1,16 +1,10 @@
 /*
-
     Wave Fitness Version 1.0
-
     This is version 1.0 of Wave's Spotify implementation. It utilises the Spotify Android SDK, and it's example project.
-
     This is merely a foundation to the app, and should be heavily adopted and changed.
-
     ~ Josh Cawthorne.
-
     IMPORTANT: DUE TO A BUG WITH THE SPOTIFY SDK, IF A USER HAS THE SPOTIFY APP INSTALLED ON THEIR PHONE, AND THEY TRY TO SIGN IN,
     AUTHENTICATION WILL FAIL.
-
  */
 package com.wave.fitness;
 
@@ -129,8 +123,6 @@ public class MusicPlayerActivity extends AppCompatActivity implements
 
     public boolean logIn = false;
 
-    int hasLoggedIn = 0;
-
     private final Player.OperationCallback mOperationCallback = new Player.OperationCallback() {
         @Override
         public void onSuccess() {
@@ -146,18 +138,21 @@ public class MusicPlayerActivity extends AppCompatActivity implements
 
     //Initialization
 
+    private static boolean mHasItRun = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_musicplayer);
 
-        if (hasLoggedIn == 0) {
-            logStatus("Logging in");
-            openLoginWindow();
-            hasLoggedIn = 1;
+        if (!mHasItRun) {
+            onLoginButtonClicked(null);
+            mHasItRun = true;
         }
-
-        showAlertbox(null);
+        else if(mHasItRun) {
+            Log.e("MPLAYERSTATE", "UPDATED");
+            updateView();
+        }
 
         // Get a reference to any UI widgets that will be needed.
         mMetadataText = (TextView) findViewById(R.id.metadata);
@@ -278,14 +273,11 @@ public class MusicPlayerActivity extends AppCompatActivity implements
     //Authentication
 
     private void openLoginWindow() {
-        /*if(hasLoggedIn == 0) {
-            hasLoggedIn = 1;
-            final AuthenticationRequest request = new AuthenticationRequest.Builder(CLIENT_ID, AuthenticationResponse.Type.TOKEN, REDIRECT_URI)
-                    .setScopes(new String[]{"user-read-private", "playlist-read", "playlist-read-private", "streaming"})
-                    .build();
+        final AuthenticationRequest request = new AuthenticationRequest.Builder(CLIENT_ID, AuthenticationResponse.Type.TOKEN, REDIRECT_URI)
+                .setScopes(new String[]{"user-read-private", "playlist-read", "playlist-read-private", "streaming"})
+                .build();
 
-            AuthenticationClient.openLoginActivity(this, REQUEST_CODE, request);
-        }*/
+        AuthenticationClient.openLoginActivity(this, REQUEST_CODE, request);
     }
 
     @Override
@@ -349,7 +341,7 @@ public class MusicPlayerActivity extends AppCompatActivity implements
 
         // Set enabled for all widgets which depend on initialized state
         for (int id : REQUIRES_INITIALIZED_STATE) {
-        //    findViewById(id).setEnabled(loggedIn);
+            //    findViewById(id).setEnabled(loggedIn);
         }
 
         // Same goes for the playing state
@@ -369,10 +361,10 @@ public class MusicPlayerActivity extends AppCompatActivity implements
             //Set the metadata from song length to Minutes:Seconds, rather than milliseconds.
             final String durationStr =
                     String.format("\n %02d:%02d",
-                    TimeUnit.MILLISECONDS.toMinutes(mMetadata.currentTrack.durationMs),
-                    TimeUnit.MILLISECONDS.toSeconds(mMetadata.currentTrack.durationMs) -
-                            TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(mMetadata.currentTrack.durationMs))
-            );
+                            TimeUnit.MILLISECONDS.toMinutes(mMetadata.currentTrack.durationMs),
+                            TimeUnit.MILLISECONDS.toSeconds(mMetadata.currentTrack.durationMs) -
+                                    TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(mMetadata.currentTrack.durationMs))
+                    );
             mMetadataText.setText(mMetadata.currentTrack.name + " - " + mMetadata.currentTrack.artistName + durationStr);
             Picasso.with(this)
                     .load(mMetadata.currentTrack.albumCoverWebUrl)
@@ -393,8 +385,8 @@ public class MusicPlayerActivity extends AppCompatActivity implements
                     .into(coverArtView);
         } else {
             mMetadataText.setText("You're not playing anything yet! " +
-                                    "\n" +
-                                    "Are you signed in?");
+                    "\n" +
+                    "Are you signed in?");
             coverArtView.setBackground(null);
         }
 
@@ -445,7 +437,7 @@ public class MusicPlayerActivity extends AppCompatActivity implements
     public void onGenreButtonClicked(View view) {
         //Array that contains all potential playlists.
         String[] playlists = {"spotify:user:4joshua-cawthorne:playlist:4vr1l7iKUXfsmxEFlQabwG",
-                              "spotify:user:spotify:playlist:37i9dQZF1DX6VdMW310YC7"};
+                "spotify:user:spotify:playlist:37i9dQZF1DX6VdMW310YC7"};
         //Create random
         Random random = new Random();
         //Pause Music if user is playing some.
@@ -512,11 +504,9 @@ public class MusicPlayerActivity extends AppCompatActivity implements
             int index = random.nextInt(popGenre.length);
             TEST_PLAYLIST_URI = popGenre[index];
 
-            mPlayer.playUri(mOperationCallback, TEST_PLAYLIST_URI, 0, 0);
-
-            //if(genreSwitchResume = true){
-            //    mPlayer.playUri(mOperationCallback, TEST_PLAYLIST_URI, 0, 0);
-            //}
+            if(genreSwitchResume = true){
+                mPlayer.playUri(mOperationCallback, TEST_PLAYLIST_URI, 0, 0);
+            }
         }
         else if (selectedFromList == "Classical") {
             String[] classicalGenre = {
@@ -663,17 +653,17 @@ public class MusicPlayerActivity extends AppCompatActivity implements
         super.onPause();
         unregisterReceiver(mNetworkStateReceiver);
 
-        /*if (mPlayer != null) {
+        if (mPlayer != null) {
             mPlayer.removeNotificationCallback(MusicPlayerActivity.this);
             mPlayer.removeConnectionStateCallback(MusicPlayerActivity.this);
-        }*/
+        }
     }
 
-    @Override
-    protected void onDestroy() {
-        Spotify.destroyPlayer(this);
-        super.onDestroy();
-    }
+    //@Override
+    //protected void onDestroy() {
+     //   Spotify.destroyPlayer(this);
+     //   super.onDestroy();
+    //}
 
     @Override
     public void onPlaybackEvent(PlayerEvent event) {

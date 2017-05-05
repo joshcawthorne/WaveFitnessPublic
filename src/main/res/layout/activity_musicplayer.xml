@@ -73,6 +73,8 @@
         android:gravity="center"
         android:textColor="#fff"
         android:textSize="17sp"
+        android:maxLength= "10"
+        android:scrollbars = "vertical"
         />
 
     <android.support.design.widget.FloatingActionButton

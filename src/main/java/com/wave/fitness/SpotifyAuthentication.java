@@ -6,11 +6,9 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.View;
 import android.widget.EditText;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -29,11 +27,10 @@ import com.spotify.sdk.android.player.PlayerEvent;
 import com.spotify.sdk.android.player.Spotify;
 import com.spotify.sdk.android.player.SpotifyPlayer;
 
-
 import static com.spotify.sdk.android.authentication.LoginActivity.REQUEST_CODE;
 
 
-public class SpotifyAuthentication extends AppCompatActivity implements
+final public class SpotifyAuthentication extends AppCompatActivity implements
         Player.NotificationCallback, ConnectionStateCallback{
 
     private static final String TAG = null;
@@ -79,7 +76,7 @@ public class SpotifyAuthentication extends AppCompatActivity implements
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_musicplayer);
+        setContentView(R.layout.activity_dashboard);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         logStatus("Logging in");
@@ -126,6 +123,13 @@ public class SpotifyAuthentication extends AppCompatActivity implements
                 default:
                     logStatus("Auth result: " + response.getType());
             }
+            onAuthenticationComplete(response);
+            Intent myIntent = new Intent(SpotifyAuthentication.this, MusicPlayerActivity.class);
+            myIntent.putExtra("requestCode", requestCode);
+            myIntent.putExtra("resultCode", resultCode);
+            myIntent.putExtra("intent", intent);
+            myIntent.putExtra("AuthenticationResponse", AuthenticationResponse.Type.TOKEN);
+            myIntent.putExtra("response", response);
         }
     }
 
@@ -151,6 +155,10 @@ public class SpotifyAuthentication extends AppCompatActivity implements
         } else {
             mPlayer.login(authResponse.getAccessToken());
         }
+
+        Intent myIntent = new Intent(SpotifyAuthentication.this, MusicPlayerActivity.class);
+        myIntent.putExtra("authResponse", authResponse.getAccessToken());
+
         Intent i = new Intent(getBaseContext(), DashboardActivity.class);
         startActivity(i);
     }

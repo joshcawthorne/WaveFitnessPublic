@@ -1,4 +1,5 @@
-<RelativeLayout android:id="@+id/root"
+<RelativeLayout xmlns:map="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
                 xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
@@ -6,47 +7,40 @@
                 tools:context="com.wave.fitness.DemoActivity">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:clipToPadding="false"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
         android:orientation="vertical">
 
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            android:subtitleTextColor="#fff"
+            android:textColor="#fff"
+            android:theme="@style/drawerTheme"
+            android:titleTextColor="#fff" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:scaleType="fitEnd"
-            android:id="@+id/cover_art"
-            android:adjustViewBounds="true"
-            android:maxWidth="150dp"
-            android:maxHeight="150dp"
-            android:paddingBottom="25dp"
-            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="485dp"
+                tools:context="teamcupcake.uk.ac.tees.wave.RunActivity"/>
+
+            <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <include layout="@layout/buttons" />
+
+            </FrameLayout>
+        </LinearLayout>
 
     </LinearLayout>
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/status_text_container">
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <include layout="@layout/buttons"/>
-
-            <Button
-                android:text="Button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/button4" />
-
-        </FrameLayout>
-
-    </ScrollView>
-
-
-
 </RelativeLayout>

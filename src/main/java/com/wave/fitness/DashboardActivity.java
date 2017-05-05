@@ -2,19 +2,10 @@ package com.wave.fitness;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 
-import com.jjoe64.graphview.GraphView;
-import com.jjoe64.graphview.GridLabelRenderer;
-import com.jjoe64.graphview.helper.DateAsXAxisLabelFormatter;
-import com.jjoe64.graphview.series.DataPoint;
-import com.jjoe64.graphview.series.LineGraphSeries;
 import com.mikepenz.materialdrawer.AccountHeader;
 import com.mikepenz.materialdrawer.AccountHeaderBuilder;
 import com.mikepenz.materialdrawer.Drawer;
@@ -26,9 +17,6 @@ import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 import com.spotify.sdk.android.player.SpotifyPlayer;
-
-import java.util.Calendar;
-import java.util.Date;
 
 public class DashboardActivity extends AppCompatActivity {
 
@@ -42,22 +30,6 @@ public class DashboardActivity extends AppCompatActivity {
         setContentView(R.layout.activity_dashboard);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        if (!isLoggedIn()) {
-            Intent i = new Intent(getBaseContext(), SpotifyAuthentication.class);
-            startActivity(i);
-        } else {
-            Log.i("Login Status", "Logged in");
-        }
-
-        //FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        //fab.setOnClickListener(new View.OnClickListener() {
-        //    @Override
-        //    public void onClick(View view) {
-        //        Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-        //                .setAction("Action", null).show();
-        //    }
-        //});
 
         AccountHeader headerResult = new AccountHeaderBuilder()
                 .withActivity(this)
@@ -90,7 +62,7 @@ public class DashboardActivity extends AppCompatActivity {
                              @Override
                              public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
                                  // do something with the clicked item :D
-                                 startActivity(new Intent(DashboardActivity.this, MusicPlayerActivity.class));
+                                 startActivity(new Intent(DashboardActivity.this, DemoActivity.class));
                                 return true;
                              }
                         }
