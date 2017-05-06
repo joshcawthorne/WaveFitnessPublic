@@ -8,6 +8,8 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 
 import com.jjoe64.graphview.GraphView;
@@ -29,10 +31,12 @@ import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 import java.util.Calendar;
 import java.util.Date;
 
-public class DashboardActivity extends AppCompatActivity {
+public class DashboardActivity extends AppCompatActivity implements Animation.AnimationListener {
 
     Drawer menu;
     SharedPreferences prefs = null;
+
+    Animation animFadein;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,14 +47,11 @@ public class DashboardActivity extends AppCompatActivity {
 
         prefs = getSharedPreferences("com.wave.fitness", MODE_PRIVATE);
 
-        //FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        //fab.setOnClickListener(new View.OnClickListener() {
-        //    @Override
-        //    public void onClick(View view) {
-        //        Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-        //                .setAction("Action", null).show();
-        //    }
-        //});
+        animFadein = AnimationUtils.loadAnimation(getApplicationContext(),
+                R.anim.standard);
+
+        animFadein.setAnimationListener(this);
+
 
         AccountHeader headerResult = new AccountHeaderBuilder()
                 .withActivity(this)
@@ -118,6 +119,27 @@ public class DashboardActivity extends AppCompatActivity {
             intent.addCategory(Intent.CATEGORY_HOME);
             startActivity(intent);
         }
+
+    }
+
+    @Override
+    public void onAnimationEnd(Animation animation) {
+        // Take any action after completing the animation
+
+        // check for fade in animation
+        if (animation == animFadein) {
+        }
+    }
+
+    @Override
+    public void onAnimationRepeat(Animation animation) {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Override
+    public void onAnimationStart(Animation animation) {
+        // TODO Auto-generated method stub
 
     }
 

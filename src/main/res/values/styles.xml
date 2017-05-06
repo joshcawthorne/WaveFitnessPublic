@@ -17,7 +17,10 @@
         <item name="material_drawer_selected_text">@color/material_drawer_selected_text</item>
         <item name="material_drawer_header_selection_text">@color/material_drawer_header_selection_text</item>
         <item name="android:textColorHint">@color/waveHint</item>
+    </style>
 
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/splashscreen</item>
     </style>
 
     <style name="DialogBox" parent="Theme.AppCompat.Light.Dialog.Alert">
