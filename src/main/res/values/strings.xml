@@ -119,10 +119,14 @@
     <string name="login_welcome">Welcome to Wave!</string>
     <string name="login_subtitle">Login to get right back at it.</string>
     <string name="login">Login</string>
+    <string name="name">Full name</string>
     <string name="password">Password</string>
     <string name="err_msg_name">Enter your full name</string>
     <string name="err_msg_email">Enter valid email address</string>
     <string name="err_msg_password">Enter the password</string>
     <string name="version">Wave Beta Version 2.0</string>
+
+    <string name="signup">So you want to get started?</string>
+    <string name="signup_subtitle">Well, we\'ll need a few small details first.</string>
 
 </resources>

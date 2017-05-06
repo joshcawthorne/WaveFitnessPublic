@@ -50,14 +50,14 @@
         <TextView
             tools:ignore="MissingPrefix"
             android:id="@+id/welcome_title"
-            android:layout_height="30dp"
+            android:layout_height="35dp"
             android:text="@string/login_welcome"
             android:gravity="center_horizontal"
             android:layout_width="fill_parent"
             android:layout_alignParentTop="true"
             android:textAlignment="center"
             fontPath="nexalight.otf"
-            android:layout_marginBottom="3dp"
+            android:layout_marginBottom="0dp"
             android:textColor="#fff"
             android:textSize="25dp" />
 

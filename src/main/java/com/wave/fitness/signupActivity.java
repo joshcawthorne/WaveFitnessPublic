@@ -1,6 +1,8 @@
 package com.wave.fitness;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -16,30 +18,24 @@ import butterknife.InjectView;
 public class signupActivity extends AppCompatActivity {
     private static final String TAG = "SignupActivity";
 
+    SharedPreferences prefs = null;
+
     @InjectView(R.id.input_name) EditText _nameText;
     @InjectView(R.id.input_email) EditText _emailText;
     @InjectView(R.id.input_password) EditText _passwordText;
-    @InjectView(R.id.btn_signup) Button _signupButton;
-    @InjectView(R.id.link_login) TextView _loginLink;
+    @InjectView(R.id.signup) Button _signupButton;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_signup);
+        setContentView(R.layout.activity_register);
+        prefs = getSharedPreferences("com.wave.fitness", MODE_PRIVATE);
         ButterKnife.inject(this);
 
         _signupButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 signup();
-            }
-        });
-
-        _loginLink.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Finish the registration screen and return to the Login activity
-                finish();
             }
         });
     }
@@ -54,10 +50,10 @@ public class signupActivity extends AppCompatActivity {
 
         _signupButton.setEnabled(false);
 
-        final ProgressDialog progressDialog = new ProgressDialog(SignupActivity.this,
-                R.style.AppTheme_Dark_Dialog);
+        final ProgressDialog progressDialog = new ProgressDialog(signupActivity.this,
+                R.style.DialogBox);
         progressDialog.setIndeterminate(true);
-        progressDialog.setMessage("Creating Account...");
+        progressDialog.setMessage("Hold on, we're just setting some stuff up...");
         progressDialog.show();
 
         String name = _nameText.getText().toString();
@@ -78,11 +74,18 @@ public class signupActivity extends AppCompatActivity {
                 }, 3000);
     }
 
+    public void returnLogin() {
+        Intent returnLogin = new Intent(signupActivity.this, startupActivity.class);
+        signupActivity.this.startActivity(returnLogin);
+    }
+
 
     public void onSignupSuccess() {
         _signupButton.setEnabled(true);
         setResult(RESULT_OK, null);
-        finish();
+        prefs.edit().putBoolean("firstrun", false).commit();
+        Intent startDashboard = new Intent(signupActivity.this, DashboardActivity.class);
+        signupActivity.this.startActivity(startDashboard);
     }
 
     public void onSignupFailed() {
