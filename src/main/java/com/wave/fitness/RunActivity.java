@@ -1,5 +1,6 @@
 package com.wave.fitness;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
@@ -9,6 +10,7 @@ import android.os.Handler;
 import android.os.SystemClock;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
@@ -46,6 +48,8 @@ import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 
 import java.util.ArrayList;
 
+import static com.wave.fitness.R.layout.activity_run;
+
 public class RunActivity extends AppCompatActivity implements OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, LocationListener {
 
     private Handler uiHandler = new Handler();
@@ -82,10 +86,12 @@ public class RunActivity extends AppCompatActivity implements OnMapReadyCallback
 
     Drawer menu;
 
+    private boolean running = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_run);
+        setContentView(activity_run);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -93,6 +99,25 @@ public class RunActivity extends AppCompatActivity implements OnMapReadyCallback
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
         Log.d("MAP", "Created");
+
+        //Generate fabs
+        final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.runToggle);
+        final FloatingActionButton fabTwo = (FloatingActionButton) findViewById(R.id.endRun);
+
+        fabTwo.hide();
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(!running) {
+                    fab.setImageDrawable(getResources().getDrawable(R.drawable.pause));
+                    toggleTracking(null);
+                } else {
+                    fab.setImageDrawable(getResources().getDrawable(R.drawable.play));
+                    toggleTracking(null);
+                }
+            }
+        });
 
         if (mGoogleApiClient == null) {
             mGoogleApiClient = new GoogleApiClient.Builder(this)
@@ -150,6 +175,7 @@ public class RunActivity extends AppCompatActivity implements OnMapReadyCallback
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         menu.getActionBarDrawerToggle().setDrawerIndicatorEnabled(true);
     }
+
 
     protected void onStart() {
         super.onStart();
@@ -247,14 +273,31 @@ public class RunActivity extends AppCompatActivity implements OnMapReadyCallback
     }
 
     public void toggleTracking(View _view) {
+        final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.runToggle);
+        final FloatingActionButton fabTwo = (FloatingActionButton) findViewById(R.id.endRun);
+
         if (tracking) {
-            Toast.makeText(this, "Run Finished!", Toast.LENGTH_LONG).show();
+            fab.setImageDrawable(getResources().getDrawable(R.drawable.play));
+            fabTwo.show();
+            Toast.makeText(this, "Run Paused!", Toast.LENGTH_LONG).show();
             chrono.stop();
-            Log.d("RUN", "Run Tracking Stopped");
+            Log.d("RUN", "Run Tracking Paused");
+
+            fabTwo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent i = new Intent(getBaseContext(), DashboardActivity.class);
+                    startActivity(i);
+                }
+            });
 
             //setContentView(R.layout.post_run); //Start the Post Run Screen (Just displays the layout, doesn't change to the PostRun activity)
 
         } else {
+            fab.setImageDrawable(getResources().getDrawable(R.drawable.pause));
+
+            fabTwo.hide();
+
             Toast.makeText(this, "Run Started!",
                     Toast.LENGTH_LONG).show();
 
@@ -268,4 +311,6 @@ public class RunActivity extends AppCompatActivity implements OnMapReadyCallback
         }
         tracking = !tracking;
     }
+
+
 }
