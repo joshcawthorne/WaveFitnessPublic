@@ -12,6 +12,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 
+import com.google.android.gms.auth.api.Auth;
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.GridLabelRenderer;
 import com.jjoe64.graphview.helper.DateAsXAxisLabelFormatter;
@@ -105,7 +106,7 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
     }
 
     public void onRunButtonClicked(View view) {
-        startActivity(new Intent(DashboardActivity.this, RunActivity.class));
+        startActivity(new Intent(DashboardActivity.this, AuthActivity.class));
     }
 
     @Override
