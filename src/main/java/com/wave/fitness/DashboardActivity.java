@@ -1,6 +1,7 @@
 package com.wave.fitness;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -31,6 +32,7 @@ import java.util.Date;
 public class DashboardActivity extends AppCompatActivity {
 
     Drawer menu;
+    SharedPreferences prefs = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,8 @@ public class DashboardActivity extends AppCompatActivity {
         setContentView(R.layout.activity_dashboard);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        prefs = getSharedPreferences("com.wave.fitness", MODE_PRIVATE);
 
         //FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         //fab.setOnClickListener(new View.OnClickListener() {
@@ -90,6 +94,15 @@ public class DashboardActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        if (prefs.getBoolean("firstrun", true)) {
+            Intent firstTime = new Intent(DashboardActivity.this, startupActivity.class);
+            DashboardActivity.this.startActivity(firstTime);
+        }
+    }
 
     public void onRunButtonClicked(View view) {
         startActivity(new Intent(DashboardActivity.this, RunActivity.class));
@@ -102,6 +115,9 @@ public class DashboardActivity extends AppCompatActivity {
         }
         else{
             super.onBackPressed();
+            Intent intent = new Intent(Intent.ACTION_MAIN);
+            intent.addCategory(Intent.CATEGORY_HOME);
+            startActivity(intent);
         }
 
     }

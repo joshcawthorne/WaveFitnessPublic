@@ -5,6 +5,10 @@
     <color name="colorAccent">#ff4081</color>
     <color name="newColour1">#00ff95</color>
 
+    <!-- Wave Styles -->
+    <color name="wavePrimary">#0088FF</color>
+    <color name="waveHint">#fff</color>
+
     <!-- Material DEFAULT colors -->
     <color name="material_drawer_primary">#1C1A1F</color>
     <color name="material_drawer_primary_dark">#1976D2</color>
