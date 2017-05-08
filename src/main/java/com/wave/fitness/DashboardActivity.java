@@ -16,6 +16,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.android.gms.auth.api.Auth;
+import com.google.android.gms.maps.model.Dash;
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.GridLabelRenderer;
 import com.jjoe64.graphview.helper.DateAsXAxisLabelFormatter;
@@ -34,9 +35,12 @@ import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Random;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
+
+import static android.R.id.list;
 
 public class DashboardActivity extends AppCompatActivity implements Animation.AnimationListener {
 
@@ -65,7 +69,7 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
                 .withActivity(this)
                 //.withHeaderBackground(R.drawable.header)
                 .addProfiles(
-                        new ProfileDrawerItem().withName("Josh Cawthorne").withEmail("joshcawthorne97@gmail.com")/*.withIcon(getResources().getDrawable(R.drawable.profile))*/
+                        new ProfileDrawerItem().withName("Josh Cawthorne").withEmail("joshcawthorne97@gmail.com").withIcon(getResources().getDrawable(R.drawable.temp_profile))
                 )
                 .withOnAccountHeaderListener(new AccountHeader.OnAccountHeaderListener() {
                     @Override
@@ -75,7 +79,12 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
                 })
                 .build();
 
-        PrimaryDrawerItem music = new PrimaryDrawerItem().withIdentifier(1).withName("Music");
+        PrimaryDrawerItem dashboard = new PrimaryDrawerItem().withIdentifier(1).withName("Dashboard");
+        SecondaryDrawerItem run = new SecondaryDrawerItem().withIdentifier(2).withName("Start A Run");
+        SecondaryDrawerItem music = new SecondaryDrawerItem().withIdentifier(3).withName("Music");
+        SecondaryDrawerItem past = new SecondaryDrawerItem().withIdentifier(4).withName("Previous Runs");
+        SecondaryDrawerItem settings = new SecondaryDrawerItem().withIdentifier(5).withName("Settings");
+        SecondaryDrawerItem logout = new SecondaryDrawerItem().withIdentifier(6).withName("Logout");
 
          menu = new DrawerBuilder()
                 .withActivity(this)
@@ -84,8 +93,7 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
                 .withTranslucentStatusBar(true)
                 .withActionBarDrawerToggle(true)
                 .addDrawerItems(
-                        music, new SecondaryDrawerItem().withName("Start A Run"), new SecondaryDrawerItem().withName("Past Runs"),
-                        new DividerDrawerItem(), new SecondaryDrawerItem().withName("Settings"), new SecondaryDrawerItem().withName("Logout")
+                        dashboard,run,music,past, new DividerDrawerItem(),settings,logout
                 )
                 .withOnDrawerItemClickListener(
                         new Drawer.OnDrawerItemClickListener(){
@@ -106,12 +114,32 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
                 .build()
         );
 
-        SimpleDateFormat parseFormat = new SimpleDateFormat("EEEE, MMMM d");
+        SimpleDateFormat parseFormat = new SimpleDateFormat("EEEE");
         Date date =new Date();
         String dashboardDate = parseFormat.format(date);
 
+        Random prefix = new Random();
+        String[] prefixs = new String[] { "Happy ", "It's ",
+                "Don't you just love ", "Let's get you through ", "Welcome to "};
+
+        String prefixString = "Happy ";
+
+        int INDEXn = prefix.nextInt(prefixs.length);
+        for (int i2 = 0; i2 < INDEXn; i2++) {
+            prefixString = (String) (prefixs[INDEXn]);
+        }
+
+        Random endSent = new Random();
+        String[] endSentence = new String[] {"!", "!", "?", ".", "."};
+
+        String endSentString = "!";
+
+        for (int i2 = 0; i2 < INDEXn; i2++) {
+            endSentString = (String) (endSentence[INDEXn]);
+        }
+
         TextView curDate = (TextView)findViewById(R.id.dashDate);
-        curDate.setText(dashboardDate);
+        curDate.setText(prefixString + dashboardDate + ", Josh" + endSentString);
     }
 
     @Override

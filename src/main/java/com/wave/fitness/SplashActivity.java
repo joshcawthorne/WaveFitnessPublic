@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
+
 public class SplashActivity extends Activity implements Animation.AnimationListener {
 
     Animation animFadein;
@@ -18,16 +20,6 @@ public class SplashActivity extends Activity implements Animation.AnimationListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        animFadein = AnimationUtils.loadAnimation(getApplicationContext(),
-                R.anim.standard);
-
-        animFadein.setAnimationListener(this);
-
-        View view = findViewById(android.R.id.content);
-        Animation mLoadAnimation = AnimationUtils.loadAnimation(getApplicationContext(), android.R.anim.fade_out);
-        mLoadAnimation.setDuration(1000);
-        view.startAnimation(mLoadAnimation);
 
         Intent intent = new Intent(this, DashboardActivity.class);
         startActivity(intent);

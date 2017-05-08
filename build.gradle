@@ -84,4 +84,7 @@ dependencies {
     //Butterknife
     compile 'com.jakewharton:butterknife:6.1.0'
 
+    //Android Universal Image Loader
+    compile'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+
 }

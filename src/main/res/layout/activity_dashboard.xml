@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
@@ -21,130 +22,316 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="85dp"
-                android:background="#EEE"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="300dp"
-                    android:layout_height="75dp"
-                    android:layout_marginTop="5dp"
-                    android:background="#EEE"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="200dp"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginTop="5dp"
-                        android:layout_height="55dp"
-                        android:layout_marginRight="5dp"
-                        android:orientation="vertical"
-                        >
-
-                        <android.support.v7.widget.AppCompatTextView
-                            android:layout_width="match_parent"
-                            android:id="@+id/dashDate"
-                            android:text="@string/currentDate"
-                            android:paddingLeft="15dp"
-                            android:paddingTop="0dp"
-                            android:layout_marginTop="5dp"
-                            android:textSize="12dp"
-                            fontPath="fonts/Montserrat-SemiBold.otf"
-                            android:textAllCaps="true"
-                            android:textColor="#9e9e9e"
-                            android:layout_height="15dp" />
-
-                        <android.support.v7.widget.AppCompatTextView
-                            android:layout_width="match_parent"
-                            android:text="FOR YOU"
-                            android:paddingLeft="15dp"
-                            android:textSize="30dp"
-                            android:includeFontPadding="false"
-                            fontPath="fonts/Montserrat-Bold.otf"
-                            android:textAllCaps="true"
-                            android:textColor="#000"
-                            android:layout_height="40dp" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="75dp"
-                    android:layout_gravity="right"
-                    android:background="#EEE"
-                    android:layout_marginTop="5dp"
-                    android:orientation="horizontal"
-                    android:layout_marginRight="20dp">
-
-                    <LinearLayout
-                        android:layout_width="35dp"
-                        android:layout_gravity="center_vertical"
-                        android:layout_height="35dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginRight="5dp"
-                        >
-
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            xmlns:app="http://schemas.android.com/apk/res-auto"
-                            android:id="@+id/profile_image"
-                            android:layout_width="35dp"
-                            android:layout_height="35dp"
-                            android:src="@drawable/dance"
-                            />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:background="#EEE"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_height="150dp"
-                    android:background="#fff"
-                    android:radius="10dp"
-                    android:orientation="horizontal">
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-
-            <!--LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/textView16"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="275dp"
+                android:background="#EEE"
+                android:orientation="vertical">
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:textColor="#fff"
-                    android:padding="10dp"
-                    android:text="Here's some stuff we think you'll like:"
-                    android:background="#0088FF"
-                    android:elevation="5dp"
-                    />
-            </LinearLayout-->
+                    android:layout_height="80dp"
+                    android:background="#EEE"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="300dp"
+                        android:layout_height="75dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#EEE"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="300dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="5dp"
+                            android:layout_height="55dp"
+                            android:layout_marginRight="5dp"
+                            android:orientation="vertical"
+                            >
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:id="@+id/dashDate"
+                                android:text="@string/currentDate"
+                                android:paddingLeft="15dp"
+                                android:paddingTop="0dp"
+                                android:layout_marginTop="5dp"
+                                android:textSize="12dp"
+                                fontPath="fonts/Montserrat-SemiBold.otf"
+                                android:textAllCaps="true"
+                                android:textColor="#9e9e9e"
+                                android:layout_height="15dp" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:text="FOR YOU"
+                                android:paddingLeft="15dp"
+                                android:textSize="30dp"
+                                android:includeFontPadding="false"
+                                fontPath="fonts/Montserrat-Bold.otf"
+                                android:textAllCaps="true"
+                                android:textColor="#000"
+                                android:layout_height="40dp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="75dp"
+                        android:layout_gravity="right"
+                        android:background="#EEE"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:layout_marginRight="20dp">
+
+                        <LinearLayout
+                            android:layout_width="35dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="35dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            >
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/profile_image"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/temp_profile"
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent">
+
+                    <HorizontalScrollView
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="330dp"
+                                android:layout_height="180dp"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="10dp"
+                                android:background="@drawable/layout_bg">
+
+                                <GridLayout
+                                    android:layout_width="310dp"
+                                    android:layout_height="100dp"
+                                    android:orientation="horizontal"
+                                    android:columnCount="3"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="15dp"
+                                    >
+                                    <com.makeramen.roundedimageview.RoundedImageView
+                                        app:riv_corner_radius="5dip"
+                                        android:src="@drawable/topcharts"
+                                        android:layout_height="100dp"
+                                        android:padding="1dp"
+                                        android:scaleType="centerCrop"
+                                        android:layout_width="125dp"/>
+
+                                    <GridLayout
+                                        android:orientation="vertical">
+                                        <com.makeramen.roundedimageview.RoundedImageView
+                                            app:riv_corner_radius="3dip"
+                                            android:src="@drawable/zedd"
+                                            android:layout_height="50dp"
+                                            android:scaleType="centerCrop"
+                                            android:padding="1dp"
+                                            android:layout_width="62.5dp"/>
+                                        <com.makeramen.roundedimageview.RoundedImageView
+                                            app:riv_corner_radius="3dip"
+                                            android:src="@drawable/symphony"
+                                            android:layout_height="50dp"
+                                            android:scaleType="centerCrop"
+                                            android:padding="1dp"
+                                            android:layout_width="62.5dp"/>
+                                    </GridLayout>
+
+                                    <com.makeramen.roundedimageview.RoundedImageView
+                                        app:riv_corner_radius="5dip"
+                                        android:src="@drawable/calvinharris"
+                                        android:layout_height="100dp"
+                                        android:scaleType="centerCrop"
+                                        android:padding="1dp"
+                                        android:layout_width="125dp"/>
+                                </GridLayout>
+
+                                <GridLayout
+                                    android:layout_width="310dp"
+                                    android:layout_height="50dp"
+                                    android:orientation="horizontal"
+                                    android:columnCount="5"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_marginLeft="10dp"
+                                    >
+                                    <com.makeramen.roundedimageview.RoundedImageView
+                                        app:riv_corner_radius="3dip"
+                                        android:src="@drawable/imtheone"
+                                        android:layout_height="50dp"
+                                        android:scaleType="centerCrop"
+                                        android:padding="1dp"
+                                        android:layout_width="62.5dp"/>
+                                    <com.makeramen.roundedimageview.RoundedImageView
+                                        app:riv_corner_radius="3dip"
+                                        android:src="@drawable/littlemix2"
+                                        android:layout_height="50dp"
+                                        android:scaleType="centerCrop"
+                                        android:padding="1dp"
+                                        android:layout_width="62.5dp"/>
+                                    <com.makeramen.roundedimageview.RoundedImageView
+                                        app:riv_corner_radius="3dip"
+                                        android:src="@drawable/kygo2"
+                                        android:layout_height="50dp"
+                                        android:scaleType="centerCrop"
+                                        android:padding="1dp"
+                                        android:layout_width="62.5dp"/>
+                                    <com.makeramen.roundedimageview.RoundedImageView
+                                        app:riv_corner_radius="3dip"
+                                        android:src="@drawable/gallawaygirl"
+                                        android:layout_height="50dp"
+                                        android:scaleType="centerCrop"
+                                        android:padding="1dp"
+                                        android:layout_width="62.5dp"/>
+                                    <com.makeramen.roundedimageview.RoundedImageView
+                                        app:riv_corner_radius="3dip"
+                                        android:src="@drawable/runup"
+                                        android:layout_height="50dp"
+                                        android:padding="1dp"
+                                        android:scaleType="centerCrop"
+                                        android:layout_width="62.5dp"/>
+                                </GridLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="330dp"
+                                android:layout_height="180dp"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/layout_bg">
+
+                                <GridLayout
+                                    android:layout_width="310dp"
+                                    android:layout_height="100dp"
+                                    android:orientation="horizontal"
+                                    android:columnCount="3"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="15dp"
+                                    >
+                                    <com.makeramen.roundedimageview.RoundedImageView
+                                        app:riv_corner_radius="5dip"
+                                        android:src="@drawable/oldbutgoldnew"
+                                        android:layout_height="100dp"
+                                        android:padding="1dp"
+                                        android:scaleType="centerCrop"
+                                        android:layout_width="145dp"/>
+
+                                    <GridLayout
+                                        android:orientation="vertical">
+                                        <com.makeramen.roundedimageview.RoundedImageView
+                                            app:riv_corner_radius="3dip"
+                                            android:src="@drawable/derulo"
+                                            android:layout_height="50dp"
+                                            android:scaleType="centerCrop"
+                                            android:padding="1dp"
+                                            android:layout_width="62.5dp"/>
+                                        <com.makeramen.roundedimageview.RoundedImageView
+                                            app:riv_corner_radius="3dip"
+                                            android:src="@drawable/jordan"
+                                            android:layout_height="50dp"
+                                            android:scaleType="centerCrop"
+                                            android:padding="1dp"
+                                            android:layout_width="62.5dp"/>
+                                    </GridLayout>
+
+                                    <com.makeramen.roundedimageview.RoundedImageView
+                                        app:riv_corner_radius="5dip"
+                                        android:src="@drawable/beyonce"
+                                        android:layout_height="100dp"
+                                        android:scaleType="centerCrop"
+                                        android:padding="1dp"
+                                        android:layout_width="105dp"/>
+                                </GridLayout>
+
+                                <GridLayout
+                                    android:layout_width="310dp"
+                                    android:layout_height="50dp"
+                                    android:orientation="horizontal"
+                                    android:columnCount="5"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_marginLeft="10dp"
+                                    >
+                                    <com.makeramen.roundedimageview.RoundedImageView
+                                        app:riv_corner_radius="3dip"
+                                        android:src="@drawable/mama"
+                                        android:layout_height="50dp"
+                                        android:scaleType="centerCrop"
+                                        android:padding="1dp"
+                                        android:layout_width="62.5dp"/>
+                                    <com.makeramen.roundedimageview.RoundedImageView
+                                        app:riv_corner_radius="3dip"
+                                        android:src="@drawable/ruby"
+                                        android:layout_height="50dp"
+                                        android:scaleType="centerCrop"
+                                        android:padding="1dp"
+                                        android:layout_width="62.5dp"/>
+                                    <com.makeramen.roundedimageview.RoundedImageView
+                                        app:riv_corner_radius="3dip"
+                                        android:src="@drawable/slim"
+                                        android:layout_height="50dp"
+                                        android:scaleType="centerCrop"
+                                        android:padding="1dp"
+                                        android:layout_width="62.5dp"/>
+                                    <com.makeramen.roundedimageview.RoundedImageView
+                                        app:riv_corner_radius="3dip"
+                                        android:src="@drawable/spice"
+                                        android:layout_height="50dp"
+                                        android:scaleType="centerCrop"
+                                        android:padding="1dp"
+                                        android:layout_width="62.5dp"/>
+                                    <com.makeramen.roundedimageview.RoundedImageView
+                                        app:riv_corner_radius="3dip"
+                                        android:src="@drawable/viva"
+                                        android:layout_height="50dp"
+                                        android:padding="1dp"
+                                        android:scaleType="centerCrop"
+                                        android:layout_width="62.5dp"/>
+                                </GridLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+
+                    </HorizontalScrollView>
+
+                </LinearLayout>
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -153,7 +340,29 @@
                 android:orientation="vertical">
             </LinearLayout>
 
-            <LinearLayout
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="3dp"
+                    android:orientation="vertical">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/vapor1"
+                        android:src="@drawable/runbanner3"
+                        android:scaleType="centerCrop"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginBottom="7dp"
+                        app:riv_corner_radius="10dip"
+                        android:onClick="onRunButtonClicked" />
+
+                </LinearLayout>
+
+            <!--LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
@@ -176,30 +385,6 @@
                             xmlns:app="http://schemas.android.com/apk/res-auto"
                             android:id="@+id/oldbutgold"
                             android:src="@drawable/oldbutgoldnew"
-                            android:scaleType="centerCrop"
-                            android:layout_height="100dp"
-                            android:layout_marginBottom="10dp"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_width="150dp"
-                            app:riv_corner_radius="10dip" />
-
-                        <com.makeramen.roundedimageview.RoundedImageView
-                            xmlns:app="http://schemas.android.com/apk/res-auto"
-                            android:id="@+id/rock"
-                            android:src="@drawable/rockimage2"
-                            android:scaleType="centerCrop"
-                            android:layout_height="100dp"
-                            android:layout_marginBottom="10dp"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_width="150dp"
-                            app:riv_corner_radius="10dip" />
-
-                        <com.makeramen.roundedimageview.RoundedImageView
-                            xmlns:app="http://schemas.android.com/apk/res-auto"
-                            android:id="@+id/vapor"
-                            android:src="@drawable/vapornew"
                             android:scaleType="centerCrop"
                             android:layout_height="100dp"
                             android:layout_marginBottom="10dp"
@@ -250,43 +435,7 @@
                     </LinearLayout>
                 </HorizontalScrollView>
 
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="5dp"
-                android:background="#EEE"
-                android:orientation="vertical">
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:elevation="3dp"
-                android:orientation="vertical">
-
-                <com.makeramen.roundedimageview.RoundedImageView
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:id="@+id/vapor1"
-                    android:src="@drawable/runbanner2"
-                    android:scaleType="centerCrop"
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginTop="7dp"
-                    android:layout_marginBottom="7dp"
-                    app:riv_corner_radius="10dip"
-                    android:onClick="onRunButtonClicked" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="5dp"
-                android:background="#EEE"
-                android:orientation="vertical">
-            </LinearLayout>
+            </LinearLayout-->
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -298,7 +447,7 @@
                 <com.makeramen.roundedimageview.RoundedImageView
                     xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:id="@+id/placeholder"
-                    android:src="@drawable/placeholder"
+                    android:background="@color/colorAccent"
                     android:scaleType="centerCrop"
                     android:layout_width="160dp"
                     android:layout_height="175dp"
@@ -311,71 +460,7 @@
                 <com.makeramen.roundedimageview.RoundedImageView
                     xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:id="@+id/alsoplaceholder"
-                    android:src="@drawable/alsoplaceholder"
-                    android:scaleType="centerCrop"
-                    android:layout_width="160dp"
-                    android:layout_height="175dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginBottom="15dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_weight="1"
-                    app:riv_corner_radius="10dip" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <com.makeramen.roundedimageview.RoundedImageView
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:id="@+id/placeholder"
-                    android:src="@drawable/placeholder"
-                    android:scaleType="centerCrop"
-                    android:layout_width="160dp"
-                    android:layout_height="175dp"
-                    android:layout_marginBottom="15dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_weight="1"
-                    app:riv_corner_radius="10dip" />
-
-                <com.makeramen.roundedimageview.RoundedImageView
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:id="@+id/alsoplaceholder"
-                    android:src="@drawable/alsoplaceholder"
-                    android:scaleType="centerCrop"
-                    android:layout_width="160dp"
-                    android:layout_height="175dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginBottom="15dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_weight="1"
-                    app:riv_corner_radius="10dip" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <com.makeramen.roundedimageview.RoundedImageView
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:id="@+id/placeholder"
-                    android:src="@drawable/placeholder"
-                    android:scaleType="centerCrop"
-                    android:layout_width="160dp"
-                    android:layout_height="175dp"
-                    android:layout_marginBottom="15dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_weight="1"
-                    app:riv_corner_radius="10dip" />
-
-                <com.makeramen.roundedimageview.RoundedImageView
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:id="@+id/alsoplaceholder"
-                    android:src="@drawable/alsoplaceholder"
+                    android:background="@color/colorAccent"
                     android:scaleType="centerCrop"
                     android:layout_width="160dp"
                     android:layout_height="175dp"

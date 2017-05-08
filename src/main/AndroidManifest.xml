@@ -12,7 +12,8 @@
         android:icon="@mipmap/launcher_icon"
         android:label="Wave"
         android:theme="@style/WaveTheme"
-        android:name=".SpotifyCore">
+        android:name=".SpotifyCore"
+        android:largeHeap="true">
 
 
         <activity
