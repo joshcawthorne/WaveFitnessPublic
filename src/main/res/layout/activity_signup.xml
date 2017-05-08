@@ -124,10 +124,10 @@
             android:layout_width="fill_parent"
             android:gravity="center"
             android:layout_height="40dp"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="0dp">
 
             <Button
-                android:text="Login"
+                android:text="Facebook"
                 android:layout_width="wrap_content"
                 android:layout_gravity="center"
                 android:background="@android:color/transparent"
@@ -136,10 +136,31 @@
                 android:elevation="5dp"
                 android:layout_height="2dp"
                 android:radius="10dp"
-                android:id="@+id/login"
+                android:id="@+id/facebook"
                 android:layout_weight="1"
-                style="@android:style/Widget.Material.Light.Button"
-                android:onClick="login();" />
+                style="@android:style/Widget.Material.Light.Button" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:gravity="center"
+            android:layout_height="40dp"
+            android:layout_marginTop="0dp">
+
+            <Button
+                android:text="Google"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:textColor="#fff"
+                fontPath="nexabold.otf"
+                android:elevation="5dp"
+                android:layout_height="2dp"
+                android:radius="10dp"
+                android:id="@+id/google"
+                android:layout_weight="1"
+                style="@android:style/Widget.Material.Light.Button" />
         </LinearLayout>
 
         <LinearLayout

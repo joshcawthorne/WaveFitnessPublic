@@ -1,5 +1,6 @@
 package com.wave.fitness;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.icu.text.SimpleDateFormat;
@@ -35,6 +36,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class DashboardActivity extends AppCompatActivity implements Animation.AnimationListener {
 
@@ -110,6 +112,11 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
 
         TextView curDate = (TextView)findViewById(R.id.dashDate);
         curDate.setText(dashboardDate);
+    }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 
     @Override
