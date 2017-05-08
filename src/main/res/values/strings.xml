@@ -125,8 +125,9 @@
     <string name="err_msg_email">Enter valid email address</string>
     <string name="err_msg_password">Enter the password</string>
     <string name="version">Wave Beta Version 2.0</string>
-
     <string name="signup">So you want to get started?</string>
     <string name="signup_subtitle">Well, we\'ll need a few small details first.</string>
 
+    <!-- Dashboard Strings -->
+    <string name="currentDate">Monday, May 9</string>
 </resources>

@@ -2,6 +2,7 @@ package com.wave.fitness;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.icu.text.SimpleDateFormat;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -11,6 +12,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.google.android.gms.auth.api.Auth;
 import com.jjoe64.graphview.GraphView;
@@ -31,6 +33,8 @@ import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 
 import java.util.Calendar;
 import java.util.Date;
+
+import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 
 public class DashboardActivity extends AppCompatActivity implements Animation.AnimationListener {
 
@@ -94,6 +98,18 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         menu.getActionBarDrawerToggle().setDrawerIndicatorEnabled(true);
 
+        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
+                .setDefaultFontPath("fonts/Montserrat-Regular.otf")
+                .setFontAttrId(R.attr.fontPath)
+                .build()
+        );
+
+        SimpleDateFormat parseFormat = new SimpleDateFormat("EEEE, MMMM d");
+        Date date =new Date();
+        String dashboardDate = parseFormat.format(date);
+
+        TextView curDate = (TextView)findViewById(R.id.dashDate);
+        curDate.setText(dashboardDate);
     }
 
     @Override
