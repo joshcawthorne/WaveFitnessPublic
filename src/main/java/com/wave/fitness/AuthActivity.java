@@ -34,19 +34,8 @@ public class AuthActivity extends AppCompatActivity implements
         Player.NotificationCallback, ConnectionStateCallback{
 
     private static final String TAG = null;
-    private SpotifyPlayer mPlayer;
 
-    private PlaybackState mCurrentPlaybackState;
 
-    //Used to recieve info on a user's current network status (IE: Wireless, Offline)
-    private BroadcastReceiver mNetworkStateReceiver;
-
-    private TextView mMetadataText;
-
-    private EditText mSeekEditText;
-
-    private ScrollView mStatusTextScrollView;
-    private Metadata mMetadata;
 
     //Constants
     //Required to make the app work - this is our public key and callback URL!
@@ -56,45 +45,18 @@ public class AuthActivity extends AppCompatActivity implements
     @SuppressWarnings("SpellCheckingInspection")
     private static final String REDIRECT_URI = "testschema://callback";
 
-    public boolean logIn = false;
-
-    private final Player.OperationCallback mOperationCallback = new Player.OperationCallback() {
-        @Override
-        public void onSuccess() {
-            logStatus("OK!");
-            logIn = true;
-        }
-
-        @Override
-        public void onError(Error error) {
-            logStatus("ERROR:" + error);
-        }
-    };
+    private SpotifyCore core;
 
     //Initialization
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dashboard);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+       // setContentView(R.layout.activity_dashboard);
+
+        core = ((SpotifyCore)getApplicationContext());
+
         logStatus("Logging in");
-        openLoginWindow();
-    }
-
-    private Connectivity getNetworkConnectivity(Context context) {
-        ConnectivityManager connectivityManager;
-        connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo activeNetwork = connectivityManager.getActiveNetworkInfo();
-        if (activeNetwork != null && activeNetwork.isConnected()) {
-            return Connectivity.fromNetworkType(activeNetwork.getType());
-        } else {
-            return Connectivity.OFFLINE;
-        }
-    }
-
-    private void openLoginWindow() {
         final AuthenticationRequest request = new AuthenticationRequest.Builder(CLIENT_ID, AuthenticationResponse.Type.TOKEN, REDIRECT_URI)
                 .setScopes(new String[]{"user-read-private", "playlist-read", "playlist-read-private", "streaming"})
                 .build();
@@ -102,19 +64,24 @@ public class AuthActivity extends AppCompatActivity implements
         AuthenticationClient.openLoginActivity(this, REQUEST_CODE, request);
     }
 
+
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
         super.onActivityResult(requestCode, resultCode, intent);
-
+        logStatus("Checking response");
         // Check if result comes from the correct activity
         if (requestCode == REQUEST_CODE) {
             AuthenticationResponse response = AuthenticationClient.getResponse(resultCode, intent);
             switch (response.getType()) {
                 // Response was successful and contains auth token
                 case TOKEN:
-                    onAuthenticationComplete(response);
+                    logStatus("Auth OK");
+                    core.isLoggedIn = true;
+                    core.authResponse = response;
+                    this.setResult(RESULT_OK);
+                    this.finish();
                     break;
-
                 // Auth flow returned an error
                 case ERROR:
                     logStatus("Auth error: " + response.getError());
@@ -123,45 +90,10 @@ public class AuthActivity extends AppCompatActivity implements
                 default:
                     logStatus("Auth result: " + response.getType());
             }
-            onAuthenticationComplete(response);
-            Intent myIntent = new Intent(AuthActivity.this, MusicPlayerActivity.class);
-            myIntent.putExtra("requestCode", requestCode);
-            myIntent.putExtra("resultCode", resultCode);
-            myIntent.putExtra("intent", intent);
-            myIntent.putExtra("AuthenticationResponse", AuthenticationResponse.Type.TOKEN);
-            myIntent.putExtra("response", response);
+
         }
     }
 
-    private void onAuthenticationComplete(AuthenticationResponse authResponse) {
-        // Once we have obtained an authorization token, we can proceed with creating a Player.
-        logStatus("Got authentication token");
-        if (mPlayer == null) {
-            Config playerConfig = new Config(getApplicationContext(), authResponse.getAccessToken(), CLIENT_ID);
-            mPlayer = Spotify.getPlayer(playerConfig, this, new SpotifyPlayer.InitializationObserver() {
-                @Override
-                public void onInitialized(SpotifyPlayer player) {
-                    logStatus("-- Player initialized --");
-                    mPlayer.setConnectivityStatus(mOperationCallback, getNetworkConnectivity(AuthActivity.this));
-                    mPlayer.addNotificationCallback(AuthActivity.this);
-                    mPlayer.addConnectionStateCallback(AuthActivity.this);
-                }
-
-                @Override
-                public void onError(Throwable error) {
-                    logStatus("Error in initialization: " + error.getMessage());
-                }
-            });
-        } else {
-            mPlayer.login(authResponse.getAccessToken());
-        }
-
-        Intent myIntent = new Intent(AuthActivity.this, MusicPlayerActivity.class);
-        myIntent.putExtra("authResponse", authResponse.getAccessToken());
-
-        Intent i = new Intent(getBaseContext(), DashboardActivity.class);
-        startActivity(i);
-    }
 
     //Callback Methods
 
@@ -194,10 +126,10 @@ public class AuthActivity extends AppCompatActivity implements
     @Override
     public void onPlaybackEvent(PlayerEvent event) {
         logStatus("Event: " + event);
-        mCurrentPlaybackState = mPlayer.getPlaybackState();
-        mMetadata = mPlayer.getMetadata();
-        Log.i(TAG, "Player state: " + mCurrentPlaybackState);
-        Log.i(TAG, "Metadata: " + mMetadata);
+        core.mCurrentPlaybackState = core.mPlayer.getPlaybackState();
+        core.mMetadata = core.mPlayer.getMetadata();
+        Log.i(TAG, "Player state: " + core.mCurrentPlaybackState);
+        Log.i(TAG, "Metadata: " + core.mMetadata);
     }
 
     @Override
@@ -207,6 +139,6 @@ public class AuthActivity extends AppCompatActivity implements
 
     // Errors and stuff a lot like, but not identical to errors.
     private void logStatus(String status) {
-
+        Log.e("Auth", status);
     }
 }

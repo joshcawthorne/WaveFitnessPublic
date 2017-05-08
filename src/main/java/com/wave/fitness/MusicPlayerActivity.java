@@ -109,31 +109,23 @@ public class MusicPlayerActivity extends AppCompatActivity implements
     };
     public static final String TAG = "SpotifySdkDemo";
 
-    //Fields
-
-    private SpotifyPlayer mPlayer;
-
-    private PlaybackState mCurrentPlaybackState;
 
     //Used to recieve info on a user's current network status (IE: Wireless, Offline)
     private BroadcastReceiver mNetworkStateReceiver;
 
+    //UI
     private TextView mMetadataText;
-
     private EditText mSeekEditText;
-
     private ScrollView mStatusTextScrollView;
-    private Metadata mMetadata;
-
     Drawer menu;
 
-    public boolean logIn = false;
+    private SpotifyCore core;
+    private static final int SPOTIFY_LOGIN = 87;
 
     private final Player.OperationCallback mOperationCallback = new Player.OperationCallback() {
         @Override
         public void onSuccess() {
             logStatus("OK!");
-            logIn = true;
         }
 
         @Override
@@ -149,7 +141,13 @@ public class MusicPlayerActivity extends AppCompatActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_musicplayer);
 
-        onLoginButtonClicked(null);
+        core = ((SpotifyCore)getApplicationContext());
+
+        if(!core.isLoggedIn){
+            startActivityForResult(new Intent(this, AuthActivity.class), SPOTIFY_LOGIN);
+        }else {
+            createPlayer();
+        }
 
         // Get a reference to any UI widgets that will be needed.
         mMetadataText = (TextView) findViewById(R.id.metadata);
@@ -157,15 +155,17 @@ public class MusicPlayerActivity extends AppCompatActivity implements
 
         updateView();
 
+        showAlertbox(null);
+
         final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.pause_button);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (mCurrentPlaybackState != null && mCurrentPlaybackState.isPlaying) {
-                    mPlayer.pause(mOperationCallback);
+                if (core.mCurrentPlaybackState != null && core.mCurrentPlaybackState.isPlaying) {
+                    core.mPlayer.pause(mOperationCallback);
                     fab.setImageDrawable(getResources().getDrawable(R.drawable.play));
                 } else {
-                    mPlayer.resume(mOperationCallback);
+                    core.mPlayer.resume(mOperationCallback);
                     fab.setImageDrawable(getResources().getDrawable(R.drawable.pause));
                 }
             }
@@ -239,10 +239,10 @@ public class MusicPlayerActivity extends AppCompatActivity implements
         mNetworkStateReceiver = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
-                if (mPlayer != null) {
+                if (core.mPlayer != null) {
                     Connectivity connectivity = getNetworkConnectivity(getBaseContext());
                     logStatus("Network state changed: " + connectivity.toString());
-                    mPlayer.setConnectivityStatus(mOperationCallback, connectivity);
+                    core.mPlayer.setConnectivityStatus(mOperationCallback, connectivity);
                 }
             }
         };
@@ -250,9 +250,9 @@ public class MusicPlayerActivity extends AppCompatActivity implements
         IntentFilter filter = new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
         registerReceiver(mNetworkStateReceiver, filter);
 
-        if (mPlayer != null) {
-            mPlayer.addNotificationCallback(MusicPlayerActivity.this);
-            mPlayer.addConnectionStateCallback(MusicPlayerActivity.this);
+        if (core.mPlayer != null) {
+            core.mPlayer.addNotificationCallback(MusicPlayerActivity.this);
+            core.mPlayer.addConnectionStateCallback(MusicPlayerActivity.this);
         }
     }
 
@@ -267,52 +267,30 @@ public class MusicPlayerActivity extends AppCompatActivity implements
         }
     }
 
-    //Authentication
 
-    private void openLoginWindow() {
-        final AuthenticationRequest request = new AuthenticationRequest.Builder(CLIENT_ID, AuthenticationResponse.Type.TOKEN, REDIRECT_URI)
-                .setScopes(new String[]{"user-read-private", "playlist-read", "playlist-read-private", "streaming"})
-                .build();
-
-        AuthenticationClient.openLoginActivity(this, REQUEST_CODE, request);
-    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
-        super.onActivityResult(requestCode, resultCode, intent);
-
-        // Check if result comes from the correct activity
-        if (requestCode == REQUEST_CODE) {
-            AuthenticationResponse response = AuthenticationClient.getResponse(resultCode, intent);
-            switch (response.getType()) {
-                // Response was successful and contains auth token
-                case TOKEN:
-                    onAuthenticationComplete(response);
-                    break;
-
-                // Auth flow returned an error
-                case ERROR:
-                    logStatus("Auth error: " + response.getError());
-                    break;
-                // Most likely auth flow was cancelled
-                default:
-                    logStatus("Auth result: " + response.getType());
+        if(requestCode == SPOTIFY_LOGIN){
+            if(resultCode == RESULT_OK){
+                createPlayer();
             }
         }
+
     }
 
-    private void onAuthenticationComplete(AuthenticationResponse authResponse) {
+    private void createPlayer() {
         // Once we have obtained an authorization token, we can proceed with creating a Player.
         logStatus("Got authentication token");
-        if (mPlayer == null) {
-            Config playerConfig = new Config(getApplicationContext(), authResponse.getAccessToken(), CLIENT_ID);
-            mPlayer = Spotify.getPlayer(playerConfig, this, new SpotifyPlayer.InitializationObserver() {
+        if (core.mPlayer == null) {
+            Config playerConfig = new Config(getApplicationContext(), core.authResponse.getAccessToken(), CLIENT_ID);
+            core.mPlayer = Spotify.getPlayer(playerConfig, this, new SpotifyPlayer.InitializationObserver() {
                 @Override
                 public void onInitialized(SpotifyPlayer player) {
                     logStatus("-- Player initialized --");
-                    mPlayer.setConnectivityStatus(mOperationCallback, getNetworkConnectivity(MusicPlayerActivity.this));
-                    mPlayer.addNotificationCallback(MusicPlayerActivity.this);
-                    mPlayer.addConnectionStateCallback(MusicPlayerActivity.this);
+                    core.mPlayer.setConnectivityStatus(mOperationCallback, getNetworkConnectivity(MusicPlayerActivity.this));
+                    core.mPlayer.addNotificationCallback(MusicPlayerActivity.this);
+                    core.mPlayer.addConnectionStateCallback(MusicPlayerActivity.this);
                     // Trigger UI refresh
                     updateView();
                 }
@@ -323,7 +301,7 @@ public class MusicPlayerActivity extends AppCompatActivity implements
                 }
             });
         } else {
-            mPlayer.login(authResponse.getAccessToken());
+            core.mPlayer.login(core.authResponse.getAccessToken());
         }
     }
 
@@ -342,29 +320,29 @@ public class MusicPlayerActivity extends AppCompatActivity implements
         }
 
         // Same goes for the playing state
-        boolean playing = loggedIn && mCurrentPlaybackState != null && mCurrentPlaybackState.isPlaying;
+        boolean playing = loggedIn && core.mCurrentPlaybackState != null && core.mCurrentPlaybackState.isPlaying;
         for (int id : REQUIRES_PLAYING_STATE) {
             findViewById(id).setEnabled(playing);
         }
 
-        if (mMetadata != null) {
-            findViewById(R.id.skip_next_button).setEnabled(mMetadata.nextTrack != null);
-            findViewById(R.id.skip_prev_button).setEnabled(mMetadata.prevTrack != null);
-            findViewById(R.id.pause_button).setEnabled(mMetadata.currentTrack != null);
+        if (core.mMetadata != null) {
+            findViewById(R.id.skip_next_button).setEnabled(core.mMetadata.nextTrack != null);
+            findViewById(R.id.skip_prev_button).setEnabled(core.mMetadata.prevTrack != null);
+            findViewById(R.id.pause_button).setEnabled(core.mMetadata.currentTrack != null);
         }
 
         final ImageView coverArtView = (ImageView) findViewById(R.id.cover_art);
-        if (mMetadata != null && mMetadata.currentTrack != null) {
+        if (core.mMetadata != null && core.mMetadata.currentTrack != null) {
             //Set the metadata from song length to Minutes:Seconds, rather than milliseconds.
             final String durationStr =
                     String.format("\n %02d:%02d",
-                    TimeUnit.MILLISECONDS.toMinutes(mMetadata.currentTrack.durationMs),
-                    TimeUnit.MILLISECONDS.toSeconds(mMetadata.currentTrack.durationMs) -
-                            TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(mMetadata.currentTrack.durationMs))
+                    TimeUnit.MILLISECONDS.toMinutes(core.mMetadata.currentTrack.durationMs),
+                    TimeUnit.MILLISECONDS.toSeconds(core.mMetadata.currentTrack.durationMs) -
+                            TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(core.mMetadata.currentTrack.durationMs))
             );
-            mMetadataText.setText(mMetadata.currentTrack.name + " - " + mMetadata.currentTrack.artistName + durationStr);
+            mMetadataText.setText(core.mMetadata.currentTrack.name + " - " + core.mMetadata.currentTrack.artistName + durationStr);
             Picasso.with(this)
-                    .load(mMetadata.currentTrack.albumCoverWebUrl)
+                    .load(core.mMetadata.currentTrack.albumCoverWebUrl)
                     .transform(new Transformation() {
                         @Override
                         public Bitmap transform(Bitmap source) {
@@ -390,40 +368,30 @@ public class MusicPlayerActivity extends AppCompatActivity implements
     }
 
     private boolean isLoggedIn() {
-        return mPlayer != null && mPlayer.isLoggedIn();
-    }
-
-    public void onLoginButtonClicked(View view) {
-        if (!isLoggedIn()) {
-            logStatus("Logging in");
-            openLoginWindow();
-            showAlertbox(null);
-        } else {
-            mPlayer.logout();
-        }
+        return core.mPlayer != null && core.mPlayer.isLoggedIn();
     }
 
     public void onPlayButtonClicked(View view, FloatingActionButton fab) {
         String uri = "spotify:user:spotify:playlist:7MizIujRqHWLFVZAfQ21h4";
         logStatus("Starting playback for " + uri);
-        mPlayer.playUri(mOperationCallback, uri, 0, 0);
+        core.mPlayer.playUri(mOperationCallback, uri, 0, 0);
         fab.setImageDrawable(getResources().getDrawable(R.drawable.pause));
     }
 
     public void onPauseButtonClicked(View view) {
-        if (mCurrentPlaybackState != null && mCurrentPlaybackState.isPlaying) {
-            mPlayer.pause(mOperationCallback);
+        if (core.mCurrentPlaybackState != null && core.mCurrentPlaybackState.isPlaying) {
+            core.mPlayer.pause(mOperationCallback);
         } else {
-            mPlayer.resume(mOperationCallback);
+            core.mPlayer.resume(mOperationCallback);
         }
     }
 
     public void onSkipToPreviousButtonClicked(View view) {
-        mPlayer.skipToPrevious(mOperationCallback);
+        core.mPlayer.skipToPrevious(mOperationCallback);
     }
 
     public void onSkipToNextButtonClicked(View view) {
-        mPlayer.skipToNext(mOperationCallback);
+        core.mPlayer.skipToNext(mOperationCallback);
     }
 
 
@@ -438,7 +406,7 @@ public class MusicPlayerActivity extends AppCompatActivity implements
         //Create random
         Random random = new Random();
         //Pause Music if user is playing some.
-        if (mCurrentPlaybackState != null && mCurrentPlaybackState.isPlaying) {
+        if (core.mCurrentPlaybackState != null && core.mCurrentPlaybackState.isPlaying) {
             onPauseButtonClicked(view);
             genreSwitchResume = true;
         }
@@ -448,7 +416,7 @@ public class MusicPlayerActivity extends AppCompatActivity implements
 
         if(genreSwitchResume = true){
             onPauseButtonClicked(view);
-            mPlayer.playUri(mOperationCallback, TEST_PLAYLIST_URI, 0, 0);
+            core.mPlayer.playUri(mOperationCallback, TEST_PLAYLIST_URI, 0, 0);
         }
         Log.e("CREATION", playlists[index]);
     }
@@ -494,7 +462,7 @@ public class MusicPlayerActivity extends AppCompatActivity implements
             //Create random
             Random random = new Random();
             //Pause Music if user is playing some.
-            if (mCurrentPlaybackState != null && mCurrentPlaybackState.isPlaying) {
+            if (core.mCurrentPlaybackState != null && core.mCurrentPlaybackState.isPlaying) {
                 genreSwitchResume = true;
             }
             //Set genre to be random selection from above array
@@ -502,7 +470,7 @@ public class MusicPlayerActivity extends AppCompatActivity implements
             TEST_PLAYLIST_URI = popGenre[index];
 
             if(genreSwitchResume = true){
-                mPlayer.playUri(mOperationCallback, TEST_PLAYLIST_URI, 0, 0);
+                core.mPlayer.playUri(mOperationCallback, TEST_PLAYLIST_URI, 0, 0);
             }
         }
         else if (selectedFromList == "Classical") {
@@ -514,7 +482,7 @@ public class MusicPlayerActivity extends AppCompatActivity implements
             //Create random
             Random random = new Random();
             //Pause Music if user is playing some.
-            if (mCurrentPlaybackState != null && mCurrentPlaybackState.isPlaying) {
+            if (core.mCurrentPlaybackState != null && core.mCurrentPlaybackState.isPlaying) {
                 genreSwitchResume = true;
             }
             //Set genre to be random selection from above array
@@ -522,7 +490,7 @@ public class MusicPlayerActivity extends AppCompatActivity implements
             TEST_PLAYLIST_URI = classicalGenre[index];
 
             if(genreSwitchResume = true){
-                mPlayer.playUri(mOperationCallback, TEST_PLAYLIST_URI, 0, 0);
+                core.mPlayer.playUri(mOperationCallback, TEST_PLAYLIST_URI, 0, 0);
             }
 
         }
@@ -535,7 +503,7 @@ public class MusicPlayerActivity extends AppCompatActivity implements
             //Create random
             Random random = new Random();
             //Pause Music if user is playing some.
-            if (mCurrentPlaybackState != null && mCurrentPlaybackState.isPlaying) {
+            if (core.mCurrentPlaybackState != null && core.mCurrentPlaybackState.isPlaying) {
                 genreSwitchResume = true;
             }
             //Set genre to be random selection from above array
@@ -543,7 +511,7 @@ public class MusicPlayerActivity extends AppCompatActivity implements
             TEST_PLAYLIST_URI = electronicGenre[index];
 
             if(genreSwitchResume = true){
-                mPlayer.playUri(mOperationCallback, TEST_PLAYLIST_URI, 0, 0);
+                core.mPlayer.playUri(mOperationCallback, TEST_PLAYLIST_URI, 0, 0);
             }
         }
         else if(selectedFromList == "Funk") {
@@ -555,7 +523,7 @@ public class MusicPlayerActivity extends AppCompatActivity implements
             //Create random
             Random random = new Random();
             //Pause Music if user is playing some.
-            if (mCurrentPlaybackState != null && mCurrentPlaybackState.isPlaying) {
+            if (core.mCurrentPlaybackState != null && core.mCurrentPlaybackState.isPlaying) {
                 genreSwitchResume = true;
             }
             //Set genre to be random selection from above array
@@ -563,7 +531,7 @@ public class MusicPlayerActivity extends AppCompatActivity implements
             TEST_PLAYLIST_URI = funkyGenre[index];
 
             if(genreSwitchResume = true){
-                mPlayer.playUri(mOperationCallback, TEST_PLAYLIST_URI, 0, 0);
+                core.mPlayer.playUri(mOperationCallback, TEST_PLAYLIST_URI, 0, 0);
             }
         }
         else if(selectedFromList == "Not") {
@@ -575,7 +543,7 @@ public class MusicPlayerActivity extends AppCompatActivity implements
             //Create random
             Random random = new Random();
             //Pause Music if user is playing some.
-            if (mCurrentPlaybackState != null && mCurrentPlaybackState.isPlaying) {
+            if (core.mCurrentPlaybackState != null && core.mCurrentPlaybackState.isPlaying) {
                 genreSwitchResume = true;
             }
             //Set genre to be random selection from above array
@@ -583,31 +551,31 @@ public class MusicPlayerActivity extends AppCompatActivity implements
             TEST_PLAYLIST_URI = funkGenre[index];
 
             if(genreSwitchResume = true){
-                mPlayer.playUri(mOperationCallback, TEST_PLAYLIST_URI, 0, 0);
+                core.mPlayer.playUri(mOperationCallback, TEST_PLAYLIST_URI, 0, 0);
             }
         }
     }
 
 
     public void onToggleRepeatButtonClicked(View view) {
-        mPlayer.setRepeat(mOperationCallback, !mCurrentPlaybackState.isRepeating);
+        core.mPlayer.setRepeat(mOperationCallback, !core.mCurrentPlaybackState.isRepeating);
     }
 
     public void onSeekButtonClicked(View view) {
         final Integer seek = Integer.valueOf(mSeekEditText.getText().toString());
-        mPlayer.seekToPosition(mOperationCallback, seek);
+        core.mPlayer.seekToPosition(mOperationCallback, seek);
     }
 
     public void onLowBitrateButtonPressed(View view) {
-        mPlayer.setPlaybackBitrate(mOperationCallback, PlaybackBitrate.BITRATE_LOW);
+        core.mPlayer.setPlaybackBitrate(mOperationCallback, PlaybackBitrate.BITRATE_LOW);
     }
 
     public void onNormalBitrateButtonPressed(View view) {
-        mPlayer.setPlaybackBitrate(mOperationCallback, PlaybackBitrate.BITRATE_NORMAL);
+        core.mPlayer.setPlaybackBitrate(mOperationCallback, PlaybackBitrate.BITRATE_NORMAL);
     }
 
     public void onHighBitrateButtonPressed(View view) {
-        mPlayer.setPlaybackBitrate(mOperationCallback, PlaybackBitrate.BITRATE_HIGH);
+        core.mPlayer.setPlaybackBitrate(mOperationCallback, PlaybackBitrate.BITRATE_HIGH);
     }
 
     //Callback Methods
@@ -640,7 +608,7 @@ public class MusicPlayerActivity extends AppCompatActivity implements
 
     // Errors and stuff a lot like, but not identical to errors.
     private void logStatus(String status) {
-
+        Log.e("Player", status);
     }
 
     // Destruction.
@@ -650,9 +618,9 @@ public class MusicPlayerActivity extends AppCompatActivity implements
         super.onPause();
         unregisterReceiver(mNetworkStateReceiver);
 
-        if (mPlayer != null) {
-            mPlayer.removeNotificationCallback(MusicPlayerActivity.this);
-            mPlayer.removeConnectionStateCallback(MusicPlayerActivity.this);
+        if (core.mPlayer != null) {
+            core.mPlayer.removeNotificationCallback(MusicPlayerActivity.this);
+            core.mPlayer.removeConnectionStateCallback(MusicPlayerActivity.this);
         }
     }
 
@@ -665,10 +633,10 @@ public class MusicPlayerActivity extends AppCompatActivity implements
     @Override
     public void onPlaybackEvent(PlayerEvent event) {
         logStatus("Event: " + event);
-        mCurrentPlaybackState = mPlayer.getPlaybackState();
-        mMetadata = mPlayer.getMetadata();
-        Log.i(TAG, "Player state: " + mCurrentPlaybackState);
-        Log.i(TAG, "Metadata: " + mMetadata);
+        core.mCurrentPlaybackState = core.mPlayer.getPlaybackState();
+        core.mMetadata = core.mPlayer.getMetadata();
+        Log.i(TAG, "Player state: " + core.mCurrentPlaybackState);
+        Log.i(TAG, "Metadata: " + core.mMetadata);
         updateView();
     }
 
