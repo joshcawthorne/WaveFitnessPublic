@@ -9,12 +9,12 @@
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:theme="@style/drawerTheme"
+        android:theme="@style/WaveTheme"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        android:textColor="#fff"
-        android:titleTextColor="#fff"
-        android:subtitleTextColor="#fff"
+        android:background="@color/wave_drawer_background"
+        android:textColor="@color/wave_drawer_primary_text"
+        android:titleTextColor="@color/wave_drawer_primary_text"
+        android:subtitleTextColor="@color/wave_drawer_primary_text"
         android:elevation="4dp" />
 
         <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
@@ -39,7 +39,7 @@
                         android:textColor="#fff"
                         android:padding="10dp"
                         android:text="Here's some stuff we think you'll like:"
-                        android:background="#101011"
+                        android:background="#0088FF"
                         />
                 </LinearLayout>
 
@@ -48,7 +48,7 @@
                     android:layout_height="wrap_content"
 
                     android:orientation="horizontal"
-                    android:background="#202022">
+                    android:background="#64b5f6">
 
                     <HorizontalScrollView
                         android:layout_width="match_parent"

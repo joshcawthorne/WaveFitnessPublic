@@ -39,6 +39,7 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
 
     Animation animFadein;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
