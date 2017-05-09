@@ -39,7 +39,6 @@ import android.widget.ListView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-import com.google.android.gms.maps.model.Dash;
 import com.mikepenz.materialdrawer.AccountHeader;
 import com.mikepenz.materialdrawer.AccountHeaderBuilder;
 import com.mikepenz.materialdrawer.Drawer;
@@ -50,16 +49,11 @@ import com.mikepenz.materialdrawer.model.ProfileDrawerItem;
 import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
-import com.spotify.sdk.android.authentication.AuthenticationClient;
-import com.spotify.sdk.android.authentication.AuthenticationRequest;
-import com.spotify.sdk.android.authentication.AuthenticationResponse;
 import com.spotify.sdk.android.player.Config;
 import com.spotify.sdk.android.player.ConnectionStateCallback;
 import com.spotify.sdk.android.player.Connectivity;
 import com.spotify.sdk.android.player.Error;
-import com.spotify.sdk.android.player.Metadata;
 import com.spotify.sdk.android.player.PlaybackBitrate;
-import com.spotify.sdk.android.player.PlaybackState;
 import com.spotify.sdk.android.player.Player;
 import com.spotify.sdk.android.player.PlayerEvent;
 import com.spotify.sdk.android.player.Spotify;
@@ -116,6 +110,8 @@ public class MusicPlayerActivity extends AppCompatActivity implements
 
     //UI
     private TextView mMetadataText;
+    private TextView mMetaDataSubtext;
+    private TextView mMetaDataTime;
     private EditText mSeekEditText;
     private ScrollView mStatusTextScrollView;
     Drawer menu;
@@ -151,7 +147,9 @@ public class MusicPlayerActivity extends AppCompatActivity implements
         }
 
         // Get a reference to any UI widgets that will be needed.
-        mMetadataText = (TextView) findViewById(R.id.metadata);
+        mMetadataText = (TextView) findViewById(R.id.metadataTitle);
+        mMetaDataSubtext = (TextView) findViewById(R.id.metadataSubTitle);
+        mMetaDataTime = (TextView) findViewById(R.id.metaDataTime);
         mStatusTextScrollView = (ScrollView) findViewById(R.id.status_text_container);
 
         updateView();
@@ -341,7 +339,9 @@ public class MusicPlayerActivity extends AppCompatActivity implements
                     TimeUnit.MILLISECONDS.toSeconds(core.mMetadata.currentTrack.durationMs) -
                             TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(core.mMetadata.currentTrack.durationMs))
             );
-            mMetadataText.setText(core.mMetadata.currentTrack.name + " - " + core.mMetadata.currentTrack.artistName + durationStr);
+            mMetadataText.setText(core.mMetadata.currentTrack.name);
+            mMetaDataSubtext.setText(core.mMetadata.currentTrack.artistName);
+            mMetaDataTime.setText(durationStr);
             Picasso.with(this)
                     .load(core.mMetadata.currentTrack.albumCoverWebUrl)
                     .transform(new Transformation() {

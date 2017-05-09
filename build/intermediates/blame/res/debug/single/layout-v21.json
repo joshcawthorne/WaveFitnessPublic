@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\layout-v21\\notification_action_tombstone.xml"
+    },
+    {
+        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\layout-v21\\place_autocomplete_fragment.xml",
+        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\9c48360e39fa0368dfb6daf59a4adf81cd02676b\\output\\res\\layout-v21\\place_autocomplete_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\layout-v21\\notification_template_icon_group.xml"
+    },
+    {
+        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
+        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\layout-v21\\notification_template_custom_big.xml"
+    },
+    {
+        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
+        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\layout-v21\\notification_action.xml"
+    }
+]

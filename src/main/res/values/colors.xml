@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#232127</color>
     <color name="colorAccent">#ff4081</color>
     <color name="newColour1">#00ff95</color>
+    <color name="background">#354852</color>
 
     <!-- Wave Styles -->
     <color name="wavePrimary">#0088FF</color>

@@ -1,18 +1,30 @@
 [
     {
-        "merged": "/Users/q5065885/Desktop/newMaster/WaveFitness/build/intermediates/res/merged/debug/mipmap-xxhdpi/ic_launcher.png",
-        "source": "/Users/q5065885/Desktop/newMaster/WaveFitness/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\launcher_launch.png",
+        "source": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\src\\main\\res\\mipmap-xxhdpi\\launcher_launch.png"
     },
     {
-        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\q5065885\\Desktop\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
-        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\q5065885\\Desktop\\WaveFitness\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\q5065885\\Desktop\\newMaster\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
+        "source": "C:\\Users\\q5065885\\Desktop\\newMaster\\WaveFitness\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Aaron\\Desktop\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
-        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\launcher_icon.png",
+        "source": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\src\\main\\res\\mipmap-xxhdpi\\launcher_icon.png"
     },
     {
-        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/mipmap-xxhdpi/ic_launcher.png",
-        "source": "/Users/s6236422/Desktop/WaveFitness/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
+        "source": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\s6236422\\Desktop\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
+        "source": "C:\\Users\\s6236422\\Desktop\\WaveFitness\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\s6236422\\Desktop\\WaveFitness\\C:\\Users\\Aaron\\Desktop\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
+        "source": "C:\\Users\\s6236422\\Desktop\\WaveFitness\\C:\\Users\\Aaron\\Desktop\\WaveFitness\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\s6236422\\Desktop\\WaveFitness\\C:\\Users\\q5065885\\Desktop\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
+        "source": "C:\\Users\\s6236422\\Desktop\\WaveFitness\\C:\\Users\\q5065885\\Desktop\\WaveFitness\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     }
 ]

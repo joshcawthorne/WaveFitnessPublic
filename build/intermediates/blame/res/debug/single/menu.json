@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\menu\\menu_scrolling.xml",
+        "source": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\src\\main\\res\\menu\\menu_scrolling.xml"
+    },
+    {
+        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\menu\\drawer.xml",
+        "source": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\src\\main\\res\\menu\\drawer.xml"
+    },
+    {
+        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
+        "source": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\src\\main\\res\\menu\\main.xml"
+    }
+]
