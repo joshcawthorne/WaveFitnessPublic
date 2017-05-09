@@ -4,6 +4,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.3.1'
+        classpath 'com.google.gms:google-services:3.0.0'
     }
 }
 
@@ -21,7 +22,7 @@ android {
     buildToolsVersion '25.0.2'
 
     defaultConfig {
-        minSdkVersion 21
+        minSdkVersion 23
         targetSdkVersion 25
         multiDexEnabled true
         applicationId 'com.wave.fitness'
@@ -68,6 +69,13 @@ dependencies {
     compile('com.mikepenz:materialdrawer:5.9.1@aar') {
         transitive = true
     }
+
+    //Smart Login
+    compile 'codelight.studios:android-smart-login:1.2'
+    //Facebook SDK
+    compile 'com.facebook.android:facebook-android-sdk:4.0.1'
+    //GSON library
+    compile 'com.google.code.gson:gson:2.3.1'
 
     //Rounded Images
     compile 'com.makeramen:roundedimageview:2.3.0'
