@@ -9,13 +9,12 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
-public class signupActivity extends AppCompatActivity {
+public class OLDsignupActivity extends AppCompatActivity {
     private static final String TAG = "SignupActivity";
 
     SharedPreferences prefs = null;
@@ -50,7 +49,7 @@ public class signupActivity extends AppCompatActivity {
 
         _signupButton.setEnabled(false);
 
-        final ProgressDialog progressDialog = new ProgressDialog(signupActivity.this,
+        final ProgressDialog progressDialog = new ProgressDialog(OLDsignupActivity.this,
                 R.style.DialogBox);
         progressDialog.setIndeterminate(true);
         progressDialog.setMessage("Hold on, we're just setting some stuff up...");
@@ -75,8 +74,8 @@ public class signupActivity extends AppCompatActivity {
     }
 
     public void returnLogin() {
-        Intent returnLogin = new Intent(signupActivity.this, startupActivity.class);
-        signupActivity.this.startActivity(returnLogin);
+        Intent returnLogin = new Intent(OLDsignupActivity.this, setupActivity.class);
+        OLDsignupActivity.this.startActivity(returnLogin);
     }
 
 
@@ -84,8 +83,8 @@ public class signupActivity extends AppCompatActivity {
         _signupButton.setEnabled(true);
         setResult(RESULT_OK, null);
         prefs.edit().putBoolean("firstrun", false).commit();
-        Intent startDashboard = new Intent(signupActivity.this, DashboardActivity.class);
-        signupActivity.this.startActivity(startDashboard);
+        Intent startDashboard = new Intent(OLDsignupActivity.this, DashboardActivity.class);
+        OLDsignupActivity.this.startActivity(startDashboard);
     }
 
     public void onSignupFailed() {

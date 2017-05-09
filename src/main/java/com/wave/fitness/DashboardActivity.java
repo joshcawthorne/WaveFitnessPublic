@@ -3,28 +3,15 @@ package com.wave.fitness;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.icu.text.SimpleDateFormat;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.Button;
 import android.widget.TextView;
 
-import com.google.android.gms.auth.api.Auth;
-import com.google.android.gms.maps.model.Dash;
-import com.jjoe64.graphview.GraphView;
-import com.jjoe64.graphview.GridLabelRenderer;
-import com.jjoe64.graphview.helper.DateAsXAxisLabelFormatter;
-import com.jjoe64.graphview.series.DataPoint;
-import com.jjoe64.graphview.series.LineGraphSeries;
 import com.mikepenz.materialdrawer.AccountHeader;
 import com.mikepenz.materialdrawer.AccountHeaderBuilder;
 import com.mikepenz.materialdrawer.Drawer;
@@ -36,16 +23,11 @@ import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 
-import java.net.URL;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.Random;
 
-import studios.codelight.smartloginlibrary.SmartLoginConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
-
-import static android.R.id.list;
 
 public class DashboardActivity extends AppCompatActivity implements Animation.AnimationListener {
 
@@ -169,7 +151,7 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
 
         if (prefs.getBoolean("firstrun", true)) {
 
-            Intent firstTime = new Intent(DashboardActivity.this, startupActivity.class);
+            Intent firstTime = new Intent(DashboardActivity.this, setupActivity.class);
             DashboardActivity.this.startActivity(firstTime);
         }
     }

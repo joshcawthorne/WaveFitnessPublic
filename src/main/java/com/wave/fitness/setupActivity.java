@@ -1,50 +1,31 @@
 package com.wave.fitness;
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.res.AssetManager;
-import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Editable;
-import android.text.TextUtils;
-import android.text.TextWatcher;
 import android.view.View;
-import android.view.WindowManager;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import android.app.ProgressDialog;
 import android.util.Log;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
 
-import java.util.Locale;
-
 import studios.codelight.smartloginlibrary.LoginType;
 import studios.codelight.smartloginlibrary.SmartLogin;
 import studios.codelight.smartloginlibrary.SmartLoginCallbacks;
 import studios.codelight.smartloginlibrary.SmartLoginConfig;
 import studios.codelight.smartloginlibrary.SmartLoginFactory;
-import studios.codelight.smartloginlibrary.users.SmartFacebookUser;
 import studios.codelight.smartloginlibrary.users.SmartUser;
 import studios.codelight.smartloginlibrary.util.SmartLoginException;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
-
-import static android.R.attr.typeface;
 
 
-public class startupActivity  extends AppCompatActivity implements SmartLoginCallbacks{
+public class setupActivity extends AppCompatActivity implements SmartLoginCallbacks{
 
     private static final String TAG = "LoginActivity";
     private static final int REQUEST_SIGNUP = 0;
@@ -110,7 +91,7 @@ public class startupActivity  extends AppCompatActivity implements SmartLoginCal
             @Override
             public void onClick(View v) {
                 // Start the Signup activity
-                Intent intent = new Intent(getApplicationContext(), signupActivity.class);
+                Intent intent = new Intent(getApplicationContext(), OLDsignupActivity.class);
                 startActivityForResult(intent, REQUEST_SIGNUP);
             }
         });
@@ -164,8 +145,8 @@ public class startupActivity  extends AppCompatActivity implements SmartLoginCal
 
         core.firstName = firstName;
 
-        Intent startDashboard = new Intent(startupActivity.this, DashboardActivity.class);
-        startupActivity.this.startActivity(startDashboard);
+        Intent startDashboard = new Intent(setupActivity.this, DashboardActivity.class);
+        setupActivity.this.startActivity(startDashboard);
 
 
     }
