@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "912008561423",
+    "project_id": "firebase-wavefitness"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:912008561423:android:cdc4484b73b7bcad",
+        "android_client_info": {
+          "package_name": "com.wave.fitness"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "912008561423-jm06saf84qd37g62hgldcj3o847fbepu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.wave.fitness",
+            "certificate_hash": "50227e95ac0ed4dadf95535f40081730dacb3fee"
+          }
+        },
+        {
+          "client_id": "912008561423-1n5ic7o3fr6kea5ja3pkvav57vm21k18.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtlQvfyIh5-PxPqKRcenfeefutqfKPo-Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
