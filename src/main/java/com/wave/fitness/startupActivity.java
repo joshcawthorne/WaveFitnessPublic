@@ -61,12 +61,15 @@ public class startupActivity  extends AppCompatActivity implements SmartLoginCal
 
     SmartLoginConfig config;
     SmartLogin smartLogin;
+    private SpotifyCore core;
 
     @Override
     protected void onCreate(Bundle savedInstantState) {
         super.onCreate(savedInstantState);
 
         setContentView(R.layout.activity_signup);
+
+        core = ((SpotifyCore)getApplicationContext());
 
         config = new SmartLoginConfig(this /* Context */, this /* SmartLoginCallbacks */);
         config.setFacebookAppId(getString(R.string.facebook_app_id));
@@ -156,6 +159,11 @@ public class startupActivity  extends AppCompatActivity implements SmartLoginCal
     @Override
     public void onLoginSuccess(SmartUser user) {
         prefs.edit().putBoolean("firstrun", false).commit();
+
+        String firstName = user.getFirstName();
+
+        core.firstName = firstName;
+
         Intent startDashboard = new Intent(startupActivity.this, DashboardActivity.class);
         startupActivity.this.startActivity(startDashboard);
 
