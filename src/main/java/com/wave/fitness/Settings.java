@@ -16,8 +16,9 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.wave.fitness.pedometer;
+package com.wave.fitness;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
 
@@ -35,5 +36,10 @@ public class Settings extends PreferenceActivity {
         super.onCreate(savedInstanceState);
         
         addPreferencesFromResource(R.xml.preferences);
+    }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(Settings.this, RunActivity.class));
     }
 }

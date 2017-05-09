@@ -145,6 +145,7 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 
+
     @Override
     protected void onResume() {
         super.onResume();
@@ -157,7 +158,7 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
     }
 
     public void onRunButtonClicked(View view) {
-        startActivity(new Intent(DashboardActivity.this, AuthActivity.class));
+        startActivity(new Intent(DashboardActivity.this, RunActivity.class));
     }
 
     @Override

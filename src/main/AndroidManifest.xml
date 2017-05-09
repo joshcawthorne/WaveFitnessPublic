@@ -121,7 +121,7 @@
 
         <service android:name=".pedometer.StepService"/>
 
-        <activity android:name=".pedometer.Settings"
+        <activity android:name=".Settings"
             android:label="@string/activity_settings">
         </activity>
 

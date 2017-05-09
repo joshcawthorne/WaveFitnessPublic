@@ -17,7 +17,6 @@ import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -55,7 +54,6 @@ import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 
 import com.wave.fitness.pedometer.PedometerSettings;
-import com.wave.fitness.pedometer.Settings;
 import com.wave.fitness.pedometer.StepService;
 import com.wave.fitness.pedometer.Utils;
 
@@ -526,7 +524,6 @@ public class RunActivity extends AppCompatActivity implements OnMapReadyCallback
     }
 
     private static final int MENU_SETTINGS = 8;
-    private static final int MENU_QUIT     = 9;
 
     private static final int MENU_PAUSE = 1;
     private static final int MENU_RESUME = 2;
@@ -552,9 +549,6 @@ public class RunActivity extends AppCompatActivity implements OnMapReadyCallback
                 .setIcon(android.R.drawable.ic_menu_preferences)
                 .setShortcut('8', 's')
                 .setIntent(new Intent(this, Settings.class));
-        menu.add(0, MENU_QUIT, 0, R.string.quit)
-                .setIcon(android.R.drawable.ic_lock_power_off)
-                .setShortcut('9', 'q');
         return true;
     }
 
@@ -571,13 +565,6 @@ public class RunActivity extends AppCompatActivity implements OnMapReadyCallback
                 return true;
             case MENU_RESET:
                 resetValues(true);
-                return true;
-            case MENU_QUIT:
-                resetValues(false);
-                unbindStepService();
-                stopStepService();
-                mQuitting = true;
-                finish();
                 return true;
         }
         return false;

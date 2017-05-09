@@ -375,7 +375,7 @@ public class StepService extends Service {
         //notification.setLatestEventInfo(this, text,
              //   getText(R.string.notification_subtitle), contentIntent);
 
-        mNM.notify(R.string.app_name, notification);
+        //mNM.notify(R.string.app_name, notification);
     }
 
 
