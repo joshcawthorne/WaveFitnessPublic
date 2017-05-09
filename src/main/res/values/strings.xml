@@ -116,6 +116,8 @@
     <string name="title_activity_dashboard">DashboardActivity</string>
 
     <!--Login/Signup Strings-->
+    <string name="facebook_app_id">638876779630334</string>
+    <string name="fb_login_protocol_scheme">fb638876779630334</string>
     <string name="login_welcome">Welcome to Wave!</string>
     <string name="login_subtitle">Login to get right back at it.</string>
     <string name="login">Login</string>

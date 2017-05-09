@@ -37,6 +37,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Random;
 
+import studios.codelight.smartloginlibrary.SmartLoginConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
@@ -152,6 +153,7 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
         super.onResume();
 
         if (prefs.getBoolean("firstrun", true)) {
+
             Intent firstTime = new Intent(DashboardActivity.this, startupActivity.class);
             DashboardActivity.this.startActivity(firstTime);
         }

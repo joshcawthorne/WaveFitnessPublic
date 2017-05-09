@@ -30,13 +30,21 @@ import butterknife.InjectView;
 
 import java.util.Locale;
 
+import studios.codelight.smartloginlibrary.LoginType;
+import studios.codelight.smartloginlibrary.SmartLogin;
+import studios.codelight.smartloginlibrary.SmartLoginCallbacks;
+import studios.codelight.smartloginlibrary.SmartLoginConfig;
+import studios.codelight.smartloginlibrary.SmartLoginFactory;
+import studios.codelight.smartloginlibrary.users.SmartFacebookUser;
+import studios.codelight.smartloginlibrary.users.SmartUser;
+import studios.codelight.smartloginlibrary.util.SmartLoginException;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 import static android.R.attr.typeface;
 
 
-public class startupActivity  extends AppCompatActivity{
+public class startupActivity  extends AppCompatActivity implements SmartLoginCallbacks{
 
     private static final String TAG = "LoginActivity";
     private static final int REQUEST_SIGNUP = 0;
@@ -46,15 +54,22 @@ public class startupActivity  extends AppCompatActivity{
     @InjectView(R.id.input_email) EditText _emailText;
     @InjectView(R.id.input_password) EditText _passwordText;
     @InjectView(R.id.login) Button _loginButton;
+    @InjectView(R.id.facebook) Button _fbloginButton;
     @InjectView(R.id.signup) TextView _signupLink;
 
     String fontPath = "assets/fonts/";
+
+    SmartLoginConfig config;
+    SmartLogin smartLogin;
 
     @Override
     protected void onCreate(Bundle savedInstantState) {
         super.onCreate(savedInstantState);
 
         setContentView(R.layout.activity_signup);
+
+        config = new SmartLoginConfig(this /* Context */, this /* SmartLoginCallbacks */);
+        config.setFacebookAppId(getString(R.string.facebook_app_id));
 
         prefs = getSharedPreferences("com.wave.fitness", MODE_PRIVATE);
 
@@ -72,8 +87,19 @@ public class startupActivity  extends AppCompatActivity{
 
             @Override
             public void onClick(View v) {
-                login();
+                smartLogin = SmartLoginFactory.build(LoginType.Google);
+                smartLogin.login(config);
             }
+        });
+
+        _fbloginButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                /* Facebook Login */
+                smartLogin = SmartLoginFactory.build(LoginType.Facebook);
+                smartLogin.login(config);
+            }
+
         });
 
         _signupLink.setOnClickListener(new View.OnClickListener() {
@@ -92,68 +118,16 @@ public class startupActivity  extends AppCompatActivity{
         super.onResume();
     }
 
-    public void login() {
-        Log.d(TAG, "Login");
-
-        if (!validate()) {
-            onLoginFailed();
-            return;
-        }
-
-        _loginButton.setEnabled(false);
-
-        final ProgressDialog progressDialog = new ProgressDialog(startupActivity.this,
-                R.style.DialogBox);
-        progressDialog.setIndeterminate(true);
-        progressDialog.setMessage("Authenticating...");
-        progressDialog.show();
-
-        String email = _emailText.getText().toString();
-        String password = _passwordText.getText().toString();
-
-        // TODO: Implement authentication logic here.
-
-        new android.os.Handler().postDelayed(
-                new Runnable() {
-                    public void run() {
-                        // On complete call either onLoginSuccess or onLoginFailed
-                        onLoginSuccess();
-                        // onLoginFailed();
-                        progressDialog.dismiss();
-                    }
-                }, 3000);
-    }
-
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == REQUEST_SIGNUP) {
-            if (resultCode == RESULT_OK) {
-
-                // TODO: Implement successful signup logic here
-                Intent intent = new Intent(getApplicationContext(), signupActivity.class);
-                startActivityForResult(intent, REQUEST_SIGNUP);
-            }
-        }
+        super.onActivityResult(requestCode, resultCode, data);
+        smartLogin.onActivityResult(requestCode, resultCode, data, config);
     }
 
     @Override
     public void onBackPressed() {
         // disable going back to the MainActivity
         moveTaskToBack(true);
-    }
-
-    public void onLoginSuccess() {
-        _loginButton.setEnabled(true);
-        prefs.edit().putBoolean("firstrun", false).commit();
-        Intent startDashboard = new Intent(startupActivity.this, DashboardActivity.class);
-        startupActivity.this.startActivity(startDashboard);
-    }
-
-    public void onLoginFailed() {
-        Toast.makeText(getBaseContext(), "Login failed", Toast.LENGTH_LONG).show();
-
-        _loginButton.setEnabled(true);
     }
 
     public boolean validate() {
@@ -177,5 +151,29 @@ public class startupActivity  extends AppCompatActivity{
         }
 
         return valid;
+    }
+
+    @Override
+    public void onLoginSuccess(SmartUser user) {
+        prefs.edit().putBoolean("firstrun", false).commit();
+        Intent startDashboard = new Intent(startupActivity.this, DashboardActivity.class);
+        startupActivity.this.startActivity(startDashboard);
+
+
+    }
+
+    @Override
+    public void onLoginFailure(SmartLoginException e) {
+        Log.e("Login", "Failed");
+    }
+
+    @Override
+    public SmartUser doCustomLogin() {
+        return null;
+    }
+
+    @Override
+    public SmartUser doCustomSignup() {
+        return null;
     }
 }
