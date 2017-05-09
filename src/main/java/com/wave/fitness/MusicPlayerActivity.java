@@ -61,6 +61,8 @@ import com.spotify.sdk.android.player.SpotifyPlayer;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Transformation;
 
+import java.sql.Time;
+import java.util.Calendar;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
@@ -114,6 +116,7 @@ public class MusicPlayerActivity extends AppCompatActivity implements
     private TextView mMetaDataTime;
     private EditText mSeekEditText;
     private ScrollView mStatusTextScrollView;
+    private String currentPlaylist = "null";
     Drawer menu;
 
     private SpotifyCore core;
@@ -151,6 +154,7 @@ public class MusicPlayerActivity extends AppCompatActivity implements
         mMetaDataSubtext = (TextView) findViewById(R.id.metadataSubTitle);
         mMetaDataTime = (TextView) findViewById(R.id.metaDataTime);
         mStatusTextScrollView = (ScrollView) findViewById(R.id.status_text_container);
+        mMetadataText.setSelected(true);
 
         updateView();
 
@@ -331,6 +335,7 @@ public class MusicPlayerActivity extends AppCompatActivity implements
         }
 
         final ImageView coverArtView = (ImageView) findViewById(R.id.cover_art);
+        final ImageView coverArtViewTwo = (ImageView) findViewById(R.id.cover_art_two);
         if (core.mMetadata != null && core.mMetadata.currentTrack != null) {
             //Set the metadata from song length to Minutes:Seconds, rather than milliseconds.
             final String durationStr =
@@ -342,6 +347,7 @@ public class MusicPlayerActivity extends AppCompatActivity implements
             mMetadataText.setText(core.mMetadata.currentTrack.name);
             mMetaDataSubtext.setText(core.mMetadata.currentTrack.artistName);
             mMetaDataTime.setText(durationStr);
+
             Picasso.with(this)
                     .load(core.mMetadata.currentTrack.albumCoverWebUrl)
                     .transform(new Transformation() {
@@ -359,11 +365,30 @@ public class MusicPlayerActivity extends AppCompatActivity implements
                         }
                     })
                     .into(coverArtView);
+
+            Picasso.with(this)
+                    .load(core.mMetadata.currentTrack.albumCoverWebUrl)
+                    .transform(new Transformation() {
+                        @Override
+                        public Bitmap transform(Bitmap source) {
+                            final Bitmap copy = source.copy(source.getConfig(), true);
+                            source.recycle();
+                            final Canvas canvas = new Canvas(copy);
+                            return copy;
+                        }
+
+                        @Override
+                        public String key() {
+                            return "darken";
+                        }
+                    })
+                    .into(coverArtViewTwo);
+
+
         } else {
-            mMetadataText.setText("You're not playing anything yet! " +
-                                    "\n" +
-                                    "Are you signed in?");
+            mMetadataText.setText(" ");
             coverArtView.setBackground(null);
+            coverArtViewTwo.setBackground(null);
         }
 
     }
@@ -469,10 +494,6 @@ public class MusicPlayerActivity extends AppCompatActivity implements
             //Set genre to be random selection from above array
             int index = random.nextInt(popGenre.length);
             TEST_PLAYLIST_URI = popGenre[index];
-
-            if(genreSwitchResume = true){
-                core.mPlayer.playUri(mOperationCallback, TEST_PLAYLIST_URI, 0, 0);
-            }
         }
         else if (selectedFromList == "Classical") {
             String[] classicalGenre = {
@@ -489,11 +510,6 @@ public class MusicPlayerActivity extends AppCompatActivity implements
             //Set genre to be random selection from above array
             int index = random.nextInt(classicalGenre.length);
             TEST_PLAYLIST_URI = classicalGenre[index];
-
-            if(genreSwitchResume = true){
-                core.mPlayer.playUri(mOperationCallback, TEST_PLAYLIST_URI, 0, 0);
-            }
-
         }
         else if(selectedFromList == "Electronic") {
             String[] electronicGenre = {
@@ -510,10 +526,6 @@ public class MusicPlayerActivity extends AppCompatActivity implements
             //Set genre to be random selection from above array
             int index = random.nextInt(electronicGenre.length);
             TEST_PLAYLIST_URI = electronicGenre[index];
-
-            if(genreSwitchResume = true){
-                core.mPlayer.playUri(mOperationCallback, TEST_PLAYLIST_URI, 0, 0);
-            }
         }
         else if(selectedFromList == "Funk") {
             String[] funkyGenre = {
@@ -530,30 +542,24 @@ public class MusicPlayerActivity extends AppCompatActivity implements
             //Set genre to be random selection from above array
             int index = random.nextInt(funkyGenre.length);
             TEST_PLAYLIST_URI = funkyGenre[index];
-
-            if(genreSwitchResume = true){
-                core.mPlayer.playUri(mOperationCallback, TEST_PLAYLIST_URI, 0, 0);
-            }
         }
-        else if(selectedFromList == "Not") {
-            String[] funkGenre = {
-                    "spotify:user:spotify:playlist:4Ebgfxsss10NoZbpRq1E06",
-                    "spotify:user:spotify:playlist:37i9dQZF1DX23YPJntYMnh",
-                    "spotify:user:spotify:playlist:37i9dQZF1DX7Q7o98uPeg1",
-            };
-            //Create random
-            Random random = new Random();
-            //Pause Music if user is playing some.
-            if (core.mCurrentPlaybackState != null && core.mCurrentPlaybackState.isPlaying) {
-                genreSwitchResume = true;
-            }
-            //Set genre to be random selection from above array
-            int index = random.nextInt(funkGenre.length);
-            TEST_PLAYLIST_URI = funkGenre[index];
+        checkMusic();
+    }
 
-            if(genreSwitchResume = true){
-                core.mPlayer.playUri(mOperationCallback, TEST_PLAYLIST_URI, 0, 0);
-            }
+    public void checkMusic() {
+        if (currentPlaylist == "null") {
+            core.mPlayer.playUri(mOperationCallback, TEST_PLAYLIST_URI, 0, 0);
+            currentPlaylist = TEST_PLAYLIST_URI;
+        }
+
+        else if(currentPlaylist == TEST_PLAYLIST_URI) {
+            setGenre();
+        }
+
+        else if(currentPlaylist != TEST_PLAYLIST_URI) {
+            core.mPlayer.playUri(mOperationCallback, TEST_PLAYLIST_URI, 0, 0);
+
+            currentPlaylist = TEST_PLAYLIST_URI;
         }
     }
 

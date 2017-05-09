@@ -3,12 +3,15 @@ package com.wave.fitness;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.icu.text.SimpleDateFormat;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -33,6 +36,7 @@ import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 
+import java.net.URL;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Random;
@@ -50,14 +54,20 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
 
     Animation animFadein;
 
+    SpotifyCore core;
+
+    String userFirstName = "John";
+    String userLastName = "Blogs";
+    String userEmail = "johnblogs@gmail.com";
+    String profileID = " ";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
+        core = ((SpotifyCore)getApplicationContext());
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
         prefs = getSharedPreferences("com.wave.fitness", MODE_PRIVATE);
 
         animFadein = AnimationUtils.loadAnimation(getApplicationContext(),
@@ -65,12 +75,13 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
 
         animFadein.setAnimationListener(this);
 
+        createUserInfo();
 
         AccountHeader headerResult = new AccountHeaderBuilder()
                 .withActivity(this)
                 //.withHeaderBackground(R.drawable.header)
                 .addProfiles(
-                        new ProfileDrawerItem().withName("Josh Cawthorne").withEmail("joshcawthorne97@gmail.com").withIcon(getResources().getDrawable(R.drawable.temp_profile))
+                        new ProfileDrawerItem().withName(userFirstName + userLastName).withEmail(userEmail).withIcon(getResources().getDrawable(R.drawable.temp_profile))
                 )
                 .withOnAccountHeaderListener(new AccountHeader.OnAccountHeaderListener() {
                     @Override
@@ -141,6 +152,10 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
 
         TextView curDate = (TextView)findViewById(R.id.dashDate);
         curDate.setText(prefixString + dashboardDate + ", Josh" + endSentString);
+    }
+
+    protected void createUserInfo() {
+        userFirstName = core.firstName;
     }
 
     @Override
