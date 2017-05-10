@@ -120,18 +120,11 @@ public class spotifyActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    public void endRunActivity() {
-
-    }
-
     DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
         @Override
         public void onClick(DialogInterface dialog, int which) {
             switch (which){
                 case DialogInterface.BUTTON_POSITIVE:
-                    fragmentTransaction.remove(SpotifyFragmentActivity).commit();
-                    endRunActivity();
                     break;
 
                 case DialogInterface.BUTTON_NEGATIVE:
