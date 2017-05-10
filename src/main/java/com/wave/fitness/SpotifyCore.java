@@ -20,7 +20,7 @@ public class SpotifyCore extends Application {
     public Metadata mMetadata;
     public boolean isLoggedIn = false;
     public AuthenticationResponse authResponse;
-    public SocialUser user;
+    public SocialUser user = new SocialUser("0", "Joe Doe", "test@test.com", null, null, null, null);
 
     @Override
     public void onCreate() {

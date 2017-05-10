@@ -31,7 +31,7 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class DashboardActivity extends AppCompatActivity implements Animation.AnimationListener {
 
-    Drawer menu;
+    private HamburgerMenu menu;
     Toolbar toolbar;
     SharedPreferences prefs = null;
 
@@ -107,13 +107,13 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
             DashboardActivity.this.startActivityForResult(firstTime, 22);
         }
         else{
-            new HamburgerMenu(this, core.user, toolbar);
+            menu = new HamburgerMenu(this, core.user, toolbar);
         }
 
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
-        new HamburgerMenu(this, core.user, toolbar);
+        menu = new HamburgerMenu(this, core.user, toolbar);
     }
 
     public void onRunButtonClicked(View view) {
@@ -122,16 +122,11 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
 
     @Override
     public void onBackPressed() {
-        if(menu.isDrawerOpen()){
-            menu.closeDrawer();
-        }
-        else{
-            super.onBackPressed();
-            Intent intent = new Intent(Intent.ACTION_MAIN);
-            intent.addCategory(Intent.CATEGORY_HOME);
-            startActivity(intent);
-        }
+        if(menu.menu.isDrawerOpen()){
+            menu.menu.closeDrawer();
+        }else {
 
+        }
     }
 
     public void startTemp(View view) {
