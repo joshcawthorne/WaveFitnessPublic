@@ -1,6 +1,7 @@
 package com.wave.fitness;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -18,18 +19,22 @@ import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 import com.rogalabs.lib.model.SocialUser;
 
+import static android.content.Context.MODE_PRIVATE;
+
 /**
  * Created by s6236422 on 10/05/2017.
  */
+
+
 
 public class HamburgerMenu {
     
     public AccountHeader header;
     public Drawer menu;
+    private SharedPreferences prefs;
     
     public HamburgerMenu(final AppCompatActivity activity, SocialUser user, Toolbar toolbar){
 
-        
         header = new AccountHeaderBuilder()
                 .withActivity(activity)
                 //.withHeaderBackground(R.drawable.header)

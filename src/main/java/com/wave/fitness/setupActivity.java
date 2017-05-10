@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import android.util.Log;
 
+import com.google.gson.Gson;
 import com.rogalabs.lib.Callback;
 import com.rogalabs.lib.LoginView;
 import com.rogalabs.lib.model.SocialUser;
@@ -45,6 +46,8 @@ public class setupActivity extends LoginView {
         setContentView(R.layout.activity_signup);
 
         core = ((SpotifyCore)getApplicationContext());
+
+        final Gson gson = new Gson();
 
         prefs = getSharedPreferences("com.wave.fitness", MODE_PRIVATE);
 
@@ -90,6 +93,7 @@ public class setupActivity extends LoginView {
                     @Override
                     public void onSuccess(SocialUser socialUser) {
                         prefs.edit().putBoolean("firstrun", false).commit();
+                        prefs.edit().putString("user", gson.toJson(socialUser)).commit();
                         core.user = socialUser;
                         Intent startDashboard = new Intent(setupActivity.this, DashboardActivity.class);
                         setupActivity.this.startActivity(startDashboard);

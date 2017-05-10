@@ -13,6 +13,9 @@ import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+import com.rogalabs.lib.model.SocialUser;
+
 import java.util.Date;
 import java.util.Random;
 
@@ -30,6 +33,7 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
 
     Animation animFadein;
 
+    Gson gson;
     SpotifyCore core;
 
     @Override
@@ -38,6 +42,7 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
         setContentView(R.layout.activity_dashboard);
 
         core = ((SpotifyCore)getApplicationContext());
+        gson = new Gson();
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         prefs = getSharedPreferences("com.wave.fitness", MODE_PRIVATE);
@@ -100,13 +105,13 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
             DashboardActivity.this.startActivityForResult(firstTime, 22);
         }
         else{
-            menu = new HamburgerMenu(this, core.user, toolbar);
+            menu = new HamburgerMenu(this, gson.fromJson(prefs.getString("user", ""), SocialUser.class), toolbar);
         }
 
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
-        menu = new HamburgerMenu(this, core.user, toolbar);
+        menu = new HamburgerMenu(this, gson.fromJson(prefs.getString("user", ""), SocialUser.class), toolbar);
     }
 
     public void onRunButtonClicked(View view) {
