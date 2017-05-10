@@ -26,29 +26,27 @@ import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 import java.util.Date;
 import java.util.Random;
 
+import studios.codelight.smartloginlibrary.UserSessionManager;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class DashboardActivity extends AppCompatActivity implements Animation.AnimationListener {
 
     Drawer menu;
+    Toolbar toolbar;
     SharedPreferences prefs = null;
 
     Animation animFadein;
 
     SpotifyCore core;
 
-    String userFirstName = "John";
-    String userLastName = "Blogs";
-    String userEmail = "johnblogs@gmail.com";
-    String profileID = " ";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
+
         core = ((SpotifyCore)getApplicationContext());
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         prefs = getSharedPreferences("com.wave.fitness", MODE_PRIVATE);
 
@@ -57,50 +55,9 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
 
         animFadein.setAnimationListener(this);
 
-        createUserInfo();
-
-        AccountHeader headerResult = new AccountHeaderBuilder()
-                .withActivity(this)
-                //.withHeaderBackground(R.drawable.header)
-                .addProfiles(
-                        new ProfileDrawerItem().withName(userFirstName + userLastName).withEmail(userEmail).withIcon(getResources().getDrawable(R.drawable.temp_profile))
-                )
-                .withOnAccountHeaderListener(new AccountHeader.OnAccountHeaderListener() {
-                    @Override
-                    public boolean onProfileChanged(View view, IProfile profile, boolean currentProfile) {
-                        return false;
-                    }
-                })
-                .build();
-
-        PrimaryDrawerItem dashboard = new PrimaryDrawerItem().withIdentifier(1).withName("Dashboard");
-        SecondaryDrawerItem run = new SecondaryDrawerItem().withIdentifier(2).withName("Start A Run");
-        SecondaryDrawerItem music = new SecondaryDrawerItem().withIdentifier(3).withName("Music");
-        SecondaryDrawerItem past = new SecondaryDrawerItem().withIdentifier(4).withName("Previous Runs");
-        SecondaryDrawerItem settings = new SecondaryDrawerItem().withIdentifier(5).withName("Settings");
-        SecondaryDrawerItem logout = new SecondaryDrawerItem().withIdentifier(6).withName("Logout");
-
-         menu = new DrawerBuilder()
-                .withActivity(this)
-                .withAccountHeader(headerResult)
-                .withToolbar(toolbar)
-                .withTranslucentStatusBar(true)
-                .withActionBarDrawerToggle(true)
-                .addDrawerItems(
-                        dashboard,run,music,past, new DividerDrawerItem(),settings,logout
-                )
-                .withOnDrawerItemClickListener(
-                        new Drawer.OnDrawerItemClickListener(){
-                             @Override
-                             public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
-                                 startActivity(new Intent(DashboardActivity.this, MusicPlayerActivity.class));
-                                 return true;
-                             }
-                        }
-                )
-                .build();
-        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
-        menu.getActionBarDrawerToggle().setDrawerIndicatorEnabled(true);
+        if(prefs.getBoolean("firstrun", true)){
+            startActivity(new Intent(DashboardActivity.this, setupActivity.class));
+        }
 
         CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
                 .setDefaultFontPath("fonts/Montserrat-Regular.otf")
@@ -136,10 +93,6 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
         curDate.setText(prefixString + dashboardDate + ", Josh" + endSentString);
     }
 
-    protected void createUserInfo() {
-        userFirstName = core.firstName;
-    }
-
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
@@ -151,10 +104,17 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
         super.onResume();
 
         if (prefs.getBoolean("firstrun", true)) {
-
             Intent firstTime = new Intent(DashboardActivity.this, setupActivity.class);
-            DashboardActivity.this.startActivity(firstTime);
+            DashboardActivity.this.startActivityForResult(firstTime, 22);
         }
+        else{
+            new HamburgerMenu(this, UserSessionManager.getCurrentUser(this.getApplicationContext()), toolbar);
+        }
+
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
+        new HamburgerMenu(this, UserSessionManager.getCurrentUser(this.getApplicationContext()), toolbar);
     }
 
     public void onRunButtonClicked(View view) {

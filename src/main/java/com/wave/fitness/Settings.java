@@ -40,6 +40,6 @@ public class Settings extends PreferenceActivity {
 
     @Override
     public void onBackPressed() {
-        startActivity(new Intent(Settings.this, RunActivity.class));
+        finish();
     }
 }
