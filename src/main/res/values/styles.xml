@@ -16,6 +16,12 @@
 
         <item name="android:textColorHint">@color/waveHint</item>
         <item name="android:windowLightStatusBar">true</item>
+
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowAllowEnterTransitionOverlap">true</item>
+        <item name="android:windowAllowReturnTransitionOverlap">true</item>
+        <item name="android:windowSharedElementEnterTransition">@android:transition/move</item>
+        <item name="android:windowSharedElementExitTransition">@android:transition/move</item>
     </style>
 
     <style name="TextAppearance.FontPath" parent="android:TextAppearance">

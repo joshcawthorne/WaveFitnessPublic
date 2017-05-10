@@ -23,7 +23,7 @@ android {
 
     defaultConfig {
         minSdkVersion 23
-        targetSdkVersion 25
+        targetSdkVersion 23
         multiDexEnabled true
         applicationId 'com.wave.fitness'
         versionName '2.0'

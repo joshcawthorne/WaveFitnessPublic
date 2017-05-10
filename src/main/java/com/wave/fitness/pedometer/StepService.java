@@ -68,7 +68,6 @@ public class StepService extends Service {
     private DistanceNotifier mDistanceNotifier;
     private SpeedNotifier mSpeedNotifier;
     private CaloriesNotifier mCaloriesNotifier;
-    private SpeakingTimer mSpeakingTimer;
     
     private PowerManager.WakeLock wakeLock;
     private NotificationManager mNM;
@@ -105,7 +104,6 @@ public class StepService extends Service {
 
         mUtils = Utils.getInstance();
         mUtils.setService(this);
-        mUtils.initTTS();
 
         acquireWakeLock();
         
@@ -141,14 +139,6 @@ public class StepService extends Service {
         mCaloriesNotifier.setCalories(mCalories = mState.getFloat("calories", 0));
         mStepDetector.addStepListener(mCaloriesNotifier);
         
-        mSpeakingTimer = new SpeakingTimer(mPedometerSettings, mUtils);
-        mSpeakingTimer.addListener(mStepDisplayer);
-        mSpeakingTimer.addListener(mPaceNotifier);
-        mSpeakingTimer.addListener(mDistanceNotifier);
-        mSpeakingTimer.addListener(mSpeedNotifier);
-        mSpeakingTimer.addListener(mCaloriesNotifier);
-        mStepDetector.addStepListener(mSpeakingTimer);
-        
         // Used when debugging:
         // mStepBuzzer = new StepBuzzer(this);
         // mStepDetector.addStepListener(mStepBuzzer);
@@ -169,7 +159,6 @@ public class StepService extends Service {
     @Override
     public void onDestroy() {
         Log.i(TAG, "[SERVICE] onDestroy");
-        mUtils.shutdownTTS();
 
         // Unregister our receiver.
         unregisterReceiver(mReceiver);
@@ -277,7 +266,6 @@ public class StepService extends Service {
         if (mDistanceNotifier != null) mDistanceNotifier.reloadSettings();
         if (mSpeedNotifier    != null) mSpeedNotifier.reloadSettings();
         if (mCaloriesNotifier != null) mCaloriesNotifier.reloadSettings();
-        if (mSpeakingTimer    != null) mSpeakingTimer.reloadSettings();
     }
     
     public void resetValues() {

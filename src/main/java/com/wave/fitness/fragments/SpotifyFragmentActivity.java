@@ -1,4 +1,18 @@
-package com.wave.fitness;
+/*
+
+    Wave Fitness Version 1.0
+
+    This is version 1.0 of Wave's Spotify implementation. It utilises the Spotify Android SDK, and it's example project.
+
+    This is merely a foundation to the app, and should be heavily adopted and changed.
+
+    ~ Josh Cawthorne.
+
+    IMPORTANT: DUE TO A BUG WITH THE SPOTIFY SDK, IF A USER HAS THE SPOTIFY APP INSTALLED ON THEIR PHONE, AND THEY TRY TO SIGN IN,
+    AUTHENTICATION WILL FAIL.
+
+ */
+package com.wave.fitness.fragments;
 
 import android.app.AlertDialog;
 import android.content.BroadcastReceiver;
@@ -11,12 +25,18 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -47,12 +67,23 @@ import com.spotify.sdk.android.player.SpotifyPlayer;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Transformation;
 
-import java.sql.Time;
-import java.util.Calendar;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-public class MusicPlayerActivity extends AppCompatActivity implements
+import com.wave.fitness.AuthActivity;
+import com.wave.fitness.R;
+import com.wave.fitness.fragments.OneFragment;
+import com.wave.fitness.fragments.ThreeFragment;
+import com.wave.fitness.fragments.TwoFragment;
+
+import com.wave.fitness.SpotifyCore;
+
+import static android.app.Activity.RESULT_OK;
+import static com.facebook.FacebookSdk.getApplicationContext;
+
+public class SpotifyFragmentActivity extends Fragment implements
         Player.NotificationCallback, ConnectionStateCallback{
 
     //Constants
@@ -90,7 +121,7 @@ public class MusicPlayerActivity extends AppCompatActivity implements
             R.id.skip_next_button,
             R.id.skip_prev_button,
     };
-    public static final String TAG = "SpotifySdkDemo";
+    public static final String TAG = "Music";
 
 
     //Used to recieve info on a user's current network status (IE: Wireless, Offline)
@@ -104,6 +135,9 @@ public class MusicPlayerActivity extends AppCompatActivity implements
     private ScrollView mStatusTextScrollView;
     private String currentPlaylist = "null";
     Drawer menu;
+    private TabLayout tabLayout;
+    private ViewPager viewPager;
+    private boolean genreSet = false;
 
     private SpotifyCore core;
     private static final int SPOTIFY_LOGIN = 87;
@@ -123,30 +157,39 @@ public class MusicPlayerActivity extends AppCompatActivity implements
     //Initialization
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_musicplayer);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.activity_musicplayer, container, false);
+    }
+
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
 
         core = ((SpotifyCore)getApplicationContext());
 
         if(!core.isLoggedIn){
-            startActivityForResult(new Intent(this, AuthActivity.class), SPOTIFY_LOGIN);
+            startActivityForResult(new Intent(getActivity(), AuthActivity.class), SPOTIFY_LOGIN);
         }else {
             createPlayer();
         }
 
         // Get a reference to any UI widgets that will be needed.
-        mMetadataText = (TextView) findViewById(R.id.metadataTitle);
-        mMetaDataSubtext = (TextView) findViewById(R.id.metadataSubTitle);
-        mMetaDataTime = (TextView) findViewById(R.id.metaDataTime);
-        mStatusTextScrollView = (ScrollView) findViewById(R.id.status_text_container);
+        mMetadataText = (TextView) getView().findViewById(R.id.metadataTitle);
+        mMetaDataSubtext = (TextView) getView().findViewById(R.id.metadataSubTitle);
+        mMetaDataTime = (TextView) getView().findViewById(R.id.metaDataTime);
+        mStatusTextScrollView = (ScrollView) getView().findViewById(R.id.status_text_container);
         mMetadataText.setSelected(true);
 
         updateView();
 
-        showAlertbox(null);
+        if (genreSet == false) {
+            showAlertbox(null);
+            genreSet = true;
+        }
 
-        final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.pause_button);
+        final FloatingActionButton fab = (FloatingActionButton) getView().findViewById(R.id.pause_button);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -159,67 +202,10 @@ public class MusicPlayerActivity extends AppCompatActivity implements
                 }
             }
         });
-
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        //FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        //fab.setOnClickListener(new View.OnClickListener() {
-        //    @Override
-        //    public void onClick(View view) {
-        //        Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-        //                .setAction("Action", null).show();
-        //    }
-        //});
-
-        AccountHeader headerResult = new AccountHeaderBuilder()
-                .withActivity(this)
-                //.withHeaderBackground(R.drawable.header)
-                .addProfiles(
-                        new ProfileDrawerItem().withName("Josh Cawthorne").withEmail("joshcawthorne97@gmail.com").withIcon(getResources().getDrawable(R.drawable.temp_profile))
-                )
-                .withOnAccountHeaderListener(new AccountHeader.OnAccountHeaderListener() {
-                    @Override
-                    public boolean onProfileChanged(View view, IProfile profile, boolean currentProfile) {
-                        return false;
-                    }
-                })
-                .build();
-
-        PrimaryDrawerItem music = new PrimaryDrawerItem().withIdentifier(1).withName("Music");
-
-        menu = new DrawerBuilder()
-                .withActivity(this)
-                .withAccountHeader(headerResult)
-                .withToolbar(toolbar)
-                .withTranslucentStatusBar(true)
-                .withActionBarDrawerToggle(true)
-                .addDrawerItems(
-                        music, new SecondaryDrawerItem().withName("Start A Run"), new SecondaryDrawerItem().withName("Past Runs"),
-                        new DividerDrawerItem(), new SecondaryDrawerItem().withName("Settings"), new SecondaryDrawerItem().withName("Logout")
-                )
-                .withOnDrawerItemClickListener(
-                        new Drawer.OnDrawerItemClickListener(){
-                            @Override
-                            public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
-                                // do something with the clicked item :D
-                                startActivity(new Intent(MusicPlayerActivity.this, DashboardActivity.class));
-                                return true;
-                            }
-                        }
-                )
-                .build();
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main, menu);
-        //menu.removeItem(R.id.logout);
-        return true;
-    }
-
-    @Override
-    protected void onResume() {
+    public void onResume() {
         super.onResume();
 
         // Set up the broadcast receiver for network events.
@@ -227,7 +213,7 @@ public class MusicPlayerActivity extends AppCompatActivity implements
             @Override
             public void onReceive(Context context, Intent intent) {
                 if (core.mPlayer != null) {
-                    Connectivity connectivity = getNetworkConnectivity(getBaseContext());
+                    Connectivity connectivity = getNetworkConnectivity(getActivity().getBaseContext());
                     logStatus("Network state changed: " + connectivity.toString());
                     core.mPlayer.setConnectivityStatus(mOperationCallback, connectivity);
                 }
@@ -235,11 +221,11 @@ public class MusicPlayerActivity extends AppCompatActivity implements
         };
 
         IntentFilter filter = new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
-        registerReceiver(mNetworkStateReceiver, filter);
+        getActivity().registerReceiver(mNetworkStateReceiver, filter);
 
         if (core.mPlayer != null) {
-            core.mPlayer.addNotificationCallback(MusicPlayerActivity.this);
-            core.mPlayer.addConnectionStateCallback(MusicPlayerActivity.this);
+            core.mPlayer.addNotificationCallback(SpotifyFragmentActivity.this);
+            core.mPlayer.addConnectionStateCallback(SpotifyFragmentActivity.this);
         }
     }
 
@@ -255,9 +241,8 @@ public class MusicPlayerActivity extends AppCompatActivity implements
     }
 
 
-
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
+    public void onActivityResult(int requestCode, int resultCode, Intent intent) {
         if(requestCode == SPOTIFY_LOGIN){
             if(resultCode == RESULT_OK){
                 createPlayer();
@@ -275,9 +260,9 @@ public class MusicPlayerActivity extends AppCompatActivity implements
                 @Override
                 public void onInitialized(SpotifyPlayer player) {
                     logStatus("-- Player initialized --");
-                    core.mPlayer.setConnectivityStatus(mOperationCallback, getNetworkConnectivity(MusicPlayerActivity.this));
-                    core.mPlayer.addNotificationCallback(MusicPlayerActivity.this);
-                    core.mPlayer.addConnectionStateCallback(MusicPlayerActivity.this);
+                    core.mPlayer.setConnectivityStatus(mOperationCallback, getNetworkConnectivity(getActivity()));
+                    core.mPlayer.addNotificationCallback(SpotifyFragmentActivity.this);
+                    core.mPlayer.addConnectionStateCallback(SpotifyFragmentActivity.this);
                     // Trigger UI refresh
                     updateView();
                 }
@@ -303,36 +288,36 @@ public class MusicPlayerActivity extends AppCompatActivity implements
 
         // Set enabled for all widgets which depend on initialized state
         for (int id : REQUIRES_INITIALIZED_STATE) {
-            //    findViewById(id).setEnabled(loggedIn);
+        //    findViewById(id).setEnabled(loggedIn);
         }
 
         // Same goes for the playing state
         boolean playing = loggedIn && core.mCurrentPlaybackState != null && core.mCurrentPlaybackState.isPlaying;
         for (int id : REQUIRES_PLAYING_STATE) {
-            findViewById(id).setEnabled(playing);
+            getView().findViewById(id).setEnabled(playing);
         }
 
         if (core.mMetadata != null) {
-            findViewById(R.id.skip_next_button).setEnabled(core.mMetadata.nextTrack != null);
-            findViewById(R.id.skip_prev_button).setEnabled(core.mMetadata.prevTrack != null);
-            findViewById(R.id.pause_button).setEnabled(core.mMetadata.currentTrack != null);
+            getView().findViewById(R.id.skip_next_button).setEnabled(core.mMetadata.nextTrack != null);
+            getView().findViewById(R.id.skip_prev_button).setEnabled(core.mMetadata.prevTrack != null);
+            getView().findViewById(R.id.pause_button).setEnabled(core.mMetadata.currentTrack != null);
         }
 
-        final ImageView coverArtView = (ImageView) findViewById(R.id.cover_art);
-        final ImageView coverArtViewTwo = (ImageView) findViewById(R.id.cover_art_two);
+        final ImageView coverArtView = (ImageView) getView().findViewById(R.id.cover_art);
+        final ImageView coverArtViewTwo = (ImageView) getView().findViewById(R.id.cover_art_two);
         if (core.mMetadata != null && core.mMetadata.currentTrack != null) {
             //Set the metadata from song length to Minutes:Seconds, rather than milliseconds.
             final String durationStr =
                     String.format("\n %02d:%02d",
-                            TimeUnit.MILLISECONDS.toMinutes(core.mMetadata.currentTrack.durationMs),
-                            TimeUnit.MILLISECONDS.toSeconds(core.mMetadata.currentTrack.durationMs) -
-                                    TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(core.mMetadata.currentTrack.durationMs))
-                    );
+                    TimeUnit.MILLISECONDS.toMinutes(core.mMetadata.currentTrack.durationMs),
+                    TimeUnit.MILLISECONDS.toSeconds(core.mMetadata.currentTrack.durationMs) -
+                            TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(core.mMetadata.currentTrack.durationMs))
+            );
             mMetadataText.setText(core.mMetadata.currentTrack.name);
             mMetaDataSubtext.setText(core.mMetadata.currentTrack.artistName);
             mMetaDataTime.setText(durationStr);
 
-            Picasso.with(this)
+            Picasso.with(getActivity())
                     .load(core.mMetadata.currentTrack.albumCoverWebUrl)
                     .transform(new Transformation() {
                         @Override
@@ -350,7 +335,7 @@ public class MusicPlayerActivity extends AppCompatActivity implements
                     })
                     .into(coverArtView);
 
-            Picasso.with(this)
+            Picasso.with(getActivity())
                     .load(core.mMetadata.currentTrack.albumCoverWebUrl)
                     .transform(new Transformation() {
                         @Override
@@ -412,7 +397,7 @@ public class MusicPlayerActivity extends AppCompatActivity implements
     public void onGenreButtonClicked(View view) {
         //Array that contains all potential playlists.
         String[] playlists = {"spotify:user:4joshua-cawthorne:playlist:4vr1l7iKUXfsmxEFlQabwG",
-                "spotify:user:spotify:playlist:37i9dQZF1DX6VdMW310YC7"};
+                              "spotify:user:spotify:playlist:37i9dQZF1DX6VdMW310YC7"};
         //Create random
         Random random = new Random();
         //Pause Music if user is playing some.
@@ -436,13 +421,13 @@ public class MusicPlayerActivity extends AppCompatActivity implements
 
     final public void showAlertbox(View view) {
         {String names[] ={"Pop","Classical","Electronic","Funk"};
-            final AlertDialog.Builder alertDialog = new AlertDialog.Builder(MusicPlayerActivity.this);
-            LayoutInflater inflater = getLayoutInflater();
+            final AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+            LayoutInflater inflater = getLayoutInflater(null);
             View convertView = (View) inflater.inflate(R.layout.musicplayer_list, null);
             alertDialog.setView(convertView);
             alertDialog.setTitle("Choose a genre:");
             final ListView lv = (ListView) convertView.findViewById(R.id.listView1);
-            ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,names);
+            ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,names);
             lv.setAdapter(adapter);
             alert = alertDialog.create();
             alert.show();
@@ -605,18 +590,23 @@ public class MusicPlayerActivity extends AppCompatActivity implements
     // Destruction.
 
     @Override
-    protected void onPause() {
+    public void onPause() {
         super.onPause();
-        unregisterReceiver(mNetworkStateReceiver);
+        getActivity().unregisterReceiver(mNetworkStateReceiver);
 
         if (core.mPlayer != null) {
-            core.mPlayer.removeNotificationCallback(MusicPlayerActivity.this);
-            core.mPlayer.removeConnectionStateCallback(MusicPlayerActivity.this);
+            core.mPlayer.removeNotificationCallback(SpotifyFragmentActivity.this);
+            core.mPlayer.removeConnectionStateCallback(SpotifyFragmentActivity.this);
         }
     }
 
     @Override
-    protected void onDestroy() {
+    public void onDestroyHelper() {
+        onDestroy();
+    }
+
+    @Override
+    public void onDestroy() {
         Spotify.destroyPlayer(this);
         super.onDestroy();
     }
