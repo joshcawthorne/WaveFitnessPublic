@@ -175,6 +175,10 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
 
     }
 
+    public void startTemp(View view) {
+        startActivity(new Intent(DashboardActivity.this, spotifyActivity.class));
+    }
+
     @Override
     public void onAnimationEnd(Animation animation) {
         // Take any action after completing the animation

@@ -7,7 +7,7 @@ import android.util.Log;
 
 import java.util.Locale;
 
-public class Utils implements TextToSpeech.OnInitListener {
+public class Utils{
     private static final String TAG = "Utils";
     private Service mService;
 
@@ -27,7 +27,7 @@ public class Utils implements TextToSpeech.OnInitListener {
         mService = service;
     }
     
-    /********** SPEAKING **********/
+    /********** SPEAKING **********
     
     private TextToSpeech mTts;
     private boolean mSpeak = false;

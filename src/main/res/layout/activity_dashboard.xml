@@ -341,7 +341,8 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="5dp"
                     android:layout_weight="1"
-                    app:riv_corner_radius="10dip" />
+                    app:riv_corner_radius="10dip"
+                    android:onClick="startTemp" />
 
                 <com.makeramen.roundedimageview.RoundedImageView
                     xmlns:app="http://schemas.android.com/apk/res-auto"

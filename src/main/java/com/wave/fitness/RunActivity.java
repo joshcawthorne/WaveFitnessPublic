@@ -228,8 +228,6 @@ public class RunActivity extends AppCompatActivity implements OnMapReadyCallback
         mSettings = PreferenceManager.getDefaultSharedPreferences(this);
         mPedometerSettings = new PedometerSettings(mSettings);
 
-        mUtils.setSpeak(mSettings.getBoolean("speak", false));
-
         // Read from preferences if the service was running on the last onPause
         mIsRunning = mPedometerSettings.isServiceRunning();
 

@@ -23,7 +23,7 @@ package com.wave.fitness.pedometer;
  * Calculates and displays the approximate calories.  
  * @author Levente Bagi
  */
-public class CaloriesNotifier implements StepListener, SpeakingTimer.Listener {
+public class CaloriesNotifier implements StepListener{
 
     public interface Listener {
         public void valueChanged(float value);
@@ -102,16 +102,5 @@ public class CaloriesNotifier implements StepListener, SpeakingTimer.Listener {
     public void passValue() {
         
     }
-    
-    public void speak() {
-        if (mSettings.shouldTellCalories()) {
-            if (mCalories > 0) {
-                mUtils.say("" + (int)mCalories + " calories burned");
-            }
-        }
-        
-    }
-    
-
 }
 
