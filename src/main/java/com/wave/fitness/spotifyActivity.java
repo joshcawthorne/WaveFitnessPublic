@@ -39,10 +39,7 @@ public class spotifyActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private TabLayout tabLayout;
     private ViewPager viewPager;
-    String userFirstName = "John";
-    String userLastName = "Blogs";
-    String userEmail = "johnblogs@gmail.com";
-    Drawer menu;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -121,17 +118,16 @@ public class spotifyActivity extends AppCompatActivity {
     }
 
     DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
-        @Override
-        public void onClick(DialogInterface dialog, int which) {
-            switch (which){
-                case DialogInterface.BUTTON_POSITIVE:
-                    break;
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                switch (which){
+                    case DialogInterface.BUTTON_POSITIVE:
+                        break;
 
-                case DialogInterface.BUTTON_NEGATIVE:
-                    //No button clicked
-                    break;
+                    case DialogInterface.BUTTON_NEGATIVE:
+                        //No button clicked
+                        break;
             }
         }
     };
 }
-

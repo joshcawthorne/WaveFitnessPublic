@@ -3,29 +3,23 @@ package com.wave.fitness;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import android.util.Log;
+import com.google.gson.Gson;
+import com.rogalabs.lib.Callback;
+import com.rogalabs.lib.LoginView;
+import com.rogalabs.lib.model.SocialUser;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
-
-import studios.codelight.smartloginlibrary.LoginType;
-import studios.codelight.smartloginlibrary.SmartLogin;
-import studios.codelight.smartloginlibrary.SmartLoginCallbacks;
-import studios.codelight.smartloginlibrary.SmartLoginConfig;
-import studios.codelight.smartloginlibrary.SmartLoginFactory;
-import studios.codelight.smartloginlibrary.users.SmartUser;
-import studios.codelight.smartloginlibrary.util.SmartLoginException;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 
 
-public class setupActivity extends AppCompatActivity implements SmartLoginCallbacks{
+public class setupActivity extends LoginView {
 
     private static final String TAG = "LoginActivity";
     private static final int REQUEST_SIGNUP = 0;
@@ -40,8 +34,6 @@ public class setupActivity extends AppCompatActivity implements SmartLoginCallba
 
     String fontPath = "assets/fonts/";
 
-    SmartLoginConfig config;
-    SmartLogin smartLogin;
     private SpotifyCore core;
 
     @Override
@@ -52,8 +44,7 @@ public class setupActivity extends AppCompatActivity implements SmartLoginCallba
 
         core = ((SpotifyCore)getApplicationContext());
 
-        config = new SmartLoginConfig(this /* Context */, this /* SmartLoginCallbacks */);
-        config.setFacebookAppId(getString(R.string.facebook_app_id));
+        final Gson gson = new Gson();
 
         prefs = getSharedPreferences("com.wave.fitness", MODE_PRIVATE);
 
@@ -71,8 +62,23 @@ public class setupActivity extends AppCompatActivity implements SmartLoginCallba
 
             @Override
             public void onClick(View v) {
-                smartLogin = SmartLoginFactory.build(LoginType.Google);
-                smartLogin.login(config);
+                loginWithGoogle(new Callback() {
+                    @Override
+                    public void onSuccess(SocialUser socialUser) {
+                        prefs.edit().putBoolean("firstrun", false).commit();
+
+                        core.user = socialUser;
+                        Intent startDashboard = new Intent(setupActivity.this, DashboardActivity.class);
+                        setupActivity.this.startActivity(startDashboard);
+
+                    }
+
+                    @Override
+                    public void onError(Throwable throwable) {
+                        throwable.printStackTrace();
+                    }
+                });
+
             }
         });
 
@@ -80,8 +86,22 @@ public class setupActivity extends AppCompatActivity implements SmartLoginCallba
             @Override
             public void onClick(View v) {
                 /* Facebook Login */
-                smartLogin = SmartLoginFactory.build(LoginType.Facebook);
-                smartLogin.login(config);
+                loginWithFacebook(new Callback() {
+                    @Override
+                    public void onSuccess(SocialUser socialUser) {
+                        prefs.edit().putBoolean("firstrun", false).commit();
+                        prefs.edit().putString("user", gson.toJson(socialUser)).commit();
+                        core.user = socialUser;
+                        Intent startDashboard = new Intent(setupActivity.this, DashboardActivity.class);
+                        setupActivity.this.startActivity(startDashboard);
+
+                    }
+
+                    @Override
+                    public void onError(Throwable throwable) {
+                        throwable.printStackTrace();
+                    }
+                });
             }
 
         });
@@ -100,12 +120,6 @@ public class setupActivity extends AppCompatActivity implements SmartLoginCallba
     @Override
     protected void onResume() {
         super.onResume();
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        smartLogin.onActivityResult(requestCode, resultCode, data, config);
     }
 
     @Override
@@ -137,32 +151,5 @@ public class setupActivity extends AppCompatActivity implements SmartLoginCallba
         return valid;
     }
 
-    @Override
-    public void onLoginSuccess(SmartUser user) {
-        prefs.edit().putBoolean("firstrun", false).commit();
 
-        String firstName = user.getFirstName();
-
-        core.firstName = firstName;
-
-        Intent startDashboard = new Intent(setupActivity.this, DashboardActivity.class);
-        setupActivity.this.startActivity(startDashboard);
-
-
-    }
-
-    @Override
-    public void onLoginFailure(SmartLoginException e) {
-        Log.e("Login", "Failed");
-    }
-
-    @Override
-    public SmartUser doCustomLogin() {
-        return null;
-    }
-
-    @Override
-    public SmartUser doCustomSignup() {
-        return null;
-    }
 }

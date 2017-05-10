@@ -11,33 +11,29 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import com.mikepenz.materialdrawer.AccountHeader;
-import com.mikepenz.materialdrawer.AccountHeaderBuilder;
-import com.mikepenz.materialdrawer.Drawer;
-import com.mikepenz.materialdrawer.DrawerBuilder;
-import com.mikepenz.materialdrawer.model.DividerDrawerItem;
-import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
-import com.mikepenz.materialdrawer.model.ProfileDrawerItem;
-import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
-import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
-import com.mikepenz.materialdrawer.model.interfaces.IProfile;
+import com.google.gson.Gson;
+import com.rogalabs.lib.model.SocialUser;
 
 import java.util.Date;
 import java.util.Random;
 
-import studios.codelight.smartloginlibrary.UserSessionManager;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class DashboardActivity extends AppCompatActivity implements Animation.AnimationListener {
 
-    Drawer menu;
+    private HamburgerMenu menu;
+
+    private boolean killOnNext = false;
+
     Toolbar toolbar;
     SharedPreferences prefs = null;
 
     Animation animFadein;
 
+    Gson gson;
     SpotifyCore core;
 
     @Override
@@ -46,6 +42,7 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
         setContentView(R.layout.activity_dashboard);
 
         core = ((SpotifyCore)getApplicationContext());
+        gson = new Gson();
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         prefs = getSharedPreferences("com.wave.fitness", MODE_PRIVATE);
@@ -108,13 +105,13 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
             DashboardActivity.this.startActivityForResult(firstTime, 22);
         }
         else{
-            new HamburgerMenu(this, UserSessionManager.getCurrentUser(this.getApplicationContext()), toolbar);
+            menu = new HamburgerMenu(this, gson.fromJson(prefs.getString("user", ""), SocialUser.class), toolbar);
         }
 
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
-        new HamburgerMenu(this, UserSessionManager.getCurrentUser(this.getApplicationContext()), toolbar);
+        menu = new HamburgerMenu(this, gson.fromJson(prefs.getString("user", ""), SocialUser.class), toolbar);
     }
 
     public void onRunButtonClicked(View view) {
@@ -123,16 +120,16 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
 
     @Override
     public void onBackPressed() {
-        if(menu.isDrawerOpen()){
-            menu.closeDrawer();
+        if(menu.menu.isDrawerOpen()){
+            menu.menu.closeDrawer();
+        }else {
+            if(!killOnNext){
+                Toast.makeText(this, "Press again to exit", Toast.LENGTH_LONG).show();
+                killOnNext = true;
+            }else {
+                finishAndRemoveTask();
+            }
         }
-        else{
-            super.onBackPressed();
-            Intent intent = new Intent(Intent.ACTION_MAIN);
-            intent.addCategory(Intent.CATEGORY_HOME);
-            startActivity(intent);
-        }
-
     }
 
     public void startTemp(View view) {
