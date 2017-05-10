@@ -8,7 +8,11 @@ buildscript {
     }
 }
 
-apply plugin: 'com.android.application'
+allprojects {
+    repositories {
+        maven { url 'https://jitpack.io' }
+    }
+}
 
 repositories {
     jcenter()
@@ -17,6 +21,7 @@ repositories {
     }
 }
 
+apply plugin: 'com.android.application'
 android {
     compileSdkVersion 25
     buildToolsVersion '25.0.2'
@@ -53,9 +58,9 @@ dependencies {
     //Android support
     compile 'com.android.support:support-annotations:25.2.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile 'com.google.android.gms:play-services-maps:10.2.0'
+    compile 'com.google.android.gms:play-services-maps:10.2.1'
     compile 'com.android.support:design:25.2.0'
-    compile 'com.google.android.gms:play-services:10.2.0'
+    compile 'com.google.android.gms:play-services:10.2.1'
 
     //Spotify
     compile 'com.spotify.android:auth:1.0.0-alpha'
@@ -70,8 +75,12 @@ dependencies {
         transitive = true
     }
 
-    //Smart Login
-    compile 'codelight.studios:android-smart-login:1.2'
+    //Shareble
+    compile 'com.github.robertsimoes:Shareable:0.1.0'
+    //Social login
+    compile 'com.github.RogaLabs:social-login:+'
+
+
     //Facebook SDK
     compile 'com.facebook.android:facebook-android-sdk:4.0.1'
     //GSON library
@@ -99,3 +108,5 @@ dependencies {
     compile 'com.yalantis:eqwaves:1.0.1'
 
 }
+
+apply plugin: 'com.google.gms.google-services'

@@ -26,7 +26,6 @@ import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 import java.util.Date;
 import java.util.Random;
 
-import studios.codelight.smartloginlibrary.UserSessionManager;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
@@ -108,13 +107,13 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
             DashboardActivity.this.startActivityForResult(firstTime, 22);
         }
         else{
-            new HamburgerMenu(this, UserSessionManager.getCurrentUser(this.getApplicationContext()), toolbar);
+            new HamburgerMenu(this, core.user, toolbar);
         }
 
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
-        new HamburgerMenu(this, UserSessionManager.getCurrentUser(this.getApplicationContext()), toolbar);
+        new HamburgerMenu(this, core.user, toolbar);
     }
 
     public void onRunButtonClicked(View view) {

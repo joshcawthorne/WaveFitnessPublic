@@ -39,10 +39,7 @@ public class spotifyActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private TabLayout tabLayout;
     private ViewPager viewPager;
-    String userFirstName = "John";
-    String userLastName = "Blogs";
-    String userEmail = "johnblogs@gmail.com";
-    Drawer menu;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -120,9 +117,8 @@ public class spotifyActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
     public void endRunActivity() {
-
+        this.finish();
     }
 
     DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
@@ -130,7 +126,6 @@ public class spotifyActivity extends AppCompatActivity {
         public void onClick(DialogInterface dialog, int which) {
             switch (which){
                 case DialogInterface.BUTTON_POSITIVE:
-                    fragmentTransaction.remove(SpotifyFragmentActivity).commit();
                     endRunActivity();
                     break;
 

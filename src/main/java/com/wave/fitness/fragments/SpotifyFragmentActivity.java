@@ -601,11 +601,6 @@ public class SpotifyFragmentActivity extends Fragment implements
     }
 
     @Override
-    public void onDestroyHelper() {
-        onDestroy();
-    }
-
-    @Override
     public void onDestroy() {
         Spotify.destroyPlayer(this);
         super.onDestroy();

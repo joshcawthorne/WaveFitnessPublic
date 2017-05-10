@@ -16,8 +16,7 @@ import com.mikepenz.materialdrawer.model.ProfileDrawerItem;
 import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
-
-import studios.codelight.smartloginlibrary.users.SmartUser;
+import com.rogalabs.lib.model.SocialUser;
 
 /**
  * Created by s6236422 on 10/05/2017.
@@ -28,13 +27,14 @@ public class HamburgerMenu {
     public AccountHeader header;
     public Drawer menu;
     
-    public HamburgerMenu(final AppCompatActivity activity, SmartUser user, Toolbar toolbar){
+    public HamburgerMenu(final AppCompatActivity activity, SocialUser user, Toolbar toolbar){
+
         
         header = new AccountHeaderBuilder()
                 .withActivity(activity)
                 //.withHeaderBackground(R.drawable.header)
                 .addProfiles(
-                        new ProfileDrawerItem().withName(user.getFirstName() + user.getLastName()).withEmail(user.getEmail()).withIcon(activity.getResources().getDrawable(R.drawable.temp_profile))
+                        new ProfileDrawerItem().withName(user.getName()).withEmail(user.getEmail()).withIcon(activity.getResources().getDrawable(R.drawable.temp_profile)) // TODO: 10/05/2017 Replace with user.getIconURL using picasso
                 )
                 .withOnAccountHeaderListener(new AccountHeader.OnAccountHeaderListener() {
                     @Override
