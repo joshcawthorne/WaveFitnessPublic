@@ -19,7 +19,6 @@ import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 import com.rogalabs.lib.model.SocialUser;
 
-import static android.content.Context.MODE_PRIVATE;
 
 /**
  * Created by s6236422 on 10/05/2017.
