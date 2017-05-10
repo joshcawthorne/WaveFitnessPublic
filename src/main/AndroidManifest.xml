@@ -27,6 +27,12 @@
         <activity
             android:name=".SplashActivity"
             android:theme="@style/SplashTheme">
+        </activity>
+
+        <activity
+            android:name=".PostRunActivity"
+            android:label="@string/app_name"
+            android:theme="@style/WaveTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
