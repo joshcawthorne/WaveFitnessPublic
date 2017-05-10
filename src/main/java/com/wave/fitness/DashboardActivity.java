@@ -11,17 +11,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.TextView;
-
-import com.mikepenz.materialdrawer.AccountHeader;
-import com.mikepenz.materialdrawer.AccountHeaderBuilder;
-import com.mikepenz.materialdrawer.Drawer;
-import com.mikepenz.materialdrawer.DrawerBuilder;
-import com.mikepenz.materialdrawer.model.DividerDrawerItem;
-import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
-import com.mikepenz.materialdrawer.model.ProfileDrawerItem;
-import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
-import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
-import com.mikepenz.materialdrawer.model.interfaces.IProfile;
+import android.widget.Toast;
 
 import java.util.Date;
 import java.util.Random;
@@ -32,6 +22,9 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 public class DashboardActivity extends AppCompatActivity implements Animation.AnimationListener {
 
     private HamburgerMenu menu;
+
+    private boolean killOnNext = false;
+
     Toolbar toolbar;
     SharedPreferences prefs = null;
 
@@ -125,7 +118,12 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
         if(menu.menu.isDrawerOpen()){
             menu.menu.closeDrawer();
         }else {
-
+            if(!killOnNext){
+                Toast.makeText(this, "Press again to exit", Toast.LENGTH_LONG).show();
+                killOnNext = true;
+            }else {
+                finishAndRemoveTask();
+            }
         }
     }
 
