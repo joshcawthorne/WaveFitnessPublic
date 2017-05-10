@@ -39,11 +39,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.mikepenz.materialdrawer.AccountHeader;
 import com.mikepenz.materialdrawer.AccountHeaderBuilder;
@@ -79,6 +81,9 @@ import com.wave.fitness.fragments.ThreeFragment;
 import com.wave.fitness.fragments.TwoFragment;
 
 import com.wave.fitness.SpotifyCore;
+
+import studios.codelight.smartloginlibrary.LoginType;
+import studios.codelight.smartloginlibrary.SmartLoginFactory;
 
 import static android.app.Activity.RESULT_OK;
 import static com.facebook.FacebookSdk.getApplicationContext;
@@ -139,6 +144,8 @@ public class SpotifyFragmentActivity extends Fragment implements
     private ViewPager viewPager;
     private boolean genreSet = false;
 
+    private View v;
+
     private SpotifyCore core;
     private static final int SPOTIFY_LOGIN = 87;
 
@@ -159,9 +166,45 @@ public class SpotifyFragmentActivity extends Fragment implements
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.activity_musicplayer, container, false);
-    }
 
+        v = inflater.inflate(R.layout.activity_musicplayer, container, false);
+        Button play = (Button) v.findViewById(R.id.pause_temp);
+        FloatingActionButton playfab = (FloatingActionButton) v.findViewById(R.id.pause_button);
+        Button skip = (Button) v.findViewById(R.id.skip_next_button);
+        Button prev = (Button) v.findViewById(R.id.skip_prev_button);
+
+        play.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onPauseButtonClicked();
+            }
+        });
+
+        skip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onSkipToNextButtonClicked();
+            }
+        });
+
+        prev.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onSkipToPreviousButtonClicked();
+            }
+        });
+        playfab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onPauseButtonClicked();
+            }
+        });
+
+        Toast.makeText(getActivity(), "This is a temporary layout for music.",
+                Toast.LENGTH_LONG).show();
+
+        return v;
+    }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
@@ -366,14 +409,14 @@ public class SpotifyFragmentActivity extends Fragment implements
         return core.mPlayer != null && core.mPlayer.isLoggedIn();
     }
 
-    public void onPlayButtonClicked(View view, FloatingActionButton fab) {
+    public void onPlayButtonClicked(FloatingActionButton fab) {
         String uri = "spotify:user:spotify:playlist:7MizIujRqHWLFVZAfQ21h4";
         logStatus("Starting playback for " + uri);
         core.mPlayer.playUri(mOperationCallback, uri, 0, 0);
         fab.setImageDrawable(getResources().getDrawable(R.drawable.pause));
     }
 
-    public void onPauseButtonClicked(View view) {
+    public void onPauseButtonClicked() {
         if (core.mCurrentPlaybackState != null && core.mCurrentPlaybackState.isPlaying) {
             core.mPlayer.pause(mOperationCallback);
         } else {
@@ -381,11 +424,11 @@ public class SpotifyFragmentActivity extends Fragment implements
         }
     }
 
-    public void onSkipToPreviousButtonClicked(View view) {
+    public void onSkipToPreviousButtonClicked() {
         core.mPlayer.skipToPrevious(mOperationCallback);
     }
 
-    public void onSkipToNextButtonClicked(View view) {
+    public void onSkipToNextButtonClicked() {
         core.mPlayer.skipToNext(mOperationCallback);
     }
 
@@ -402,7 +445,7 @@ public class SpotifyFragmentActivity extends Fragment implements
         Random random = new Random();
         //Pause Music if user is playing some.
         if (core.mCurrentPlaybackState != null && core.mCurrentPlaybackState.isPlaying) {
-            onPauseButtonClicked(view);
+            onPauseButtonClicked();
             genreSwitchResume = true;
         }
         //Set genre to be random selection from above array
@@ -410,7 +453,7 @@ public class SpotifyFragmentActivity extends Fragment implements
         TEST_PLAYLIST_URI = playlists[index];
 
         if(genreSwitchResume = true){
-            onPauseButtonClicked(view);
+            onPauseButtonClicked();
             core.mPlayer.playUri(mOperationCallback, TEST_PLAYLIST_URI, 0, 0);
         }
         Log.e("CREATION", playlists[index]);

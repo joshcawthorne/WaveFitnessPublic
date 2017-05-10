@@ -117,23 +117,17 @@ public class spotifyActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void endRunActivity() {
-        this.finish();
-    }
-
     DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
-        @Override
-        public void onClick(DialogInterface dialog, int which) {
-            switch (which){
-                case DialogInterface.BUTTON_POSITIVE:
-                    endRunActivity();
-                    break;
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                switch (which){
+                    case DialogInterface.BUTTON_POSITIVE:
+                        break;
 
-                case DialogInterface.BUTTON_NEGATIVE:
-                    //No button clicked
-                    break;
+                    case DialogInterface.BUTTON_NEGATIVE:
+                        //No button clicked
+                        break;
             }
         }
     };
 }
-
