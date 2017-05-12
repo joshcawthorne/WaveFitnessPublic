@@ -52,7 +52,6 @@
             android:theme="@style/WaveTheme">
         </activity>
 
-
         <activity
             android:name=".OLDsignupActivity"
             android:label="@string/app_name"
