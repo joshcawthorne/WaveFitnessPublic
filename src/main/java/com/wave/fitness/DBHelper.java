@@ -27,7 +27,7 @@ public class DBHelper extends SQLiteOpenHelper {
         //All necessary tables you like to create will create here
 
         String CREATE_TABLE_RUNSTATISTIC = "CREATE TABLE " + Data_RunStatistic.TABLE  + "("
-                + Data_RunStatistic.KEY_ID  + " INTEGER PRIMARY KEY AUTOINCREMENT ,"
+                + Data_RunStatistic.KEY_ID  + " INTEGER PRIMARY ,"
                 + Data_RunStatistic.KEY_DATE + " INTEGER, "
                 + Data_RunStatistic.KEY_DURATION + " INTEGER, "
                 + Data_RunStatistic.KEY_DISTANCE + " INTEGER, "

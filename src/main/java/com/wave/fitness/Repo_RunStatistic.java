@@ -21,7 +21,7 @@ public class Repo_RunStatistic {
     public int insert(Data_RunStatistic data){
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
-        //values.put(Data_RunStatistic.KEY_ID, data.id); Auto increment
+        values.put(Data_RunStatistic.KEY_ID, data.id);
         values.put(Data_RunStatistic.KEY_DATE, data.date);
         values.put(Data_RunStatistic.KEY_DURATION, data.duration);
         values.put(Data_RunStatistic.KEY_DISTANCE, data.distance);
