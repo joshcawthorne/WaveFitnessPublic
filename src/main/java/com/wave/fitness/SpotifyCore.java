@@ -21,6 +21,7 @@ public class SpotifyCore extends Application {
     public boolean isLoggedIn = false;
     public AuthenticationResponse authResponse;
     public SocialUser user;
+    public String testString;
 
     @Override
     public void onCreate() {

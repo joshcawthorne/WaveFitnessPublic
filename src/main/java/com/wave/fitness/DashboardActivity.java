@@ -47,20 +47,9 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
         setSupportActionBar(toolbar);
         prefs = getSharedPreferences("com.wave.fitness", MODE_PRIVATE);
 
-        animFadein = AnimationUtils.loadAnimation(getApplicationContext(),
-                R.anim.standard);
-
-        animFadein.setAnimationListener(this);
-
         if(prefs.getBoolean("firstrun", true)){
             startActivity(new Intent(DashboardActivity.this, setupActivity.class));
         }
-
-        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
-                .setDefaultFontPath("fonts/Montserrat-Regular.otf")
-                .setFontAttrId(R.attr.fontPath)
-                .build()
-        );
 
         SimpleDateFormat parseFormat = new SimpleDateFormat("EEEE");
         Date date =new Date();
@@ -106,6 +95,7 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
         }
         else{
             menu = new HamburgerMenu(this, gson.fromJson(prefs.getString("user", ""), SocialUser.class), toolbar);
+
         }
 
     }

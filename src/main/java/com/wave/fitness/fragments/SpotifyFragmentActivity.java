@@ -82,9 +82,6 @@ import com.wave.fitness.fragments.TwoFragment;
 
 import com.wave.fitness.SpotifyCore;
 
-import studios.codelight.smartloginlibrary.LoginType;
-import studios.codelight.smartloginlibrary.SmartLoginFactory;
-
 import static android.app.Activity.RESULT_OK;
 import static com.facebook.FacebookSdk.getApplicationContext;
 

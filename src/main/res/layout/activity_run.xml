@@ -234,10 +234,10 @@
         xmlns:map="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/map"
-        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:name="com.google.android.gms.maps.MapFragment"
         android:layout_width="match_parent"
         android:layout_height="544dp"
-        tools:context="teamcupcake.uk.ac.tees.wave.RunActivity" />
+        tools:context="com.wave.fitness.fragments.RunningFragment" />
 
 
 </LinearLayout>

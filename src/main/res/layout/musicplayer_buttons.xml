@@ -22,12 +22,12 @@
             android:layout_marginRight="2dp"
             android:layout_height="wrap_content"
             android:background="?android:attr/selectableItemBackground"
-            android:drawableEnd="@drawable/previous"
+            android:drawableLeft="@drawable/previous"
             android:onClick="onSkipToPreviousButtonClicked"/>
 
         <Button
             android:id="@+id/pause_temp"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_marginRight="2dp"
             android:layout_height="wrap_content"
             android:background="?android:attr/selectableItemBackground"
@@ -40,7 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="2dp"
             android:background="?android:attr/selectableItemBackground"
-            android:drawableEnd="@drawable/next"
+            android:drawableRight="@drawable/next"
             android:onClick="onSkipToNextButtonClicked"/>
     </LinearLayout>
 
