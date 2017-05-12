@@ -14,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
+import com.makeramen.roundedimageview.RoundedImageView;
 import com.rogalabs.lib.model.SocialUser;
 
 import java.util.Date;
@@ -77,6 +78,13 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
 
         TextView curDate = (TextView)findViewById(R.id.dashDate);
         curDate.setText(prefixString + dashboardDate + ", Josh" + endSentString);
+
+        RoundedImageView img = (RoundedImageView) findViewById(R.id.runBanner);
+        img.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                onMapsStart();
+            }
+        });
     }
 
     @Override
@@ -122,10 +130,6 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
         }
     }
 
-    public void startTemp(View view) {
-        startActivity(new Intent(DashboardActivity.this, spotifyActivity.class));
-    }
-
     @Override
     public void onAnimationEnd(Animation animation) {
         // Take any action after completing the animation
@@ -147,4 +151,28 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
 
     }
 
+    //Intents to start different activities within main class.
+
+
+    public void onMusicStart() {
+        Intent a = new Intent(this, spotifyActivity.class);
+        a.putExtra("frgToLoad", "FRAGMENT_A");
+
+        // Now start your activity
+        startActivity(a);
+    }
+    public void onMapsStart() {
+        Intent a = new Intent(this, spotifyActivity.class);
+        a.putExtra("frgToLoad", "FRAGMENT_A");
+
+        // Now start your activity
+        startActivity(a);
+    }
+    public void onStatsStart() {
+        Intent a = new Intent(this, spotifyActivity.class);
+        a.putExtra("frgToLoad", "FRAGMENT_C");
+
+        // Now start your activity
+        startActivity(a);
+    }
 }

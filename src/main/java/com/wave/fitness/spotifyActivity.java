@@ -12,6 +12,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 
@@ -59,13 +60,31 @@ public class spotifyActivity extends AppCompatActivity {
 
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
+
+        String intentFragment = getIntent().getExtras().getString("frgToLoad");
+
+        if(intentFragment == "FRAGMENT_A") {
+            viewPager.setCurrentItem(1, true);
+        }
+
+
+        else if(intentFragment == "FRAGMENT_B") {
+            Log.e("Moving", "True");
+            MoveNext();
+        }
+
+
+        else if(intentFragment == "FRAGMENT_C") {
+            viewPager.setCurrentItem(3, true);
+        }
+
     }
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(spot = new SpotifyFragmentActivity(), "Music");
-        adapter.addFragment(new ThreeFragment(), "Running");
-        adapter.addFragment(new MapViewFragment(), "Stats");
+        adapter.addFragment(new MapViewFragment(), "Running");
+        adapter.addFragment(new ThreeFragment(), "Stats");
         viewPager.setAdapter(adapter);
     }
 
@@ -84,7 +103,7 @@ public class spotifyActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            return mFragmentList.size();
+            return 3;
         }
 
         public void addFragment(Fragment fragment, String title) {
@@ -98,14 +117,20 @@ public class spotifyActivity extends AppCompatActivity {
         }
     }
 
+    public void MoveNext() {
+        Log.e("MoveState", "Moving");
+        viewPager.setCurrentItem(viewPager.getCurrentItem() + 1);
+    }
+
+    public void MovePrevious() {
+        viewPager.setCurrentItem(viewPager.getCurrentItem() - 1);
+    }
+
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
-
         AlertDialog.Builder builder = new AlertDialog.Builder(spotifyActivity.this);
-        builder.setMessage("Are you sure?").setPositiveButton("Yes", dialogClickListener)
-                .setNegativeButton("No", dialogClickListener).show();
-
+        builder.setMessage("You're mid-run, if you quit now you'll lose your progress!").setPositiveButton("Quit", dialogClickListener)
+                .setNegativeButton("Don't quit", dialogClickListener).show();
     }
 
     @Override
@@ -121,15 +146,16 @@ public class spotifyActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+
     DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 switch (which){
                     case DialogInterface.BUTTON_POSITIVE:
+                        finish();
                         break;
 
                     case DialogInterface.BUTTON_NEGATIVE:
-                        //No button clicked
                         break;
             }
         }

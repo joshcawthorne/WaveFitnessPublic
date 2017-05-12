@@ -234,7 +234,7 @@
 
                     <com.makeramen.roundedimageview.RoundedImageView
                         xmlns:app="http://schemas.android.com/apk/res-auto"
-                        android:id="@+id/vapor1"
+                        android:id="@+id/runBanner"
                         android:src="@drawable/runbanner3"
                         android:scaleType="centerCrop"
                         android:layout_width="match_parent"
@@ -342,7 +342,7 @@
                     android:layout_marginRight="5dp"
                     android:layout_weight="1"
                     app:riv_corner_radius="10dip"
-                    android:onClick="startTemp" />
+                    />
 
                 <com.makeramen.roundedimageview.RoundedImageView
                     xmlns:app="http://schemas.android.com/apk/res-auto"
