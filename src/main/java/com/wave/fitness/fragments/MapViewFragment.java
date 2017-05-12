@@ -1,12 +1,18 @@
 package com.wave.fitness.fragments;
 
 import android.content.pm.PackageManager;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.location.Location;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.SystemClock;
 import android.provider.SyncStateContract;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
@@ -14,11 +20,16 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.drive.Drive;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -31,6 +42,7 @@ import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.PolylineOptions;
 import com.wave.fitness.R;
 import com.wave.fitness.RouteNode;
 
@@ -39,16 +51,17 @@ import java.util.ArrayList;
 /**
  * A fragment that launches other parts of the demo application.
  */
-public class MapViewFragment extends Fragment implements OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, LocationListener {
+public class MapViewFragment extends Fragment implements OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, LocationListener, View.OnClickListener {
 
     MapView mMapView;
     private GoogleMap googleMap;
     GoogleMap mGoogleMap;
     SupportMapFragment mapFrag;
-    LocationRequest mLocationRequest;
     GoogleApiClient mGoogleApiClient;
     Location mLastLocation;
     Marker mCurrLocationMarker;
+
+    private GoogleMap mMap;
 
     private final int ACCESS_FINE_LOCATION_REQUEST = 0;
     private Location lastKnownLocation = null;
@@ -57,17 +70,11 @@ public class MapViewFragment extends Fragment implements OnMapReadyCallback, Goo
     private Handler uiHandler = new Handler();
     private Runnable uiRunnable;
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // inflat and return the layout
-        View v = inflater.inflate(R.layout.map_view, container,
-                false);
-        mMapView = (MapView) v.findViewById(R.id.mapView);
-        mMapView.onCreate(savedInstanceState);
+    FloatingActionButton btn;
 
-        mMapView.onResume();// needed to get the map to display immediately
+    private LocationRequest mLocationRequest = new LocationRequest();
 
+    protected void requestPermissions() {
         if (ContextCompat.checkSelfPermission(getActivity(),
                 android.Manifest.permission.ACCESS_FINE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED) {
@@ -82,8 +89,34 @@ public class MapViewFragment extends Fragment implements OnMapReadyCallback, Goo
                         new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION},
                         ACCESS_FINE_LOCATION_REQUEST);
             }
-            googleMap.setMyLocationEnabled(true);
         }
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // inflat and return the layout
+        View v = inflater.inflate(R.layout.map_view, container,
+                false);
+
+
+        mMapView = (MapView) v.findViewById(R.id.mapView);
+        mMapView.onCreate(savedInstanceState);
+
+        if (mGoogleApiClient == null) {
+            mGoogleApiClient = new GoogleApiClient.Builder(getActivity())
+                    .addConnectionCallbacks(this)
+                    .addOnConnectionFailedListener(this)
+                    .addApi(LocationServices.API)
+                    .build();
+        }
+        Log.d("API", "Google API Client Created");
+
+
+        mMapView.onResume();// needed to get the map to display immediately
+
+        btn = (FloatingActionButton) v.findViewById(R.id.toggleTrackButton);
+        btn.setOnClickListener(this);
 
         try {
             MapsInitializer.initialize(getActivity().getApplicationContext());
@@ -92,22 +125,17 @@ public class MapViewFragment extends Fragment implements OnMapReadyCallback, Goo
         }
 
         mMapView.getMapAsync(this);
-        // latitude and longitude
-        double latitude = 17.385044;
-        double longitude = 78.486671;
-
-        // create marker
-        MarkerOptions marker = new MarkerOptions().position(
-                new LatLng(latitude, longitude)).title("Hello Maps");
-
-        // Changing marker icon
-        marker.icon(BitmapDescriptorFactory
-                .defaultMarker(BitmapDescriptorFactory.HUE_ROSE));
-
-
 
         // Perform any camera updates here
         return v;
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        requestPermissions();
+        Log.d("APP", "Application Started");
+        mGoogleApiClient.connect();
     }
 
     @Override
@@ -120,6 +148,13 @@ public class MapViewFragment extends Fragment implements OnMapReadyCallback, Goo
     public void onPause() {
         super.onPause();
         mMapView.onPause();
+    }
+
+    @Override
+    public void onStop() {
+        Log.d("APP", "Application Stopping");
+        mGoogleApiClient.disconnect();
+        super.onStop();
     }
 
     @Override
@@ -136,7 +171,18 @@ public class MapViewFragment extends Fragment implements OnMapReadyCallback, Goo
 
     @Override
     public void onConnected(@Nullable Bundle bundle) {
-
+        Log.d("Maps", "On connected run");
+        mLocationRequest = new LocationRequest();
+        mLocationRequest.setInterval(1000); //to be adjusted later, maybe as a setting
+        mLocationRequest.setFastestInterval(1000);
+        mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+        Log.d("API", "Location Request Created");
+        if (ContextCompat.checkSelfPermission(getActivity(),
+                android.Manifest.permission.ACCESS_FINE_LOCATION)
+                == PackageManager.PERMISSION_GRANTED) {
+            LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, this);
+            Log.d("API", "Location Request Applied");
+        }
     }
 
     @Override
@@ -149,9 +195,35 @@ public class MapViewFragment extends Fragment implements OnMapReadyCallback, Goo
 
     }
 
-    @Override
-    public void onMapReady(GoogleMap map) {
-        googleMap = map;
+    public void onMapReady(GoogleMap googleMap) {
+        mMap = googleMap;
+        Log.d("MAP", "Map Ready");
+
+        uiRunnable = new Runnable() {
+            @Override
+            public void run() {
+                if (tracking) {
+                    mMap.clear();
+                    PolylineOptions lineOpt = new PolylineOptions();
+                    for (int i = 0; i < route.size() - 1; i++) {
+                        Location loc = route.get(i).location;
+                        lineOpt.add(new LatLng(loc.getLatitude(), loc.getLongitude()));
+                    }
+                    lineOpt.color(Color.BLUE);
+                    lineOpt.width(20.0f);
+                    lineOpt.visible(true);
+                    mMap.addPolyline(lineOpt);
+
+                    //For testing only
+                    //speedView.setText("Speed: " + pedo.getSpeed());
+
+                } else {
+                    mMap.clear();
+                }
+                uiHandler.postDelayed(uiRunnable, 500);
+            }
+        };
+        uiRunnable.run();
     }
 
     @Override
@@ -162,7 +234,7 @@ public class MapViewFragment extends Fragment implements OnMapReadyCallback, Goo
             Log.d("LOC", String.format("Lat:%f, Lat:%f", location.getLatitude(), location.getLongitude()));
             lastKnownLocation = location;
             CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(new LatLng(location.getLatitude(), location.getLongitude()), 19f);
-            googleMap.animateCamera(cameraUpdate);
+            mMap.animateCamera(cameraUpdate);
             Log.d("MAP", "Camera Moved To Current Location");
 
             if (tracking) {
@@ -173,8 +245,30 @@ public class MapViewFragment extends Fragment implements OnMapReadyCallback, Goo
         } else {
             Log.d("LOC", "NULL Location");
             CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(new LatLng(lastKnownLocation.getLatitude(), lastKnownLocation.getLongitude()), 19f);
-            googleMap.animateCamera(cameraUpdate);
+            mMap.animateCamera(cameraUpdate);
             Log.d("MAP", "Camera Moved To Last Known Location");
         }
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (tracking) {
+            Toast.makeText(getActivity(), "Run Stopped.",
+                    Toast.LENGTH_LONG).show();
+
+            Log.d("RUN", "Run Tracking Stopped");
+
+            //setContentView(R.layout.post_run); //Start the Post Run Screen (Just displays the layout, doesn't change to the PostRun activity)
+
+        } else {
+            route = new ArrayList<RouteNode>();
+            route.add(new RouteNode(lastKnownLocation));
+
+            Toast.makeText(getActivity(), "Run Started!",
+                    Toast.LENGTH_LONG).show();
+
+            Log.d("RUN", "Run Tracking Started");
+        }
+        tracking = !tracking;
     }
 }
