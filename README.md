@@ -12,3 +12,7 @@ If you're unsure on your commits, commit to a new branch and *don't* pull to mas
 - Allow a user to search or choose a genre, and then have the app search the spotify library, and plug in a song/album/artist/playlist ID into the "private static final String TEST_SONG_URI = "id";" field.
 - Updated the UI to better represent the mockups created.
 - Impliment the code with functionality that could be found in previous repo's, such as the running/map functionality.
+
+#Adding a Facebook Hash:
+Mac Users: keytool -exportcert -alias androiddebugkey -keystore ~/.android/debug.keystore | openssl sha1 -binary | openssl base64
+Windows Users: keytool -exportcert -alias androiddebugkey -keystore %HOMEPATH%\.android\debug.keystore | openssl sha1 -binary | openssl base64
