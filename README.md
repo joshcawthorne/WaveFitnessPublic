@@ -13,6 +13,6 @@ If you're unsure on your commits, commit to a new branch and *don't* pull to mas
 - Updated the UI to better represent the mockups created.
 - Impliment the code with functionality that could be found in previous repo's, such as the running/map functionality.
 
-#Adding a Facebook Hash:
+# Adding a Facebook Hash:
 Mac Users: keytool -exportcert -alias androiddebugkey -keystore ~/.android/debug.keystore | openssl sha1 -binary | openssl base64
 Windows Users: keytool -exportcert -alias androiddebugkey -keystore %HOMEPATH%\.android\debug.keystore | openssl sha1 -binary | openssl base64
