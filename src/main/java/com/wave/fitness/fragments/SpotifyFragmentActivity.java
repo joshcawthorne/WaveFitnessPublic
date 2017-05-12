@@ -81,6 +81,7 @@ import com.wave.fitness.fragments.ThreeFragment;
 import com.wave.fitness.fragments.TwoFragment;
 
 import com.wave.fitness.SpotifyCore;
+import com.wave.fitness.spotifyActivity;
 
 import static android.app.Activity.RESULT_OK;
 import static com.facebook.FacebookSdk.getApplicationContext;
@@ -145,6 +146,7 @@ public class SpotifyFragmentActivity extends Fragment implements
 
     private SpotifyCore core;
     private static final int SPOTIFY_LOGIN = 87;
+    private boolean isFirstSong = true;
 
     private final Player.OperationCallback mOperationCallback = new Player.OperationCallback() {
         @Override
@@ -293,8 +295,9 @@ public class SpotifyFragmentActivity extends Fragment implements
 
     private void createPlayer() {
         // Once we have obtained an authorization token, we can proceed with creating a Player.
+
         logStatus("Got authentication token");
-        if (core.mPlayer == null) {
+     //   if (core.mPlayer == null) {
             Config playerConfig = new Config(getApplicationContext(), core.authResponse.getAccessToken(), CLIENT_ID);
             core.mPlayer = Spotify.getPlayer(playerConfig, this, new SpotifyPlayer.InitializationObserver() {
                 @Override
@@ -312,9 +315,9 @@ public class SpotifyFragmentActivity extends Fragment implements
                     logStatus("Error in initialization: " + error.getMessage());
                 }
             });
-        } else {
-            core.mPlayer.login(core.authResponse.getAccessToken());
-        }
+        //} else {
+         //   core.mPlayer.login(core.authResponse.getAccessToken());
+        //}
     }
 
     //UI
@@ -429,10 +432,6 @@ public class SpotifyFragmentActivity extends Fragment implements
         core.mPlayer.skipToNext(mOperationCallback);
     }
 
-
-    public void onToggleShuffleButtonClicked(View view) {
-
-    }
 
     public void onGenreButtonClicked(View view) {
         //Array that contains all potential playlists.
@@ -570,8 +569,14 @@ public class SpotifyFragmentActivity extends Fragment implements
 
             currentPlaylist = TEST_PLAYLIST_URI;
         }
+
     }
 
+
+    public void onToggleShuffleButtonClicked(View view) {
+        Log.e("SHUFFLING", "TRUE");
+        core.mPlayer.setShuffle(mOperationCallback, !core.mCurrentPlaybackState.isShuffling);
+    }
 
     public void onToggleRepeatButtonClicked(View view) {
         core.mPlayer.setRepeat(mOperationCallback, !core.mCurrentPlaybackState.isRepeating);
@@ -642,18 +647,36 @@ public class SpotifyFragmentActivity extends Fragment implements
 
     @Override
     public void onDestroy() {
+        if (core.mPlayer != null) {
+            core.mPlayer.removeNotificationCallback(SpotifyFragmentActivity.this);
+            core.mPlayer.removeConnectionStateCallback(SpotifyFragmentActivity.this);
+        }
         Spotify.destroyPlayer(this);
         super.onDestroy();
     }
 
+
     @Override
     public void onPlaybackEvent(PlayerEvent event) {
-        logStatus("Event: " + event);
-        core.mCurrentPlaybackState = core.mPlayer.getPlaybackState();
-        core.mMetadata = core.mPlayer.getMetadata();
-        Log.i(TAG, "Player state: " + core.mCurrentPlaybackState);
-        Log.i(TAG, "Metadata: " + core.mMetadata);
-        updateView();
+        if(event == PlayerEvent.kSpPlaybackNotifyBecameActive){
+            core.mPlayer.setShuffle(mOperationCallback, true);
+        }
+        if(event == PlayerEvent.kSpPlaybackNotifyShuffleOff){
+            core.mPlayer.setShuffle(mOperationCallback, true);
+        }
+        if(isFirstSong && event == PlayerEvent.kSpPlaybackNotifyMetadataChanged){
+            core.mPlayer.skipToNext(mOperationCallback);
+            isFirstSong = false;
+            return;
+        }
+        if (!isFirstSong){
+            logStatus("Event: " + event);
+            core.mCurrentPlaybackState = core.mPlayer.getPlaybackState();
+            core.mMetadata = core.mPlayer.getMetadata();
+            Log.i(TAG, "Player state: " + core.mCurrentPlaybackState);
+            Log.i(TAG, "Metadata: " + core.mMetadata);
+            updateView();
+        }
     }
 
     @Override

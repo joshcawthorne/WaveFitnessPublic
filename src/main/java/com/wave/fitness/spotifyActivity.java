@@ -41,6 +41,7 @@ public class spotifyActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private TabLayout tabLayout;
     private ViewPager viewPager;
+    private SpotifyFragmentActivity spot;
 
 
     @Override
@@ -62,7 +63,7 @@ public class spotifyActivity extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new SpotifyFragmentActivity(), "Music");
+        adapter.addFragment(spot = new SpotifyFragmentActivity(), "Music");
         adapter.addFragment(new ThreeFragment(), "Running");
         adapter.addFragment(new MapViewFragment(), "Stats");
         viewPager.setAdapter(adapter);
@@ -104,6 +105,7 @@ public class spotifyActivity extends AppCompatActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(spotifyActivity.this);
         builder.setMessage("Are you sure?").setPositiveButton("Yes", dialogClickListener)
                 .setNegativeButton("No", dialogClickListener).show();
+
     }
 
     @Override
