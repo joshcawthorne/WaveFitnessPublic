@@ -103,7 +103,7 @@ public class PaceNotifier implements StepListener{
             }
             if (isMeaningfull && sum > 0) {
                 long avg = sum / mLastStepDeltas.length;
-                mPace = 60*1000 / avg;
+                mPace = 60*1000 / avg+1;
             }
             else {
                 mPace = -1;
