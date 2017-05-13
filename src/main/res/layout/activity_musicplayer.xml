@@ -5,121 +5,147 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.wave.fitness.fragments.SpotifyFragmentActivity">
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/pause_button"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:layout_gravity="bottom|right|end"
-        android:layout_marginLeft="@dimen/fab_margin"
-        android:layout_marginRight="@dimen/fab_margin"
-        android:layout_marginBottom="30dp"
-        app:elevation="5dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:onClick="onPauseButtonClicked"
-        app:srcCompat="@drawable/pause" />
+    <!-- Toolbar -->
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
         <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:id="@+id/playBar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="#EEE"
+            android:orientation="horizontal">
 
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_gravity="top|center"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:id="@+id/cover_art_small"
+                android:adjustViewBounds="true"
+                android:background="#000"
+                android:maxWidth="150dp"
+                android:maxHeight="150dp"/>
             <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="430dp"
-                android:layout_above="@+id/buttons"
-                android:layout_gravity="center|bottom"
-                android:paddingBottom="5dp"
-                android:paddingLeft="@dimen/activity_horizontal_margin"
-                android:paddingRight="@dimen/activity_horizontal_margin"
-                android:paddingTop="@dimen/activity_vertical_margin" >
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_height="fill_parent"
-                    android:scaleType="centerCrop"
-                    android:layout_alignParentBottom="false"
-                    android:id="@+id/cover_art_two"
-                    android:adjustViewBounds="true"
-                    android:background="#000" />
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical">
+                <TextView
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="17dp"
+                    android:text="Error 02"
+                    android:ellipsize="marquee"
+                    android:fadingEdge="horizontal"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:maxLines="1"
+                    android:textSize="11dp"
+                    android:id="@+id/metadataTitle"
+                    android:textColor="#000"
+                    android:layout_marginLeft="10dp"
+                    android:textAllCaps="true"
+                    fontPath="fonts/Montserrat-Bold.otf" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/metadataSubTitle"
+                    android:layout_height="wrap_content"
+                    android:textSize="8dp"
+                    android:text="Error - No Data supplied!"
+                    android:textColor="#b3b3b3"
+                    android:layout_marginLeft="10dp"
+                    fontPath="fonts/Montserrat-Regular.otf" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="8dp"
+                    android:text="Please reboot Wave."
+                    android:textColor="#b3b3b3"
+                    android:layout_marginLeft="10dp"
+                    fontPath="fonts/Montserrat-Regular.otf"
+                    android:id="@+id/metaDataTime"/>
 
             </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:gravity="center">
-                <include layout="@layout/musicplayer_buttons"/>
-            </LinearLayout>
-
 
         </LinearLayout>
 
-        <RelativeLayout
+    </RelativeLayout>
+
+    <!-- Content -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <LinearLayout
-                android:id="@+id/playBar"
+            <android.support.design.widget.CoordinatorLayout
+                android:id="@+id/coordinator_layout"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_alignParentBottom="true"
-                android:background="#EEE"
-                android:orientation="horizontal">
-                <ImageView
-                    android:layout_width="60dp"
-                    android:layout_gravity="top|center"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:id="@+id/cover_art"
-                    android:adjustViewBounds="true"
-                    android:background="#000"
-                    android:maxWidth="150dp"
-                    android:maxHeight="150dp"/>
-                <LinearLayout
-                    android:layout_width="200dp"
-                    android:layout_height="40dp"
-                    android:orientation="vertical"
-                    android:layout_gravity="center_vertical">
-                    <TextView
-                        android:layout_marginTop="0dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="17dp"
-                        android:text="Error 02"
-                        android:ellipsize="marquee"
-                        android:fadingEdge="horizontal"
-                        android:marqueeRepeatLimit="marquee_forever"
-                        android:scrollHorizontally="true"
-                        android:maxLines="1"
-                        android:textSize="11dp"
-                        android:id="@+id/metadataTitle"
-                        android:textColor="#000"
-                        android:layout_marginLeft="10dp"
-                        android:textAllCaps="true"
-                        fontPath="fonts/Montserrat-Bold.otf" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:id="@+id/metadataSubTitle"
-                        android:layout_height="wrap_content"
-                        android:textSize="8dp"
-                        android:text="Error - No Data supplied!"
-                        android:textColor="#b3b3b3"
-                        android:layout_marginLeft="10dp"
-                        fontPath="fonts/Montserrat-Regular.otf" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="8dp"
-                        android:text="Please reboot Wave."
-                        android:textColor="#b3b3b3"
-                        android:layout_marginLeft="10dp"
-                        fontPath="fonts/Montserrat-Regular.otf"
-                        android:id="@+id/metaDataTime"/>
-                </LinearLayout>
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="false">
 
-                </LinearLayout>
+                <android.support.design.widget.AppBarLayout
+                    android:id="@+id/app_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#0088FF"
+                    android:fitsSystemWindows="false">
 
-        </RelativeLayout>
+                    <android.support.design.widget.CollapsingToolbarLayout
+                        android:id="@+id/collapsing_toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fitsSystemWindows="false"
+                        app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed|snap"
+                        app:contentScrim="#0088FF"
+                        app:statusBarScrim="#000"
+                        app:titleEnabled="true">
+
+                        <ImageView
+                            android:id="@+id/cover_art"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:fitsSystemWindows="false"
+                            android:scaleType="centerCrop"
+                            app:layout_collapseMode="parallax"
+                            app:layout_collapseParallaxMultiplier="0.7"
+                            android:foreground="@drawable/blackgradient"/>
+
+                        <android.support.v7.widget.Toolbar
+                            android:id="@+id/toolbar"
+                            android:layout_width="match_parent"
+                            android:layout_height="?attr/actionBarSize"
+                            app:layout_scrollFlags="scroll|enterAlways|snap"
+                            app:layout_collapseMode="pin"/>
+
+                    </android.support.design.widget.CollapsingToolbarLayout>
+
+                </android.support.design.widget.AppBarLayout>
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/pause_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/fab_margin"
+                    app:layout_anchor="@id/app_bar"
+                    app:layout_anchorGravity="bottom|end"
+                    app:srcCompat="@drawable/pause"/>
+
+                <include layout="@layout/musicplayer_buttons"/>
+
+            </android.support.design.widget.CoordinatorLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </RelativeLayout>

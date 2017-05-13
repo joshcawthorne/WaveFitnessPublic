@@ -12,6 +12,8 @@
     <color name="wave_drawer_background">#f8f8f8</color>
     <color name="wave_drawer_primary_text">#4c4c4c</color>
     <color name="waveBase">#f8f8f8</color>
+    <color name="black">#000</color>
+
 
     <!-- Material DEFAULT colors -->
     <color name="material_drawer_primary">#2196F3</color>

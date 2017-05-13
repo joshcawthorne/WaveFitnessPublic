@@ -1,47 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:layout_weight="2"
-              android:gravity="center_horizontal"
-              android:orientation="vertical"
-              android:paddingBottom="@dimen/activity_vertical_margin"
-              android:paddingLeft="@dimen/activity_horizontal_margin"
-              android:paddingRight="@dimen/activity_horizontal_margin"
-              android:paddingTop="@dimen/activity_vertical_margin">
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+app:layout_behavior="@string/appbar_scrolling_view_behavior"
+tools:context="com.wave.fitness.fragments.SpotifyFragmentActivity"
+tools:showIn="@layout/activity_musicplayer">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center">
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal">
 
-        <Button
-            android:id="@+id/skip_prev_button"
-            android:layout_width="wrap_content"
-            android:layout_marginRight="2dp"
-            android:layout_height="wrap_content"
-            android:background="?android:attr/selectableItemBackground"
-            android:drawableLeft="@drawable/previous"
-            android:onClick="onSkipToPreviousButtonClicked"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
 
-        <Button
-            android:id="@+id/pause_temp"
-            android:layout_width="0dp"
-            android:layout_marginRight="2dp"
-            android:layout_height="wrap_content"
-            android:background="?android:attr/selectableItemBackground"
-            android:drawableEnd="@drawable/pauseblack"
-            android:onClick="onPauseButtonClicked"/>
+            <ImageView
+                android:id="@+id/skip_prev_button"
+                android:layout_width="wrap_content"
+                android:padding="2dp"
+                android:layout_margin="5dp"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:src="@drawable/previous"
+                android:onClick="onSkipToPreviousButtonClicked"/>
 
-        <Button
-            android:id="@+id/skip_next_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="2dp"
-            android:background="?android:attr/selectableItemBackground"
-            android:drawableRight="@drawable/next"
-            android:onClick="onSkipToNextButtonClicked"/>
-    </LinearLayout>
+            <ImageView
+                android:id="@+id/skip_next_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:layout_margin="5dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:src="@drawable/next"
+                android:onClick="onSkipToNextButtonClicked"/>
 
-</LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.v4.widget.NestedScrollView>

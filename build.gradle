@@ -33,6 +33,8 @@ android {
         applicationId 'com.wave.fitness'
         versionName '2.0'
         versionCode 2
+        renderscriptTargetApi 20
+        renderscriptSupportModeEnabled true
     }
 
     buildTypes {
@@ -61,6 +63,7 @@ dependencies {
     compile 'com.google.android.gms:play-services-maps:10.2.1'
     compile 'com.android.support:design:25.2.0'
     compile 'com.google.android.gms:play-services:10.2.1'
+    compile 'com.android.support:recyclerview-v7:22.0.+'
 
     //Spotify
     compile 'com.spotify.android:auth:1.0.0-alpha'
@@ -106,6 +109,10 @@ dependencies {
 
     //Horizon
     compile 'com.yalantis:eqwaves:1.0.1'
+
+    //Dali
+    compile 'at.favre.lib:dali:0.3.4'
+
 
 }
 
