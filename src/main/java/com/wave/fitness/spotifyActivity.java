@@ -3,6 +3,7 @@ package com.wave.fitness;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -29,6 +30,7 @@ import com.mikepenz.materialdrawer.model.ProfileDrawerItem;
 import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
+import com.squareup.otto.Subscribe;
 import com.wave.fitness.R;
 import com.wave.fitness.fragments.MapViewFragment;
 import com.wave.fitness.fragments.OneFragment;
@@ -36,6 +38,9 @@ import com.wave.fitness.fragments.PedometerFragment;
 import com.wave.fitness.fragments.ThreeFragment;
 import com.wave.fitness.fragments.TwoFragment;
 import com.wave.fitness.fragments.SpotifyFragmentActivity;
+import com.wave.fitness.runningEvent.LocationChangedEvent;
+import com.wave.fitness.runningEvent.TrackChangedEvent;
+import com.wave.fitness.runningEvent.UpdateRunStatEvent;
 
 public class spotifyActivity extends AppCompatActivity {
 
@@ -79,6 +84,17 @@ public class spotifyActivity extends AppCompatActivity {
         }
 
     }
+
+    @Override public void onResume() {
+        super.onResume();
+        BusProvider.getInstance().register(this);
+    }
+
+    @Override public void onPause() {
+        super.onPause();
+        BusProvider.getInstance().unregister(this);
+    }
+
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
@@ -160,4 +176,66 @@ public class spotifyActivity extends AppCompatActivity {
             }
         }
     };
+
+    //Data keeping
+    private int _StepValue;
+    private int _AvrPaceValue = 0;
+    private long _startRunTime;
+    private float _DistanceValue;
+    private float _AvrSpeedValue;
+    private int _CaloriesValue;
+    private ArrayList<RouteNode> route;
+    public ArrayList<SongNode> songs;
+
+    @Subscribe
+    public void onLocationChanged(LocationChangedEvent event){
+        route = event.route;
+    }
+    @Subscribe
+    public void onUpdateRunStat(UpdateRunStatEvent event){
+        _StepValue = event.mStepValue;
+        if (_AvrPaceValue == 0){
+            _AvrPaceValue = event.mPaceValue;
+        }else{
+            _AvrPaceValue = (int)((_AvrPaceValue + event.mPaceValue)/2);
+        }
+        _DistanceValue = event.mDistanceValue;
+        if(_AvrSpeedValue == 0){
+            _AvrSpeedValue = event.mSpeedValue;
+        }else{
+            _AvrSpeedValue = (_AvrSpeedValue+event.mSpeedValue)/2;
+        }
+    }
+    @Subscribe
+    public void onTrackChanged(TrackChangedEvent event){
+        SpotifyCore core = (SpotifyCore) getApplicationContext();
+        songs.add(new SongNode(core.mMetadata.currentTrack));
+    }
+
+    private void onStartRun(){
+        _startRunTime = System.currentTimeMillis();
+    }
+
+    private void onEndRun(){
+        SharedPreferences prefs = getSharedPreferences("com.wave.fitness", MODE_PRIVATE);
+        int runId = prefs.getInt("runID", 0)+1;
+        Repo_RunStatistic repo = new Repo_RunStatistic(getApplicationContext());
+        Data_RunStatistic data = new Data_RunStatistic();
+
+        data.id = runId;
+        data.date = System.currentTimeMillis();
+        data.duration = System.currentTimeMillis() - _startRunTime;
+        data.avrspeed = _AvrSpeedValue;
+        data.distance = (long)_DistanceValue;
+        data.calories = _CaloriesValue;
+        data.route = route;
+        data.songs = songs;
+
+        repo.insert(data);
+
+        Intent postRun = new Intent(this, PostRunActivity.class);
+        postRun.putExtra("runID", runId);
+        startActivity(postRun);
+        this.finish();
+    }
 }
