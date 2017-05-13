@@ -83,6 +83,7 @@
     <string msgid="2039274714455389140" name="debug_menu_title">"Välj ett felsökningsläge"</string>
     <string msgid="1173358804935285568" name="debug_menu_troubleshooting">"Felsökning"</string>
     <string msgid="6099173376375995052" name="decline">"Godkänn inte"</string>
+    <string name="messenger_send_button_text">Skicka</string>
     <string msgid="3698378085901466129" name="mr_button_content_description">"Cast-knappen"</string>
     <string msgid="6349900579507521956" name="mr_chooser_searching">"Letar efter enheter"</string>
     <string msgid="414301941546135990" name="mr_chooser_title">"Casta till"</string>

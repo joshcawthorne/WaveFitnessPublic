@@ -21,6 +21,7 @@
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Recolher"</string>
     <string name="material_drawer_close">Fechar</string>
     <string name="material_drawer_open">Abrir</string>
+    <string name="messenger_send_button_text">Enviar</string>
     <string msgid="3698378085901466129" name="mr_button_content_description">"Botão Transmitir"</string>
     <string msgid="6349900579507521956" name="mr_chooser_searching">"Localizando dispositivos"</string>
     <string msgid="414301941546135990" name="mr_chooser_title">"Transmitir para"</string>

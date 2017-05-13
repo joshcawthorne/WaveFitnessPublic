@@ -14,6 +14,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.PolylineOptions;
+import com.robertsimoes.shareable.Shareable;
 
 import java.util.ArrayList;
 
@@ -72,9 +73,18 @@ public class PostRunActivity extends AppCompatActivity implements OnMapReadyCall
 */
         map.addPolyline(line);
 
+
         //The following is used to add an icon on each geopoint on the map, this can be removed if we do not want this feature, Could be used to signal start and end points
         //map.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_notification //This is where you select an icon to be displayed
         // )).anchor(0.0f, 1.0f).position(new LatLng(54.5695968,-1.2339262))); //Test location - University
 
+    }
+
+    protected void onPostToFacebook(){
+        Shareable shareAction = new Shareable.Builder(this)
+                .message("I've finished a run")
+                .socialChannel(Shareable.Builder.FACEBOOK)
+                .build();
+        shareAction.share();
     }
 }

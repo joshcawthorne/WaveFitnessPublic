@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hdpi-v4\\values-hdpi-v4.xml",
+        "outputFile": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hdpi-v4/values-hdpi-v4.xml",
         "map": [
             {
                 "to": {
@@ -12,7 +12,33 @@
                     "endOffset": 327
                 },
                 "from": {
-                    "file": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
+                    "file": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/values-hdpi-v4/values-hdpi-v4.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endLine": 6,
+                        "endColumn": 13,
+                        "endOffset": 327
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hdpi-v4\\values-hdpi-v4.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endLine": 6,
+                    "endColumn": 13,
+                    "endOffset": 327
+                },
+                "from": {
+                    "file": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,

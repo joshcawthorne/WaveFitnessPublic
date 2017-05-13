@@ -1,15 +1,16 @@
 <component name="libraryTable">
   <library name="mediarouter-v7-24.0.0">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.android/build-cache/e3310fd3f7dcfe27fe40d1452491517c154bb78f/output/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.android/build-cache/caa448ca6177b6edc3971285688dafbf867038ca/output/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="file://$USER_HOME$/.android/build-cache/e3310fd3f7dcfe27fe40d1452491517c154bb78f/output/res" />
-      <root url="jar://$USER_HOME$/.android/build-cache/e3310fd3f7dcfe27fe40d1452491517c154bb78f/output/jars/classes.jar!/" />
-      <root url="jar://$USER_HOME$/.android/build-cache/e3310fd3f7dcfe27fe40d1452491517c154bb78f/output/jars/libs/internal_impl-24.0.0.jar!/" />
+      <root url="jar://$USER_HOME$/.android/build-cache/caa448ca6177b6edc3971285688dafbf867038ca/output/jars/libs/internal_impl-24.0.0.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/caa448ca6177b6edc3971285688dafbf867038ca/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/caa448ca6177b6edc3971285688dafbf867038ca/output/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../Shared/Android/sdk/extras/android/m2repository/com/android/support/mediarouter-v7/24.0.0/mediarouter-v7-24.0.0-sources.jar!/" />
       <root url="jar://$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/mediarouter-v7/24.0.0/mediarouter-v7-24.0.0-sources.jar!/" />
       <root url="jar://$USER_HOME$/Shared/Android/sdk/extras/android/m2repository/com/android/support/mediarouter-v7/24.0.0/mediarouter-v7-24.0.0-sources.jar!/" />
     </SOURCES>

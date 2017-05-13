@@ -3,57 +3,30 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\Josh Cawthorne\.android\build-cache\0ffbfa8fbf1052223b5a7296b036b9820938df19\output\jars\classes.jar"
+        jar="/Users/s6236422/.android/build-cache/cab489bf780d4fe8e70ea3b823f88449378023bb/output/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="343e2ad1ff1fb5cd0e56dd962a73a3504f97ef71">
-        <dex dex="C:\Users\Josh Cawthorne\AndroidStudioProjects\May4th\WaveFitness\build\intermediates\transforms\dex\debug\folders\1000\10\classes_02adb11c3b1cd0acb82d8444911bee866da28d14\classes.dex" />
+        sha1="55220cc71bd23fff8fc339a67f55be3cfd11cdec">
+        <dex dex="/Users/s6236422/Desktop/WaveFitness/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a2bd39bcb2c615fb4cda023dda42ffa578c27a70/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Josh Cawthorne\.android\build-cache\3d3a170c1cc3448d803020767310bb9ec2481ab7\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="ebcb0bcf52fab7c586f39717f7cb8de91748b1b1">
-        <dex dex="C:\Users\Josh Cawthorne\AndroidStudioProjects\May4th\WaveFitness\build\intermediates\transforms\dex\debug\folders\1000\10\classes_5b202ff4cfd533ba2fc77cfb842aa77c08624d86\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Josh Cawthorne\.android\build-cache\9af6e11e8e556ce0d708d1cae9f74c524aa8795b\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="630b29f983afc36ec2c99bc8b4cae38b328119b4">
-        <dex dex="C:\Users\Josh Cawthorne\AndroidStudioProjects\May4th\WaveFitness\build\intermediates\transforms\dex\debug\folders\1000\10\classes_0328c45ab0012cb4f89a5fbcda20ef912adfebe4\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Josh Cawthorne\.gradle\caches\modules-2\files-2.1\com.nostra13.universalimageloader\universal-image-loader\1.9.5\442dbfb517b9ab5cb5c6da7ebf8cc28ec5bd0375\universal-image-loader-1.9.5.jar"
+        jar="/Users/s6236422/Desktop/WaveFitness/libs/universal-image-loader-1.9.5.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="442dbfb517b9ab5cb5c6da7ebf8cc28ec5bd0375">
-        <dex dex="C:\Users\Josh Cawthorne\AndroidStudioProjects\May4th\WaveFitness\build\intermediates\transforms\dex\debug\folders\1000\10\universal-image-loader-1.9.5_04b58bf61ee4ce6ae0b912343920e8331c49f8da\classes.dex" />
+        <dex dex="/Users/s6236422/Desktop/WaveFitness/build/intermediates/transforms/dex/debug/folders/1000/2/universal-image-loader-1.9.5_44cd43ede98fdb9a4817563e18eb6e3c1a059b90/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Josh Cawthorne\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife\6.1.0\63735f48b82bcd24cdd33821342428252eb1ca5a\butterknife-6.1.0.jar"
+        jar="/Users/s6236422/.android/build-cache/cab489bf780d4fe8e70ea3b823f88449378023bb/output/jars/libs/jnihelpers-1.0.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="63735f48b82bcd24cdd33821342428252eb1ca5a">
-        <dex dex="C:\Users\Josh Cawthorne\AndroidStudioProjects\May4th\WaveFitness\build\intermediates\transforms\dex\debug\folders\1000\10\butterknife-6.1.0_6250e145d5450e567c8e8307b2d68c9b824e86ad\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Josh Cawthorne\.android\build-cache\0e5d15c577e422bc8006915be8c08ab73e69149a\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="a2af9c72ccaa4c5c049b500ca6ea664a4ce1f7d4">
-        <dex dex="C:\Users\Josh Cawthorne\AndroidStudioProjects\May4th\WaveFitness\build\intermediates\transforms\dex\debug\folders\1000\10\classes_887d4a45c4bb9000e69dd2ec5362755597b38e1b\classes.dex" />
+        sha1="b54aab38b4f87a6682331b511fec0db6b952bb7e">
+        <dex dex="/Users/s6236422/Desktop/WaveFitness/build/intermediates/transforms/dex/debug/folders/1000/10/jnihelpers-1.0_caffc24d65fc155f5b7b347b4ac6071f89779289/classes.dex" />
     </item>
 
 </items>

@@ -85,6 +85,7 @@
     <string msgid="6099173376375995052" name="decline">"Refuser"</string>
     <string name="material_drawer_close">Fermer</string>
     <string name="material_drawer_open">Ouvrir</string>
+    <string name="messenger_send_button_text">Envoyer</string>
     <string msgid="3698378085901466129" name="mr_button_content_description">"Icône Cast"</string>
     <string msgid="6349900579507521956" name="mr_chooser_searching">"Recherche d\'appareils en cours…"</string>
     <string msgid="414301941546135990" name="mr_chooser_title">"Caster sur"</string>

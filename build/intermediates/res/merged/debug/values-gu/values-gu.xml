@@ -64,6 +64,7 @@
     <string msgid="2039274714455389140" name="debug_menu_title">"ડીબગ મોડ પસંદ કરો"</string>
     <string msgid="1173358804935285568" name="debug_menu_troubleshooting">"સમસ્યા નિવારણ"</string>
     <string msgid="6099173376375995052" name="decline">"નકારો"</string>
+    <string name="messenger_send_button_text">મોકલો</string>
     <string msgid="1303870564366209730" name="place_autocomplete_clear_button">"શોધ સાફ કરો"</string>
     <string msgid="2809095107724486040" name="place_autocomplete_search_hint">"શોધો"</string>
     <string msgid="8020323581538738027" name="store_picture_message">"જાહેરાતને ચિત્ર ગૅલેરી છબીઓ સંગ્રહિત કરવાની મંજૂરી આપીએ?"</string>

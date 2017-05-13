@@ -64,6 +64,7 @@
     <string msgid="2039274714455389140" name="debug_menu_title">"डीबग मोड निवडा"</string>
     <string msgid="1173358804935285568" name="debug_menu_troubleshooting">"समस्यानिवारण"</string>
     <string msgid="6099173376375995052" name="decline">"नकार द्या"</string>
+    <string name="messenger_send_button_text">पाठवा</string>
     <string msgid="1303870564366209730" name="place_autocomplete_clear_button">"शोध साफ करा"</string>
     <string msgid="2809095107724486040" name="place_autocomplete_search_hint">"शोध"</string>
     <string msgid="8020323581538738027" name="store_picture_message">"चित्र गॅलरीत प्रतिमा संग्रहित करण्याची जाहिरातीस अनुमती द्यायची?"</string>

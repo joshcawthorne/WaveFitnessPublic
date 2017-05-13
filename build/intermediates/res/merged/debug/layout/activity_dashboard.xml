@@ -34,7 +34,7 @@
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="80dp"
                     android:background="#EEE"
                     android:orientation="horizontal">
@@ -84,26 +84,28 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="75dp"
                         android:layout_gravity="right"
                         android:background="#EEE"
                         android:layout_marginTop="5dp"
                         android:orientation="horizontal"
-                        android:layout_marginRight="20dp">
+                        android:layout_marginRight="0dp">
 
                         <LinearLayout
                             android:layout_width="35dp"
-                            android:layout_gravity="center_vertical"
+                            android:layout_gravity="center_vertical|right"
                             android:layout_height="35dp"
                             android:layout_marginTop="5dp"
-                            android:layout_marginRight="5dp"
+                            android:layout_marginRight="0dp"
                             >
 
                             <de.hdodenhof.circleimageview.CircleImageView
                                 xmlns:app="http://schemas.android.com/apk/res-auto"
                                 android:id="@+id/profile_image"
                                 android:layout_width="35dp"
+                                android:gravity="right"
+                                android:layout_alignParentRight="true"
                                 android:layout_height="35dp"
                                 android:src="@drawable/temp_profile"
                                 />
@@ -232,7 +234,7 @@
 
                     <com.makeramen.roundedimageview.RoundedImageView
                         xmlns:app="http://schemas.android.com/apk/res-auto"
-                        android:id="@+id/vapor1"
+                        android:id="@+id/runBanner"
                         android:src="@drawable/runbanner3"
                         android:scaleType="centerCrop"
                         android:layout_width="match_parent"
@@ -331,7 +333,7 @@
                 <com.makeramen.roundedimageview.RoundedImageView
                     xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:id="@+id/placeholder"
-                    android:background="@color/colorAccent"
+                    android:background="@drawable/pvris"
                     android:scaleType="centerCrop"
                     android:layout_width="160dp"
                     android:layout_height="175dp"
@@ -339,12 +341,13 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="5dp"
                     android:layout_weight="1"
-                    app:riv_corner_radius="10dip" />
+                    app:riv_corner_radius="10dip"
+                    />
 
                 <com.makeramen.roundedimageview.RoundedImageView
                     xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:id="@+id/alsoplaceholder"
-                    android:background="@color/colorAccent"
+                    android:id="@+id/popbanner"
+                    android:background="@drawable/brunomars"
                     android:scaleType="centerCrop"
                     android:layout_width="160dp"
                     android:layout_height="175dp"
@@ -352,7 +355,7 @@
                     android:layout_marginBottom="15dp"
                     android:layout_marginRight="15dp"
                     android:layout_weight="1"
-                    app:riv_corner_radius="10dip" />
+                    app:riv_corner_radius="15dip" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

@@ -5,8 +5,8 @@
     android:versionName="2.0" >
 
     <uses-sdk
-        android:minSdkVersion="21"
-        android:targetSdkVersion="25" />
+        android:minSdkVersion="23"
+        android:targetSdkVersion="23" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -19,20 +19,23 @@
 
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <!-- Required for Google Login -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
 
     <!-- Optional permission for Analytics to run. -->
     <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Permissions required for GCM -->
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <meta-data
+        android:name="android.support.VERSION"
+        android:value="25.3.1" />
 
     <permission
         android:name="com.wave.fitness.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
 
     <uses-permission android:name="com.wave.fitness.permission.C2D_MESSAGE" />
-
-    <meta-data
-        android:name="android.support.VERSION"
-        android:value="25.3.1" />
 
     <application
         android:name="com.wave.fitness.SpotifyCore"
@@ -44,6 +47,7 @@
         android:theme="@style/WaveTheme" >
         <activity
             android:name="com.wave.fitness.SplashActivity"
+            android:noHistory="true"
             android:theme="@style/SplashTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -52,7 +56,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.wave.fitness.startupActivity"
+            android:name="com.wave.fitness.setupActivity"
+            android:label="@string/app_name"
+            android:theme="@style/WaveTheme" >
+        </activity>
+        <activity
+            android:name="com.wave.fitness.spotifyActivity"
             android:label="@string/app_name"
             android:theme="@style/WaveTheme" >
         </activity>
@@ -62,13 +71,14 @@
             android:theme="@style/WaveTheme" >
         </activity>
         <activity
-            android:name="com.wave.fitness.signupActivity"
+            android:name="com.wave.fitness.OLDsignupActivity"
             android:label="@string/app_name"
             android:theme="@style/WaveTheme" >
         </activity>
         <activity
             android:name="com.wave.fitness.DashboardActivity"
             android:label="Wave Fitness"
+            android:launchMode="singleTask"
             android:theme="@style/WaveTheme" >
         </activity>
         <activity
@@ -81,19 +91,26 @@
             android:label="@string/title_activity_demo"
             android:windowSoftInputMode="stateHidden" >
         </activity>
-        <activity android:name="com.wave.fitness.RunActivity" >
+        <activity
+            android:name="com.wave.fitness.RunActivity"
+            android:launchMode="singleTop" >
         </activity>
         <activity
-            android:name="com.spotify.sdk.android.authentication.LoginActivity"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
 
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCpyAZeljnI83E-ICT5QBeEcUSe1deS5pc" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
 
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="com.wave.fitness.authentication.WebAuthResultActivity"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" >
@@ -107,6 +124,28 @@
                     android:host="callback"
                     android:scheme="testschema" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.spotify.sdk.android.authentication.LoginActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCpyAZeljnI83E-ICT5QBeEcUSe1deS5pc" />
+
+        <!-- Pedometer -->
+
+        <service android:name="com.wave.fitness.pedometer.StepService" />
+
+        <activity
+            android:name="com.wave.fitness.Settings"
+            android:label="@string/activity_settings" >
         </activity>
 
         <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
@@ -127,19 +166,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
-            android:excludeFromRecents="true"
-            android:exported="false"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-        <!--
-Service handling Google Sign-In user revocation. For apps that do not integrate with
-            Google Sign-In, this service will never be started.
-        -->
-        <service
-            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
-            android:exported="true"
-            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" />
 
         <receiver android:name="com.google.android.gms.cast.framework.media.MediaIntentReceiver" />
 
@@ -173,6 +199,39 @@ Service handling Google Sign-In user revocation. For apps that do not integrate 
                 <category android:name="android.intent.category.BROWSABLE" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.spotify.sdk.android.authentication.AuthCallbackActivity"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="@string/com_spotify_sdk_redirect_host"
+                    android:scheme="@string/com_spotify_sdk_redirect_scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!--
+Service handling Google Sign-In user revocation. For apps that do not integrate with
+            Google Sign-In, this service will never be started.
+        -->
+        <service
+            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+            android:exported="true"
+            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" />
+
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
         <receiver
             android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
@@ -199,7 +258,6 @@ Service handling Google Sign-In user revocation. For apps that do not integrate 
             android:permission="com.google.android.c2dm.permission.SEND" >
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
 
                 <category android:name="com.wave.fitness" />
             </intent-filter>
@@ -228,26 +286,6 @@ Service handling Google Sign-In user revocation. For apps that do not integrate 
             android:authorities="com.wave.fitness.firebaseinitprovider"
             android:exported="false"
             android:initOrder="100" />
-
-        <activity
-            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-            android:exported="false"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-        <activity
-            android:name="com.spotify.sdk.android.authentication.AuthCallbackActivity"
-            android:exported="true"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <data
-                    android:host="@string/com_spotify_sdk_redirect_host"
-                    android:scheme="@string/com_spotify_sdk_redirect_scheme" />
-            </intent-filter>
-        </activity>
     </application>
 
 </manifest>

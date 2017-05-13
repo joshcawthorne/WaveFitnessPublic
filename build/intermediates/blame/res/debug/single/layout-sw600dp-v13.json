@@ -1,6 +1,10 @@
 [
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\design_layout_snackbar.xml",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\eae61757f35c1631e99de594bb073d57f36e2ce2\\output\\res\\layout-sw600dp-v13\\design_layout_snackbar.xml"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/layout-sw600dp-v13/design_layout_snackbar.xml",
+        "source": "/Users/s6236422/.android/build-cache/eb593286924d494dac942f05c2fd33ccc169a2af/output/res/layout-sw600dp-v13/design_layout_snackbar.xml"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\design_layout_snackbar.xml",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\eae61757f35c1631e99de594bb073d57f36e2ce2\\output\\res\\layout-sw600dp-v13\\design_layout_snackbar.xml"
     }
 ]

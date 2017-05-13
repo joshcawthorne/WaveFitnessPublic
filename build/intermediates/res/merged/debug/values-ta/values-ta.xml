@@ -64,6 +64,7 @@
     <string msgid="2039274714455389140" name="debug_menu_title">"பிழைத் திருத்தப் பயன்முறையைத் தேர்ந்தெடுக்கவும்"</string>
     <string msgid="1173358804935285568" name="debug_menu_troubleshooting">"பிழைகாண்"</string>
     <string msgid="6099173376375995052" name="decline">"நிராகரி"</string>
+    <string name="messenger_send_button_text">அனுப்பு</string>
     <string msgid="1303870564366209730" name="place_autocomplete_clear_button">"தேடலை அழிக்கும்"</string>
     <string msgid="2809095107724486040" name="place_autocomplete_search_hint">"தேடுக"</string>
     <string msgid="8020323581538738027" name="store_picture_message">"பட கேலரியில் படத்தைச் சேமிக்க, விளம்பரத்தை அனுமதிக்கவா?"</string>

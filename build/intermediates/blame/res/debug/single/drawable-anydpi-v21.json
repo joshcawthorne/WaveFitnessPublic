@@ -1,10 +1,18 @@
 [
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\design_ic_visibility_off.xml",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\eae61757f35c1631e99de594bb073d57f36e2ce2\\output\\res\\drawable-anydpi-v21\\design_ic_visibility_off.xml"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-anydpi-v21/design_ic_visibility_off.xml",
+        "source": "/Users/s6236422/.android/build-cache/eb593286924d494dac942f05c2fd33ccc169a2af/output/res/drawable-anydpi-v21/design_ic_visibility_off.xml"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\design_ic_visibility.xml",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\eae61757f35c1631e99de594bb073d57f36e2ce2\\output\\res\\drawable-anydpi-v21\\design_ic_visibility.xml"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-anydpi-v21/design_ic_visibility.xml",
+        "source": "/Users/s6236422/.android/build-cache/eb593286924d494dac942f05c2fd33ccc169a2af/output/res/drawable-anydpi-v21/design_ic_visibility.xml"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\design_ic_visibility_off.xml",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\eae61757f35c1631e99de594bb073d57f36e2ce2\\output\\res\\drawable-anydpi-v21\\design_ic_visibility_off.xml"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\design_ic_visibility.xml",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\eae61757f35c1631e99de594bb073d57f36e2ce2\\output\\res\\drawable-anydpi-v21\\design_ic_visibility.xml"
     }
 ]

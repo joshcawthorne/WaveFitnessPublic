@@ -83,6 +83,7 @@
     <string msgid="2039274714455389140" name="debug_menu_title">"Fehlerbehebungsmodus auswählen"</string>
     <string msgid="1173358804935285568" name="debug_menu_troubleshooting">"Fehlerbehebung"</string>
     <string msgid="6099173376375995052" name="decline">"Ablehnen"</string>
+    <string name="messenger_send_button_text">Senden</string>
     <string msgid="3698378085901466129" name="mr_button_content_description">"Cast-Symbol"</string>
     <string msgid="6349900579507521956" name="mr_chooser_searching">"Geräte werden gesucht."</string>
     <string msgid="414301941546135990" name="mr_chooser_title">"Streamen auf"</string>

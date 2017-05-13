@@ -1,574 +1,1222 @@
 [
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_forward_30_grey600_36.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_forward_30_grey600_36.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_forward_30_grey600_36.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_forward_30_grey600_36.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_refresh_white_24.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_refresh_white_24.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_popup_background_mtrl_mult.9.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/abc_popup_background_mtrl_mult.9.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_closed_caption_white_36.png",
+        "source": "/Users/s6236422/.android/build-cache/41af32327e922be3c5f47a4f15273e3188f89e8f/output/res/drawable-mdpi-v4/quantum_ic_closed_caption_white_36.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\51e3f68e195ec87858dcbbfa7c35fa8ceb576b0c\\output\\res\\drawable-mdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_cast_dark.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_cast_dark.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_cast_dark.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_cast_dark.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\51e3f68e195ec87858dcbbfa7c35fa8ceb576b0c\\output\\res\\drawable-mdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_star_half_black_16dp.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_ic_star_half_black_16dp.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_skip_previous_white_36.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_skip_previous_white_36.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_stop_grey600_36.png",
+        "source": "/Users/s6236422/.android/build-cache/41af32327e922be3c5f47a4f15273e3188f89e8f/output/res/drawable-mdpi-v4/quantum_ic_stop_grey600_36.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\cast_abc_scrubber_control_off_mtrl_alpha.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\cast_abc_scrubber_control_off_mtrl_alpha.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_skip_next_white_24.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_skip_next_white_24.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_star_black_48dp.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_ic_star_black_48dp.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_tv_light.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_tv_light.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_btn_check_to_on_mtrl_015.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_pause_circle_filled_white_36.png",
+        "source": "/Users/s6236422/.android/build-cache/41af32327e922be3c5f47a4f15273e3188f89e8f/output/res/drawable-mdpi-v4/quantum_ic_pause_circle_filled_white_36.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_skip_next_white_24.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_skip_next_white_24.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_menu_cut_mtrl_alpha.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_closed_caption_grey600_36.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_closed_caption_grey600_36.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_tv_light.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_tv_light.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_cast_dark.png",
+        "source": "/Users/s6236422/.android/build-cache/caa448ca6177b6edc3971285688dafbf867038ca/output/res/drawable-mdpi-v4/ic_cast_dark.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_text_select_handle_middle_mtrl_light.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_text_select_handle_middle_mtrl_light.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_text_select_handle_right_mtrl_light.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_text_select_handle_right_mtrl_light.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_cast_white_36.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_cast_white_36.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_dark.9.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/com_facebook_tooltip_blue_topnub.png",
+        "source": "/Users/s6236422/.android/build-cache/f9e1a7c66abdd1b6b98f8d780944f5a0d0deb324/output/res/drawable-mdpi-v4/com_facebook_tooltip_blue_topnub.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_closed_caption_grey600_36.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_closed_caption_grey600_36.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_plusone_small_off_client.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\dd553ea7cb28078e602cf9f0436a8f40633b0dd5\\output\\res\\drawable-mdpi-v4\\ic_plusone_small_off_client.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_text_select_handle_right_mtrl_light.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_text_select_handle_right_mtrl_light.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_btn_check_to_on_mtrl_000.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_dark.9.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\cast_ic_notification_2.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\68fabd41250fe409b7f984961438afec0adedbe7\\output\\res\\drawable-mdpi-v4\\cast_ic_notification_2.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_btn_check_to_on_mtrl_000.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/design_ic_visibility_off.png",
+        "source": "/Users/s6236422/.android/build-cache/eb593286924d494dac942f05c2fd33ccc169a2af/output/res/drawable-mdpi-v4/design_ic_visibility_off.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_plusone_medium_off_client.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\dd553ea7cb28078e602cf9f0436a8f40633b0dd5\\output\\res\\drawable-mdpi-v4\\ic_plusone_medium_off_client.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_volume_off_grey600_36.png",
+        "source": "/Users/s6236422/.android/build-cache/41af32327e922be3c5f47a4f15273e3188f89e8f/output/res/drawable-mdpi-v4/quantum_ic_volume_off_grey600_36.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_plusone_small_off_client.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\dd553ea7cb28078e602cf9f0436a8f40633b0dd5\\output\\res\\drawable-mdpi-v4\\ic_plusone_small_off_client.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_replay_30_white_36.png",
+        "source": "/Users/s6236422/.android/build-cache/41af32327e922be3c5f47a4f15273e3188f89e8f/output/res/drawable-mdpi-v4/quantum_ic_replay_30_white_36.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_art_track_grey600_48.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_art_track_grey600_48.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\cast_ic_notification_2.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\68fabd41250fe409b7f984961438afec0adedbe7\\output\\res\\drawable-mdpi-v4\\cast_ic_notification_2.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_list_selector_disabled_holo_dark.9.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/abc_list_selector_disabled_holo_dark.9.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_skip_previous_grey600_36.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_skip_previous_grey600_36.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_pause_light.png",
+        "source": "/Users/s6236422/.android/build-cache/caa448ca6177b6edc3971285688dafbf867038ca/output/res/drawable-mdpi-v4/ic_pause_light.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/cast_ic_stop_circle_filled_grey600.png",
+        "source": "/Users/s6236422/.android/build-cache/41af32327e922be3c5f47a4f15273e3188f89e8f/output/res/drawable-mdpi-v4/cast_ic_stop_circle_filled_grey600.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_list_divider_mtrl_alpha.9.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_plusone_medium_off_client.png",
+        "source": "/Users/s6236422/.android/build-cache/2200824b66fe643c034e2c9576084ef9dd23848f/output/res/drawable-mdpi-v4/ic_plusone_medium_off_client.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_forward_10_white_24.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_forward_10_white_24.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_play_dark.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_play_dark.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_play_dark.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_play_dark.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_forward_10_white_24.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_forward_10_white_24.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_list_longpressed_holo.9.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_list_longpressed_holo.9.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_speaker_group_light.png",
+        "source": "/Users/s6236422/.android/build-cache/caa448ca6177b6edc3971285688dafbf867038ca/output/res/drawable-mdpi-v4/ic_speaker_group_light.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_tv_dark.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_tv_dark.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/com_facebook_tooltip_blue_xout.png",
+        "source": "/Users/s6236422/.android/build-cache/f9e1a7c66abdd1b6b98f8d780944f5a0d0deb324/output/res/drawable-mdpi-v4/com_facebook_tooltip_blue_xout.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_close_dark.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_close_dark.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_tv_dark.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_tv_dark.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\googleg_standard_color_18.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\51e3f68e195ec87858dcbbfa7c35fa8ceb576b0c\\output\\res\\drawable-mdpi-v4\\googleg_standard_color_18.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_popup_background_mtrl_mult.9.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_popup_background_mtrl_mult.9.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/googleg_standard_color_18.png",
+        "source": "/Users/s6236422/.android/build-cache/43cc4d5f70f90bd33ad3ff62c35a62206c004ba9/output/res/drawable-mdpi-v4/googleg_standard_color_18.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_volume_up_white_36.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_volume_up_white_36.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_refresh_white_24.png",
+        "source": "/Users/s6236422/.android/build-cache/41af32327e922be3c5f47a4f15273e3188f89e8f/output/res/drawable-mdpi-v4/quantum_ic_refresh_white_24.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_pause_grey600_36.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_pause_grey600_36.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_close_light.png",
+        "source": "/Users/s6236422/.android/build-cache/caa448ca6177b6edc3971285688dafbf867038ca/output/res/drawable-mdpi-v4/ic_close_light.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_cast_grey.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_cast_grey.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_popup_background_mtrl_mult.9.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_popup_background_mtrl_mult.9.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\cast_ic_stop_circle_filled_white.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\cast_ic_stop_circle_filled_white.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/cast_abc_scrubber_control_to_pressed_mtrl_000.png",
+        "source": "/Users/s6236422/.android/build-cache/41af32327e922be3c5f47a4f15273e3188f89e8f/output/res/drawable-mdpi-v4/cast_abc_scrubber_control_to_pressed_mtrl_000.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_text_select_handle_left_mtrl_light.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_text_select_handle_left_mtrl_light.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_pause_grey600_36.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_pause_grey600_36.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\cast_ic_notification_0.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\68fabd41250fe409b7f984961438afec0adedbe7\\output\\res\\drawable-mdpi-v4\\cast_ic_notification_0.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\cast_ic_stop_circle_filled_white.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\cast_ic_stop_circle_filled_white.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_text_select_handle_middle_mtrl_dark.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_text_select_handle_middle_mtrl_dark.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_btn_radio_to_on_mtrl_000.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/abc_btn_radio_to_on_mtrl_000.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\cast_ic_stop_circle_filled_grey600.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\cast_ic_stop_circle_filled_grey600.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_art_track_grey600_48.png",
+        "source": "/Users/s6236422/.android/build-cache/41af32327e922be3c5f47a4f15273e3188f89e8f/output/res/drawable-mdpi-v4/quantum_ic_art_track_grey600_48.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_light.9.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_light.9.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\cast_ic_notification_0.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\68fabd41250fe409b7f984961438afec0adedbe7\\output\\res\\drawable-mdpi-v4\\cast_ic_notification_0.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\cast_ic_stop_circle_filled_grey600.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\cast_ic_stop_circle_filled_grey600.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_speaker_group_light.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_speaker_group_light.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_skip_previous_white_36.png",
+        "source": "/Users/s6236422/.android/build-cache/41af32327e922be3c5f47a4f15273e3188f89e8f/output/res/drawable-mdpi-v4/quantum_ic_skip_previous_white_36.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_keyboard_arrow_down_white_36.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_keyboard_arrow_down_white_36.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_speaker_group_light.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_speaker_group_light.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_forward_30_grey600_36.png",
+        "source": "/Users/s6236422/.android/build-cache/41af32327e922be3c5f47a4f15273e3188f89e8f/output/res/drawable-mdpi-v4/quantum_ic_forward_30_grey600_36.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_bigtop_updates_white_24.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_bigtop_updates_white_24.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_keyboard_arrow_down_white_36.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_keyboard_arrow_down_white_36.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\cast_abc_scrubber_control_to_pressed_mtrl_005.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\cast_abc_scrubber_control_to_pressed_mtrl_005.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/messenger_bubble_large_blue.png",
+        "source": "/Users/s6236422/.android/build-cache/f9e1a7c66abdd1b6b98f8d780944f5a0d0deb324/output/res/drawable-mdpi-v4/messenger_bubble_large_blue.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_replay_30_white_24.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_replay_30_white_24.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_plusone_tall_off_client.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\dd553ea7cb28078e602cf9f0436a8f40633b0dd5\\output\\res\\drawable-mdpi-v4\\ic_plusone_tall_off_client.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/places_ic_search.png",
+        "source": "/Users/s6236422/.android/build-cache/a73c0f57cc9606667eea373e38555951f3f14262/output/res/drawable-mdpi-v4/places_ic_search.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_clear_white_24.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_clear_white_24.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_bigtop_updates_white_24.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_bigtop_updates_white_24.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\powered_by_google_light.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\9c48360e39fa0368dfb6daf59a4adf81cd02676b\\output\\res\\drawable-mdpi-v4\\powered_by_google_light.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_plusone_tall_off_client.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\dd553ea7cb28078e602cf9f0436a8f40633b0dd5\\output\\res\\drawable-mdpi-v4\\ic_plusone_tall_off_client.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_skip_next_white_36.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_skip_next_white_36.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_clear_white_24.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_clear_white_24.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_play_circle_filled_white_36.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_play_circle_filled_white_36.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\powered_by_google_light.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\9c48360e39fa0368dfb6daf59a4adf81cd02676b\\output\\res\\drawable-mdpi-v4\\powered_by_google_light.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_cast_disabled_light.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_cast_disabled_light.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_play_arrow_white_24.png",
+        "source": "/Users/s6236422/.android/build-cache/41af32327e922be3c5f47a4f15273e3188f89e8f/output/res/drawable-mdpi-v4/quantum_ic_play_arrow_white_24.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\notify_panel_notification_icon_bg.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\notify_panel_notification_icon_bg.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_skip_next_white_36.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_skip_next_white_36.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_replay_30_white_36.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_replay_30_white_36.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_star_half_black_36dp.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/abc_ic_star_half_black_36dp.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_cast_white.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_cast_white.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_stop_grey600_48.png",
+        "source": "/Users/s6236422/.android/build-cache/41af32327e922be3c5f47a4f15273e3188f89e8f/output/res/drawable-mdpi-v4/quantum_ic_stop_grey600_48.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_textfield_default_mtrl_alpha.9.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_textfield_default_mtrl_alpha.9.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_replay_white_24.png",
+        "source": "/Users/s6236422/.android/build-cache/41af32327e922be3c5f47a4f15273e3188f89e8f/output/res/drawable-mdpi-v4/quantum_ic_replay_white_24.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_pause_dark.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_pause_dark.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_cast_white.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_cast_white.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_menu_share_mtrl_alpha.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_cast_off_light.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_cast_off_light.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_textfield_default_mtrl_alpha.9.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_textfield_default_mtrl_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_audiotrack_light.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_audiotrack_light.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_play_arrow_white_24.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_play_arrow_white_24.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_btn_radio_to_on_mtrl_015.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_text_select_handle_right_mtrl_dark.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_text_select_handle_right_mtrl_dark.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/powered_by_google_light.png",
+        "source": "/Users/s6236422/.android/build-cache/a73c0f57cc9606667eea373e38555951f3f14262/output/res/drawable-mdpi-v4/powered_by_google_light.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_speaker_light.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_speaker_light.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_tv_light.png",
+        "source": "/Users/s6236422/.android/build-cache/caa448ca6177b6edc3971285688dafbf867038ca/output/res/drawable-mdpi-v4/ic_tv_light.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_btn_radio_to_on_mtrl_015.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_list_focused_holo.9.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_list_focused_holo.9.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_list_focused_holo.9.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_list_focused_holo.9.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_replay_30_white_24.png",
+        "source": "/Users/s6236422/.android/build-cache/41af32327e922be3c5f47a4f15273e3188f89e8f/output/res/drawable-mdpi-v4/quantum_ic_replay_30_white_24.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_star_half_black_48dp.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_ic_star_half_black_48dp.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_switch_track_mtrl_alpha.9.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\notification_bg_normal_pressed.9.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\notification_bg_normal_pressed.9.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/com_facebook_tooltip_black_xout.png",
+        "source": "/Users/s6236422/.android/build-cache/f9e1a7c66abdd1b6b98f8d780944f5a0d0deb324/output/res/drawable-mdpi-v4/com_facebook_tooltip_black_xout.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_switch_track_mtrl_alpha.9.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_plusone_standard_off_client.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\dd553ea7cb28078e602cf9f0436a8f40633b0dd5\\output\\res\\drawable-mdpi-v4\\ic_plusone_standard_off_client.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_plusone_standard_off_client.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\dd553ea7cb28078e602cf9f0436a8f40633b0dd5\\output\\res\\drawable-mdpi-v4\\ic_plusone_standard_off_client.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_textfield_default_mtrl_alpha.9.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/abc_textfield_default_mtrl_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_forward_30_white_36.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_forward_30_white_36.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_stop_grey600_36.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_stop_grey600_36.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_btn_check_to_on_mtrl_015.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/abc_btn_check_to_on_mtrl_015.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_star_black_16dp.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_ic_star_black_16dp.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_media_route_off_mono_dark.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_media_route_off_mono_dark.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\cast_abc_scrubber_primary_mtrl_alpha.9.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\cast_abc_scrubber_primary_mtrl_alpha.9.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_pause_white_24.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_pause_white_24.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\notification_bg_low_normal.9.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\notification_bg_low_normal.9.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_stop_white_24.png",
+        "source": "/Users/s6236422/.android/build-cache/41af32327e922be3c5f47a4f15273e3188f89e8f/output/res/drawable-mdpi-v4/quantum_ic_stop_white_24.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_replay_white_24.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_replay_white_24.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_media_route_off_mono_dark.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_media_route_off_mono_dark.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_audiotrack.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_audiotrack.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_pause_white_24.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_pause_white_24.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\51e3f68e195ec87858dcbbfa7c35fa8ceb576b0c\\output\\res\\drawable-mdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_pause_circle_filled_grey600_36.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_pause_circle_filled_grey600_36.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_media_route_disabled_mono_dark.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_media_route_disabled_mono_dark.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_replay_white_24.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_replay_white_24.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/com_facebook_profile_picture_blank_portrait.png",
+        "source": "/Users/s6236422/.android/build-cache/f9e1a7c66abdd1b6b98f8d780944f5a0d0deb324/output/res/drawable-mdpi-v4/com_facebook_profile_picture_blank_portrait.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_audiotrack.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_audiotrack.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_star_black_36dp.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/abc_ic_star_black_36dp.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_skip_next_grey600_36.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_skip_next_grey600_36.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_play_light.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_play_light.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_media_route_disabled_mono_dark.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_media_route_disabled_mono_dark.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_play_arrow_grey600_48.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_play_arrow_grey600_48.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_cast_disabled_light.png",
+        "source": "/Users/s6236422/.android/build-cache/caa448ca6177b6edc3971285688dafbf867038ca/output/res/drawable-mdpi-v4/ic_cast_disabled_light.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\51e3f68e195ec87858dcbbfa7c35fa8ceb576b0c\\output\\res\\drawable-mdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_skip_next_white_24.png",
+        "source": "/Users/s6236422/.android/build-cache/41af32327e922be3c5f47a4f15273e3188f89e8f/output/res/drawable-mdpi-v4/quantum_ic_skip_next_white_24.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_forward_30_white_24.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_forward_30_white_24.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_pause_grey600_36.png",
+        "source": "/Users/s6236422/.android/build-cache/41af32327e922be3c5f47a4f15273e3188f89e8f/output/res/drawable-mdpi-v4/quantum_ic_pause_grey600_36.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_speaker_group_dark.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_speaker_group_dark.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_speaker_dark.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_speaker_dark.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\design_ic_visibility.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\eae61757f35c1631e99de594bb073d57f36e2ce2\\output\\res\\drawable-mdpi-v4\\design_ic_visibility.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/notification_bg_normal.9.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/notification_bg_normal.9.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_play_light.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_play_light.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_text_select_handle_middle_mtrl_light.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/abc_text_select_handle_middle_mtrl_light.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_play_arrow_grey600_48.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_play_arrow_grey600_48.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/com_facebook_close.png",
+        "source": "/Users/s6236422/.android/build-cache/f9e1a7c66abdd1b6b98f8d780944f5a0d0deb324/output/res/drawable-mdpi-v4/com_facebook_close.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_speaker_dark.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_speaker_dark.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\googleg_disabled_color_18.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\51e3f68e195ec87858dcbbfa7c35fa8ceb576b0c\\output\\res\\drawable-mdpi-v4\\googleg_disabled_color_18.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/messenger_bubble_small_blue.png",
+        "source": "/Users/s6236422/.android/build-cache/f9e1a7c66abdd1b6b98f8d780944f5a0d0deb324/output/res/drawable-mdpi-v4/messenger_bubble_small_blue.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_play_circle_filled_white_36.png",
+        "source": "/Users/s6236422/.android/build-cache/41af32327e922be3c5f47a4f15273e3188f89e8f/output/res/drawable-mdpi-v4/quantum_ic_play_circle_filled_white_36.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_close_light.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_close_light.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_text_select_handle_left_mtrl_dark.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/abc_text_select_handle_left_mtrl_dark.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_play_arrow_grey600_36.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_play_arrow_grey600_36.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_star_half_black_48dp.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/abc_ic_star_half_black_48dp.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_stop_grey600_48.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_stop_grey600_48.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_plusone_standard_off_client.png",
+        "source": "/Users/s6236422/.android/build-cache/2200824b66fe643c034e2c9576084ef9dd23848f/output/res/drawable-mdpi-v4/ic_plusone_standard_off_client.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_btn_radio_to_on_mtrl_000.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_btn_radio_to_on_mtrl_000.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_cast_connected_white_24.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_cast_connected_white_24.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_pause_white_24.png",
+        "source": "/Users/s6236422/.android/build-cache/41af32327e922be3c5f47a4f15273e3188f89e8f/output/res/drawable-mdpi-v4/quantum_ic_pause_white_24.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_volume_up_grey600_36.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_volume_up_grey600_36.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_cast_connected_white_24.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_cast_connected_white_24.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_replay_10_white_24.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_replay_10_white_24.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/cast_ic_notification_1.png",
+        "source": "/Users/s6236422/.android/build-cache/51811b106be09a349867c7dbc717b54e2aa4570d/output/res/drawable-mdpi-v4/cast_ic_notification_1.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_replay_10_white_24.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_replay_10_white_24.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_volume_off_white_36.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_volume_off_white_36.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_star_half_black_36dp.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_ic_star_half_black_36dp.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_clear_white_24.png",
+        "source": "/Users/s6236422/.android/build-cache/41af32327e922be3c5f47a4f15273e3188f89e8f/output/res/drawable-mdpi-v4/quantum_ic_clear_white_24.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_cast_light.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_cast_light.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_pause_light.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_pause_light.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_tab_indicator_mtrl_alpha.9.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\powered_by_google_dark.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\9c48360e39fa0368dfb6daf59a4adf81cd02676b\\output\\res\\drawable-mdpi-v4\\powered_by_google_dark.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_pause_light.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_pause_light.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_spinner_mtrl_am_alpha.9.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/abc_spinner_mtrl_am_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\powered_by_google_dark.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\9c48360e39fa0368dfb6daf59a4adf81cd02676b\\output\\res\\drawable-mdpi-v4\\powered_by_google_dark.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\cast_abc_scrubber_control_to_pressed_mtrl_000.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\cast_abc_scrubber_control_to_pressed_mtrl_000.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_pause_circle_filled_grey600_36.png",
+        "source": "/Users/s6236422/.android/build-cache/41af32327e922be3c5f47a4f15273e3188f89e8f/output/res/drawable-mdpi-v4/quantum_ic_pause_circle_filled_grey600_36.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_replay_30_grey600_36.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_replay_30_grey600_36.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_stop_white_24.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_stop_white_24.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_play_dark.png",
+        "source": "/Users/s6236422/.android/build-cache/caa448ca6177b6edc3971285688dafbf867038ca/output/res/drawable-mdpi-v4/ic_play_dark.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\notification_bg_low_pressed.9.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\notification_bg_low_pressed.9.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_cast_connected_white_24.png",
+        "source": "/Users/s6236422/.android/build-cache/41af32327e922be3c5f47a4f15273e3188f89e8f/output/res/drawable-mdpi-v4/quantum_ic_cast_connected_white_24.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_star_black_36dp.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_ic_star_black_36dp.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\cast_abc_scrubber_control_to_pressed_mtrl_000.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\cast_abc_scrubber_control_to_pressed_mtrl_000.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/messenger_bubble_large_white.png",
+        "source": "/Users/s6236422/.android/build-cache/f9e1a7c66abdd1b6b98f8d780944f5a0d0deb324/output/res/drawable-mdpi-v4/messenger_bubble_large_white.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_list_pressed_holo_dark.9.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_list_pressed_holo_dark.9.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\notification_bg_low_pressed.9.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\notification_bg_low_pressed.9.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_list_pressed_holo_light.9.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_list_pressed_holo_light.9.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_media_route_off_mono_dark.png",
+        "source": "/Users/s6236422/.android/build-cache/caa448ca6177b6edc3971285688dafbf867038ca/output/res/drawable-mdpi-v4/ic_media_route_off_mono_dark.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\places_ic_clear.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\9c48360e39fa0368dfb6daf59a4adf81cd02676b\\output\\res\\drawable-mdpi-v4\\places_ic_clear.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/notification_bg_low_normal.9.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/notification_bg_low_normal.9.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\notification_bg_normal.9.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\notification_bg_normal.9.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_list_pressed_holo_dark.9.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_list_pressed_holo_dark.9.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\places_ic_search.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\9c48360e39fa0368dfb6daf59a4adf81cd02676b\\output\\res\\drawable-mdpi-v4\\places_ic_search.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_list_pressed_holo_light.9.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_list_pressed_holo_light.9.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_spinner_mtrl_am_alpha.9.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/places_ic_clear.png",
+        "source": "/Users/s6236422/.android/build-cache/a73c0f57cc9606667eea373e38555951f3f14262/output/res/drawable-mdpi-v4/places_ic_clear.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_media_pause.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_media_pause.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_forward_30_white_24.png",
+        "source": "/Users/s6236422/.android/build-cache/41af32327e922be3c5f47a4f15273e3188f89e8f/output/res/drawable-mdpi-v4/quantum_ic_forward_30_white_24.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_volume_off_grey600_36.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_volume_off_grey600_36.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\places_ic_search.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\9c48360e39fa0368dfb6daf59a4adf81cd02676b\\output\\res\\drawable-mdpi-v4\\places_ic_search.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\cast_ic_notification_1.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\68fabd41250fe409b7f984961438afec0adedbe7\\output\\res\\drawable-mdpi-v4\\cast_ic_notification_1.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/cast_ic_notification_2.png",
+        "source": "/Users/s6236422/.android/build-cache/51811b106be09a349867c7dbc717b54e2aa4570d/output/res/drawable-mdpi-v4/cast_ic_notification_2.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_play_circle_filled_grey600_36.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_play_circle_filled_grey600_36.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_play_circle_filled_grey600_36.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_play_circle_filled_grey600_36.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\51e3f68e195ec87858dcbbfa7c35fa8ceb576b0c\\output\\res\\drawable-mdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/com_facebook_tooltip_blue_background.9.png",
+        "source": "/Users/s6236422/.android/build-cache/f9e1a7c66abdd1b6b98f8d780944f5a0d0deb324/output/res/drawable-mdpi-v4/com_facebook_tooltip_blue_background.9.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_media_play.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_media_play.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_pause_grey600_48.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_pause_grey600_48.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_pause_grey600_48.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_pause_grey600_48.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_volume_off_white_36.png",
+        "source": "/Users/s6236422/.android/build-cache/41af32327e922be3c5f47a4f15273e3188f89e8f/output/res/drawable-mdpi-v4/quantum_ic_volume_off_white_36.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_cast_light.png",
+        "source": "/Users/s6236422/.android/build-cache/caa448ca6177b6edc3971285688dafbf867038ca/output/res/drawable-mdpi-v4/ic_cast_light.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_pause_circle_filled_white_36.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_pause_circle_filled_white_36.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_pause_circle_filled_white_36.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_pause_circle_filled_white_36.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\51e3f68e195ec87858dcbbfa7c35fa8ceb576b0c\\output\\res\\drawable-mdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_text_select_handle_right_mtrl_light.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/abc_text_select_handle_right_mtrl_light.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_text_select_handle_left_mtrl_dark.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_text_select_handle_left_mtrl_dark.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/com_facebook_tooltip_black_bottomnub.png",
+        "source": "/Users/s6236422/.android/build-cache/f9e1a7c66abdd1b6b98f8d780944f5a0d0deb324/output/res/drawable-mdpi-v4/com_facebook_tooltip_black_bottomnub.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_skip_previous_white_24.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_skip_previous_white_24.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\51e3f68e195ec87858dcbbfa7c35fa8ceb576b0c\\output\\res\\drawable-mdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\design_ic_visibility_off.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\eae61757f35c1631e99de594bb073d57f36e2ce2\\output\\res\\drawable-mdpi-v4\\design_ic_visibility_off.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_media_route_disabled_mono_dark.png",
+        "source": "/Users/s6236422/.android/build-cache/caa448ca6177b6edc3971285688dafbf867038ca/output/res/drawable-mdpi-v4/ic_media_route_disabled_mono_dark.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\cast_ic_notification_on.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\68fabd41250fe409b7f984961438afec0adedbe7\\output\\res\\drawable-mdpi-v4\\cast_ic_notification_on.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_scrubber_track_mtrl_alpha.9.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/abc_scrubber_track_mtrl_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_closed_caption_white_36.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_closed_caption_white_36.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_cab_background_top_mtrl_alpha.9.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/abc_cab_background_top_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_refresh_white_24.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_refresh_white_24.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_star_half_black_16dp.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_ic_star_half_black_16dp.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_keyboard_arrow_down_white_36.png",
+        "source": "/Users/s6236422/.android/build-cache/41af32327e922be3c5f47a4f15273e3188f89e8f/output/res/drawable-mdpi-v4/quantum_ic_keyboard_arrow_down_white_36.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_skip_previous_white_36.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_skip_previous_white_36.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_list_focused_holo.9.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/abc_list_focused_holo.9.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\cast_abc_scrubber_control_off_mtrl_alpha.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\cast_abc_scrubber_control_off_mtrl_alpha.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_star_black_48dp.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_ic_star_black_48dp.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_btn_check_to_on_mtrl_015.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_text_select_handle_middle_mtrl_light.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_text_select_handle_middle_mtrl_light.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_cast_white_36.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_cast_white_36.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/messenger_button_send_round_shadow.png",
+        "source": "/Users/s6236422/.android/build-cache/f9e1a7c66abdd1b6b98f8d780944f5a0d0deb324/output/res/drawable-mdpi-v4/messenger_button_send_round_shadow.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/com_facebook_button_like_icon_selected.png",
+        "source": "/Users/s6236422/.android/build-cache/f9e1a7c66abdd1b6b98f8d780944f5a0d0deb324/output/res/drawable-mdpi-v4/com_facebook_button_like_icon_selected.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_star_black_16dp.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/abc_ic_star_black_16dp.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_replay_10_white_24.png",
+        "source": "/Users/s6236422/.android/build-cache/41af32327e922be3c5f47a4f15273e3188f89e8f/output/res/drawable-mdpi-v4/quantum_ic_replay_10_white_24.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_art_track_grey600_48.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_art_track_grey600_48.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_plusone_medium_off_client.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\dd553ea7cb28078e602cf9f0436a8f40633b0dd5\\output\\res\\drawable-mdpi-v4\\ic_plusone_medium_off_client.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_skip_previous_grey600_36.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_skip_previous_grey600_36.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/design_ic_visibility.png",
+        "source": "/Users/s6236422/.android/build-cache/eb593286924d494dac942f05c2fd33ccc169a2af/output/res/drawable-mdpi-v4/design_ic_visibility.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png",
+        "source": "/Users/s6236422/.android/build-cache/43cc4d5f70f90bd33ad3ff62c35a62206c004ba9/output/res/drawable-mdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_btn_check_to_on_mtrl_000.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/abc_btn_check_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_list_divider_mtrl_alpha.9.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_list_longpressed_holo.9.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_list_longpressed_holo.9.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_cast_white_36.png",
+        "source": "/Users/s6236422/.android/build-cache/41af32327e922be3c5f47a4f15273e3188f89e8f/output/res/drawable-mdpi-v4/quantum_ic_cast_white_36.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_cast_grey.png",
+        "source": "/Users/s6236422/.android/build-cache/caa448ca6177b6edc3971285688dafbf867038ca/output/res/drawable-mdpi-v4/ic_cast_grey.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_close_dark.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_close_dark.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_switch_track_mtrl_alpha.9.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/abc_switch_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_pause_dark.png",
+        "source": "/Users/s6236422/.android/build-cache/caa448ca6177b6edc3971285688dafbf867038ca/output/res/drawable-mdpi-v4/ic_pause_dark.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\googleg_standard_color_18.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\51e3f68e195ec87858dcbbfa7c35fa8ceb576b0c\\output\\res\\drawable-mdpi-v4\\googleg_standard_color_18.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_plusone_small_off_client.png",
+        "source": "/Users/s6236422/.android/build-cache/2200824b66fe643c034e2c9576084ef9dd23848f/output/res/drawable-mdpi-v4/ic_plusone_small_off_client.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/com_facebook_tooltip_black_topnub.png",
+        "source": "/Users/s6236422/.android/build-cache/f9e1a7c66abdd1b6b98f8d780944f5a0d0deb324/output/res/drawable-mdpi-v4/com_facebook_tooltip_black_topnub.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_volume_up_white_36.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_volume_up_white_36.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_cast_grey.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_cast_grey.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_play_arrow_grey600_48.png",
+        "source": "/Users/s6236422/.android/build-cache/41af32327e922be3c5f47a4f15273e3188f89e8f/output/res/drawable-mdpi-v4/quantum_ic_play_arrow_grey600_48.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_text_select_handle_left_mtrl_light.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_text_select_handle_left_mtrl_light.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_star_black_48dp.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/abc_ic_star_black_48dp.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_text_select_handle_middle_mtrl_dark.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_text_select_handle_middle_mtrl_dark.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_light.9.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_light.9.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_skip_next_white_36.png",
+        "source": "/Users/s6236422/.android/build-cache/41af32327e922be3c5f47a4f15273e3188f89e8f/output/res/drawable-mdpi-v4/quantum_ic_skip_next_white_36.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_skip_next_grey600_36.png",
+        "source": "/Users/s6236422/.android/build-cache/41af32327e922be3c5f47a4f15273e3188f89e8f/output/res/drawable-mdpi-v4/quantum_ic_skip_next_grey600_36.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\cast_abc_scrubber_control_to_pressed_mtrl_005.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\cast_abc_scrubber_control_to_pressed_mtrl_005.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_text_select_handle_left_mtrl_light.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/abc_text_select_handle_left_mtrl_light.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_replay_30_white_24.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_replay_30_white_24.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/com_facebook_button_send_icon.png",
+        "source": "/Users/s6236422/.android/build-cache/f9e1a7c66abdd1b6b98f8d780944f5a0d0deb324/output/res/drawable-mdpi-v4/com_facebook_button_send_icon.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_media_play.png",
+        "source": "/Users/s6236422/.android/build-cache/caa448ca6177b6edc3971285688dafbf867038ca/output/res/drawable-mdpi-v4/ic_media_play.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_play_circle_filled_white_36.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_play_circle_filled_white_36.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_cast_disabled_light.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_cast_disabled_light.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\notify_panel_notification_icon_bg.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_replay_30_white_36.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_replay_30_white_36.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_textfield_activated_mtrl_alpha.9.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/abc_textfield_activated_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_pause_dark.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_pause_dark.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_menu_share_mtrl_alpha.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/com_facebook_profile_picture_blank_square.png",
+        "source": "/Users/s6236422/.android/build-cache/f9e1a7c66abdd1b6b98f8d780944f5a0d0deb324/output/res/drawable-mdpi-v4/com_facebook_profile_picture_blank_square.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_closed_caption_grey600_36.png",
+        "source": "/Users/s6236422/.android/build-cache/41af32327e922be3c5f47a4f15273e3188f89e8f/output/res/drawable-mdpi-v4/quantum_ic_closed_caption_grey600_36.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_cast_off_light.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_cast_off_light.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_audiotrack_light.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_audiotrack_light.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_play_arrow_white_24.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_play_arrow_white_24.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_close_dark.png",
+        "source": "/Users/s6236422/.android/build-cache/caa448ca6177b6edc3971285688dafbf867038ca/output/res/drawable-mdpi-v4/ic_close_dark.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_text_select_handle_right_mtrl_dark.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_text_select_handle_right_mtrl_dark.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_audiotrack_light.png",
+        "source": "/Users/s6236422/.android/build-cache/caa448ca6177b6edc3971285688dafbf867038ca/output/res/drawable-mdpi-v4/ic_audiotrack_light.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_speaker_light.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_speaker_light.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_star_half_black_48dp.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_ic_star_half_black_48dp.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\notification_bg_normal_pressed.9.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_forward_30_white_36.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_forward_30_white_36.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_stop_grey600_36.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_stop_grey600_36.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_star_black_16dp.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_ic_star_black_16dp.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\cast_abc_scrubber_primary_mtrl_alpha.9.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\cast_abc_scrubber_primary_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_speaker_group_dark.png",
+        "source": "/Users/s6236422/.android/build-cache/caa448ca6177b6edc3971285688dafbf867038ca/output/res/drawable-mdpi-v4/ic_speaker_group_dark.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\notification_bg_low_normal.9.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/cast_abc_scrubber_primary_mtrl_alpha.9.png",
+        "source": "/Users/s6236422/.android/build-cache/41af32327e922be3c5f47a4f15273e3188f89e8f/output/res/drawable-mdpi-v4/cast_abc_scrubber_primary_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_play_arrow_grey600_36.png",
+        "source": "/Users/s6236422/.android/build-cache/41af32327e922be3c5f47a4f15273e3188f89e8f/output/res/drawable-mdpi-v4/quantum_ic_play_arrow_grey600_36.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/messenger_bubble_small_white.png",
+        "source": "/Users/s6236422/.android/build-cache/f9e1a7c66abdd1b6b98f8d780944f5a0d0deb324/output/res/drawable-mdpi-v4/messenger_bubble_small_white.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_pause_circle_filled_grey600_36.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_pause_circle_filled_grey600_36.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_text_select_handle_middle_mtrl_dark.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/abc_text_select_handle_middle_mtrl_dark.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/com_facebook_tooltip_blue_bottomnub.png",
+        "source": "/Users/s6236422/.android/build-cache/f9e1a7c66abdd1b6b98f8d780944f5a0d0deb324/output/res/drawable-mdpi-v4/com_facebook_tooltip_blue_bottomnub.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_skip_next_grey600_36.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_skip_next_grey600_36.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_audiotrack.png",
+        "source": "/Users/s6236422/.android/build-cache/caa448ca6177b6edc3971285688dafbf867038ca/output/res/drawable-mdpi-v4/ic_audiotrack.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_text_select_handle_right_mtrl_dark.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/abc_text_select_handle_right_mtrl_dark.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/googleg_disabled_color_18.png",
+        "source": "/Users/s6236422/.android/build-cache/43cc4d5f70f90bd33ad3ff62c35a62206c004ba9/output/res/drawable-mdpi-v4/googleg_disabled_color_18.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/cast_ic_stop_circle_filled_white.png",
+        "source": "/Users/s6236422/.android/build-cache/41af32327e922be3c5f47a4f15273e3188f89e8f/output/res/drawable-mdpi-v4/cast_ic_stop_circle_filled_white.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_forward_30_white_36.png",
+        "source": "/Users/s6236422/.android/build-cache/41af32327e922be3c5f47a4f15273e3188f89e8f/output/res/drawable-mdpi-v4/quantum_ic_forward_30_white_36.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_forward_30_white_24.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_forward_30_white_24.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/notification_bg_normal_pressed.9.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_speaker_light.png",
+        "source": "/Users/s6236422/.android/build-cache/caa448ca6177b6edc3971285688dafbf867038ca/output/res/drawable-mdpi-v4/ic_speaker_light.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_volume_up_white_36.png",
+        "source": "/Users/s6236422/.android/build-cache/41af32327e922be3c5f47a4f15273e3188f89e8f/output/res/drawable-mdpi-v4/quantum_ic_volume_up_white_36.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_list_pressed_holo_dark.9.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/abc_list_pressed_holo_dark.9.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_play_light.png",
+        "source": "/Users/s6236422/.android/build-cache/caa448ca6177b6edc3971285688dafbf867038ca/output/res/drawable-mdpi-v4/ic_play_light.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_bigtop_updates_white_24.png",
+        "source": "/Users/s6236422/.android/build-cache/41af32327e922be3c5f47a4f15273e3188f89e8f/output/res/drawable-mdpi-v4/quantum_ic_bigtop_updates_white_24.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_replay_30_grey600_36.png",
+        "source": "/Users/s6236422/.android/build-cache/41af32327e922be3c5f47a4f15273e3188f89e8f/output/res/drawable-mdpi-v4/quantum_ic_replay_30_grey600_36.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_speaker_group_dark.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_speaker_group_dark.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\design_ic_visibility.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\eae61757f35c1631e99de594bb073d57f36e2ce2\\output\\res\\drawable-mdpi-v4\\design_ic_visibility.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_skip_previous_grey600_36.png",
+        "source": "/Users/s6236422/.android/build-cache/41af32327e922be3c5f47a4f15273e3188f89e8f/output/res/drawable-mdpi-v4/quantum_ic_skip_previous_grey600_36.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_plusone_tall_off_client.png",
+        "source": "/Users/s6236422/.android/build-cache/2200824b66fe643c034e2c9576084ef9dd23848f/output/res/drawable-mdpi-v4/ic_plusone_tall_off_client.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_skip_previous_white_24.png",
+        "source": "/Users/s6236422/.android/build-cache/41af32327e922be3c5f47a4f15273e3188f89e8f/output/res/drawable-mdpi-v4/quantum_ic_skip_previous_white_24.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_list_divider_mtrl_alpha.9.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/abc_list_divider_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_speaker_dark.png",
+        "source": "/Users/s6236422/.android/build-cache/caa448ca6177b6edc3971285688dafbf867038ca/output/res/drawable-mdpi-v4/ic_speaker_dark.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_play_circle_filled_grey600_36.png",
+        "source": "/Users/s6236422/.android/build-cache/41af32327e922be3c5f47a4f15273e3188f89e8f/output/res/drawable-mdpi-v4/quantum_ic_play_circle_filled_grey600_36.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_media_pause.png",
+        "source": "/Users/s6236422/.android/build-cache/caa448ca6177b6edc3971285688dafbf867038ca/output/res/drawable-mdpi-v4/ic_media_pause.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/cast_ic_notification_0.png",
+        "source": "/Users/s6236422/.android/build-cache/51811b106be09a349867c7dbc717b54e2aa4570d/output/res/drawable-mdpi-v4/cast_ic_notification_0.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\googleg_disabled_color_18.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\51e3f68e195ec87858dcbbfa7c35fa8ceb576b0c\\output\\res\\drawable-mdpi-v4\\googleg_disabled_color_18.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/com_facebook_tooltip_black_background.9.png",
+        "source": "/Users/s6236422/.android/build-cache/f9e1a7c66abdd1b6b98f8d780944f5a0d0deb324/output/res/drawable-mdpi-v4/com_facebook_tooltip_black_background.9.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/cast_abc_scrubber_control_off_mtrl_alpha.png",
+        "source": "/Users/s6236422/.android/build-cache/41af32327e922be3c5f47a4f15273e3188f89e8f/output/res/drawable-mdpi-v4/cast_abc_scrubber_control_off_mtrl_alpha.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_close_light.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_close_light.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_play_arrow_grey600_36.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_play_arrow_grey600_36.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png",
+        "source": "/Users/s6236422/.android/build-cache/43cc4d5f70f90bd33ad3ff62c35a62206c004ba9/output/res/drawable-mdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_stop_grey600_48.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_stop_grey600_48.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_cast_white.png",
+        "source": "/Users/s6236422/.android/build-cache/caa448ca6177b6edc3971285688dafbf867038ca/output/res/drawable-mdpi-v4/ic_cast_white.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_pause_grey600_48.png",
+        "source": "/Users/s6236422/.android/build-cache/41af32327e922be3c5f47a4f15273e3188f89e8f/output/res/drawable-mdpi-v4/quantum_ic_pause_grey600_48.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_volume_up_grey600_36.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_volume_up_grey600_36.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_volume_off_white_36.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_volume_off_white_36.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_tv_dark.png",
+        "source": "/Users/s6236422/.android/build-cache/caa448ca6177b6edc3971285688dafbf867038ca/output/res/drawable-mdpi-v4/ic_tv_dark.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_star_half_black_36dp.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_ic_star_half_black_36dp.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_cast_light.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_cast_light.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_scrubber_control_off_mtrl_alpha.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/abc_scrubber_control_off_mtrl_alpha.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_replay_30_grey600_36.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_replay_30_grey600_36.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_menu_share_mtrl_alpha.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/abc_ic_menu_share_mtrl_alpha.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_volume_up_grey600_36.png",
+        "source": "/Users/s6236422/.android/build-cache/41af32327e922be3c5f47a4f15273e3188f89e8f/output/res/drawable-mdpi-v4/quantum_ic_volume_up_grey600_36.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_stop_white_24.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_stop_white_24.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_star_black_36dp.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_ic_star_black_36dp.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png",
+        "source": "/Users/s6236422/.android/build-cache/43cc4d5f70f90bd33ad3ff62c35a62206c004ba9/output/res/drawable-mdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/cast_ic_notification_on.png",
+        "source": "/Users/s6236422/.android/build-cache/51811b106be09a349867c7dbc717b54e2aa4570d/output/res/drawable-mdpi-v4/cast_ic_notification_on.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_star_half_black_16dp.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/abc_ic_star_half_black_16dp.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\places_ic_clear.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\9c48360e39fa0368dfb6daf59a4adf81cd02676b\\output\\res\\drawable-mdpi-v4\\places_ic_clear.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/cast_abc_scrubber_control_to_pressed_mtrl_005.png",
+        "source": "/Users/s6236422/.android/build-cache/41af32327e922be3c5f47a4f15273e3188f89e8f/output/res/drawable-mdpi-v4/cast_abc_scrubber_control_to_pressed_mtrl_005.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\notification_bg_normal.9.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\notification_bg_normal.9.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_spinner_mtrl_am_alpha.9.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/com_facebook_button_icon.png",
+        "source": "/Users/s6236422/.android/build-cache/f9e1a7c66abdd1b6b98f8d780944f5a0d0deb324/output/res/drawable-mdpi-v4/com_facebook_button_icon.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_cast_off_light.png",
+        "source": "/Users/s6236422/.android/build-cache/caa448ca6177b6edc3971285688dafbf867038ca/output/res/drawable-mdpi-v4/ic_cast_off_light.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_media_pause.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_media_pause.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/powered_by_google_dark.png",
+        "source": "/Users/s6236422/.android/build-cache/a73c0f57cc9606667eea373e38555951f3f14262/output/res/drawable-mdpi-v4/powered_by_google_dark.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_volume_off_grey600_36.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_volume_off_grey600_36.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\cast_ic_notification_1.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\68fabd41250fe409b7f984961438afec0adedbe7\\output\\res\\drawable-mdpi-v4\\cast_ic_notification_1.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/notify_panel_notification_icon_bg.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_list_longpressed_holo.9.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/abc_list_longpressed_holo.9.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\51e3f68e195ec87858dcbbfa7c35fa8ceb576b0c\\output\\res\\drawable-mdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_media_play.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\19e82ac1cb67efef4427d27050e46020c835dc6f\\output\\res\\drawable-mdpi-v4\\ic_media_play.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_list_pressed_holo_light.9.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/abc_list_pressed_holo_light.9.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_btn_radio_to_on_mtrl_015.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/abc_btn_radio_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_forward_10_white_24.png",
+        "source": "/Users/s6236422/.android/build-cache/41af32327e922be3c5f47a4f15273e3188f89e8f/output/res/drawable-mdpi-v4/quantum_ic_forward_10_white_24.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_text_select_handle_left_mtrl_dark.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-mdpi-v4\\abc_text_select_handle_left_mtrl_dark.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_skip_previous_white_24.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_skip_previous_white_24.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_text_light_normal_background.9.png",
+        "source": "/Users/s6236422/.android/build-cache/43cc4d5f70f90bd33ad3ff62c35a62206c004ba9/output/res/drawable-mdpi-v4/common_google_signin_btn_text_light_normal_background.9.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\design_ic_visibility_off.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\eae61757f35c1631e99de594bb073d57f36e2ce2\\output\\res\\drawable-mdpi-v4\\design_ic_visibility_off.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\cast_ic_notification_on.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\68fabd41250fe409b7f984961438afec0adedbe7\\output\\res\\drawable-mdpi-v4\\cast_ic_notification_on.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_list_selector_disabled_holo_light.9.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/abc_list_selector_disabled_holo_light.9.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\quantum_ic_closed_caption_white_36.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\6daefaba2bc59213ef683b17457ddd9a74418ec7\\output\\res\\drawable-mdpi-v4\\quantum_ic_closed_caption_white_36.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-mdpi-v4/notification_bg_low_pressed.9.png",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-mdpi-v4/notification_bg_low_pressed.9.png"
     }
 ]

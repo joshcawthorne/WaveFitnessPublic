@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="social-login-1.2.1">
     <CLASSES>
-      <root url="file://$USER_HOME$/.android/build-cache/e896977773777917381a1a2a9e8cdc308088e9cd/output/res" />
-      <root url="jar://$USER_HOME$/.android/build-cache/e896977773777917381a1a2a9e8cdc308088e9cd/output/jars/libs/volley-d20f9d3.jar!/" />
-      <root url="jar://$USER_HOME$/.android/build-cache/e896977773777917381a1a2a9e8cdc308088e9cd/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/ff7c63aa7ed276b0fbbb7a0b0fbf2df428a0dd39/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/ff7c63aa7ed276b0fbbb7a0b0fbf2df428a0dd39/output/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.android/build-cache/ff7c63aa7ed276b0fbbb7a0b0fbf2df428a0dd39/output/jars/libs/volley-d20f9d3.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

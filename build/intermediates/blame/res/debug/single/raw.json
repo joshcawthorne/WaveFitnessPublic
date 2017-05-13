@@ -1,14 +1,22 @@
 [
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\raw\\av_workaround_1min.mp3",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\902f347ea4c1b7265491565e7dd8ed2f32ddcf63\\output\\res\\raw\\av_workaround_1min.mp3"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\raw\\av_workaround_1min.mp3",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\902f347ea4c1b7265491565e7dd8ed2f32ddcf63\\output\\res\\raw\\av_workaround_1min.mp3"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\raw\\bz_frag.glsl",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\0ffbfa8fbf1052223b5a7296b036b9820938df19\\output\\res\\raw\\bz_frag.glsl"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\raw\\bz_frag.glsl",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\0ffbfa8fbf1052223b5a7296b036b9820938df19\\output\\res\\raw\\bz_frag.glsl"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\raw\\bz_vert.glsl",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\0ffbfa8fbf1052223b5a7296b036b9820938df19\\output\\res\\raw\\bz_vert.glsl"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\raw\\bz_vert.glsl",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\0ffbfa8fbf1052223b5a7296b036b9820938df19\\output\\res\\raw\\bz_vert.glsl"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/raw/bz_vert.glsl",
+        "source": "/Users/s6236422/.android/build-cache/3ab040729484fc942fc8fd53dde05da1d1e03f30/output/res/raw/bz_vert.glsl"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/raw/bz_frag.glsl",
+        "source": "/Users/s6236422/.android/build-cache/3ab040729484fc942fc8fd53dde05da1d1e03f30/output/res/raw/bz_frag.glsl"
     }
 ]

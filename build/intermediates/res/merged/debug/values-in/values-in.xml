@@ -83,6 +83,7 @@
     <string msgid="2039274714455389140" name="debug_menu_title">"Pilih Mode Debug"</string>
     <string msgid="1173358804935285568" name="debug_menu_troubleshooting">"Pemecahan Masalah"</string>
     <string msgid="6099173376375995052" name="decline">"Tolak"</string>
+    <string name="messenger_send_button_text">Kirim</string>
     <string msgid="3698378085901466129" name="mr_button_content_description">"Tombol transmisi"</string>
     <string msgid="6349900579507521956" name="mr_chooser_searching">"Mencari perangkat"</string>
     <string msgid="414301941546135990" name="mr_chooser_title">"Transmisikan ke"</string>

@@ -1,6 +1,10 @@
 [
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-v23\\abc_control_background_material.xml",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-v23\\abc_control_background_material.xml"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-v23\\abc_control_background_material.xml",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\e95fdb76e60bd46168030e536dcfa0162ba9f0c9\\output\\res\\drawable-v23\\abc_control_background_material.xml"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-v23/abc_control_background_material.xml",
+        "source": "/Users/s6236422/.android/build-cache/f8e638233b753a657b2967e6e316347a6b64b721/output/res/drawable-v23/abc_control_background_material.xml"
     }
 ]

@@ -1,18 +1,34 @@
 [
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-tvdpi-v4\\ic_plusone_small_off_client.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\dd553ea7cb28078e602cf9f0436a8f40633b0dd5\\output\\res\\drawable-tvdpi-v4\\ic_plusone_small_off_client.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-tvdpi-v4/ic_plusone_standard_off_client.png",
+        "source": "/Users/s6236422/.android/build-cache/2200824b66fe643c034e2c9576084ef9dd23848f/output/res/drawable-tvdpi-v4/ic_plusone_standard_off_client.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-tvdpi-v4\\ic_plusone_standard_off_client.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\dd553ea7cb28078e602cf9f0436a8f40633b0dd5\\output\\res\\drawable-tvdpi-v4\\ic_plusone_standard_off_client.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-tvdpi-v4/ic_plusone_small_off_client.png",
+        "source": "/Users/s6236422/.android/build-cache/2200824b66fe643c034e2c9576084ef9dd23848f/output/res/drawable-tvdpi-v4/ic_plusone_small_off_client.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-tvdpi-v4\\ic_plusone_tall_off_client.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\dd553ea7cb28078e602cf9f0436a8f40633b0dd5\\output\\res\\drawable-tvdpi-v4\\ic_plusone_tall_off_client.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-tvdpi-v4/ic_plusone_tall_off_client.png",
+        "source": "/Users/s6236422/.android/build-cache/2200824b66fe643c034e2c9576084ef9dd23848f/output/res/drawable-tvdpi-v4/ic_plusone_tall_off_client.png"
     },
     {
-        "merged": "C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-tvdpi-v4\\ic_plusone_medium_off_client.png",
-        "source": "C:\\Users\\Josh Cawthorne\\.android\\build-cache\\dd553ea7cb28078e602cf9f0436a8f40633b0dd5\\output\\res\\drawable-tvdpi-v4\\ic_plusone_medium_off_client.png"
+        "merged": "/Users/s6236422/Desktop/WaveFitness/build/intermediates/res/merged/debug/drawable-tvdpi-v4/ic_plusone_medium_off_client.png",
+        "source": "/Users/s6236422/.android/build-cache/2200824b66fe643c034e2c9576084ef9dd23848f/output/res/drawable-tvdpi-v4/ic_plusone_medium_off_client.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-tvdpi-v4\\ic_plusone_small_off_client.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\dd553ea7cb28078e602cf9f0436a8f40633b0dd5\\output\\res\\drawable-tvdpi-v4\\ic_plusone_small_off_client.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-tvdpi-v4\\ic_plusone_standard_off_client.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\dd553ea7cb28078e602cf9f0436a8f40633b0dd5\\output\\res\\drawable-tvdpi-v4\\ic_plusone_standard_off_client.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-tvdpi-v4\\ic_plusone_tall_off_client.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\dd553ea7cb28078e602cf9f0436a8f40633b0dd5\\output\\res\\drawable-tvdpi-v4\\ic_plusone_tall_off_client.png"
+    },
+    {
+        "merged": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\AndroidStudioProjects\\May4th\\WaveFitness\\build\\intermediates\\res\\merged\\debug\\drawable-tvdpi-v4\\ic_plusone_medium_off_client.png",
+        "source": "/Users/s6236422/Desktop/WaveFitness/C:\\Users\\Josh Cawthorne\\.android\\build-cache\\dd553ea7cb28078e602cf9f0436a8f40633b0dd5\\output\\res\\drawable-tvdpi-v4\\ic_plusone_medium_off_client.png"
     }
 ]

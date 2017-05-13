@@ -32,10 +32,10 @@ import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 import com.wave.fitness.R;
 import com.wave.fitness.fragments.MapViewFragment;
 import com.wave.fitness.fragments.OneFragment;
+import com.wave.fitness.fragments.PedometerFragment;
 import com.wave.fitness.fragments.ThreeFragment;
 import com.wave.fitness.fragments.TwoFragment;
 import com.wave.fitness.fragments.SpotifyFragmentActivity;
-import com.wave.fitness.fragments.RunningFragment;
 
 public class spotifyActivity extends AppCompatActivity {
 
@@ -61,7 +61,7 @@ public class spotifyActivity extends AppCompatActivity {
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
 
-        String intentFragment = getIntent().getExtras().getString("frgToLoad");
+        String intentFragment = getIntent().getStringExtra("frgToLoad");
 
         if(intentFragment == "FRAGMENT_A") {
             viewPager.setCurrentItem(1, true);
@@ -84,7 +84,7 @@ public class spotifyActivity extends AppCompatActivity {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(spot = new SpotifyFragmentActivity(), "Music");
         adapter.addFragment(new MapViewFragment(), "Running");
-        adapter.addFragment(new ThreeFragment(), "Stats");
+        adapter.addFragment(new PedometerFragment(), "Stats");
         viewPager.setAdapter(adapter);
     }
 

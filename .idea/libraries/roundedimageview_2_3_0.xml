@@ -1,11 +1,11 @@
 <component name="libraryTable">
   <library name="roundedimageview-2.3.0">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.android/build-cache/5c626272a27d805251e68aa1fb532128c25ab9d0/output/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.android/build-cache/064fb8d06d76e5c864b9216f2048bb109c6c3dda/output/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="file://$USER_HOME$/.android/build-cache/5c626272a27d805251e68aa1fb532128c25ab9d0/output/res" />
-      <root url="jar://$USER_HOME$/.android/build-cache/5c626272a27d805251e68aa1fb532128c25ab9d0/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/064fb8d06d76e5c864b9216f2048bb109c6c3dda/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/064fb8d06d76e5c864b9216f2048bb109c6c3dda/output/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
