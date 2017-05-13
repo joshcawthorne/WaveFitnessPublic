@@ -319,7 +319,8 @@ public class MusicPlayerActivity extends AppCompatActivity implements
         }
 
         final ImageView coverArtView = (ImageView) findViewById(R.id.cover_art);
-        final ImageView coverArtViewTwo = (ImageView) findViewById(R.id.cover_art_two);
+        final ImageView coverArtViewSmall = (ImageView) findViewById(R.id.cover_art_small);
+        //final ImageView coverArtViewTwo = (ImageView) findViewById(R.id.cover_art_two);
         if (core.mMetadata != null && core.mMetadata.currentTrack != null) {
             //Set the metadata from song length to Minutes:Seconds, rather than milliseconds.
             final String durationStr =
@@ -366,13 +367,13 @@ public class MusicPlayerActivity extends AppCompatActivity implements
                             return "darken";
                         }
                     })
-                    .into(coverArtViewTwo);
+                    .into(coverArtViewSmall);
 
 
         } else {
             mMetadataText.setText(" ");
             coverArtView.setBackground(null);
-            coverArtViewTwo.setBackground(null);
+            coverArtViewSmall.setBackground(null);
         }
 
     }

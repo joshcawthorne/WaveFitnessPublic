@@ -20,10 +20,15 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
+import android.graphics.Color;
+import android.media.Image;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.os.CountDownTimer;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -43,6 +48,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -82,6 +88,8 @@ import com.wave.fitness.fragments.TwoFragment;
 
 import com.wave.fitness.SpotifyCore;
 import com.wave.fitness.spotifyActivity;
+
+import at.favre.lib.dali.Dali;
 
 import static android.app.Activity.RESULT_OK;
 import static com.facebook.FacebookSdk.getApplicationContext;
@@ -141,12 +149,19 @@ public class SpotifyFragmentActivity extends Fragment implements
     private TabLayout tabLayout;
     private ViewPager viewPager;
     private boolean genreSet = false;
+    ProgressBar mProgressBar;
+    CountDownTimer mCountDownTimer;
+    int i=0;
 
     private View v;
 
     private SpotifyCore core;
     private static final int SPOTIFY_LOGIN = 87;
     private boolean isFirstSong = true;
+
+    CollapsingToolbarLayout collapsingToolbarLayout;
+
+    long songLength = 0;
 
     private final Player.OperationCallback mOperationCallback = new Player.OperationCallback() {
         @Override
@@ -167,31 +182,42 @@ public class SpotifyFragmentActivity extends Fragment implements
                              Bundle savedInstanceState) {
 
         v = inflater.inflate(R.layout.activity_musicplayer, container, false);
-        Button play = (Button) v.findViewById(R.id.pause_temp);
+        //Button play = (Button) v.findViewById(R.id.pause_temp);
         FloatingActionButton playfab = (FloatingActionButton) v.findViewById(R.id.pause_button);
-        Button skip = (Button) v.findViewById(R.id.skip_next_button);
-        Button prev = (Button) v.findViewById(R.id.skip_prev_button);
+        //Button skip = (Button) v.findViewById(R.id.skip_next_button);
+        //Button prev = (Button) v.findViewById(R.id.skip_prev_button);
 
-        play.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onPauseButtonClicked();
-            }
-        });
+        ImageView prevImg = (ImageView) v.findViewById(R.id.skip_prev_button);
+        ImageView skipImg = (ImageView) v.findViewById(R.id.skip_next_button);
 
-        skip.setOnClickListener(new View.OnClickListener() {
+        skipImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onSkipToNextButtonClicked();
             }
         });
 
-        prev.setOnClickListener(new View.OnClickListener() {
+        prevImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onSkipToPreviousButtonClicked();
             }
         });
+
+        /*skip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onSkipToNextButtonClicked();
+            }
+        });*/
+
+        /*prev.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onSkipToPreviousButtonClicked();
+            }
+        });*/
+
         playfab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -223,6 +249,13 @@ public class SpotifyFragmentActivity extends Fragment implements
         mMetaDataTime = (TextView) getView().findViewById(R.id.metaDataTime);
         mStatusTextScrollView = (ScrollView) getView().findViewById(R.id.status_text_container);
         mMetadataText.setSelected(true);
+
+
+        collapsingToolbarLayout = (CollapsingToolbarLayout) v.findViewById(R.id.collapsing_toolbar);
+        collapsingToolbarLayout.setTitle("Test");
+        collapsingToolbarLayout.setCollapsedTitleTextColor(getResources().getColor(android.R.color.black));
+        collapsingToolbarLayout.setExpandedTitleColor(getResources().getColor(android.R.color.black));
+        collapsingToolbarLayout.setBackgroundColor(getResources().getColor(R.color.wavePrimary));
 
         updateView();
 
@@ -325,6 +358,11 @@ public class SpotifyFragmentActivity extends Fragment implements
     private void updateView() {
         boolean loggedIn = isLoggedIn();
 
+        final ImageView coverArtView = (ImageView) getView().findViewById(R.id.cover_art);
+        //final ImageView coverArtViewTwo = (ImageView) getView().findViewById(R.id.cover_art_two);
+        //final ImageView coverArtBlur = (ImageView) getView().findViewById(R.id.cover_art_blur);
+        final ImageView coverArtSmall = (ImageView) getView().findViewById(R.id.cover_art_small);
+
         // Login button should be the inverse of the logged in state
         //Button loginButton = (Button) findViewById(R.id.login_button);
         //loginButton.setText(loggedIn ? R.string.logout_button_label : R.string.login_button_label);
@@ -346,8 +384,6 @@ public class SpotifyFragmentActivity extends Fragment implements
             getView().findViewById(R.id.pause_button).setEnabled(core.mMetadata.currentTrack != null);
         }
 
-        final ImageView coverArtView = (ImageView) getView().findViewById(R.id.cover_art);
-        final ImageView coverArtViewTwo = (ImageView) getView().findViewById(R.id.cover_art_two);
         if (core.mMetadata != null && core.mMetadata.currentTrack != null) {
             //Set the metadata from song length to Minutes:Seconds, rather than milliseconds.
             final String durationStr =
@@ -356,10 +392,23 @@ public class SpotifyFragmentActivity extends Fragment implements
                     TimeUnit.MILLISECONDS.toSeconds(core.mMetadata.currentTrack.durationMs) -
                             TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(core.mMetadata.currentTrack.durationMs))
             );
+
+            songLength = core.mMetadata.currentTrack.durationMs;
+
             mMetadataText.setText(core.mMetadata.currentTrack.name);
             mMetaDataSubtext.setText(core.mMetadata.currentTrack.artistName);
             mMetaDataTime.setText(durationStr);
 
+            collapsingToolbarLayout = (CollapsingToolbarLayout) v.findViewById(R.id.collapsing_toolbar);
+            collapsingToolbarLayout.setTitle(core.mMetadata.currentTrack.name + " - " + core.mMetadata.currentTrack.artistName);
+            collapsingToolbarLayout.setCollapsedTitleTextColor(getResources().getColor(android.R.color.black));
+            collapsingToolbarLayout.setExpandedTitleColor(getResources().getColor(android.R.color.white));
+            collapsingToolbarLayout.setBackgroundColor(getResources().getColor(R.color.wavePrimary));
+            collapsingToolbarLayout.setExpandedTitleTextAppearance(R.style.ExpandedAppBar);
+            collapsingToolbarLayout.setCollapsedTitleTextAppearance(R.style.CollapsedAppBar);
+
+            coverArtView.setVisibility(View.INVISIBLE);
+
             Picasso.with(getActivity())
                     .load(core.mMetadata.currentTrack.albumCoverWebUrl)
                     .transform(new Transformation() {
@@ -370,22 +419,26 @@ public class SpotifyFragmentActivity extends Fragment implements
                             final Canvas canvas = new Canvas(copy);
                             return copy;
                         }
-
                         @Override
                         public String key() {
                             return "darken";
                         }
                     })
+
                     .into(coverArtView);
 
+            coverArtView.setVisibility(View.VISIBLE);
+
             Picasso.with(getActivity())
                     .load(core.mMetadata.currentTrack.albumCoverWebUrl)
                     .transform(new Transformation() {
                         @Override
                         public Bitmap transform(Bitmap source) {
+                            // really ugly darkening trick
                             final Bitmap copy = source.copy(source.getConfig(), true);
                             source.recycle();
                             final Canvas canvas = new Canvas(copy);
+                            //canvas.drawColor(0xbb000000);
                             return copy;
                         }
 
@@ -394,14 +447,18 @@ public class SpotifyFragmentActivity extends Fragment implements
                             return "darken";
                         }
                     })
-                    .into(coverArtViewTwo);
+                    .into(coverArtSmall);
 
+            progressBar(songLength);
 
         } else {
             mMetadataText.setText(" ");
             coverArtView.setBackground(null);
-            coverArtViewTwo.setBackground(null);
+            coverArtSmall.setBackground(null);
         }
+    }
+
+    public void progressBar(long songLength){
 
     }
 
@@ -669,7 +726,7 @@ public class SpotifyFragmentActivity extends Fragment implements
             isFirstSong = false;
             return;
         }
-        if (!isFirstSong){
+        if(!isFirstSong) {
             logStatus("Event: " + event);
             core.mCurrentPlaybackState = core.mPlayer.getPlaybackState();
             core.mMetadata = core.mPlayer.getMetadata();
