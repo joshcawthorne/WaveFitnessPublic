@@ -47,7 +47,9 @@ import com.squareup.otto.Subscribe;
 import com.wave.fitness.BusProvider;
 import com.wave.fitness.R;
 import com.wave.fitness.RouteNode;
+import com.wave.fitness.runningEvent.EndRunEvent;
 import com.wave.fitness.runningEvent.LocationChangedEvent;
+import com.wave.fitness.runningEvent.StartRunEvent;
 import com.wave.fitness.runningEvent.UpdateRunStatEvent;
 
 import java.util.ArrayList;
@@ -281,6 +283,29 @@ public class MapViewFragment extends Fragment implements OnMapReadyCallback, Goo
 
     @Subscribe
     public void onRunDataUpdate(UpdateRunStatEvent event){
+        //Running statistic is embedded in the event var, use it to update UI element if needed
+        //updataRunInfoCard()
+    }
+
+    @Subscribe
+    public void onRunStart(StartRunEvent event){
+        route = new ArrayList<RouteNode>();
+        route.add(new RouteNode(lastKnownLocation));
+
+        Toast.makeText(getActivity(), "Run Started!",
+                Toast.LENGTH_LONG).show();
+        tracking = true;
+        Log.d("RUN", "Run Tracking Started");
+
+
+    }
+
+    @Subscribe
+    public void onRunEnd(EndRunEvent event){
+        Toast.makeText(getActivity(), "Run Stopped.",
+                Toast.LENGTH_LONG).show();
+        tracking = true;
+        Log.d("RUN", "Run Tracking Stopped");
     }
 
 
