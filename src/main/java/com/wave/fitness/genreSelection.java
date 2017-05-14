@@ -75,52 +75,7 @@ public class genreSelection extends AppCompatActivity {
         FloatingActionButton continueFAB = (FloatingActionButton) findViewById(R.id.continuefab);
         continueFAB.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
-                if(popSelect){
-                    String pop = "pop";
-                    selection.add(pop);
-                }
-
-                if(rockSelect){
-                    String rock = "rock";
-                    selection.add(rock);
-                }
-
-                core.genres = selection;
-
                 startActivity(new Intent(genreSelection.this, spotifyActivity.class));
-            }
-        });
-
-        this.popSquare = (ImageView) findViewById(R.id.popSquare);
-        this.popSquare.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                if (!popSelect) {
-                    Log.e("SELECTION", "SELECTED");
-                    popSquare.setImageResource(R.drawable.popbannersquareselected);
-                    popSelect = true;
-                }
-                else if(popSelect) {
-                    Log.e("SELECTION", "UNSELECTED");
-                    popSquare.setImageResource(R.drawable.popbannersquare);
-                    popSelect = false;
-                }
-            }
-        });
-
-        this.rockSquare = (ImageView) findViewById(R.id.rockSquare);
-        this.rockSquare.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                if (!rockSelect) {
-                    Log.e("SELECTION", "SELECTED");
-                    rockSquare.setImageResource(R.drawable.rocksquareselected);
-                    rockSelect = true;
-                }
-                else if(rockSelect) {
-                    Log.e("SELECTION", "UNSELECTED");
-                    rockSquare.setImageResource(R.drawable.rocksquare);
-                    rockSelect = false;
-                }
             }
         });
 

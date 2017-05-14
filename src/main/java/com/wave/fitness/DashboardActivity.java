@@ -52,6 +52,10 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
             startActivity(new Intent(DashboardActivity.this, setupActivity.class));
         }
 
+        for(SpotifyPlaylists.Genre genre : SpotifyPlaylists.Genre.values()){
+            core.selectedGenre.put(genre, prefs.getBoolean(genre.name(), false));
+        }
+
         SimpleDateFormat parseFormat = new SimpleDateFormat("EEEE");
         Date date =new Date();
         String dashboardDate = parseFormat.format(date);

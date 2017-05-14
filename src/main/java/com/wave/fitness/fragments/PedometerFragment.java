@@ -27,7 +27,9 @@ import com.wave.fitness.SpotifyCore;
 import com.wave.fitness.pedometer.PedometerSettings;
 import com.wave.fitness.pedometer.StepService;
 import com.wave.fitness.pedometer.Utils;
+import com.wave.fitness.runningEvent.EndRunEvent;
 import com.wave.fitness.runningEvent.LocationChangedEvent;
+import com.wave.fitness.runningEvent.StartRunEvent;
 import com.wave.fitness.runningEvent.TrackChangedEvent;
 import com.wave.fitness.runningEvent.UpdateRunStatEvent;
 
@@ -486,6 +488,20 @@ public class PedometerFragment extends android.support.v4.app.Fragment {
 
         //Update UI
         //core.mMetadata.currentTrack
+    }
+
+    @Subscribe
+    public void onRunStart(StartRunEvent event){
+        startStepService();
+        bindStepService();
+        resetValues(true);
+    }
+
+    @Subscribe
+    public void onRunEnd(EndRunEvent event){
+        unbindStepService();
+        stopStepService();
+        resetValues(true);
     }
 
 }
