@@ -13,6 +13,7 @@
     <color name="wave_drawer_primary_text">#4c4c4c</color>
     <color name="waveBase">#f8f8f8</color>
     <color name="black">#000</color>
+    <color name="wavePrimaryTransparent">#660088FF</color>
 
 
     <!-- Material DEFAULT colors -->

@@ -77,7 +77,7 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
         }
 
         TextView curDate = (TextView)findViewById(R.id.dashDate);
-        curDate.setText(prefixString + dashboardDate + ", Josh" + endSentString);
+        curDate.setText(prefixString + dashboardDate + ", " + core.firstName + endSentString);
 
         RoundedImageView img = (RoundedImageView) findViewById(R.id.runBanner);
         img.setOnClickListener(new View.OnClickListener() {
@@ -113,7 +113,7 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
     }
 
     public void onRunButtonClicked(View view) {
-        startActivity(new Intent(DashboardActivity.this, RunActivity.class));
+        startActivity(new Intent(DashboardActivity.this, genreSelection.class));
     }
 
     @Override

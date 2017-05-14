@@ -9,6 +9,9 @@ import com.spotify.sdk.android.player.Metadata;
 import com.spotify.sdk.android.player.PlaybackState;
 import com.spotify.sdk.android.player.SpotifyPlayer;
 
+import java.sql.Array;
+import java.util.ArrayList;
+
 
 /**
  * Created by s6236422 on 08/05/2017.
@@ -22,6 +25,8 @@ public class SpotifyCore extends Application {
     public AuthenticationResponse authResponse;
     public SocialUser user;
     public String testString;
+    public String firstName;
+    public ArrayList<String> genres;
 
     @Override
     public void onCreate() {

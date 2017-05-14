@@ -342,6 +342,7 @@
                     android:layout_marginRight="5dp"
                     android:layout_weight="1"
                     app:riv_corner_radius="10dip"
+                    android:onClick="onRunButtonClicked"
                     />
 
                 <com.makeramen.roundedimageview.RoundedImageView

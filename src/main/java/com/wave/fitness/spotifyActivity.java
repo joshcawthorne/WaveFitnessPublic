@@ -1,6 +1,5 @@
 package com.wave.fitness;
 
-import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -15,28 +14,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
-import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.mikepenz.materialdrawer.AccountHeader;
-import com.mikepenz.materialdrawer.AccountHeaderBuilder;
-import com.mikepenz.materialdrawer.Drawer;
-import com.mikepenz.materialdrawer.DrawerBuilder;
-import com.mikepenz.materialdrawer.model.DividerDrawerItem;
-import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
-import com.mikepenz.materialdrawer.model.ProfileDrawerItem;
-import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
-import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
-import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 import com.squareup.otto.Subscribe;
-import com.wave.fitness.R;
 import com.wave.fitness.fragments.MapViewFragment;
-import com.wave.fitness.fragments.OneFragment;
 import com.wave.fitness.fragments.PedometerFragment;
-import com.wave.fitness.fragments.ThreeFragment;
-import com.wave.fitness.fragments.TwoFragment;
 import com.wave.fitness.fragments.SpotifyFragmentActivity;
 import com.wave.fitness.runningEvent.LocationChangedEvent;
 import com.wave.fitness.runningEvent.TrackChangedEvent;
@@ -49,6 +33,7 @@ public class spotifyActivity extends AppCompatActivity {
     private ViewPager viewPager;
     private SpotifyFragmentActivity spot;
 
+    //Fragment fragment = new genreFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,7 +67,6 @@ public class spotifyActivity extends AppCompatActivity {
         else if(intentFragment == "FRAGMENT_C") {
             viewPager.setCurrentItem(3, true);
         }
-
     }
 
     @Override public void onResume() {

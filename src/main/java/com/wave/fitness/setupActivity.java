@@ -92,6 +92,15 @@ public class setupActivity extends LoginView {
                         prefs.edit().putBoolean("firstrun", false).commit();
                         prefs.edit().putString("user", gson.toJson(socialUser)).commit();
                         core.user = socialUser;
+
+                        String name = socialUser.getName();
+
+                        String arr[] = name.split(" ", 2);
+
+                        String firstName = arr[0];
+
+                        core.firstName = firstName;
+
                         Intent startDashboard = new Intent(setupActivity.this, DashboardActivity.class);
                         setupActivity.this.startActivity(startDashboard);
 
