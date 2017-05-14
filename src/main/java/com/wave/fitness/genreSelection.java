@@ -76,6 +76,46 @@ public class genreSelection extends AppCompatActivity {
         continueFAB.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(genreSelection.this, spotifyActivity.class));
+
+                String test = "";
+                for(SpotifyPlaylists.Genre g : SpotifyPlaylists.Genre.values()){
+                    test = test + core.selectedGenre.get(g).toString() + ", ";
+                }
+                Log.e("CHOSEN GENRES",test);
+            }
+        });
+
+        this.popSquare = (ImageView) findViewById(R.id.popSquare);
+        this.popSquare.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if(core.selectedGenre.get(SpotifyPlaylists.Genre.POP)){
+                    Log.e("SELECTION", "UNSELECTED");
+                    popSquare.setImageResource(R.drawable.popbannersquare);
+                    core.selectedGenre.put(SpotifyPlaylists.Genre.POP, false);
+                    popSelect = false;
+                }else{
+                    Log.e("SELECTION", "SELECTED");
+                    popSquare.setImageResource(R.drawable.popbannersquareselected);
+                    core.selectedGenre.put(SpotifyPlaylists.Genre.POP, true);
+                    popSelect = true;
+                }
+            }
+        });
+
+        this.rockSquare = (ImageView) findViewById(R.id.rockSquare);
+        this.rockSquare.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if(!rockSelect){
+                    Log.e("SELECTION", "UNSELECTED");
+                    rockSquare.setImageResource(R.drawable.rocksquareselected);
+                    core.selectedGenre.put(SpotifyPlaylists.Genre.ROCK, true);
+                    rockSelect = true;
+                }else{
+                    Log.e("SELECTION", "SELECTED");
+                    rockSquare.setImageResource(R.drawable.rocksquare);
+                    core.selectedGenre.put(SpotifyPlaylists.Genre.ROCK, false);
+                    rockSelect = false;
+                }
             }
         });
 
@@ -85,11 +125,13 @@ public class genreSelection extends AppCompatActivity {
                 if (!funkSelect) {
                     Log.e("SELECTION", "SELECTED");
                     funksquare.setImageResource(R.drawable.funksquareselected);
+                    core.selectedGenre.put(SpotifyPlaylists.Genre.FUNK, true);
                     funkSelect = true;
                 }
-                else if(funkSelect) {
+                else {
                     Log.e("SELECTION", "UNSELECTED");
                     funksquare.setImageResource(R.drawable.funksquare);
+                    core.selectedGenre.put(SpotifyPlaylists.Genre.FUNK, false);
                     funkSelect = false;
                 }
             }
@@ -101,11 +143,13 @@ public class genreSelection extends AppCompatActivity {
                 if (!classicalSelect) {
                     Log.e("SELECTION", "SELECTED");
                     classicalsquare.setImageResource(R.drawable.classicalsquareselected);
+                    core.selectedGenre.put(SpotifyPlaylists.Genre.CLASSICAL, true);
                     classicalSelect = true;
                 }
-                else if(classicalSelect) {
+                else {
                     Log.e("SELECTION", "UNSELECTED");
                     classicalsquare.setImageResource(R.drawable.classicalsquare);
+                    core.selectedGenre.put(SpotifyPlaylists.Genre.CLASSICAL, false);
                     classicalSelect = false;
                 }
             }
@@ -117,11 +161,13 @@ public class genreSelection extends AppCompatActivity {
                 if (!rapSelect) {
                     Log.e("SELECTION", "SELECTED");
                     rapsquare.setImageResource(R.drawable.rapsquareselected);
+                    core.selectedGenre.put(SpotifyPlaylists.Genre.RAP, true);
                     rapSelect = true;
                 }
-                else if(rapSelect) {
+                else {
                     Log.e("SELECTION", "UNSELECTED");
                     rapsquare.setImageResource(R.drawable.rapsquare);
+                    core.selectedGenre.put(SpotifyPlaylists.Genre.RAP, false);
                     rapSelect = false;
                 }
             }
@@ -133,11 +179,13 @@ public class genreSelection extends AppCompatActivity {
                 if (!electronicSelect) {
                     Log.e("SELECTION", "SELECTED");
                     electronicsquare.setImageResource(R.drawable.electronicsquareselected);
+                    core.selectedGenre.put(SpotifyPlaylists.Genre.ELECTRONIC, true);
                     electronicSelect = true;
                 }
-                else if(electronicSelect) {
+                else {
                     Log.e("SELECTION", "UNSELECTED");
                     electronicsquare.setImageResource(R.drawable.electronicsquare);
+                    core.selectedGenre.put(SpotifyPlaylists.Genre.ELECTRONIC, false);
                     electronicSelect = false;
                 }
             }
@@ -149,11 +197,13 @@ public class genreSelection extends AppCompatActivity {
                 if (!jazzfusionSelect) {
                     Log.e("SELECTION", "SELECTED");
                     jazzfusionsquare.setImageResource(R.drawable.jazzfusionsquareselected);
+                    core.selectedGenre.put(SpotifyPlaylists.Genre.JAZZFUSION, true);
                     jazzfusionSelect = true;
                 }
-                else if(jazzfusionSelect) {
+                else {
                     Log.e("SELECTION", "UNSELECTED");
                     jazzfusionsquare.setImageResource(R.drawable.jazzfusionsquare);
+                    core.selectedGenre.put(SpotifyPlaylists.Genre.JAZZFUSION, false);
                     jazzfusionSelect = false;
                 }
             }
@@ -165,11 +215,13 @@ public class genreSelection extends AppCompatActivity {
                 if (!discoSelect) {
                     Log.e("SELECTION", "SELECTED");
                     discosquare.setImageResource(R.drawable.discosquareselected);
+                    core.selectedGenre.put(SpotifyPlaylists.Genre.DISCO, true);
                     discoSelect = true;
                 }
-                else if(discoSelect) {
+                else {
                     Log.e("SELECTION", "UNSELECTED");
                     discosquare.setImageResource(R.drawable.discosquare);
+                    core.selectedGenre.put(SpotifyPlaylists.Genre.DISCO, false);
                     discoSelect = false;
                 }
             }
@@ -181,11 +233,13 @@ public class genreSelection extends AppCompatActivity {
                 if (!indierockSelect) {
                     Log.e("SELECTION", "SELECTED");
                     indierocksquare.setImageResource(R.drawable.indierocksquareselected);
+                    core.selectedGenre.put(SpotifyPlaylists.Genre.INDIEROCK, true);
                     indierockSelect = true;
                 }
-                else if(indierockSelect) {
+                else {
                     Log.e("SELECTION", "UNSELECTED");
                     indierocksquare.setImageResource(R.drawable.indierocksquare);
+                    core.selectedGenre.put(SpotifyPlaylists.Genre.INDIEROCK, false);
                     indierockSelect = false;
                 }
             }
@@ -197,11 +251,13 @@ public class genreSelection extends AppCompatActivity {
                 if (!soulSelect) {
                     Log.e("SELECTION", "SELECTED");
                     soulsquare.setImageResource(R.drawable.soulsquareselected);
+                    core.selectedGenre.put(SpotifyPlaylists.Genre.SOUL, true);
                     soulSelect = true;
                 }
-                else if(soulSelect) {
+                else {
                     Log.e("SELECTION", "UNSELECTED");
                     soulsquare.setImageResource(R.drawable.soulsquare);
+                    core.selectedGenre.put(SpotifyPlaylists.Genre.SOUL, false);
                     soulSelect = false;
                 }
             }
@@ -213,11 +269,13 @@ public class genreSelection extends AppCompatActivity {
                 if (!classichitsSelect) {
                     Log.e("SELECTION", "SELECTED");
                     classichitssquare.setImageResource(R.drawable.classichitssquareselected);
+                    core.selectedGenre.put(SpotifyPlaylists.Genre.HITS, true);
                     classichitsSelect = true;
                 }
-                else if(classichitsSelect) {
+                else {
                     Log.e("SELECTION", "UNSELECTED");
                     classichitssquare.setImageResource(R.drawable.classichitssquare);
+                    core.selectedGenre.put(SpotifyPlaylists.Genre.HITS, false);
                     classichitsSelect = false;
                 }
             }
@@ -229,11 +287,13 @@ public class genreSelection extends AppCompatActivity {
                 if (!bigbandSelect) {
                     Log.e("SELECTION", "SELECTED");
                     bigbandsquare.setImageResource(R.drawable.bigbandsquareselected);
+                    core.selectedGenre.put(SpotifyPlaylists.Genre.BIGBAND, true);
                     bigbandSelect = true;
                 }
-                else if(bigbandSelect) {
+                else {
                     Log.e("SELECTION", "UNSELECTED");
                     bigbandsquare.setImageResource(R.drawable.bigbandsquare);
+                    core.selectedGenre.put(SpotifyPlaylists.Genre.BIGBAND, false);
                     bigbandSelect = false;
                 }
             }

@@ -10,7 +10,7 @@ import java.util.List;
 public class SpotifyPlaylists {
 
     public enum Genre{
-        POP, CLASSICAL, ELECTRONIC, FUNK
+        POP, CLASSICAL, ELECTRONIC, FUNK, ROCK, RAP, JAZZFUSION, DISCO, INDIEROCK, SOUL, HITS, BIGBAND
     }
 
     public static EnumMap<Genre, String[]> allGenre = new EnumMap<Genre, String[]>(Genre.class){{
