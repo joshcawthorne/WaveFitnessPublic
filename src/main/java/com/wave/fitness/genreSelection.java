@@ -31,9 +31,30 @@ public class genreSelection extends AppCompatActivity {
 
     ImageView popSquare;
     ImageView rockSquare;
+    ImageView classicalsquare;
+    ImageView funksquare;
+    ImageView rapsquare;
+    ImageView electronicsquare;
+    ImageView jazzfusionsquare;
+    ImageView discosquare;
+    ImageView indierocksquare;
+    ImageView soulsquare;
+    ImageView classichitssquare;
+    ImageView bigbandsquare;
+
 
     Boolean popSelect = false;
     Boolean rockSelect = false;
+    Boolean classicalSelect = false;
+    Boolean funkSelect = false;
+    Boolean rapSelect = false;
+    Boolean electronicSelect = false;
+    Boolean jazzfusionSelect = false;
+    Boolean discoSelect = false;
+    Boolean indierockSelect = false;
+    Boolean soulSelect = false;
+    Boolean classichitsSelect = false;
+    Boolean bigbandSelect = false;
 
     ArrayList<String> selection;
 
@@ -54,11 +75,169 @@ public class genreSelection extends AppCompatActivity {
         FloatingActionButton continueFAB = (FloatingActionButton) findViewById(R.id.continuefab);
         continueFAB.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
                 startActivity(new Intent(genreSelection.this, spotifyActivity.class));
             }
         });
 
+        this.funksquare = (ImageView) findViewById(R.id.funksquare);
+        this.funksquare.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if (!funkSelect) {
+                    Log.e("SELECTION", "SELECTED");
+                    funksquare.setImageResource(R.drawable.funksquareselected);
+                    funkSelect = true;
+                }
+                else if(funkSelect) {
+                    Log.e("SELECTION", "UNSELECTED");
+                    funksquare.setImageResource(R.drawable.funksquare);
+                    funkSelect = false;
+                }
+            }
+        });
+
+        this.classicalsquare = (ImageView) findViewById(R.id.classicalsquare);
+        this.classicalsquare.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if (!classicalSelect) {
+                    Log.e("SELECTION", "SELECTED");
+                    classicalsquare.setImageResource(R.drawable.classicalsquareselected);
+                    classicalSelect = true;
+                }
+                else if(classicalSelect) {
+                    Log.e("SELECTION", "UNSELECTED");
+                    classicalsquare.setImageResource(R.drawable.classicalsquare);
+                    classicalSelect = false;
+                }
+            }
+        });
+
+        this.rapsquare = (ImageView) findViewById(R.id.rapsquare);
+        this.rapsquare.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if (!rapSelect) {
+                    Log.e("SELECTION", "SELECTED");
+                    rapsquare.setImageResource(R.drawable.rapsquareselected);
+                    rapSelect = true;
+                }
+                else if(rapSelect) {
+                    Log.e("SELECTION", "UNSELECTED");
+                    rapsquare.setImageResource(R.drawable.rapsquare);
+                    rapSelect = false;
+                }
+            }
+        });
+
+        this.electronicsquare = (ImageView) findViewById(R.id.electronicsquare);
+        this.electronicsquare.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if (!electronicSelect) {
+                    Log.e("SELECTION", "SELECTED");
+                    electronicsquare.setImageResource(R.drawable.electronicsquareselected);
+                    electronicSelect = true;
+                }
+                else if(electronicSelect) {
+                    Log.e("SELECTION", "UNSELECTED");
+                    electronicsquare.setImageResource(R.drawable.electronicsquare);
+                    electronicSelect = false;
+                }
+            }
+        });
+
+        this.jazzfusionsquare = (ImageView) findViewById(R.id.jazzfusionsquare);
+        this.jazzfusionsquare.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if (!jazzfusionSelect) {
+                    Log.e("SELECTION", "SELECTED");
+                    jazzfusionsquare.setImageResource(R.drawable.jazzfusionsquareselected);
+                    jazzfusionSelect = true;
+                }
+                else if(jazzfusionSelect) {
+                    Log.e("SELECTION", "UNSELECTED");
+                    jazzfusionsquare.setImageResource(R.drawable.jazzfusionsquare);
+                    jazzfusionSelect = false;
+                }
+            }
+        });
+
+        this.discosquare = (ImageView) findViewById(R.id.discosquare);
+        this.discosquare.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if (!discoSelect) {
+                    Log.e("SELECTION", "SELECTED");
+                    discosquare.setImageResource(R.drawable.discosquareselected);
+                    discoSelect = true;
+                }
+                else if(discoSelect) {
+                    Log.e("SELECTION", "UNSELECTED");
+                    discosquare.setImageResource(R.drawable.discosquare);
+                    discoSelect = false;
+                }
+            }
+        });
+
+        this.indierocksquare = (ImageView) findViewById(R.id.indierocksquare);
+        this.indierocksquare.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if (!indierockSelect) {
+                    Log.e("SELECTION", "SELECTED");
+                    indierocksquare.setImageResource(R.drawable.indierocksquareselected);
+                    indierockSelect = true;
+                }
+                else if(indierockSelect) {
+                    Log.e("SELECTION", "UNSELECTED");
+                    indierocksquare.setImageResource(R.drawable.indierocksquare);
+                    indierockSelect = false;
+                }
+            }
+        });
+
+        this.soulsquare = (ImageView) findViewById(R.id.soulsquare);
+        this.soulsquare.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if (!soulSelect) {
+                    Log.e("SELECTION", "SELECTED");
+                    soulsquare.setImageResource(R.drawable.soulsquareselected);
+                    soulSelect = true;
+                }
+                else if(soulSelect) {
+                    Log.e("SELECTION", "UNSELECTED");
+                    soulsquare.setImageResource(R.drawable.soulsquare);
+                    soulSelect = false;
+                }
+            }
+        });
+
+        this.classichitssquare = (ImageView) findViewById(R.id.classichitssquare);
+        this.classichitssquare.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if (!classichitsSelect) {
+                    Log.e("SELECTION", "SELECTED");
+                    classichitssquare.setImageResource(R.drawable.classichitssquareselected);
+                    classichitsSelect = true;
+                }
+                else if(classichitsSelect) {
+                    Log.e("SELECTION", "UNSELECTED");
+                    classichitssquare.setImageResource(R.drawable.classichitssquare);
+                    classichitsSelect = false;
+                }
+            }
+        });
+
+        this.bigbandsquare = (ImageView) findViewById(R.id.bigbandsquare);
+        this.bigbandsquare.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if (!bigbandSelect) {
+                    Log.e("SELECTION", "SELECTED");
+                    bigbandsquare.setImageResource(R.drawable.bigbandsquareselected);
+                    bigbandSelect = true;
+                }
+                else if(bigbandSelect) {
+                    Log.e("SELECTION", "UNSELECTED");
+                    bigbandsquare.setImageResource(R.drawable.bigbandsquare);
+                    bigbandSelect = false;
+                }
+            }
+        });
 
     }
 

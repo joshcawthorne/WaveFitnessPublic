@@ -46,28 +46,47 @@
                 <GridLayout
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:rowCount="2"
+                    android:rowCount="1"
                     android:orientation="horizontal">
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_marginRight="2dp"
-                        android:layout_marginBottom="4dp"
-                        android:layout_columnWeight=".50"
+                        android:layout_margin="4dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_columnWeight="1"
                         android:layout_height="wrap_content"
                         android:scaleType="fitCenter"
                         android:adjustViewBounds="true"
-                        android:src="@drawable/popsquare"
+                        android:src="@drawable/popbannersquare"
                         android:id="@+id/popSquare"/>
+                </GridLayout>
+                <GridLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:rowCount="2"
+                    android:orientation="horizontal">
+
                     <ImageView
                         android:layout_width="0dp"
                         android:layout_columnWeight=".50"
-                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginLeft="4dp"
                         android:layout_marginBottom="4dp"
                         android:layout_height="wrap_content"
                         android:scaleType="fitCenter"
                         android:adjustViewBounds="true"
                         android:src="@drawable/rocksquare"
                         android:id="@+id/rockSquare"/>
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_columnWeight=".50"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/electronicsquare"
+                        android:id="@+id/electronicsquare"/>
                 </GridLayout>
                 <GridLayout
                     android:layout_width="fill_parent"
@@ -78,20 +97,24 @@
                         android:layout_width="0dp"
                         android:layout_columnWeight=".50"
                         android:layout_marginRight="2dp"
+                        android:layout_marginLeft="4dp"
                         android:layout_marginBottom="4dp"
                         android:layout_height="wrap_content"
                         android:scaleType="fitCenter"
                         android:adjustViewBounds="true"
-                        android:src="@drawable/popsquare" />
+                        android:src="@drawable/classicalsquare"
+                        android:id="@+id/classicalsquare"/>
                     <ImageView
                         android:layout_width="0dp"
                         android:layout_columnWeight=".50"
                         android:layout_marginLeft="2dp"
+                        android:layout_marginRight="4dp"
                         android:layout_marginBottom="4dp"
                         android:layout_height="wrap_content"
                         android:scaleType="fitCenter"
                         android:adjustViewBounds="true"
-                        android:src="@drawable/popsquare"/>
+                        android:src="@drawable/funksquare"
+                        android:id="@+id/funksquare"/>
                 </GridLayout>
                 <GridLayout
                     android:layout_width="fill_parent"
@@ -102,21 +125,40 @@
                         android:layout_width="0dp"
                         android:layout_columnWeight=".50"
                         android:layout_marginRight="2dp"
+                        android:layout_marginLeft="4dp"
                         android:layout_marginBottom="4dp"
                         android:layout_height="wrap_content"
                         android:scaleType="fitCenter"
                         android:adjustViewBounds="true"
-                        android:foreground="@color/wavePrimaryTransparent"
-                        android:src="@drawable/popsquare" />
+                        android:src="@drawable/bigbandsquare"
+                        android:id="@+id/bigbandsquare"/>
                     <ImageView
                         android:layout_width="0dp"
                         android:layout_columnWeight=".50"
                         android:layout_marginLeft="2dp"
+                        android:layout_marginRight="4dp"
                         android:layout_marginBottom="4dp"
                         android:layout_height="wrap_content"
                         android:scaleType="fitCenter"
                         android:adjustViewBounds="true"
-                        android:src="@drawable/popsquare"/>
+                        android:src="@drawable/rapsquare"
+                        android:id="@+id/rapsquare"/>
+                </GridLayout>
+                <GridLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:rowCount="1"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_margin="4dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_columnWeight="1"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/classichitssquare"
+                        android:id="@+id/classichitssquare"/>
                 </GridLayout>
                 <GridLayout
                     android:layout_width="fill_parent"
@@ -127,20 +169,52 @@
                         android:layout_width="0dp"
                         android:layout_columnWeight=".50"
                         android:layout_marginRight="2dp"
+                        android:layout_marginLeft="4dp"
                         android:layout_marginBottom="4dp"
                         android:layout_height="wrap_content"
                         android:scaleType="fitCenter"
                         android:adjustViewBounds="true"
-                        android:src="@drawable/popsquare" />
+                        android:src="@drawable/jazzfusionsquare"
+                        android:id="@+id/jazzfusionsquare"/>
                     <ImageView
                         android:layout_width="0dp"
                         android:layout_columnWeight=".50"
                         android:layout_marginLeft="2dp"
+                        android:layout_marginRight="4dp"
                         android:layout_marginBottom="4dp"
                         android:layout_height="wrap_content"
                         android:scaleType="fitCenter"
                         android:adjustViewBounds="true"
-                        android:src="@drawable/popsquare"/>
+                        android:src="@drawable/discosquare"
+                        android:id="@+id/discosquare"/>
+                </GridLayout>
+                <GridLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:rowCount="2"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_columnWeight=".50"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/soulsquare"
+                        android:id="@+id/soulsquare"/>
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_columnWeight=".50"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/indierocksquare"
+                        android:id="@+id/indierocksquare"/>
                 </GridLayout>
             </LinearLayout>
         </ScrollView>
