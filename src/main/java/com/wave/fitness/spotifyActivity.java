@@ -3,7 +3,9 @@ package com.wave.fitness;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.location.Location;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -14,10 +16,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import com.spotify.sdk.android.player.Metadata;
 import com.squareup.otto.Subscribe;
 import com.wave.fitness.fragments.MapViewFragment;
 import com.wave.fitness.fragments.PedometerFragment;
@@ -34,6 +38,8 @@ public class spotifyActivity extends AppCompatActivity {
     private TabLayout tabLayout;
     private ViewPager viewPager;
     private SpotifyFragmentActivity spot;
+    private FloatingActionButton btn;
+    private SpotifyCore core;
 
     //Fragment fragment = new genreFragment();
 
@@ -42,10 +48,26 @@ public class spotifyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_spotify);
 
+        core = (SpotifyCore) getApplicationContext();
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        btn = (FloatingActionButton) findViewById(R.id.toggleRunButton);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(core.isRunning){
+                    onEndRun();
+                    core.isRunning = false;
+                }else {
+                    onStartRun();
+                    core.isRunning = true;
+                }
+
+            }
+        });
 
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         setupViewPager(viewPager);
@@ -89,6 +111,7 @@ public class spotifyActivity extends AppCompatActivity {
         adapter.addFragment(new MapViewFragment(), "Running");
         adapter.addFragment(new PedometerFragment(), "Stats");
         viewPager.setAdapter(adapter);
+        viewPager.setOffscreenPageLimit(3);
     }
 
     class ViewPagerAdapter extends FragmentPagerAdapter {
@@ -171,8 +194,8 @@ public class spotifyActivity extends AppCompatActivity {
     private float _DistanceValue;
     private float _AvrSpeedValue = 0;
     private int _CaloriesValue;
-    private ArrayList<RouteNode> route;
-    public ArrayList<SongNode> songs = new ArrayList<>();
+    private ArrayList<Location> route;
+    public ArrayList<Metadata.Track> songs = new ArrayList<>();
 
     @Subscribe
     public void onLocationChanged(LocationChangedEvent event){
@@ -197,7 +220,7 @@ public class spotifyActivity extends AppCompatActivity {
     @Subscribe
     public void onTrackChanged(TrackChangedEvent event){
         SpotifyCore core = (SpotifyCore) getApplicationContext();
-        songs.add(new SongNode(core.mMetadata.currentTrack));
+        songs.add(core.mMetadata.currentTrack);
     }
 
     private void onStartRun(){

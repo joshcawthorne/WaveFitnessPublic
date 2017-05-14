@@ -26,15 +26,15 @@ public class DBHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         //All necessary tables you like to create will create here
 
-        String CREATE_TABLE_RUNSTATISTIC = "CREATE TABLE " + Data_RunStatistic.TABLE  + "("
-                + Data_RunStatistic.KEY_ID  + " INTEGER PRIMARY ,"
+        String CREATE_TABLE_RUNSTATISTIC = "CREATE TABLE " + Data_RunStatistic.TABLE  + " ( "
+                + Data_RunStatistic.KEY_ID  + " INTEGER PRIMARY KEY, "
                 + Data_RunStatistic.KEY_DATE + " INTEGER, "
                 + Data_RunStatistic.KEY_DURATION + " INTEGER, "
                 + Data_RunStatistic.KEY_DISTANCE + " INTEGER, "
                 + Data_RunStatistic.KEY_AVRSPEED + " DOUBLE, "
                 + Data_RunStatistic.KEY_CALORIES + " INTEGER, "
-                + Data_RunStatistic.KEY_ROUTE + " STRING, "
-                + Data_RunStatistic.KEY_SONGS + " STRING)";
+                + Data_RunStatistic.KEY_ROUTE + " TEXT, "
+                + Data_RunStatistic.KEY_SONGS + " TEXT) ";
 
         db.execSQL(CREATE_TABLE_RUNSTATISTIC);
 
@@ -49,5 +49,4 @@ public class DBHelper extends SQLiteOpenHelper {
         onCreate(db);
 
     }
-
 }

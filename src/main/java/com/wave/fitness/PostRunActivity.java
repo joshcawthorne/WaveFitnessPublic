@@ -2,6 +2,7 @@ package com.wave.fitness;
 
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.location.Location;
 import android.os.Bundle;
 
 import android.support.v7.app.AppCompatActivity;
@@ -45,11 +46,14 @@ public class PostRunActivity extends AppCompatActivity implements OnMapReadyCall
         runId = getIntent().getIntExtra("runID", 0);
         repo = new Repo_RunStatistic(getApplicationContext());
         data = repo.getEntrybyID(runId);
+        if(data == null){
+            data = new Data_RunStatistic();
+        }
 
         line = new PolylineOptions();
-        for(RouteNode node: data.route){
-            line.add(new LatLng(node.location.getLatitude(), node.location.getLongitude()));
-        }
+
+
+
         line.width(5).color(Color.RED);
 
         ButterKnife.inject(this);
@@ -62,16 +66,17 @@ public class PostRunActivity extends AppCompatActivity implements OnMapReadyCall
 
     @Override
     public void onMapReady(GoogleMap map) {
+        /*
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(
-                new LatLng(data.route.get(data.route.size()-1).location.getLatitude()
-                        ,data.route.get(data.route.size()-1).location.getLongitude()), 16)); //This can be changed to last geopoint of run
+                new LatLng(data.route.get(data.route.size()-1).getLatitude()
+                        ,data.route.get(data.route.size()-1).getLongitude()), 16)); //This can be changed to last geopoint of run
 /*
         PolylineOptions line=
                 new PolylineOptions().add(new LatLng(54.5695968,-1.2339262),
                         new LatLng(54.569985,-1.2294937)) //Add more location points bellow
                         .width(5).color(Color.RED);
 */
-        map.addPolyline(line);
+        //map.addPolyline(line);
 
 
         //The following is used to add an icon on each geopoint on the map, this can be removed if we do not want this feature, Could be used to signal start and end points

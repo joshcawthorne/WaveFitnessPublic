@@ -33,6 +33,7 @@ public class SpotifyCore extends Application {
     public String testString;
     public String firstName;
     public EnumMap<SpotifyPlaylists.Genre, Boolean> selectedGenre = new EnumMap<SpotifyPlaylists.Genre, Boolean>(SpotifyPlaylists.Genre.class);
+    public boolean isRunning = false;
 
     @Override
     public void onCreate() {

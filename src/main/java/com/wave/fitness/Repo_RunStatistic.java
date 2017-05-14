@@ -4,8 +4,13 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.location.Location;
 
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import com.spotify.sdk.android.player.Metadata;
+
+import java.util.ArrayList;
 
 /**
  * Created by s6236422 on 10/05/2017.
@@ -64,8 +69,8 @@ public class Repo_RunStatistic {
                 data.distance = cursor.getLong(cursor.getColumnIndex(Data_RunStatistic.KEY_DISTANCE));
                 data.avrspeed = cursor.getDouble(cursor.getColumnIndex(Data_RunStatistic.KEY_AVRSPEED));
                 data.calories = cursor.getInt(cursor.getColumnIndex(Data_RunStatistic.KEY_CALORIES));
-                data.route = gson.fromJson(cursor.getString(cursor.getColumnIndex(Data_RunStatistic.KEY_ROUTE)), data.route.getClass());
-                data.songs = gson.fromJson(cursor.getString(cursor.getColumnIndex(Data_RunStatistic.KEY_SONGS)), data.songs.getClass());
+                data.route = gson.fromJson(cursor.getString(cursor.getColumnIndex(Data_RunStatistic.KEY_ROUTE)), TypeToken.get(new ArrayList<Location>().getClass()).getType());
+                data.songs = gson.fromJson(cursor.getString(cursor.getColumnIndex(Data_RunStatistic.KEY_SONGS)), TypeToken.get(new ArrayList<Metadata.Track>().getClass()).getType());
 
             } while (cursor.moveToNext());
         }

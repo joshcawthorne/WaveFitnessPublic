@@ -44,5 +44,15 @@
 
 
     </LinearLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:id="@+id/toggleRunButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/run"
+        android:gravity="bottom|right" />
 
 </android.support.design.widget.CoordinatorLayout>

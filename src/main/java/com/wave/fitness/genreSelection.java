@@ -268,7 +268,7 @@ public class genreSelection extends AppCompatActivity {
             public void onClick(View v) {
                 if (core.selectedGenre.get(SpotifyPlaylists.Genre.HITS)) {
                     Log.e("SELECTION", "SELECTED");
-                    classichitssquare.setImageResource(R.drawable.classicalsquare);
+                    classichitssquare.setImageResource(R.drawable.classichitssquare);
                     core.selectedGenre.put(SpotifyPlaylists.Genre.HITS, false);
                     classichitsSelect = true;
                 }

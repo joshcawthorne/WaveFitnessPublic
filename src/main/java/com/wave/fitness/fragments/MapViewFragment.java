@@ -71,7 +71,7 @@ public class MapViewFragment extends Fragment implements OnMapReadyCallback, Goo
 
     private final int ACCESS_FINE_LOCATION_REQUEST = 0;
     private Location lastKnownLocation = null;
-    private ArrayList<RouteNode> route;
+    private ArrayList<Location> route;
     private boolean tracking = false;
     private Handler uiHandler = new Handler();
     private Runnable uiRunnable;
@@ -214,7 +214,7 @@ public class MapViewFragment extends Fragment implements OnMapReadyCallback, Goo
                     mMap.clear();
                     PolylineOptions lineOpt = new PolylineOptions();
                     for (int i = 0; i < route.size() - 1; i++) {
-                        Location loc = route.get(i).location;
+                        Location loc = route.get(i);
                         lineOpt.add(new LatLng(loc.getLatitude(), loc.getLongitude()));
                     }
                     lineOpt.color(Color.BLUE);
@@ -246,7 +246,7 @@ public class MapViewFragment extends Fragment implements OnMapReadyCallback, Goo
             Log.d("MAP", "Camera Moved To Current Location");
 
             if (tracking) {
-                route.add(new RouteNode(location));
+                route.add(location);
                 Log.d("RUN", "Tracked A Running Node");
             }
 
@@ -261,24 +261,6 @@ public class MapViewFragment extends Fragment implements OnMapReadyCallback, Goo
 
     @Override
     public void onClick(View v) {
-        if (tracking) {
-            Toast.makeText(getActivity(), "Run Stopped.",
-                    Toast.LENGTH_LONG).show();
-
-            Log.d("RUN", "Run Tracking Stopped");
-
-            //setContentView(R.layout.post_run); //Start the Post Run Screen (Just displays the layout, doesn't change to the PostRun activity)
-
-        } else {
-            route = new ArrayList<RouteNode>();
-            route.add(new RouteNode(lastKnownLocation));
-
-            Toast.makeText(getActivity(), "Run Started!",
-                    Toast.LENGTH_LONG).show();
-
-            Log.d("RUN", "Run Tracking Started");
-        }
-        tracking = !tracking;
     }
 
     @Subscribe
@@ -289,8 +271,8 @@ public class MapViewFragment extends Fragment implements OnMapReadyCallback, Goo
 
     @Subscribe
     public void onRunStart(StartRunEvent event){
-        route = new ArrayList<RouteNode>();
-        route.add(new RouteNode(lastKnownLocation));
+        route = new ArrayList<Location>();
+        route.add(lastKnownLocation);
 
         Toast.makeText(getActivity(), "Run Started!",
                 Toast.LENGTH_LONG).show();

@@ -15,6 +15,7 @@
 package com.wave.fitness.fragments;
 
 import android.app.AlertDialog;
+import android.app.KeyguardManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -305,7 +306,22 @@ public class SpotifyFragmentActivity extends Fragment implements
             core.mPlayer.addConnectionStateCallback(SpotifyFragmentActivity.this);
         }
 
+        getActivity().registerReceiver(new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                KeyguardManager keyguardManager = (KeyguardManager)context.getSystemService(Context.KEYGUARD_SERVICE);
+                if (keyguardManager.isKeyguardSecure()) {
+                    updateView();
+                    Log.d("PHONE STATUS", "USER UNLOCKED");
+
+                }
+            }
+        },new IntentFilter("android.intent.action.USER_PRESENT"));
+
+        updateView();
+
     }
+
 
     private Connectivity getNetworkConnectivity(Context context) {
         ConnectivityManager connectivityManager;
