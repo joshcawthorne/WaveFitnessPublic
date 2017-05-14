@@ -43,8 +43,12 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PolylineOptions;
+import com.squareup.otto.Subscribe;
+import com.wave.fitness.BusProvider;
 import com.wave.fitness.R;
 import com.wave.fitness.RouteNode;
+import com.wave.fitness.runningEvent.LocationChangedEvent;
+import com.wave.fitness.runningEvent.UpdateRunStatEvent;
 
 import java.util.ArrayList;
 
@@ -142,12 +146,14 @@ public class MapViewFragment extends Fragment implements OnMapReadyCallback, Goo
     public void onResume() {
         super.onResume();
         mMapView.onResume();
+        BusProvider.getInstance().register(this);
     }
 
     @Override
     public void onPause() {
         super.onPause();
         mMapView.onPause();
+        BusProvider.getInstance().unregister(this);
     }
 
     @Override
@@ -248,6 +254,7 @@ public class MapViewFragment extends Fragment implements OnMapReadyCallback, Goo
             mMap.animateCamera(cameraUpdate);
             Log.d("MAP", "Camera Moved To Last Known Location");
         }
+        BusProvider.getInstance().post(new LocationChangedEvent(route));
     }
 
     @Override
@@ -271,4 +278,10 @@ public class MapViewFragment extends Fragment implements OnMapReadyCallback, Goo
         }
         tracking = !tracking;
     }
+
+    @Subscribe
+    public void onRunDataUpdate(UpdateRunStatEvent event){
+    }
+
+
 }

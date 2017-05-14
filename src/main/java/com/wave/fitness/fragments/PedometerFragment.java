@@ -7,26 +7,29 @@ import android.content.ServiceConnection;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
-import android.app.Fragment;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
 import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.squareup.otto.Produce;
+import com.squareup.otto.Subscribe;
+import com.wave.fitness.BusProvider;
 import com.wave.fitness.R;
-import com.wave.fitness.Settings;
+import com.wave.fitness.SpotifyCore;
 import com.wave.fitness.pedometer.PedometerSettings;
 import com.wave.fitness.pedometer.StepService;
 import com.wave.fitness.pedometer.Utils;
+import com.wave.fitness.runningEvent.LocationChangedEvent;
+import com.wave.fitness.runningEvent.TrackChangedEvent;
+import com.wave.fitness.runningEvent.UpdateRunStatEvent;
 
 
 public class PedometerFragment extends android.support.v4.app.Fragment {
@@ -104,6 +107,8 @@ public class PedometerFragment extends android.support.v4.app.Fragment {
     public void onResume() {
         Log.i(TAG, "[ACTIVITY] onResume");
         super.onResume();
+
+        BusProvider.getInstance().register(this);
 
         mSettings = PreferenceManager.getDefaultSharedPreferences(getActivity());
         mPedometerSettings = new PedometerSettings(mSettings);
@@ -211,6 +216,7 @@ public class PedometerFragment extends android.support.v4.app.Fragment {
         }
 
         super.onPause();
+        BusProvider.getInstance().unregister(this);
         savePaceSetting();
     }
 
@@ -454,4 +460,32 @@ public class PedometerFragment extends android.support.v4.app.Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+    /***
+     * *
+     * Event bus
+     */
+    @Produce
+    public UpdateRunStatEvent produceUpdateRunStatEvent(){
+        UpdateRunStatEvent event = new UpdateRunStatEvent();
+        event.mStepValue = mStepValue;
+        event.mCaloriesValue = mCaloriesValue;
+        event.mDistanceValue = mDistanceValue;
+        event.mSpeedValue = mSpeedValue;
+        event.mPaceValue = mPaceValue;
+        return event;
+    }
+
+    @Subscribe
+    public void onLocationChanged(LocationChangedEvent event){
+        BusProvider.getInstance().post(produceUpdateRunStatEvent());
+    }
+
+    @Subscribe
+    public void onTrackChanged(TrackChangedEvent event){
+        SpotifyCore core = (SpotifyCore) this.getActivity().getApplicationContext();
+
+        //Update UI
+        //core.mMetadata.currentTrack
+    }
+
 }
