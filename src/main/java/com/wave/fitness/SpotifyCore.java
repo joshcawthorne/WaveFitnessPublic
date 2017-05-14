@@ -11,6 +11,8 @@ import com.spotify.sdk.android.player.SpotifyPlayer;
 
 import java.sql.Array;
 import java.util.ArrayList;
+import java.util.EnumMap;
+import java.util.HashMap;
 
 
 /**
@@ -26,7 +28,7 @@ public class SpotifyCore extends Application {
     public SocialUser user;
     public String testString;
     public String firstName;
-    public ArrayList<String> genres;
+    public EnumMap<SpotifyPlaylists.Genre, Boolean> selectedGenre = new EnumMap<SpotifyPlaylists.Genre, Boolean>(SpotifyPlaylists.Genre.class);
 
     @Override
     public void onCreate() {

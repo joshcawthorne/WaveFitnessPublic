@@ -77,6 +77,7 @@ import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Transformation;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
@@ -86,6 +87,7 @@ import com.wave.fitness.BusProvider;
 import com.wave.fitness.R;
 
 import com.wave.fitness.SpotifyCore;
+import com.wave.fitness.SpotifyPlaylists;
 import com.wave.fitness.runningEvent.TrackChangedEvent;
 import com.wave.fitness.runningEvent.UpdateRunStatEvent;
 import com.wave.fitness.spotifyActivity;
@@ -546,70 +548,17 @@ public class SpotifyFragmentActivity extends Fragment implements
     }
 
     public void setGenre() {
-        if (selectedFromList == "Pop") {
-            String[] popGenre = {
-                    "spotify:user:spotify:playlist:37i9dQZF1DWY4lFlS4Pnso",
-                    "spotify:user:spotify:playlist:37i9dQZF1DWSVtp02hITpN",
-                    "spotify:user:spotify:playlist:37i9dQZF1DXdc6Ams1C6tL",
-            };
-            //Create random
-            Random random = new Random();
-            //Pause Music if user is playing some.
-            if (core.mCurrentPlaybackState != null && core.mCurrentPlaybackState.isPlaying) {
-                genreSwitchResume = true;
+        ArrayList<String> selectedSongs = new ArrayList<String>();
+        for(SpotifyPlaylists.Genre genre : SpotifyPlaylists.Genre.values()){
+            if(core.selectedGenre.get(genre)){
+                selectedSongs.addAll(Arrays.asList(SpotifyPlaylists.allGenre.get(genre)));
             }
-            //Set genre to be random selection from above array
-            int index = random.nextInt(popGenre.length);
-            TEST_PLAYLIST_URI = popGenre[index];
         }
-        else if (selectedFromList == "Classical") {
-            String[] classicalGenre = {
-                    "spotify:user:spotify:playlist:7MizIujRqHWLFVZAfQ21h4",
-                    "spotify:user:spotify:playlist:37i9dQZF1DX561TxkFttR4",
-                    "spotify:user:spotify:playlist:37i9dQZF1DXah8e1pvF5oE",
-            };
-            //Create random
-            Random random = new Random();
-            //Pause Music if user is playing some.
-            if (core.mCurrentPlaybackState != null && core.mCurrentPlaybackState.isPlaying) {
-                genreSwitchResume = true;
-            }
-            //Set genre to be random selection from above array
-            int index = random.nextInt(classicalGenre.length);
-            TEST_PLAYLIST_URI = classicalGenre[index];
+
+        if (core.mCurrentPlaybackState != null && core.mCurrentPlaybackState.isPlaying) {
+            genreSwitchResume = true;
         }
-        else if(selectedFromList == "Electronic") {
-            String[] electronicGenre = {
-                    "spotify:user:spotify:playlist:37i9dQZF1DX5uokaTN4FTR",
-                    "spotify:user:spotify:playlist:37i9dQZF1DWSqPHam7LOqC",
-                    "spotify:user:spotify:playlist:37i9dQZF1DWSrVdvTl1tVY",
-            };
-            //Create random
-            Random random = new Random();
-            //Pause Music if user is playing some.
-            if (core.mCurrentPlaybackState != null && core.mCurrentPlaybackState.isPlaying) {
-                genreSwitchResume = true;
-            }
-            //Set genre to be random selection from above array
-            int index = random.nextInt(electronicGenre.length);
-            TEST_PLAYLIST_URI = electronicGenre[index];
-        }
-        else if(selectedFromList == "Funk") {
-            String[] funkyGenre = {
-                    "spotify:user:spotify:playlist:37i9dQZF1DX23YPJntYMnh",
-                    "spotify:user:spotify:playlist:37i9dQZF1DX6drTZKzZwSo",
-                    "spotify:user:spotify:playlist:37i9dQZF1DWSrVdvTl1tVY",
-            };
-            //Create random
-            Random random = new Random();
-            //Pause Music if user is playing some.
-            if (core.mCurrentPlaybackState != null && core.mCurrentPlaybackState.isPlaying) {
-                genreSwitchResume = true;
-            }
-            //Set genre to be random selection from above array
-            int index = random.nextInt(funkyGenre.length);
-            TEST_PLAYLIST_URI = funkyGenre[index];
-        }
+        TEST_PLAYLIST_URI = selectedSongs.get(new Random().nextInt(selectedSongs.size()-1));
         checkMusic();
     }
 

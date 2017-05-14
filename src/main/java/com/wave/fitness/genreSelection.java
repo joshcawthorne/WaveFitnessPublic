@@ -55,51 +55,10 @@ public class genreSelection extends AppCompatActivity {
         continueFAB.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                if(popSelect){
-                    selection.add("pop");
-                }
-
-                if(rockSelect){
-                    selection.add("rock");
-                }
-
-                core.genres = selection;
-
                 startActivity(new Intent(genreSelection.this, spotifyActivity.class));
             }
         });
 
-        this.popSquare = (ImageView) findViewById(R.id.popSquare);
-        this.popSquare.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                if (!popSelect) {
-                    Log.e("SELECTION", "SELECTED");
-                    popSquare.setImageResource(R.drawable.popsquareselected);
-                    popSelect = true;
-                }
-                else if(popSelect) {
-                    Log.e("SELECTION", "UNSELECTED");
-                    popSquare.setImageResource(R.drawable.popsquare);
-                    popSelect = false;
-                }
-            }
-        });
-
-        this.rockSquare = (ImageView) findViewById(R.id.rockSquare);
-        this.popSquare.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                if (!rockSelect) {
-                    Log.e("SELECTION", "SELECTED");
-                    popSquare.setImageResource(R.drawable.rocksquareselected);
-                    rockSelect = true;
-                }
-                else if(rockSelect) {
-                    Log.e("SELECTION", "UNSELECTED");
-                    popSquare.setImageResource(R.drawable.rocksquare);
-                    rockSelect = false;
-                }
-            }
-        });
 
     }
 
