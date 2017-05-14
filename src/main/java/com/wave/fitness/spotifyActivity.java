@@ -22,7 +22,9 @@ import com.squareup.otto.Subscribe;
 import com.wave.fitness.fragments.MapViewFragment;
 import com.wave.fitness.fragments.PedometerFragment;
 import com.wave.fitness.fragments.SpotifyFragmentActivity;
+import com.wave.fitness.runningEvent.EndRunEvent;
 import com.wave.fitness.runningEvent.LocationChangedEvent;
+import com.wave.fitness.runningEvent.StartRunEvent;
 import com.wave.fitness.runningEvent.TrackChangedEvent;
 import com.wave.fitness.runningEvent.UpdateRunStatEvent;
 
@@ -67,6 +69,7 @@ public class spotifyActivity extends AppCompatActivity {
         else if(intentFragment == "FRAGMENT_C") {
             viewPager.setCurrentItem(3, true);
         }
+
     }
 
     @Override public void onResume() {
@@ -166,7 +169,7 @@ public class spotifyActivity extends AppCompatActivity {
     private int _AvrPaceValue = 0;
     private long _startRunTime;
     private float _DistanceValue;
-    private float _AvrSpeedValue;
+    private float _AvrSpeedValue = 0;
     private int _CaloriesValue;
     private ArrayList<RouteNode> route;
     public ArrayList<SongNode> songs;
@@ -181,7 +184,7 @@ public class spotifyActivity extends AppCompatActivity {
         if (_AvrPaceValue == 0){
             _AvrPaceValue = event.mPaceValue;
         }else{
-            _AvrPaceValue = (int)((_AvrPaceValue + event.mPaceValue)/2);
+            _AvrPaceValue = (_AvrPaceValue + event.mPaceValue)/2;
         }
         _DistanceValue = event.mDistanceValue;
         if(_AvrSpeedValue == 0){
@@ -189,6 +192,7 @@ public class spotifyActivity extends AppCompatActivity {
         }else{
             _AvrSpeedValue = (_AvrSpeedValue+event.mSpeedValue)/2;
         }
+        _CaloriesValue = event.mCaloriesValue;
     }
     @Subscribe
     public void onTrackChanged(TrackChangedEvent event){
@@ -198,9 +202,12 @@ public class spotifyActivity extends AppCompatActivity {
 
     private void onStartRun(){
         _startRunTime = System.currentTimeMillis();
+        BusProvider.getInstance().post(new StartRunEvent());
     }
 
     private void onEndRun(){
+        BusProvider.getInstance().post(new EndRunEvent());
+
         SharedPreferences prefs = getSharedPreferences("com.wave.fitness", MODE_PRIVATE);
         int runId = prefs.getInt("runID", 0)+1;
         Repo_RunStatistic repo = new Repo_RunStatistic(getApplicationContext());
@@ -219,6 +226,7 @@ public class spotifyActivity extends AppCompatActivity {
 
         Intent postRun = new Intent(this, PostRunActivity.class);
         postRun.putExtra("runID", runId);
+        prefs.edit().putInt("runID", runId).apply(); //Update RunID in SharedPrefs
         startActivity(postRun);
         this.finish();
     }

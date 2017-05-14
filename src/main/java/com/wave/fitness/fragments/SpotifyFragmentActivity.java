@@ -72,6 +72,7 @@ import com.spotify.sdk.android.player.Player;
 import com.spotify.sdk.android.player.PlayerEvent;
 import com.spotify.sdk.android.player.Spotify;
 import com.spotify.sdk.android.player.SpotifyPlayer;
+import com.squareup.otto.Subscribe;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Transformation;
 
@@ -81,12 +82,12 @@ import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 import com.wave.fitness.AuthActivity;
+import com.wave.fitness.BusProvider;
 import com.wave.fitness.R;
-import com.wave.fitness.fragments.OneFragment;
-import com.wave.fitness.fragments.ThreeFragment;
-import com.wave.fitness.fragments.TwoFragment;
 
 import com.wave.fitness.SpotifyCore;
+import com.wave.fitness.runningEvent.TrackChangedEvent;
+import com.wave.fitness.runningEvent.UpdateRunStatEvent;
 import com.wave.fitness.spotifyActivity;
 
 import at.favre.lib.dali.Dali;
@@ -282,6 +283,7 @@ public class SpotifyFragmentActivity extends Fragment implements
     @Override
     public void onResume() {
         super.onResume();
+        BusProvider.getInstance().register(this);
 
         // Set up the broadcast receiver for network events.
         mNetworkStateReceiver = new BroadcastReceiver() {
@@ -694,6 +696,7 @@ public class SpotifyFragmentActivity extends Fragment implements
     @Override
     public void onPause() {
         super.onPause();
+        BusProvider.getInstance().unregister(this);
         getActivity().unregisterReceiver(mNetworkStateReceiver);
 
         if (core.mPlayer != null) {
@@ -726,6 +729,9 @@ public class SpotifyFragmentActivity extends Fragment implements
             isFirstSong = false;
             return;
         }
+        if(event == PlayerEvent.kSpPlaybackNotifyTrackChanged){
+            BusProvider.getInstance().post(new TrackChangedEvent());
+        }
         if(!isFirstSong) {
             logStatus("Event: " + event);
             core.mCurrentPlaybackState = core.mPlayer.getPlaybackState();
@@ -735,9 +741,14 @@ public class SpotifyFragmentActivity extends Fragment implements
             updateView();
         }
     }
-
     @Override
     public void onPlaybackError(Error error) {
         logStatus("Err: " + error);
+    }
+
+    @Subscribe
+    public void onRunDataUpdate(UpdateRunStatEvent event){
+        //Running statistic is embedded in the event var, use it to update UI element if needed
+        //updataRunInfoCard()
     }
 }

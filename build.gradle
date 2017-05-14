@@ -109,9 +109,6 @@ dependencies {
     //Android Universal Image Loader
     compile'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
 
-    //Horizon
-    compile 'com.yalantis:eqwaves:1.0.1'
-
     //Dali
     compile 'at.favre.lib:dali:0.3.4'
 
