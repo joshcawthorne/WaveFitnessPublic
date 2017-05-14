@@ -172,7 +172,7 @@ public class spotifyActivity extends AppCompatActivity {
     private float _AvrSpeedValue = 0;
     private int _CaloriesValue;
     private ArrayList<RouteNode> route;
-    public ArrayList<SongNode> songs;
+    public ArrayList<SongNode> songs = new ArrayList<>();
 
     @Subscribe
     public void onLocationChanged(LocationChangedEvent event){

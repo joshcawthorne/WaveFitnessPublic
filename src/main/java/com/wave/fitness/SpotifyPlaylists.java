@@ -13,20 +13,7 @@ public class SpotifyPlaylists {
         POP, CLASSICAL, ELECTRONIC, FUNK, ROCK, RAP, JAZZFUSION, DISCO, INDIEROCK, SOUL, HITS, BIGBAND
     }
 
-    public static EnumMap<Genre, String[]> allGenre = new EnumMap<Genre, String[]>(Genre.class){{
-        put(Genre.POP, popGenre);
-        put(Genre.CLASSICAL, classicalGenre);
-        put(Genre.ELECTRONIC, electronicGenre);
-        put(Genre.FUNK, funkGenre);
-        put(Genre.ROCK, rockGenre);
-        put(Genre.RAP, rapGenre);
-        put(Genre.JAZZFUSION, jazzfusionGenre);
-        put(Genre.DISCO, discoGenre);
-        put(Genre.INDIEROCK, indierockGenre);
-        put(Genre.SOUL, soulGenre);
-        put(Genre.HITS, hitsGenre);
-        put(Genre.BIGBAND, bigbandGenre);
-    }};
+    public static EnumMap<Genre, String[]> allGenre = new EnumMap<Genre, String[]>(Genre.class);
 
     public static final String[] popGenre = {
             "spotify:user:spotify:playlist:37i9dQZF1DWY4lFlS4Pnso",

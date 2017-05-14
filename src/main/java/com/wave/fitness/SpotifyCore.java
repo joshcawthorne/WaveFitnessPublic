@@ -8,11 +8,15 @@ import com.spotify.sdk.android.authentication.AuthenticationResponse;
 import com.spotify.sdk.android.player.Metadata;
 import com.spotify.sdk.android.player.PlaybackState;
 import com.spotify.sdk.android.player.SpotifyPlayer;
+import com.squareup.otto.Bus;
 
 import java.sql.Array;
 import java.util.ArrayList;
 import java.util.EnumMap;
 import java.util.HashMap;
+
+import static com.wave.fitness.SpotifyPlaylists.*;
+
 
 
 /**
@@ -34,5 +38,22 @@ public class SpotifyCore extends Application {
     public void onCreate() {
         super.onCreate();
         LoginApplication.startSocialLogin(this);
+
+        BusProvider.BUS = new Bus();
+
+        SpotifyPlaylists.allGenre = new EnumMap<SpotifyPlaylists.Genre, String[]>(SpotifyPlaylists.Genre.class){{
+            put(SpotifyPlaylists.Genre.POP, popGenre);
+            put(SpotifyPlaylists.Genre.CLASSICAL, classicalGenre);
+            put(SpotifyPlaylists.Genre.ELECTRONIC, electronicGenre);
+            put(SpotifyPlaylists.Genre.FUNK, funkGenre);
+            put(SpotifyPlaylists.Genre.ROCK, rockGenre);
+            put(SpotifyPlaylists.Genre.RAP, rapGenre);
+            put(SpotifyPlaylists.Genre.JAZZFUSION, jazzfusionGenre);
+            put(SpotifyPlaylists.Genre.DISCO, discoGenre);
+            put(SpotifyPlaylists.Genre.INDIEROCK, indierockGenre);
+            put(SpotifyPlaylists.Genre.SOUL, soulGenre);
+            put(SpotifyPlaylists.Genre.HITS, hitsGenre);
+            put(SpotifyPlaylists.Genre.BIGBAND, bigbandGenre);
+        }};
     }
 }

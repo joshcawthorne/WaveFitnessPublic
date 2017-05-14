@@ -151,9 +151,7 @@ public class SpotifyFragmentActivity extends Fragment implements
     Drawer menu;
     private TabLayout tabLayout;
     private ViewPager viewPager;
-    private boolean genreSet = false;
-    ProgressBar mProgressBar;
-    CountDownTimer mCountDownTimer;
+
     int i=0;
 
     private View v;
@@ -242,9 +240,12 @@ public class SpotifyFragmentActivity extends Fragment implements
 
         if(!core.isLoggedIn){
             startActivityForResult(new Intent(getActivity(), AuthActivity.class), SPOTIFY_LOGIN);
+
         }else {
             createPlayer();
+
         }
+
 
         // Get a reference to any UI widgets that will be needed.
         mMetadataText = (TextView) getView().findViewById(R.id.metadataTitle);
@@ -262,10 +263,7 @@ public class SpotifyFragmentActivity extends Fragment implements
 
         updateView();
 
-        if (genreSet == false) {
-            showAlertbox(null);
-            genreSet = true;
-        }
+
 
         final FloatingActionButton fab = (FloatingActionButton) getView().findViewById(R.id.pause_button);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -306,6 +304,7 @@ public class SpotifyFragmentActivity extends Fragment implements
             core.mPlayer.addNotificationCallback(SpotifyFragmentActivity.this);
             core.mPlayer.addConnectionStateCallback(SpotifyFragmentActivity.this);
         }
+
     }
 
     private Connectivity getNetworkConnectivity(Context context) {
@@ -343,8 +342,10 @@ public class SpotifyFragmentActivity extends Fragment implements
                     core.mPlayer.setConnectivityStatus(mOperationCallback, getNetworkConnectivity(getActivity()));
                     core.mPlayer.addNotificationCallback(SpotifyFragmentActivity.this);
                     core.mPlayer.addConnectionStateCallback(SpotifyFragmentActivity.this);
+                    setGenre();
                     // Trigger UI refresh
                     updateView();
+
                 }
 
                 @Override
@@ -474,6 +475,7 @@ public class SpotifyFragmentActivity extends Fragment implements
         String uri = "spotify:user:spotify:playlist:7MizIujRqHWLFVZAfQ21h4";
         logStatus("Starting playback for " + uri);
         core.mPlayer.playUri(mOperationCallback, uri, 0, 0);
+
         fab.setImageDrawable(getResources().getDrawable(R.drawable.pause));
     }
 
@@ -494,55 +496,6 @@ public class SpotifyFragmentActivity extends Fragment implements
     }
 
 
-    public void onGenreButtonClicked(View view) {
-        //Array that contains all potential playlists.
-        String[] playlists = {"spotify:user:4joshua-cawthorne:playlist:4vr1l7iKUXfsmxEFlQabwG",
-                              "spotify:user:spotify:playlist:37i9dQZF1DX6VdMW310YC7"};
-        //Create random
-        Random random = new Random();
-        //Pause Music if user is playing some.
-        if (core.mCurrentPlaybackState != null && core.mCurrentPlaybackState.isPlaying) {
-            onPauseButtonClicked();
-            genreSwitchResume = true;
-        }
-        //Set genre to be random selection from above array
-        int index = random.nextInt(playlists.length);
-        TEST_PLAYLIST_URI = playlists[index];
-
-        if(genreSwitchResume = true){
-            onPauseButtonClicked();
-            core.mPlayer.playUri(mOperationCallback, TEST_PLAYLIST_URI, 0, 0);
-        }
-        Log.e("CREATION", playlists[index]);
-    }
-
-    AlertDialog alert;
-    String selectedFromList = "null";
-
-    final public void showAlertbox(View view) {
-        {String names[] ={"Pop","Classical","Electronic","Funk"};
-            final AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
-            LayoutInflater inflater = getLayoutInflater(null);
-            View convertView = (View) inflater.inflate(R.layout.musicplayer_list, null);
-            alertDialog.setView(convertView);
-            alertDialog.setTitle("Choose a genre:");
-            final ListView lv = (ListView) convertView.findViewById(R.id.listView1);
-            ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,names);
-            lv.setAdapter(adapter);
-            alert = alertDialog.create();
-            alert.show();
-
-            lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                public void onItemClick(AdapterView<?> myAdapter, View myView, int myItemInt, long mylng) {
-                    selectedFromList =(String) (lv.getItemAtPosition(myItemInt));
-                    Log.e("PLAYLISTS", selectedFromList);
-                    setGenre();
-                    alert.dismiss();
-                }
-            });
-        }
-    }
-
     public void toggleFab(FloatingActionButton fab) {
         fab.setImageDrawable(getResources().getDrawable(R.drawable.pause));
     }
@@ -558,11 +511,14 @@ public class SpotifyFragmentActivity extends Fragment implements
         if (core.mCurrentPlaybackState != null && core.mCurrentPlaybackState.isPlaying) {
             genreSwitchResume = true;
         }
-        TEST_PLAYLIST_URI = selectedSongs.get(new Random().nextInt(selectedSongs.size()-1));
+        TEST_PLAYLIST_URI = selectedSongs.get(new Random().nextInt(selectedSongs.size()));
         checkMusic();
     }
 
     public void checkMusic() {
+        while(!core.mPlayer.isLoggedIn()){
+
+        }
         if (currentPlaylist == "null") {
             core.mPlayer.playUri(mOperationCallback, TEST_PLAYLIST_URI, 0, 0);
             currentPlaylist = TEST_PLAYLIST_URI;
