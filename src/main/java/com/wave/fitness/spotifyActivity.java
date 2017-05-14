@@ -89,6 +89,7 @@ public class spotifyActivity extends AppCompatActivity {
         adapter.addFragment(new MapViewFragment(), "Running");
         adapter.addFragment(new PedometerFragment(), "Stats");
         viewPager.setAdapter(adapter);
+        viewPager.setOffscreenPageLimit(3);
     }
 
     class ViewPagerAdapter extends FragmentPagerAdapter {
