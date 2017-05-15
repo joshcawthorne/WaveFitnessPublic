@@ -1,6 +1,7 @@
 package com.wave.fitness;
 
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -75,6 +76,12 @@ public class genreSelection extends AppCompatActivity {
         FloatingActionButton continueFAB = (FloatingActionButton) findViewById(R.id.continuefab);
         continueFAB.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                final ProgressDialog progressDialog = new ProgressDialog(genreSelection.this,
+                        R.style.DialogBox);
+                progressDialog.setIndeterminate(true);
+                progressDialog.setMessage("Building your mixtape...");
+                progressDialog.show();
+
                 startActivity(new Intent(genreSelection.this, spotifyActivity.class));
 
                 String test = "";

@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.location.Location;
 import android.os.Bundle;
+import android.support.design.widget.AppBarLayout;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -17,6 +19,8 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.FrameLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -104,14 +108,13 @@ public class spotifyActivity extends AppCompatActivity {
         BusProvider.getInstance().unregister(this);
     }
 
-
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(spot = new SpotifyFragmentActivity(), "Music");
         adapter.addFragment(new MapViewFragment(), "Running");
         adapter.addFragment(new PedometerFragment(), "Stats");
         viewPager.setAdapter(adapter);
-        viewPager.setOffscreenPageLimit(3);
+        /*viewPager.setOffscreenPageLimit(3);*/
     }
 
     class ViewPagerAdapter extends FragmentPagerAdapter {

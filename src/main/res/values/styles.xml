@@ -37,7 +37,7 @@
         <item name="colorAccent">@color/colorAccent</item>
         <!-- Used for the title and text -->
         <item name="android:textColorPrimary">#FFFFFF</item>
-        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textColor">#000</item>
         <!-- Used for the background -->
         <item name="android:background">@color/material_drawer_background</item>
     </style>
