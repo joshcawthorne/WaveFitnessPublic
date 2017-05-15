@@ -17,6 +17,7 @@ import android.widget.ImageView;
 import com.google.gson.Gson;
 import com.rogalabs.lib.model.SocialUser;
 
+import java.io.IOException;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
@@ -311,7 +312,7 @@ public class genreSelection extends AppCompatActivity {
     @Override
     protected  void onResume() {
         super.onResume();
-        menu = new HamburgerMenu(this, gson.fromJson(prefs.getString("user", ""), SocialUser.class), toolbar);
+
     }
 
     @Override

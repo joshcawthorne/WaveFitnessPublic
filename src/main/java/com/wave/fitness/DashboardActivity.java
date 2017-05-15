@@ -56,6 +56,17 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
             core.selectedGenre.put(genre, prefs.getBoolean(genre.name(), false));
         }
 
+
+
+        RoundedImageView img = (RoundedImageView) findViewById(R.id.runBanner);
+        img.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                onMapsStart();
+            }
+        });
+    }
+
+    public void updateWellcomeMsg(){
         SimpleDateFormat parseFormat = new SimpleDateFormat("EEEE");
         Date date =new Date();
         String dashboardDate = parseFormat.format(date);
@@ -83,12 +94,14 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
         TextView curDate = (TextView)findViewById(R.id.dashDate);
         curDate.setText(prefixString + dashboardDate + ", " + core.firstName + endSentString);
 
-        RoundedImageView img = (RoundedImageView) findViewById(R.id.runBanner);
-        img.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                onMapsStart();
-            }
-        });
+    }
+
+    public void createHamburgerMenu(){
+        menu = new HamburgerMenu(this, gson.fromJson(prefs.getString("user", ""), SocialUser.class), toolbar);
+        core.user = gson.fromJson(prefs.getString("user", ""), SocialUser.class);
+        String[] name = core.user.getName().split(" ", 2);
+        core.firstName = name[0];
+        updateWellcomeMsg();
     }
 
     @Override
@@ -106,14 +119,15 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
             DashboardActivity.this.startActivityForResult(firstTime, 22);
         }
         else{
-            menu = new HamburgerMenu(this, gson.fromJson(prefs.getString("user", ""), SocialUser.class), toolbar);
+            createHamburgerMenu();
 
         }
 
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
-        menu = new HamburgerMenu(this, gson.fromJson(prefs.getString("user", ""), SocialUser.class), toolbar);
+        createHamburgerMenu();
+
     }
 
     public void onRunButtonClicked(View view) {

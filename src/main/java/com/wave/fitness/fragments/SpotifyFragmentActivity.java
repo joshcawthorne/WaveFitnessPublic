@@ -159,20 +159,16 @@ public class SpotifyFragmentActivity extends Fragment implements
     private TabLayout tabLayout;
     private ViewPager viewPager;
 
-    private List<Metadata.Track> songHistory;
+    private ArrayList<Metadata.Track> songHistory;
     private void addSongToHistory(){
-
-        for(int i = 9; i > -1; i--){
-            if( songHistory.get(i)!=null){
-                if(i==9){
-                     songHistory.remove(9);
-                }else{
-                     songHistory.add(i,songHistory.get(i-1));
-                }
+        songHistory.add(core.mMetadata.prevTrack);
+        if(songHistory.size()>10){
+            songHistory.remove(0);
+            for(int i = 1; i<12; i++){
+                songHistory.add(i-1, songHistory.get(i));
             }
         }
-         songHistory.add(0,core.mMetadata.prevTrack);
-
+        Log.e("History", songHistory.toString());
     }
 
     private View v;
@@ -259,6 +255,7 @@ public class SpotifyFragmentActivity extends Fragment implements
         super.onActivityCreated(savedInstanceState);
 
         core = ((SpotifyCore)getApplicationContext());
+        songHistory = new ArrayList<Metadata.Track>();
 
         if(!core.isLoggedIn){
             startActivityForResult(new Intent(getActivity(), AuthActivity.class), SPOTIFY_LOGIN);

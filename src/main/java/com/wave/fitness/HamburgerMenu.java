@@ -38,7 +38,10 @@ public class HamburgerMenu {
                 .withActivity(activity)
                 //.withHeaderBackground(R.drawable.header)
                 .addProfiles(
-                        new ProfileDrawerItem().withName(user.getName()).withEmail(user.getEmail()).withIcon(activity.getResources().getDrawable(R.drawable.temp_profile)) // TODO: 10/05/2017 Replace with user.getIconURL using picasso
+                        new ProfileDrawerItem()
+                                .withName(user.getName())
+                                .withEmail(user.getEmail())
+                                .withIcon(activity.getResources().getDrawable(R.drawable.temp_profile)) // TODO: 10/05/2017 Replace with user.getIconURL using picasso
                 )
                 .withOnAccountHeaderListener(new AccountHeader.OnAccountHeaderListener() {
                     @Override
