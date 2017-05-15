@@ -16,6 +16,7 @@ package com.wave.fitness.fragments;
 
 import android.app.AlertDialog;
 import android.app.KeyguardManager;
+import android.app.NotificationManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -29,6 +30,8 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.provider.SyncStateContract;
+import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
@@ -47,6 +50,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -146,6 +150,7 @@ public class SpotifyFragmentActivity extends Fragment implements
     private TextView mMetadataText;
     private TextView mMetaDataSubtext;
     private TextView mMetaDataTime;
+    private TextView mGenreData;
     private EditText mSeekEditText;
     private ScrollView mStatusTextScrollView;
     private String currentPlaylist = "null";
@@ -184,6 +189,7 @@ public class SpotifyFragmentActivity extends Fragment implements
                              Bundle savedInstanceState) {
 
         v = inflater.inflate(R.layout.activity_musicplayer, container, false);
+
         //Button play = (Button) v.findViewById(R.id.pause_temp);
         FloatingActionButton playfab = (FloatingActionButton) v.findViewById(R.id.pause_button);
         //Button skip = (Button) v.findViewById(R.id.skip_next_button);
@@ -247,17 +253,17 @@ public class SpotifyFragmentActivity extends Fragment implements
 
         }
 
-
         // Get a reference to any UI widgets that will be needed.
         mMetadataText = (TextView) getView().findViewById(R.id.metadataTitle);
         mMetaDataSubtext = (TextView) getView().findViewById(R.id.metadataSubTitle);
         mMetaDataTime = (TextView) getView().findViewById(R.id.metaDataTime);
         mStatusTextScrollView = (ScrollView) getView().findViewById(R.id.status_text_container);
+        mGenreData = (TextView) getView().findViewById(R.id.currentgenre);
         mMetadataText.setSelected(true);
 
 
         collapsingToolbarLayout = (CollapsingToolbarLayout) v.findViewById(R.id.collapsing_toolbar);
-        collapsingToolbarLayout.setTitle("Test");
+        collapsingToolbarLayout.setTitle("Error - No data supplied");
         collapsingToolbarLayout.setCollapsedTitleTextColor(getResources().getColor(android.R.color.black));
         collapsingToolbarLayout.setExpandedTitleColor(getResources().getColor(android.R.color.black));
         collapsingToolbarLayout.setBackgroundColor(getResources().getColor(R.color.wavePrimary));
@@ -405,6 +411,12 @@ public class SpotifyFragmentActivity extends Fragment implements
             getView().findViewById(R.id.pause_button).setEnabled(core.mMetadata.currentTrack != null);
         }
 
+        if( coverArtView.getDrawable() != null){
+            coverArtView.setVisibility(View.INVISIBLE);  // make image visible
+        }else{
+            coverArtView.setVisibility(View.VISIBLE);
+        }
+
         if (core.mMetadata != null && core.mMetadata.currentTrack != null) {
             //Set the metadata from song length to Minutes:Seconds, rather than milliseconds.
             final String durationStr =
@@ -419,6 +431,8 @@ public class SpotifyFragmentActivity extends Fragment implements
             mMetadataText.setText(core.mMetadata.currentTrack.name);
             mMetaDataSubtext.setText(core.mMetadata.currentTrack.artistName);
             mMetaDataTime.setText(durationStr);
+
+            mGenreData.setText("You're listening to " + core.mMetadata.currentTrack.albumName);
 
             collapsingToolbarLayout = (CollapsingToolbarLayout) v.findViewById(R.id.collapsing_toolbar);
             collapsingToolbarLayout.setTitle(core.mMetadata.currentTrack.name + " - " + core.mMetadata.currentTrack.artistName);
@@ -448,8 +462,6 @@ public class SpotifyFragmentActivity extends Fragment implements
 
                     .into(coverArtView);
 
-            coverArtView.setVisibility(View.VISIBLE);
-
             Picasso.with(getActivity())
                     .load(core.mMetadata.currentTrack.albumCoverWebUrl)
                     .transform(new Transformation() {
@@ -471,10 +483,11 @@ public class SpotifyFragmentActivity extends Fragment implements
                     .into(coverArtSmall);
 
             progressBar(songLength);
+            coverArtView.setVisibility(View.VISIBLE);
 
         } else {
             mMetadataText.setText(" ");
-            coverArtView.setBackground(null);
+            coverArtView.setVisibility(View.INVISIBLE);
             coverArtSmall.setBackground(null);
         }
     }

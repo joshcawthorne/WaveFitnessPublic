@@ -1,151 +1,66 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     tools:context="com.wave.fitness.fragments.SpotifyFragmentActivity">
 
-    <!-- Toolbar -->
+<!-- Content -->
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0088FF"
+        android:fitsSystemWindows="false">
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <LinearLayout
-            android:id="@+id/playBar"
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_alignParentBottom="true"
-            android:background="#EEE"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="false"
+            app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed|snap"
+            app:contentScrim="#0088FF"
+            app:statusBarScrim="#000"
+            app:titleEnabled="true">
 
             <ImageView
-                android:layout_width="60dp"
-                android:layout_gravity="top|center"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:id="@+id/cover_art_small"
-                android:adjustViewBounds="true"
-                android:background="#000"
-                android:maxWidth="150dp"
-                android:maxHeight="150dp"/>
-            <LinearLayout
-                android:layout_width="150dp"
-                android:layout_height="40dp"
-                android:orientation="vertical"
-                android:layout_gravity="center_vertical">
-                <TextView
-                    android:layout_marginTop="0dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="17dp"
-                    android:text="Error 02"
-                    android:ellipsize="marquee"
-                    android:fadingEdge="horizontal"
-                    android:marqueeRepeatLimit="marquee_forever"
-                    android:scrollHorizontally="true"
-                    android:maxLines="1"
-                    android:textSize="11dp"
-                    android:id="@+id/metadataTitle"
-                    android:textColor="#000"
-                    android:layout_marginLeft="10dp"
-                    android:textAllCaps="true"
-                    fontPath="fonts/Montserrat-Bold.otf" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:id="@+id/metadataSubTitle"
-                    android:layout_height="wrap_content"
-                    android:textSize="8dp"
-                    android:text="Error - No Data supplied!"
-                    android:textColor="#b3b3b3"
-                    android:layout_marginLeft="10dp"
-                    fontPath="fonts/Montserrat-Regular.otf" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="8dp"
-                    android:text="Please reboot Wave."
-                    android:textColor="#b3b3b3"
-                    android:layout_marginLeft="10dp"
-                    fontPath="fonts/Montserrat-Regular.otf"
-                    android:id="@+id/metaDataTime"/>
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-    </RelativeLayout>
-
-    <!-- Content -->
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <android.support.design.widget.CoordinatorLayout
-                android:id="@+id/coordinator_layout"
+                android:id="@+id/cover_art"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:fitsSystemWindows="false">
+                android:adjustViewBounds="true"
+                android:fitsSystemWindows="false"
+                android:background="@drawable/loading"
+                android:src="@drawable/loading"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.7"
+                android:foreground="@drawable/blackgradient"/>
 
-                <android.support.design.widget.AppBarLayout
-                    android:id="@+id/app_bar"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="#0088FF"
-                    android:fitsSystemWindows="false">
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_scrollFlags="scroll|enterAlways|snap"
+                app:layout_collapseMode="pin"/>
 
-                    <android.support.design.widget.CollapsingToolbarLayout
-                        android:id="@+id/collapsing_toolbar"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fitsSystemWindows="false"
-                        app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed|snap"
-                        app:contentScrim="#0088FF"
-                        app:statusBarScrim="#000"
-                        app:titleEnabled="true">
+        </android.support.design.widget.CollapsingToolbarLayout>
 
-                        <ImageView
-                            android:id="@+id/cover_art"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:adjustViewBounds="true"
-                            android:fitsSystemWindows="false"
-                            android:scaleType="centerCrop"
-                            app:layout_collapseMode="parallax"
-                            app:layout_collapseParallaxMultiplier="0.7"
-                            android:foreground="@drawable/blackgradient"/>
+    </android.support.design.widget.AppBarLayout>
 
-                        <android.support.v7.widget.Toolbar
-                            android:id="@+id/toolbar"
-                            android:layout_width="match_parent"
-                            android:layout_height="?attr/actionBarSize"
-                            app:layout_scrollFlags="scroll|enterAlways|snap"
-                            app:layout_collapseMode="pin"/>
+    <include layout="@layout/musicplayer_buttons"/>
+    <include layout="@layout/activity_music_toolbar"/>
 
-                    </android.support.design.widget.CollapsingToolbarLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/pause_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        app:layout_anchor="@id/app_bar"
+        app:layout_anchorGravity="bottom|end"
+        app:srcCompat="@drawable/pause"/>
 
-                </android.support.design.widget.AppBarLayout>
+</android.support.design.widget.CoordinatorLayout>
 
-                <android.support.design.widget.FloatingActionButton
-                    android:id="@+id/pause_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/fab_margin"
-                    app:layout_anchor="@id/app_bar"
-                    app:layout_anchorGravity="bottom|end"
-                    app:srcCompat="@drawable/pause"/>
 
-                <include layout="@layout/musicplayer_buttons"/>
-
-            </android.support.design.widget.CoordinatorLayout>
-
-        </LinearLayout>
-
-    </ScrollView>
-
-</RelativeLayout>
