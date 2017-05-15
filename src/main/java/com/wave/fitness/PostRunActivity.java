@@ -23,7 +23,6 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 
 
-
 public class PostRunActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     private SupportMapFragment map;
@@ -34,9 +33,12 @@ public class PostRunActivity extends AppCompatActivity implements OnMapReadyCall
     private int runId;
     private PolylineOptions line;
 
-    @InjectView(R.id.time) TextView _time;
-    @InjectView(R.id.calories) TextView _calories;
-    @InjectView(R.id.distance) TextView _distance;
+    @InjectView(R.id.time)
+    TextView _time;
+    @InjectView(R.id.calories)
+    TextView _calories;
+    @InjectView(R.id.distance)
+    TextView _distance;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,13 +48,14 @@ public class PostRunActivity extends AppCompatActivity implements OnMapReadyCall
         runId = getIntent().getIntExtra("runID", 0);
         repo = new Repo_RunStatistic(getApplicationContext());
         data = repo.getEntrybyID(runId);
-        if(data == null){
+        if (data == null) {
             data = new Data_RunStatistic();
         }
 
         line = new PolylineOptions();
-
-
+        for (Location location : data.route){
+            line.add(new LatLng(location.getLatitude(), location.getLongitude()));
+        }
 
         line.width(5).color(Color.RED);
 
@@ -66,26 +69,21 @@ public class PostRunActivity extends AppCompatActivity implements OnMapReadyCall
 
     @Override
     public void onMapReady(GoogleMap map) {
-        /*
+
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(
                 new LatLng(data.route.get(data.route.size()-1).getLatitude()
                         ,data.route.get(data.route.size()-1).getLongitude()), 16)); //This can be changed to last geopoint of run
-/*
+
         PolylineOptions line=
                 new PolylineOptions().add(new LatLng(54.5695968,-1.2339262),
                         new LatLng(54.569985,-1.2294937)) //Add more location points bellow
                         .width(5).color(Color.RED);
-*/
-        //map.addPolyline(line);
+        map.addPolyline(line);
 
-
-        //The following is used to add an icon on each geopoint on the map, this can be removed if we do not want this feature, Could be used to signal start and end points
-        //map.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_notification //This is where you select an icon to be displayed
-        // )).anchor(0.0f, 1.0f).position(new LatLng(54.5695968,-1.2339262))); //Test location - University
 
     }
 
-    protected void onPostToFacebook(){
+    protected void onPostToFacebook() {
         Shareable shareAction = new Shareable.Builder(this)
                 .message("I've finished a run")
                 .socialChannel(Shareable.Builder.FACEBOOK)

@@ -11,6 +11,8 @@ import com.google.gson.reflect.TypeToken;
 import com.spotify.sdk.android.player.Metadata;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created by s6236422 on 10/05/2017.
@@ -19,11 +21,13 @@ import java.util.ArrayList;
 public class Repo_RunStatistic {
     private DBHelper dbHelper;
 
-    public Repo_RunStatistic(Context context) {dbHelper = new DBHelper(context);}
+    public Repo_RunStatistic(Context context) {
+        dbHelper = new DBHelper(context);
+    }
 
     private Gson gson = new Gson();
 
-    public int insert(Data_RunStatistic data){
+    public int insert(Data_RunStatistic data) {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(Data_RunStatistic.KEY_ID, data.id);
@@ -41,10 +45,10 @@ public class Repo_RunStatistic {
         return (int) id;
     }
 
-    public Data_RunStatistic getEntrybyID(int _id){
+    public Data_RunStatistic getEntrybyID(int _id) {
         SQLiteDatabase db = dbHelper.getReadableDatabase();
 
-        String selectQuery =  "SELECT  " +
+        String selectQuery = "SELECT  " +
                 Data_RunStatistic.KEY_ID + "," +
                 Data_RunStatistic.KEY_DATE + "," +
                 Data_RunStatistic.KEY_DURATION + "," +
@@ -59,7 +63,7 @@ public class Repo_RunStatistic {
 
         Data_RunStatistic data = new Data_RunStatistic();
 
-        Cursor cursor = db.rawQuery(selectQuery, new String[] { String.valueOf(_id) } );
+        Cursor cursor = db.rawQuery(selectQuery, new String[]{String.valueOf(_id)});
 
         if (cursor.moveToFirst()) {
             do {
@@ -69,8 +73,9 @@ public class Repo_RunStatistic {
                 data.distance = cursor.getLong(cursor.getColumnIndex(Data_RunStatistic.KEY_DISTANCE));
                 data.avrspeed = cursor.getDouble(cursor.getColumnIndex(Data_RunStatistic.KEY_AVRSPEED));
                 data.calories = cursor.getInt(cursor.getColumnIndex(Data_RunStatistic.KEY_CALORIES));
-                data.route = gson.fromJson(cursor.getString(cursor.getColumnIndex(Data_RunStatistic.KEY_ROUTE)), TypeToken.get(new ArrayList<Location>().getClass()).getType());
-                data.songs = gson.fromJson(cursor.getString(cursor.getColumnIndex(Data_RunStatistic.KEY_SONGS)), TypeToken.get(new ArrayList<Metadata.Track>().getClass()).getType());
+                data.route = stringToArray(cursor.getString(cursor.getColumnIndex(Data_RunStatistic.KEY_ROUTE)), Location[].class);
+                data.songs = stringToArray(cursor.getString(cursor.getColumnIndex(Data_RunStatistic.KEY_SONGS)), Metadata.Track[].class);
+
 
             } while (cursor.moveToNext());
         }
@@ -79,5 +84,9 @@ public class Repo_RunStatistic {
         db.close();
         return data;
 
+    }
+    private static <T> List<T> stringToArray(String s, Class<T[]> clazz){
+        T[] arr = new Gson().fromJson(s, clazz);
+        return Arrays.asList(arr);
     }
 }

@@ -7,6 +7,7 @@ import com.spotify.sdk.android.player.Metadata;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * Created by s6236422 on 02/05/2017.
@@ -36,12 +37,9 @@ public class Data_RunStatistic {
     public int calories;
 
     //Need to convert to JSON before storing as String
-    public ArrayList<Location> route;
-    public ArrayList<Metadata.Track> songs;
+    public List<Location> route;
+    public List<Metadata.Track> songs;
 
-    public Data_RunStatistic(){
-        route = new ArrayList<Location>();
-        songs = new ArrayList<Metadata.Track>();
-    }
+
 
 }

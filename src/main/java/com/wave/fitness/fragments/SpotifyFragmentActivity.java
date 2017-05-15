@@ -72,6 +72,7 @@ import com.spotify.sdk.android.player.Config;
 import com.spotify.sdk.android.player.ConnectionStateCallback;
 import com.spotify.sdk.android.player.Connectivity;
 import com.spotify.sdk.android.player.Error;
+import com.spotify.sdk.android.player.Metadata;
 import com.spotify.sdk.android.player.PlaybackBitrate;
 import com.spotify.sdk.android.player.Player;
 import com.spotify.sdk.android.player.PlayerEvent;
@@ -158,7 +159,21 @@ public class SpotifyFragmentActivity extends Fragment implements
     private TabLayout tabLayout;
     private ViewPager viewPager;
 
-    int i=0;
+    private List<Metadata.Track> songHistory;
+    private void addSongToHistory(){
+
+        for(int i = 9; i > -1; i--){
+            if( songHistory.get(i)!=null){
+                if(i==9){
+                     songHistory.remove(9);
+                }else{
+                     songHistory.add(i,songHistory.get(i-1));
+                }
+            }
+        }
+         songHistory.add(0,core.mMetadata.prevTrack);
+
+    }
 
     private View v;
 
@@ -665,6 +680,7 @@ public class SpotifyFragmentActivity extends Fragment implements
         }
         if(event == PlayerEvent.kSpPlaybackNotifyTrackChanged){
             BusProvider.getInstance().post(new TrackChangedEvent());
+            addSongToHistory();
         }
         if(!isFirstSong) {
             logStatus("Event: " + event);
