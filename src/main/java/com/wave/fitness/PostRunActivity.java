@@ -151,8 +151,8 @@ public class PostRunActivity extends AppCompatActivity implements OnMapReadyCall
                 .message("I've finished a " + String.valueOf(data.distance) + "Km run and burned " + String.valueOf(data.calories)+ "Calories! \n" +
                             "Total Steps " + String.valueOf(data.totalStep) + "\n" +
                             "Average Speed" + String.valueOf(data.avrspeed) + "\n" +
-                            "Average Step Per Minute" + String.valueOf(data.avrspeed) + "\n")
-                .socialChannel(Shareable.Builder.FACEBOOK)
+                            "Average Step Per Minute" + String.valueOf(data.avrspeed) + "#WaveFitness")
+                .socialChannel(Shareable.Builder.TWITTER)
                 .build();
         shareAction.share();
     }
@@ -164,7 +164,7 @@ public class PostRunActivity extends AppCompatActivity implements OnMapReadyCall
         _playBar4.setVisibility(LinearLayout.GONE);
         _playBar5.setVisibility(LinearLayout.GONE);
 
-        for(int i = 0; i<4; i++){
+        for(int i = 0; i<5; i++){
             Metadata.Track track = data.songs.get(i);
             final String durationStr =
                     String.format("\n %02d:%02d",
