@@ -171,7 +171,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
                         android:src="@drawable/sharefacebook"
-                        android:layout_margin="5dp"/>
+                        android:layout_margin="5dp"
+                        android:id="@+id/shareFB"
+                        android:onClick="onp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -469,7 +471,7 @@
                             fontPath="fonts/Montserrat-Bold.otf" />
                         <TextView
                             android:layout_width="wrap_content"
-                            android:id="@+id/metadataSubTitle"
+                            android:id="@+id/metadataSubTitleFive"
                             android:layout_height="wrap_content"
                             android:textSize="8dp"
                             android:text="Error - No Data supplied!"
