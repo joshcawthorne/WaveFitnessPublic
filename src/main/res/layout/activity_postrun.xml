@@ -5,6 +5,17 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:theme="@style/WaveTheme"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/wave_drawer_background"
+        android:textColor="@color/wave_drawer_primary_text"
+        android:titleTextColor="@color/wave_drawer_primary_text"
+        android:subtitleTextColor="@color/wave_drawer_primary_text"
+        android:elevation="4dp" />
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -40,7 +51,7 @@
                     android:text="Time:  "
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/time"
+                    android:id="@+id/timetext"
                     android:layout_weight="1"
                     android:textAppearance="@android:style/TextAppearance.Material.Medium"
                     android:padding="10dp" />
@@ -49,7 +60,7 @@
                     android:text="Calories:"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/calories"
+                    android:id="@+id/caloriestext"
                     android:textAppearance="@android:style/TextAppearance.Material.Medium"
                     android:paddingLeft="10dp"
                     android:paddingBottom="10dp"
@@ -66,7 +77,7 @@
                     android:text="Text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/textView9"
+                    android:id="@+id/time"
                     android:layout_weight="1"
                     android:padding="10dp"
                     android:textAppearance="@android:style/TextAppearance.Material.Medium" />
@@ -75,7 +86,7 @@
                     android:text="Text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/textView10"
+                    android:id="@+id/calories"
                     android:layout_weight="1"
                     android:textAppearance="@android:style/TextAppearance.Material.Medium"
                     android:paddingBottom="10dp"
@@ -100,7 +111,7 @@
                     android:text="Distance:"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/distance"
+                    android:id="@+id/distancetext"
                     android:textAppearance="@android:style/TextAppearance.Material.Medium"
                     android:padding="10dp" />
 
@@ -108,7 +119,7 @@
                     android:text="Steps:"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/distance"
+                    android:id="@+id/stepstext"
                     android:layout_weight="1"
                     android:textAppearance="@android:style/TextAppearance.Material.Medium"
                     android:paddingBottom="10dp"
@@ -125,16 +136,16 @@
                     android:text="Text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/textView15"
+                    android:id="@+id/distance"
                     android:layout_weight="1"
                     android:textAppearance="@android:style/TextAppearance.Material.Medium"
                     android:padding="10dp" />
 
                 <TextView
-                    android:text="Text"
+                    android:text="TIM"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/textView12"
+                    android:id="@+id/steps_value"
                     android:layout_weight="1"
                     android:textAppearance="@android:style/TextAppearance.Material.Medium"
                     android:paddingBottom="10dp"

@@ -1,10 +1,12 @@
 package com.wave.fitness;
 
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.location.Location;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -63,8 +65,20 @@ public class spotifyActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(core.isRunning){
-                    onEndRun();
-                    core.isRunning = false;
+                    final ProgressDialog progressDialog = new ProgressDialog(spotifyActivity.this,
+                            R.style.DialogBox);
+                    progressDialog.setIndeterminate(true);
+                    progressDialog.setMessage("Saving your run...");
+                    progressDialog.show();
+
+                    final Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            onEndRun();
+                            core.isRunning = false;
+                        }
+                    }, 2000);
                 }else {
                     onStartRun();
                     core.isRunning = true;
@@ -114,7 +128,7 @@ public class spotifyActivity extends AppCompatActivity {
         adapter.addFragment(new MapViewFragment(), "Running");
         adapter.addFragment(new PedometerFragment(), "Stats");
         viewPager.setAdapter(adapter);
-        /*viewPager.setOffscreenPageLimit(3);*/
+        viewPager.setOffscreenPageLimit(3);
     }
 
     class ViewPagerAdapter extends FragmentPagerAdapter {

@@ -126,7 +126,7 @@
     <string name="err_msg_name">Enter your full name</string>
     <string name="err_msg_email">Enter valid email address</string>
     <string name="err_msg_password">Enter the password</string>
-    <string name="version">Wave Beta Version 2.0</string>
+    <string name="version">Wave Beta Version 4.0</string>
     <string name="signup">So you want to get started?</string>
     <string name="signup_subtitle">Well, we\'ll need a few small details first.</string>
 

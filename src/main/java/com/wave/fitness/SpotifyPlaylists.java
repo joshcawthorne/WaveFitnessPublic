@@ -10,7 +10,7 @@ import java.util.List;
 public class SpotifyPlaylists {
 
     public enum Genre{
-        POP, CLASSICAL, ELECTRONIC, FUNK, ROCK, RAP, JAZZFUSION, DISCO, INDIEROCK, SOUL, HITS, BIGBAND
+        POP, CLASSICAL, ELECTRONIC, FUNK, ROCK, JAZZFUSION, INDIEROCK, HITS
     }
 
     public static EnumMap<Genre, String[]> allGenre = new EnumMap<Genre, String[]>(Genre.class);
@@ -83,19 +83,6 @@ public class SpotifyPlaylists {
             "spotify:user:spotify:playlist:37i9dQZF1DWT2jS7NwYPVI"
     };
 
-    public static final String[] rapGenre = {
-            "spotify:user:spotify:playlist:37i9dQZF1DWSOkubnsDCSS",
-            "spotify:user:spotify:playlist:37i9dQZF1DXcDoDDetPsEg",
-            "spotify:user:spotify:playlist:37i9dQZF1DX6PKX5dyBKeq",
-            "spotify:user:spotify:playlist:37i9dQZF1DXdeMORbC1XNa",
-            "spotify:user:spotify:playlist:37i9dQZF1DWTggY0yqBxES",
-            "spotify:user:spotify:playlist:37i9dQZF1DWUqs4iNu6SUZ",
-            "spotify:user:spotify:playlist:37i9dQZF1DWT6SJaitNDax",
-            "spotify:user:spotify:playlist:37i9dQZF1DX5jNEiuvPyWr",
-            "spotify:user:spotify:playlist:37i9dQZF1DX05ZENzZuWVW",
-            "spotify:user:spotify:playlist:37i9dQZF1DX0XUsuxWHRQd"
-    };
-
     public static final String[] jazzfusionGenre = {
             "spotify:user:metal_swe:playlist:3aCjMq3zibs1US60n0KRpA",
             "spotify:user:rainbowdash2:playlist:1yBg3b59yAnbADsjPAeczZ",
@@ -117,28 +104,6 @@ public class SpotifyPlaylists {
             "spotify:user:spotify:playlist:37i9dQZF1DWTSKFpOdYF1r"
     };
 
-
-    public static final String[] discoGenre = {
-            "spotify:user:edvard_m:playlist:4xFSdiuP4gpR4wq2OghlOs",
-            "spotify:user:1112464570:playlist:3AtFItPTNrmxqREWOWZV6e",
-            "spotify:user:spotify:playlist:37i9dQZF1DX1MUPbVKMgJE",
-            "spotify:user:spotify:playlist:37i9dQZF1DXcAiMO5AYxE8",
-            "spotify:user:sanik007:playlist:6wR4gl33rmS84wJYpJ8rEN",
-    };
-
-    public static final String[] soulGenre = {
-            "spotify:user:spotify:playlist:37i9dQZF1DX7QC1DnNqj3m",
-            "spotify:user:spotify:playlist:37i9dQZF1DX5lDysu4GbKR",
-            "spotify:user:spotify:playlist:37i9dQZF1DWWvhKV4FBciw",
-            "spotify:user:spotify:playlist:37i9dQZF1DXdc0DUqaW3MZ",
-            "spotify:user:spotify:playlist:37i9dQZF1DXcAiMO5AYxE8",
-            "spotify:user:spotify:playlist:37i9dQZF1DX4SBhb3fqCJd",
-            "spotify:user:spotify:playlist:37i9dQZF1DX6VDO8a6cQME",
-            "spotify:user:spotify:playlist:37i9dQZF1DX9loJQLuEvap",
-            "spotify:user:spotify:playlist:37i9dQZF1DX2UgsUIg75Vg",
-            "spotify:user:spotify:playlist:37i9dQZF1DX62Nfha2yFhL"
-    };
-
     public static final String[] hitsGenre = {
             "spotify:user:spotify:playlist:37i9dQZF1DXb57FjYWz00c",
             "spotify:user:spotify:playlist:37i9dQZF1DWV8xrpik0esU",
@@ -150,15 +115,6 @@ public class SpotifyPlaylists {
             "spotify:user:spotify:playlist:37i9dQZF1DWSWNiyXQAvbl",
             "spotify:user:spotify:playlist:37i9dQZF1DXdj82GcM2wq2",
             "spotify:user:spotify:playlist:37i9dQZF1DX4o1oenSJRJd"
-    };
-
-    public static final String[] bigbandGenre = {
-            "spotify:user:kenshiro_o:playlist:1A51AEZEh5Gm8KVPLqhyzK",
-            "spotify:user:mortiferam:playlist:2VMD3Kun96CVnYdog9MooY",
-            "spotify:user:mama_fratelli:playlist:3S7Zwu4mQ7hP4A9VbpfQpH",
-            "spotify:user:jennifergriffin:playlist:5vZ7WPneVOxCRL0zCmEZdC",
-            "spotify:user:sadistic.nub:playlist:3ZUC0k1TwEKYZOfkdjhKUz",
-            "spotify:user:1252318489:playlist:Z6lPWSXg6uonr5ASpt0"
     };
 
 }

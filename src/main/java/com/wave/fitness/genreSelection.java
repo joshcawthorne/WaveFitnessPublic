@@ -35,28 +35,19 @@ public class genreSelection extends AppCompatActivity {
     ImageView rockSquare;
     ImageView classicalsquare;
     ImageView funksquare;
-    ImageView rapsquare;
     ImageView electronicsquare;
     ImageView jazzfusionsquare;
-    ImageView discosquare;
     ImageView indierocksquare;
-    ImageView soulsquare;
     ImageView classichitssquare;
-    ImageView bigbandsquare;
-
 
     Boolean popSelect = false;
     Boolean rockSelect = false;
     Boolean classicalSelect = false;
     Boolean funkSelect = false;
-    Boolean rapSelect = false;
     Boolean electronicSelect = false;
     Boolean jazzfusionSelect = false;
-    Boolean discoSelect = false;
     Boolean indierockSelect = false;
-    Boolean soulSelect = false;
     Boolean classichitsSelect = false;
-    Boolean bigbandSelect = false;
 
     ArrayList<String> selection;
 
@@ -77,6 +68,7 @@ public class genreSelection extends AppCompatActivity {
         FloatingActionButton continueFAB = (FloatingActionButton) findViewById(R.id.continuefab);
         continueFAB.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                core.dashboardCard = false;
                 final ProgressDialog progressDialog = new ProgressDialog(genreSelection.this,
                         R.style.DialogBox);
                 progressDialog.setIndeterminate(true);
@@ -84,7 +76,6 @@ public class genreSelection extends AppCompatActivity {
                 progressDialog.show();
 
                 startActivity(new Intent(genreSelection.this, spotifyActivity.class));
-
                 String test = "";
                 for(SpotifyPlaylists.Genre g : SpotifyPlaylists.Genre.values()){
                     test = test + core.selectedGenre.get(g).toString() + ", ";
@@ -163,24 +154,6 @@ public class genreSelection extends AppCompatActivity {
             }
         });
 
-        this.rapsquare = (ImageView) findViewById(R.id.rapsquare);
-        this.rapsquare.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                if (core.selectedGenre.get(SpotifyPlaylists.Genre.RAP)) {
-                    Log.e("SELECTION", "SELECTED");
-                    rapsquare.setImageResource(R.drawable.rapsquare);
-                    core.selectedGenre.put(SpotifyPlaylists.Genre.RAP, false);
-                    rapSelect = true;
-                }
-                else {
-                    Log.e("SELECTION", "UNSELECTED");
-                    rapsquare.setImageResource(R.drawable.rapsquareselected);
-                    core.selectedGenre.put(SpotifyPlaylists.Genre.RAP, true);
-                    rapSelect = false;
-                }
-            }
-        });
-
         this.electronicsquare = (ImageView) findViewById(R.id.electronicsquare);
         this.electronicsquare.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -217,24 +190,6 @@ public class genreSelection extends AppCompatActivity {
             }
         });
 
-        this.discosquare = (ImageView) findViewById(R.id.discosquare);
-        this.discosquare.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                if (core.selectedGenre.get(SpotifyPlaylists.Genre.DISCO)) {
-                    Log.e("SELECTION", "SELECTED");
-                    discosquare.setImageResource(R.drawable.discosquare);
-                    core.selectedGenre.put(SpotifyPlaylists.Genre.DISCO, false);
-                    discoSelect = true;
-                }
-                else {
-                    Log.e("SELECTION", "UNSELECTED");
-                    discosquare.setImageResource(R.drawable.discosquareselected);
-                    core.selectedGenre.put(SpotifyPlaylists.Genre.DISCO, true);
-                    discoSelect = false;
-                }
-            }
-        });
-
         this.indierocksquare = (ImageView) findViewById(R.id.indierocksquare);
         this.indierocksquare.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -249,24 +204,6 @@ public class genreSelection extends AppCompatActivity {
                     indierocksquare.setImageResource(R.drawable.indierocksquareselected);
                     core.selectedGenre.put(SpotifyPlaylists.Genre.INDIEROCK, true);
                     indierockSelect = false;
-                }
-            }
-        });
-
-        this.soulsquare = (ImageView) findViewById(R.id.soulsquare);
-        this.soulsquare.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                if (core.selectedGenre.get(SpotifyPlaylists.Genre.SOUL)) {
-                    Log.e("SELECTION", "SELECTED");
-                    soulsquare.setImageResource(R.drawable.soulsquare);
-                    core.selectedGenre.put(SpotifyPlaylists.Genre.SOUL, false);
-                    soulSelect = true;
-                }
-                else {
-                    Log.e("SELECTION", "UNSELECTED");
-                    soulsquare.setImageResource(R.drawable.soulsquareselected);
-                    core.selectedGenre.put(SpotifyPlaylists.Genre.SOUL, true);
-                    soulSelect = false;
                 }
             }
         });
@@ -288,25 +225,6 @@ public class genreSelection extends AppCompatActivity {
                 }
             }
         });
-
-        this.bigbandsquare = (ImageView) findViewById(R.id.bigbandsquare);
-        this.bigbandsquare.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                if (core.selectedGenre.get(SpotifyPlaylists.Genre.BIGBAND)) {
-                    Log.e("SELECTION", "SELECTED");
-                    bigbandsquare.setImageResource(R.drawable.bigbandsquare);
-                    core.selectedGenre.put(SpotifyPlaylists.Genre.BIGBAND, false);
-                    bigbandSelect = true;
-                }
-                else {
-                    Log.e("SELECTION", "UNSELECTED");
-                    bigbandsquare.setImageResource(R.drawable.bigbandsquareselected);
-                    core.selectedGenre.put(SpotifyPlaylists.Genre.BIGBAND, true);
-                    bigbandSelect = false;
-                }
-            }
-        });
-
     }
 
     @Override

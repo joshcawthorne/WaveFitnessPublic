@@ -542,18 +542,26 @@ public class SpotifyFragmentActivity extends Fragment implements
     }
 
     public void setGenre() {
-        ArrayList<String> selectedSongs = new ArrayList<String>();
-        for(SpotifyPlaylists.Genre genre : SpotifyPlaylists.Genre.values()){
-            if(core.selectedGenre.get(genre)){
-                selectedSongs.addAll(Arrays.asList(SpotifyPlaylists.allGenre.get(genre)));
-            }
+
+        if(core.dashboardCard) {
+            TEST_PLAYLIST_URI = core.chosenPlaylist;
+            checkMusic();
         }
 
-        if (core.mCurrentPlaybackState != null && core.mCurrentPlaybackState.isPlaying) {
-            genreSwitchResume = true;
+        else {
+            ArrayList<String> selectedSongs = new ArrayList<String>();
+            for(SpotifyPlaylists.Genre genre : SpotifyPlaylists.Genre.values()){
+                if(core.selectedGenre.get(genre)){
+                    selectedSongs.addAll(Arrays.asList(SpotifyPlaylists.allGenre.get(genre)));
+                }
+            }
+
+            if (core.mCurrentPlaybackState != null && core.mCurrentPlaybackState.isPlaying) {
+                genreSwitchResume = true;
+            }
+            TEST_PLAYLIST_URI = selectedSongs.get(new Random().nextInt(selectedSongs.size()));
+            checkMusic();
         }
-        TEST_PLAYLIST_URI = selectedSongs.get(new Random().nextInt(selectedSongs.size()));
-        checkMusic();
     }
 
     public void checkMusic() {
@@ -695,7 +703,7 @@ public class SpotifyFragmentActivity extends Fragment implements
 
     @Subscribe
     public void onRunDataUpdate(UpdateRunStatEvent event){
-        //Running statistic is embedded in the event var, use it to update UI element if needed
-        //updataRunInfoCard()
+        TextView speedcur = (TextView) v.findViewById(R.id.speedcur);
+
     }
 }

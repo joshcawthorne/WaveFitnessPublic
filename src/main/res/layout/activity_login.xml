@@ -2,97 +2,104 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal"
-    android:background="@drawable/background"
-    android:orientation="vertical"
-    android:weightSum="1"
-    tools:context="com.wave.fitness.LoginActivity">
+    android:background="@color/wavePrimary">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_margin="75dp"
-            app:srcCompat="@drawable/logo_icon" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <EditText
-            android:id="@+id/username"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="100dp"
-            android:layout_marginRight="100dp"
-            android:ems="10"
-            android:gravity="center_vertical"
-            android:singleLine="false"
-            android:text="Username"
-            android:textColor="@android:color/white" />
-
-        <EditText
-            android:id="@+id/password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="100dp"
-            android:layout_marginRight="100dp"
-            android:layout_marginTop="20dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Password"
-            android:textColor="@android:color/white" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="50dp"
-        android:orientation="vertical">
-
-        <Button
-            android:id="@+id/registerBttn"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Register"
-            android:textColor="@android:color/white" />
-
-        <Button
-            android:id="@+id/button4"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Forgotten Password?"
-            android:textColor="@android:color/white" />
-
-    </LinearLayout>
-
-    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="bottom"
-        android:gravity="bottom"
-        android:orientation="vertical">
+        android:focusable="true"
+        android:focusableInTouchMode="true">
 
-        <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:background="@null"
-            app:srcCompat="@drawable/sign_in" />
+        <ImageView
+            android:src="@drawable/wave_logo_white"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="100dp"
+            android:id="@+id/logoImageView"
+            android:scaleX="1"
+            android:scaleY="1" />
+
+        <TextView
+            tools:ignore="MissingPrefix"
+            android:id="@+id/welcome_title"
+            android:layout_height="35dp"
+            android:text="@string/login_welcome"
+            android:gravity="center_horizontal"
+            android:layout_width="fill_parent"
+            android:layout_alignParentTop="true"
+            android:textAlignment="center"
+            fontPath="nexalight.otf"
+            android:layout_marginBottom="0dp"
+            android:textColor="#fff"
+            android:textSize="25dp" />
+
+        <TextView
+            tools:ignore="MissingPrefix"
+            android:id="@+id/welcome_subtitle"
+            android:layout_height="20dp"
+            android:text="@string/login_subtitle"
+            android:gravity="center_horizontal"
+            android:layout_width="fill_parent"
+            android:layout_alignParentTop="true"
+            android:textAlignment="center"
+            fontPath="nexalight.otf"
+            android:layout_marginBottom="1dp"
+            android:textColor="#fff"
+            android:textSize="12dp" />
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:gravity="center"
+            android:layout_height="40dp"
+            android:layout_marginTop="70dp">
+
+            <Button
+                android:text=""
+                android:layout_width="150dp"
+                android:layout_gravity="center"
+                android:background="@drawable/facebook"
+                android:textColor="#fff"
+                fontPath="nexabold.otf"
+                android:elevation="5dp"
+                android:layout_height="2dp"
+                android:radius="10dp"
+                android:id="@+id/facebook"
+                android:layout_weight="1"
+                style="@android:style/Widget.Material.Light.Button" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:gravity="bottom"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                tools:ignore="MissingPrefix"
+                android:id="@+id/version"
+                android:layout_height="30dp"
+                android:text="@string/version"
+                android:gravity="center_horizontal"
+                android:layout_width="fill_parent"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="bottom"
+                android:textAlignment="center"
+                fontPath="nexalight.otf"
+                android:textColor="#cccccc"
+                android:textSize="10dp" />
+
+        </LinearLayout>
+
     </LinearLayout>
+
 
 </LinearLayout>

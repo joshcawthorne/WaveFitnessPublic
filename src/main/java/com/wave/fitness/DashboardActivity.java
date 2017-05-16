@@ -10,12 +10,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.makeramen.roundedimageview.RoundedImageView;
 import com.rogalabs.lib.model.SocialUser;
+import com.wave.fitness.fragments.SpotifyFragmentActivity;
 
 import java.util.Date;
 import java.util.Random;
@@ -55,15 +57,6 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
         for(SpotifyPlaylists.Genre genre : SpotifyPlaylists.Genre.values()){
             core.selectedGenre.put(genre, prefs.getBoolean(genre.name(), false));
         }
-
-
-
-        RoundedImageView img = (RoundedImageView) findViewById(R.id.runBanner);
-        img.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                onMapsStart();
-            }
-        });
     }
 
     public void updateWellcomeMsg(){
@@ -192,5 +185,46 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
 
         // Now start your activity
         startActivity(a);
+    }
+
+    public void startARun(View view) {
+        core.dashboardCard = false;
+        startActivity(new Intent(DashboardActivity.this, genreSelection.class));
+    }
+
+    public void getMoving(View view) {
+        core.dashboardCard = true;
+        core.chosenPlaylist = "spotify:user:spotify:playlist:37i9dQZF1DX1gcrZ1xC96D";
+        startActivity(new Intent(DashboardActivity.this, spotifyActivity.class));
+    }
+
+    public void edSheeran(View view) {
+        core.dashboardCard = true;
+        core.chosenPlaylist = "spotify:album:3T4tUhGYeRNVUGevb0wThu";
+        startActivity(new Intent(DashboardActivity.this, spotifyActivity.class));
+    }
+
+    public void cleanBandit(View view) {
+        core.dashboardCard = true;
+        core.chosenPlaylist = "spotify:album:4b13SJlne61y53KSEwuQtD";
+        startActivity(new Intent(DashboardActivity.this, spotifyActivity.class));
+    }
+
+    public void massiveDanceHits(View view) {
+        core.dashboardCard = true;
+        core.chosenPlaylist = "spotify:user:ministryofsounduk:playlist:7FUhHHA0zXAPVsJdDrNxNs";
+        startActivity(new Intent(DashboardActivity.this, spotifyActivity.class));
+    }
+
+    public void teenPopParty(View view) {
+        core.dashboardCard = true;
+        core.chosenPlaylist = "spotify:user:spotify:playlist:37i9dQZF1DX9bAf4c66TGs";
+        startActivity(new Intent(DashboardActivity.this, spotifyActivity.class));
+    }
+
+    public void noisesAfterDark(View view) {
+        core.dashboardCard = true;
+        core.chosenPlaylist = "spotify:user:spotify:playlist:37i9dQZF1DX4fxf4OrMhXb";
+        startActivity(new Intent(DashboardActivity.this, spotifyActivity.class));
     }
 }
