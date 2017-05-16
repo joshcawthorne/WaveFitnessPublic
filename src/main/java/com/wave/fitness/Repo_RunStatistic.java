@@ -35,6 +35,7 @@ public class Repo_RunStatistic {
         values.put(Data_RunStatistic.KEY_DURATION, data.duration);
         values.put(Data_RunStatistic.KEY_DISTANCE, data.distance);
         values.put(Data_RunStatistic.KEY_AVRSPEED, data.avrspeed);
+        values.put(Data_RunStatistic.KEY_AVRPACE, data.avrpace);
         values.put(Data_RunStatistic.KEY_CALORIES, data.calories);
         values.put(Data_RunStatistic.KEY_STEPPERMIN, data.totalStep);
         values.put(Data_RunStatistic.KEY_ROUTE, gson.toJson(data.route));
@@ -54,6 +55,7 @@ public class Repo_RunStatistic {
                 Data_RunStatistic.KEY_DURATION + "," +
                 Data_RunStatistic.KEY_DISTANCE + "," +
                 Data_RunStatistic.KEY_AVRSPEED + "," +
+                Data_RunStatistic.KEY_AVRPACE + "," +
                 Data_RunStatistic.KEY_CALORIES + "," +
                 Data_RunStatistic.KEY_STEPPERMIN + "," +
                 Data_RunStatistic.KEY_ROUTE + "," +
@@ -73,6 +75,7 @@ public class Repo_RunStatistic {
                 data.duration = cursor.getLong(cursor.getColumnIndex(Data_RunStatistic.KEY_DURATION));
                 data.distance = cursor.getFloat(cursor.getColumnIndex(Data_RunStatistic.KEY_DISTANCE));
                 data.avrspeed = cursor.getInt(cursor.getColumnIndex(Data_RunStatistic.KEY_AVRSPEED));
+                data.avrpace = cursor.getInt(cursor.getColumnIndex(Data_RunStatistic.KEY_AVRPACE));
                 data.calories = cursor.getInt(cursor.getColumnIndex(Data_RunStatistic.KEY_CALORIES));
                 data.totalStep = cursor.getInt(cursor.getColumnIndex(Data_RunStatistic.KEY_STEPPERMIN));
                 data.route = stringToArray(cursor.getString(cursor.getColumnIndex(Data_RunStatistic.KEY_ROUTE)), Location[].class);
