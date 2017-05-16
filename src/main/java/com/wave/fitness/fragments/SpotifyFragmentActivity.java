@@ -575,19 +575,25 @@ public class SpotifyFragmentActivity extends Fragment implements
     public void changeGenre() {
        oldURL = TEST_PLAYLIST_URI;
 
-        ArrayList<String> selectedSongs = new ArrayList<String>();
-        for(SpotifyPlaylists.Genre genre : SpotifyPlaylists.Genre.values()){
-            if(core.selectedGenre.get(genre)){
-                selectedSongs.addAll(Arrays.asList(SpotifyPlaylists.allGenre.get(genre)));
+        if(core.dashboardCard) {
+            onSkipToNextButtonClicked();
+        }
+
+        else {
+            ArrayList<String> selectedSongs = new ArrayList<String>();
+            for(SpotifyPlaylists.Genre genre : SpotifyPlaylists.Genre.values()){
+                if(core.selectedGenre.get(genre)){
+                    selectedSongs.addAll(Arrays.asList(SpotifyPlaylists.allGenre.get(genre)));
+                }
             }
-        }
 
-        if (core.mCurrentPlaybackState != null && core.mCurrentPlaybackState.isPlaying) {
-            genreSwitchResume = true;
-        }
-        TEST_PLAYLIST_URI = selectedSongs.get(new Random().nextInt(selectedSongs.size()));
+            if (core.mCurrentPlaybackState != null && core.mCurrentPlaybackState.isPlaying) {
+                genreSwitchResume = true;
+            }
+            TEST_PLAYLIST_URI = selectedSongs.get(new Random().nextInt(selectedSongs.size()));
 
-        stopRepeatGenre();
+            stopRepeatGenre();
+        }
     }
 
     public void stopRepeatGenre() {
