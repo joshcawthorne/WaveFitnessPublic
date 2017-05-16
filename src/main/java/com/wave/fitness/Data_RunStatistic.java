@@ -23,6 +23,7 @@ public class Data_RunStatistic {
     public static final String KEY_DURATION = "duration";
     public static final String KEY_DISTANCE = "distance";
     public static final String KEY_AVRSPEED = "avrspeed";
+    public static final String KEY_AVRPACE = "avrpace";
     public static final String KEY_CALORIES = "calories";
     public static final String KEY_STEPPERMIN = "steppermin";
     public static final String KEY_ROUTE = "route";
@@ -34,7 +35,8 @@ public class Data_RunStatistic {
     public long date;
     public long duration;
     public float distance;
-    public int avrspeed;
+    public float avrspeed;
+    public int avrpace;
     public int calories;
     public int totalStep;
 

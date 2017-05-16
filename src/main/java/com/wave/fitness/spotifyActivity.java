@@ -209,8 +209,8 @@ public class spotifyActivity extends AppCompatActivity {
     private int _StepValue = 0;
     private int _AvrPaceValue = 0;
     private long _startRunTime;
-    private int _DistanceValue;
-    private int _AvrSpeedValue = 0;
+    private float _DistanceValue;
+    private float _AvrSpeedValue = 0;
     private int _CaloriesValue;
     private ArrayList<Location> route;
     public ArrayList<Metadata.Track> songs = new ArrayList<>();
@@ -231,11 +231,11 @@ public class spotifyActivity extends AppCompatActivity {
         }else{
             _AvrPaceValue = (_AvrPaceValue + event.mPaceValue)/2;
         }
-        _DistanceValue = Math.round(event.mDistanceValue);
+        _DistanceValue = event.mDistanceValue;
         if(_AvrSpeedValue == 0){
-            _AvrSpeedValue = Math.round(event.mSpeedValue);
+            _AvrSpeedValue = event.mSpeedValue;
         }else{
-            _AvrSpeedValue = (_AvrSpeedValue+Math.round(event.mSpeedValue))/2;
+            _AvrSpeedValue = (_AvrSpeedValue+event.mSpeedValue)/2;
         }
         _CaloriesValue = event.mCaloriesValue;
     }
@@ -262,6 +262,7 @@ public class spotifyActivity extends AppCompatActivity {
         data.date = System.currentTimeMillis();
         data.duration = System.currentTimeMillis() - _startRunTime;
         data.avrspeed = _AvrSpeedValue;
+        data.avrpace = _AvrPaceValue;
         data.distance = _DistanceValue;
         data.calories = _CaloriesValue;
         data.totalStep = _StepValue;

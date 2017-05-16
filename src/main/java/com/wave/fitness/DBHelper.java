@@ -13,7 +13,7 @@ public class DBHelper extends SQLiteOpenHelper {
     //version number to upgrade database version
     //each time if you Add, Edit table, you need to change the
     //version number.
-    private static final int DATABASE_VERSION = 3;
+    private static final int DATABASE_VERSION = 5;
 
     // Database Name
     private static final String DATABASE_NAME = "crud.db";
@@ -31,7 +31,8 @@ public class DBHelper extends SQLiteOpenHelper {
                 + Data_RunStatistic.KEY_DATE + " INTEGER, "
                 + Data_RunStatistic.KEY_DURATION + " INTEGER, "
                 + Data_RunStatistic.KEY_DISTANCE + " REAL, "
-                + Data_RunStatistic.KEY_AVRSPEED + " INTEGER, "
+                + Data_RunStatistic.KEY_AVRSPEED + " REAL, "
+                + Data_RunStatistic.KEY_AVRPACE+ " INTEGER, "
                 + Data_RunStatistic.KEY_CALORIES + " INTEGER, "
                 + Data_RunStatistic.KEY_STEPPERMIN + " INTEGER, "
                 + Data_RunStatistic.KEY_ROUTE + " TEXT, "
