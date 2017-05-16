@@ -24,6 +24,7 @@ public class Data_RunStatistic {
     public static final String KEY_DISTANCE = "distance";
     public static final String KEY_AVRSPEED = "avrspeed";
     public static final String KEY_CALORIES = "calories";
+    public static final String KEY_STEPPERMIN = "steppermin";
     public static final String KEY_ROUTE = "route";
     public static final String KEY_SONGS = "songs";
 
@@ -32,9 +33,10 @@ public class Data_RunStatistic {
     public int id;
     public long date;
     public long duration;
-    public long distance;
-    public double avrspeed;
+    public int distance;
+    public int avrspeed;
     public int calories;
+    public int stepPerMin;
 
     //Need to convert to JSON before storing as String
     public List<Location> route;
