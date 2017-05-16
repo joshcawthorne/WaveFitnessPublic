@@ -36,7 +36,7 @@ public class Repo_RunStatistic {
         values.put(Data_RunStatistic.KEY_DISTANCE, data.distance);
         values.put(Data_RunStatistic.KEY_AVRSPEED, data.avrspeed);
         values.put(Data_RunStatistic.KEY_CALORIES, data.calories);
-
+        values.put(Data_RunStatistic.KEY_STEPPERMIN, data.stepPerMin);
         values.put(Data_RunStatistic.KEY_ROUTE, gson.toJson(data.route));
         values.put(Data_RunStatistic.KEY_SONGS, gson.toJson(data.songs));
 
@@ -55,6 +55,7 @@ public class Repo_RunStatistic {
                 Data_RunStatistic.KEY_DISTANCE + "," +
                 Data_RunStatistic.KEY_AVRSPEED + "," +
                 Data_RunStatistic.KEY_CALORIES + "," +
+                Data_RunStatistic.KEY_STEPPERMIN + "," +
                 Data_RunStatistic.KEY_ROUTE + "," +
                 Data_RunStatistic.KEY_SONGS +
                 " FROM " + Data_RunStatistic.TABLE
@@ -70,9 +71,10 @@ public class Repo_RunStatistic {
                 data.id = cursor.getInt(cursor.getColumnIndex(Data_RunStatistic.KEY_ID));
                 data.date = cursor.getLong(cursor.getColumnIndex(Data_RunStatistic.KEY_DATE));
                 data.duration = cursor.getLong(cursor.getColumnIndex(Data_RunStatistic.KEY_DURATION));
-                data.distance = cursor.getLong(cursor.getColumnIndex(Data_RunStatistic.KEY_DISTANCE));
-                data.avrspeed = cursor.getDouble(cursor.getColumnIndex(Data_RunStatistic.KEY_AVRSPEED));
+                data.distance = cursor.getInt(cursor.getColumnIndex(Data_RunStatistic.KEY_DISTANCE));
+                data.avrspeed = cursor.getInt(cursor.getColumnIndex(Data_RunStatistic.KEY_AVRSPEED));
                 data.calories = cursor.getInt(cursor.getColumnIndex(Data_RunStatistic.KEY_CALORIES));
+                data.stepPerMin = cursor.getInt(cursor.getColumnIndex(Data_RunStatistic.KEY_STEPPERMIN));
                 data.route = stringToArray(cursor.getString(cursor.getColumnIndex(Data_RunStatistic.KEY_ROUTE)), Location[].class);
                 data.songs = stringToArray(cursor.getString(cursor.getColumnIndex(Data_RunStatistic.KEY_SONGS)), Metadata.Track[].class);
 
