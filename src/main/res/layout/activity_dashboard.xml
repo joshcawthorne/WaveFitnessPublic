@@ -264,24 +264,6 @@
 
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="fill_parent"
-                    android:layout_height="60dp"
-                    android:background="@color/wavePrimary">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Get Straight to it:"
-                        fontPath="fonts/Montserrat-Light.otf"
-                        android:layout_marginLeft="20dp"
-                        android:textAlignment="center"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:textColor="#fff"
-                        android:textSize="16dp"
-                        />
-                </LinearLayout>
-
                 <com.makeramen.roundedimageview.RoundedImageView
                     xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:id="@+id/runBanner"

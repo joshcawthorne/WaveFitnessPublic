@@ -704,6 +704,8 @@ public class SpotifyFragmentActivity extends Fragment implements
     @Subscribe
     public void onRunDataUpdate(UpdateRunStatEvent event){
         TextView speedcur = (TextView) v.findViewById(R.id.speedcur);
-
+        TextView speedcur = (TextView) v.findViewById(R.id.);
+        TextView speedcur = (TextView) v.findViewById(R.id.speedcur);
+        speedcur.setText(String.valueOf(event.mPaceValue));
     }
 }
