@@ -323,62 +323,7 @@ public class PedometerFragment extends android.support.v4.app.Fragment {
             }
         }
     }
-/*
-    private static final int MENU_SETTINGS = 8;
-    private static final int MENU_QUIT     = 9;
 
-    private static final int MENU_PAUSE = 1;
-    private static final int MENU_RESUME = 2;
-    private static final int MENU_RESET = 3;
-
-    public boolean onPrepareOptionsMenu(Menu menu) {
-        menu.clear();
-        if (mIsRunning) {
-            menu.add(0, MENU_PAUSE, 0, R.string.pause)
-                    .setIcon(android.R.drawable.ic_media_pause)
-                    .setShortcut('1', 'p');
-        }
-        else {
-            menu.add(0, MENU_RESUME, 0, R.string.resume)
-                    .setIcon(android.R.drawable.ic_media_play)
-                    .setShortcut('1', 'p');
-        }
-        menu.add(0, MENU_RESET, 0, R.string.reset)
-                .setIcon(android.R.drawable.ic_menu_close_clear_cancel)
-                .setShortcut('2', 'r');
-        menu.add(0, MENU_SETTINGS, 0, R.string.settings)
-                .setIcon(android.R.drawable.ic_menu_preferences)
-                .setShortcut('8', 's')
-                .setIntent(new Intent(getActivity(), Settings.class));
-        menu.add(0, MENU_QUIT, 0, R.string.quit)
-                .setIcon(android.R.drawable.ic_lock_power_off)
-                .setShortcut('9', 'q');
-        return true;
-
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case MENU_PAUSE:
-                unbindStepService();
-                stopStepService();
-                return true;
-            case MENU_RESUME:
-                startStepService();
-                bindStepService();
-                return true;
-            case MENU_RESET:
-                resetValues(true);
-                return true;
-            case MENU_QUIT:
-                resetValues(false);
-                unbindStepService();
-                stopStepService();
-                mQuitting = true;
-                this.getActivity()finish();
-                return true;
-        }
-        return false;
-    }
-*/
     // TODO: unite all into 1 type of message
     private StepService.ICallback mCallback = new StepService.ICallback() {
         public void stepsChanged(int value) {
@@ -410,6 +355,7 @@ public class PedometerFragment extends android.support.v4.app.Fragment {
                 case STEPS_MSG:
                     mStepValue = (int)msg.arg1;
                     mStepValueView.setText("" + mStepValue);
+                    BusProvider.getInstance().post(produceUpdateRunStatEvent());
                     break;
                 case PACE_MSG:
                     mPaceValue = msg.arg1;

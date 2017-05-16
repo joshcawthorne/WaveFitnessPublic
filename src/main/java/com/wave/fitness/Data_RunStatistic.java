@@ -33,10 +33,10 @@ public class Data_RunStatistic {
     public int id;
     public long date;
     public long duration;
-    public int distance;
+    public float distance;
     public int avrspeed;
     public int calories;
-    public int stepPerMin;
+    public int totalStep;
 
     //Need to convert to JSON before storing as String
     public List<Location> route;

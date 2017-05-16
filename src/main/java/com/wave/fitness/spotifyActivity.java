@@ -55,6 +55,7 @@ public class spotifyActivity extends AppCompatActivity {
         setContentView(R.layout.activity_spotify);
 
         core = (SpotifyCore) getApplicationContext();
+        core.isRunning = false;
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -263,7 +264,7 @@ public class spotifyActivity extends AppCompatActivity {
         data.avrspeed = _AvrSpeedValue;
         data.distance = _DistanceValue;
         data.calories = _CaloriesValue;
-        data.stepPerMin = _StepValue;
+        data.totalStep = _StepValue;
         data.route = route;
         data.songs = songs;
 
