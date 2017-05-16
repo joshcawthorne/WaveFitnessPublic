@@ -4,7 +4,8 @@
     android:layout_gravity="bottom"
     android:gravity="bottom"
     android:layout_alignParentBottom="true"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:visibility="invisible">
 
     <LinearLayout
         android:id="@+id/playBar"

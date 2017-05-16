@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.ColorStateList;
 import android.location.Location;
 import android.os.Bundle;
 import android.os.Handler;
@@ -81,6 +82,7 @@ public class spotifyActivity extends AppCompatActivity {
                         }
                     }, 2000);
                 }else {
+                    btn.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.md_green_400)));
                     onStartRun();
                     core.isRunning = true;
                 }
