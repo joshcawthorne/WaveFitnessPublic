@@ -732,10 +732,6 @@ public class SpotifyFragmentActivity extends Fragment implements
         }
     }
 
-    public void addSongCard() {
-        ListView pastSongs = (ListView) v.findViewById(R.id.pastsongs);
-    }
-
     @Override
     public void onPlaybackError(Error error) {
         logStatus("Err: " + error);
@@ -746,8 +742,10 @@ public class SpotifyFragmentActivity extends Fragment implements
         TextView speedcur = (TextView) v.findViewById(R.id.speedcur);
         TextView distcur = (TextView) v.findViewById(R.id.distcur);
         TextView calcur = (TextView) v.findViewById(R.id.calcur);
+        TextView curspeedcur = (TextView) v.findViewById(R.id.curspeedcur);
         speedcur.setText(String.valueOf(event.mPaceValue));
         distcur.setText(String.valueOf(event.mDistanceValue));
         calcur.setText(String.valueOf(event.mCaloriesValue));
+        curspeedcur.setText(String.valueOf(event.mSpeedValue));
     }
 }

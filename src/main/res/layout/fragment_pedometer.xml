@@ -4,6 +4,10 @@
     android:layout_height="match_parent"
     tools:context="com.wave.fitness.fragments.PedometerFragment">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
@@ -89,13 +93,6 @@
                         android:text="@string/kilometers"
                         android:textSize="20sp"
                         android:padding="5dp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
 
                     <TextView
                         android:id="@+id/distance_value"
@@ -138,13 +135,6 @@
                         android:text="@string/steps_per_minute"
                         android:textSize="20sp"
                         android:padding="5dp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
 
                     <TextView
                         android:id="@+id/pace_value"
@@ -187,13 +177,6 @@
                         android:text="@string/kilometers_per_hour"
                         android:textSize="20sp"
                         android:padding="5dp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5">
 
                     <TextView
                         android:id="@+id/speed_value"
@@ -238,13 +221,6 @@
                         android:text="@string/calories_burned"
                         android:textSize="20sp"
                         android:padding="5dp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5">
 
                     <TextView
                         android:id="@+id/calories_value"
@@ -266,11 +242,12 @@
         <LinearLayout
             android:id="@+id/desired_pace_control"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="300dp"
             android:layout_weight="1"
             android:gravity="center_horizontal"
             android:orientation="horizontal"
-            android:paddingTop="@dimen/row_spacing">
+            android:paddingTop="@dimen/row_spacing"
+            android:visibility="invisible">
 
             <!-- Button "-", for decrementing desired pace/speed -->
             <Button
@@ -314,5 +291,5 @@
 
         </LinearLayout>
     </LinearLayout>
-
+    </ScrollView>
 </FrameLayout>
