@@ -158,6 +158,7 @@ public class SpotifyFragmentActivity extends Fragment implements
     Drawer menu;
     private TabLayout tabLayout;
     private ViewPager viewPager;
+    public String oldURL = "";
 
     private ArrayList<Metadata.Track> songHistory;
     private void addSongToHistory(){
@@ -247,6 +248,13 @@ public class SpotifyFragmentActivity extends Fragment implements
         Toast.makeText(getActivity(), "This is a temporary layout for music.",
                 Toast.LENGTH_LONG).show();
 
+        ImageView shuffleGenre = (ImageView) v.findViewById(R.id.switch_genre);
+
+        shuffleGenre.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                changeGenre();
+            }
+        });
         return v;
     }
 
@@ -564,6 +572,33 @@ public class SpotifyFragmentActivity extends Fragment implements
         }
     }
 
+    public void changeGenre() {
+       oldURL = TEST_PLAYLIST_URI;
+
+        ArrayList<String> selectedSongs = new ArrayList<String>();
+        for(SpotifyPlaylists.Genre genre : SpotifyPlaylists.Genre.values()){
+            if(core.selectedGenre.get(genre)){
+                selectedSongs.addAll(Arrays.asList(SpotifyPlaylists.allGenre.get(genre)));
+            }
+        }
+
+        if (core.mCurrentPlaybackState != null && core.mCurrentPlaybackState.isPlaying) {
+            genreSwitchResume = true;
+        }
+        TEST_PLAYLIST_URI = selectedSongs.get(new Random().nextInt(selectedSongs.size()));
+
+        stopRepeatGenre();
+    }
+
+    public void stopRepeatGenre() {
+        if (oldURL == TEST_PLAYLIST_URI) {
+            changeGenre();
+        }
+        else{
+            checkMusic();
+        }
+    }
+
     public void checkMusic() {
         while(!core.mPlayer.isLoggedIn()){
 
@@ -696,6 +731,11 @@ public class SpotifyFragmentActivity extends Fragment implements
             updateView();
         }
     }
+
+    public void addSongCard() {
+        ListView pastSongs = (ListView) v.findViewById(R.id.pastsongs);
+    }
+
     @Override
     public void onPlaybackError(Error error) {
         logStatus("Err: " + error);
@@ -704,8 +744,10 @@ public class SpotifyFragmentActivity extends Fragment implements
     @Subscribe
     public void onRunDataUpdate(UpdateRunStatEvent event){
         TextView speedcur = (TextView) v.findViewById(R.id.speedcur);
-        TextView speedcur = (TextView) v.findViewById(R.id.);
-        TextView speedcur = (TextView) v.findViewById(R.id.speedcur);
+        TextView distcur = (TextView) v.findViewById(R.id.distcur);
+        TextView calcur = (TextView) v.findViewById(R.id.calcur);
         speedcur.setText(String.valueOf(event.mPaceValue));
+        distcur.setText(String.valueOf(event.mDistanceValue));
+        calcur.setText(String.valueOf(event.mCaloriesValue));
     }
 }

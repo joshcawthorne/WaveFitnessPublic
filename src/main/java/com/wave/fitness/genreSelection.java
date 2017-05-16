@@ -49,6 +49,8 @@ public class genreSelection extends AppCompatActivity {
     Boolean indierockSelect = false;
     Boolean classichitsSelect = false;
 
+    int selected = 0;
+
     ArrayList<String> selection;
 
     @Override
@@ -92,11 +94,17 @@ public class genreSelection extends AppCompatActivity {
                     popSquare.setImageResource(R.drawable.popbannersquare);
                     core.selectedGenre.put(SpotifyPlaylists.Genre.POP, false);
                     popSelect = false;
+                    if(selected > 0){
+                        selected --;
+                    }
+                    checkFab();
                 }else{
                     Log.e("SELECTION", "SELECTED");
                     popSquare.setImageResource(R.drawable.popbannersquareselected);
                     core.selectedGenre.put(SpotifyPlaylists.Genre.POP, true);
                     popSelect = true;
+                    selected ++;
+                    checkFab();
                 }
             }
         });
@@ -109,11 +117,17 @@ public class genreSelection extends AppCompatActivity {
                     rockSquare.setImageResource(R.drawable.rocksquare);
                     core.selectedGenre.put(SpotifyPlaylists.Genre.ROCK, false);
                     rockSelect = true;
+                    if(selected > 0){
+                        selected --;
+                    }
+                    checkFab();
                 }else{
                     Log.e("SELECTION", "SELECTED");
                     rockSquare.setImageResource(R.drawable.rocksquareselected);
                     core.selectedGenre.put(SpotifyPlaylists.Genre.ROCK, true);
                     rockSelect = false;
+                    selected ++;
+                    checkFab();
                 }
             }
         });
@@ -126,12 +140,18 @@ public class genreSelection extends AppCompatActivity {
                     funksquare.setImageResource(R.drawable.funksquare);
                     core.selectedGenre.put(SpotifyPlaylists.Genre.FUNK, false);
                     funkSelect = true;
+                    if(selected > 0){
+                        selected --;
+                    }
+                    checkFab();
                 }
                 else {
                     Log.e("SELECTION", "UNSELECTED");
                     funksquare.setImageResource(R.drawable.funksquareselected);
                     core.selectedGenre.put(SpotifyPlaylists.Genre.FUNK, true);
                     funkSelect = false;
+                    selected ++;
+                    checkFab();
                 }
             }
         });
@@ -144,12 +164,18 @@ public class genreSelection extends AppCompatActivity {
                     classicalsquare.setImageResource(R.drawable.classicalsquare);
                     core.selectedGenre.put(SpotifyPlaylists.Genre.CLASSICAL, false);
                     classicalSelect = true;
+                    if(selected > 0){
+                        selected --;
+                    }
+                    checkFab();
                 }
                 else {
                     Log.e("SELECTION", "UNSELECTED");
                     classicalsquare.setImageResource(R.drawable.classicalsquareselected);
                     core.selectedGenre.put(SpotifyPlaylists.Genre.CLASSICAL, true);
                     classicalSelect = false;
+                    selected ++;
+                    checkFab();
                 }
             }
         });
@@ -162,12 +188,18 @@ public class genreSelection extends AppCompatActivity {
                     electronicsquare.setImageResource(R.drawable.electronicsquare);
                     core.selectedGenre.put(SpotifyPlaylists.Genre.ELECTRONIC, false);
                     electronicSelect = true;
+                    if(selected > 0){
+                        selected --;
+                    }
+                    checkFab();
                 }
                 else {
                     Log.e("SELECTION", "UNSELECTED");
                     electronicsquare.setImageResource(R.drawable.electronicsquareselected);
                     core.selectedGenre.put(SpotifyPlaylists.Genre.ELECTRONIC, true);
                     electronicSelect = false;
+                    selected ++;
+                    checkFab();
                 }
             }
         });
@@ -180,12 +212,18 @@ public class genreSelection extends AppCompatActivity {
                     jazzfusionsquare.setImageResource(R.drawable.jazzfusionsquare);
                     core.selectedGenre.put(SpotifyPlaylists.Genre.JAZZFUSION, false);
                     jazzfusionSelect = true;
+                    if(selected > 0){
+                        selected --;
+                    }
+                    checkFab();
                 }
                 else {
                     Log.e("SELECTION", "UNSELECTED");
                     jazzfusionsquare.setImageResource(R.drawable.jazzfusionsquareselected);
                     core.selectedGenre.put(SpotifyPlaylists.Genre.JAZZFUSION, true);
                     jazzfusionSelect = false;
+                    selected ++;
+                    checkFab();
                 }
             }
         });
@@ -198,12 +236,18 @@ public class genreSelection extends AppCompatActivity {
                     indierocksquare.setImageResource(R.drawable.indierocksquare);
                     core.selectedGenre.put(SpotifyPlaylists.Genre.INDIEROCK, false);
                     indierockSelect = true;
+                    if(selected > 0){
+                        selected --;
+                    }
+                    checkFab();
                 }
                 else {
                     Log.e("SELECTION", "UNSELECTED");
                     indierocksquare.setImageResource(R.drawable.indierocksquareselected);
                     core.selectedGenre.put(SpotifyPlaylists.Genre.INDIEROCK, true);
                     indierockSelect = false;
+                    selected ++;
+                    checkFab();
                 }
             }
         });
@@ -216,15 +260,32 @@ public class genreSelection extends AppCompatActivity {
                     classichitssquare.setImageResource(R.drawable.classichitssquare);
                     core.selectedGenre.put(SpotifyPlaylists.Genre.HITS, false);
                     classichitsSelect = true;
+                    if(selected > 0){
+                        selected --;
+                    }
+                    checkFab();
                 }
                 else {
                     Log.e("SELECTION", "UNSELECTED");
                     classichitssquare.setImageResource(R.drawable.classichitssquareselected);
                     core.selectedGenre.put(SpotifyPlaylists.Genre.HITS, true);
                     classichitsSelect = false;
+                    selected ++;
+                    checkFab();
                 }
             }
         });
+    }
+
+    private void checkFab() {
+        FloatingActionButton continueFAB = (FloatingActionButton) findViewById(R.id.continuefab);
+        Log.e("FAB", selected + "Run");
+        if(selected == 0) {
+            continueFAB.hide();
+        }
+        else {
+            continueFAB.show();
+        }
     }
 
     @Override

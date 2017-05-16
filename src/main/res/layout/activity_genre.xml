@@ -170,6 +170,7 @@
             android:clickable="true"
             app:fabSize="normal"
             app:srcCompat="@drawable/done"
+            android:visibility="invisible"
             android:id="@+id/continuefab"
             android:elevation="5dp"/>
     </FrameLayout>

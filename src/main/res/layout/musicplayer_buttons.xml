@@ -46,7 +46,6 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="7dp"
                     android:textAlignment="center"
-                    android:layout_marginLeft="8dp"
                     />
 
                 <LinearLayout
@@ -73,8 +72,7 @@
                             android:padding="2dp"
                             android:layout_margin="5dp"
                             android:background="?android:attr/selectableItemBackground"
-                            android:src="@drawable/diceblack"
-                            android:onClick=""/>
+                            android:src="@drawable/diceblack" />
 
                         <ImageView
                             android:id="@+id/skip_next_button"
@@ -120,55 +118,162 @@
                     android:gravity="center_horizontal">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:id="@+id/currentgenre"
-                        fontPath="fonts/Montserrat-Bold.otf"
-                        android:textSize="10dp"
-                        android:textColor="@color/wave_drawer_primary_text"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="7dp"
-                        android:textAlignment="center"
-                        android:layout_marginLeft="8dp"
-                        />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/speedtext"
+                        android:text="Current Speed: "/>
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:layout_gravity="center_horizontal"
-                        android:gravity="center_horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/speedcur"/>
-
-                        <ImageView
-                            android:id="@+id/switch_genre"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:padding="2dp"
-                            android:layout_margin="5dp"
-                            android:background="?android:attr/selectableItemBackground"
-                            android:src="@drawable/diceblack"
-                            android:onClick=""/>
-
-                        <ImageView
-                            android:id="@+id/skip_next_button"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:padding="2dp"
-                            android:layout_margin="5dp"
-                            android:background="?android:attr/selectableItemBackground"
-                            android:src="@drawable/next"
-                            android:onClick="onSkipToNextButtonClicked"/>
-
-                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/speedcur"/>
 
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:background="@color/wave_drawer_background"
+            android:layout_weight=".80"
+            android:elevation="5dp"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/caltext"
+                    android:text="Calories Burnt: "/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/calcur"/>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:background="@color/wave_drawer_background"
+            android:layout_weight=".80"
+            android:elevation="5dp"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/disttext"
+                    android:text="Distance Run: "/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/distcur"/>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:background="@color/wave_drawer_background"
+            android:layout_weight=".80"
+            android:elevation="5dp"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/disttexttwo"
+                    android:text="Distance Run: "/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/distcurtwo"/>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:background="@color/wave_drawer_background"
+            android:layout_weight=".80"
+            android:elevation="5dp"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Past songs:"/>
+
+                <ListView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pastsongs"></ListView>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
 
     </LinearLayout>
 

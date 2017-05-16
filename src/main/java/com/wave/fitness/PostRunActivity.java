@@ -120,6 +120,6 @@ public class PostRunActivity extends AppCompatActivity implements OnMapReadyCall
         _time.setText(timeform);
         _calories.setText(String.valueOf(data.calories));
         _distance.setText(String.valueOf(data.distance));
-        //_steps.setText(String.valueOf(data.));
+        _steps.setText(String.valueOf(data.totalStep));
     }
 }

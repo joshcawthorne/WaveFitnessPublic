@@ -21,17 +21,17 @@
     <string name="started">Pedometer started.</string>
     <string name="stopped">Pedometer stopped.</string>
 
-    <string name="steps">steps</string>
-    <string name="kilometers">kilometers</string>
-    <string name="miles">miles</string>
-    <string name="steps_per_minute">steps / minute</string>
-    <string name="kilometers_per_hour">kilometers / hour</string>
-    <string name="miles_per_hour">miles / hour</string>
-    <string name="calories_burned">calories burned</string>
-    <string name="centimeters">centimeters</string>
-    <string name="inches">inches</string>
-    <string name="kilograms">kilograms</string>
-    <string name="pounds">pounds</string>
+    <string name="steps">Steps</string>
+    <string name="kilometers">Kilometers</string>
+    <string name="miles">Miles</string>
+    <string name="steps_per_minute">Steps / Minute</string>
+    <string name="kilometers_per_hour">Kilometers / Hour</string>
+    <string name="miles_per_hour">Miles / hour</string>
+    <string name="calories_burned">Calories burned</string>
+    <string name="centimeters">Centimeters</string>
+    <string name="inches">Inches</string>
+    <string name="kilograms">Kilograms</string>
+    <string name="pounds">Pounds</string>
 
     <string name="desired_pace">Desired pace:</string>
     <string name="desired_speed">Desired speed:</string>
