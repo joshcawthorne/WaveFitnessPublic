@@ -7,111 +7,93 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-feature android:glEsVersion="0x00020000" android:required="true" />
-    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
-    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
     <!-- Required for Google Login -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.USE_CREDENTIALS" />
 
     <application
-        tools:replace="android:label"
+        android:name=".SpotifyCore"
         android:allowBackup="true"
         android:icon="@mipmap/launcher_icon"
         android:label="WaveFitness"
+        android:largeHeap="true"
         android:theme="@style/WaveTheme"
-        android:name=".SpotifyCore"
-        android:largeHeap="true">
-
-
+        tools:replace="android:label">
         <activity
             android:name=".SplashActivity"
-            android:theme="@style/SplashTheme"
-            android:noHistory="true">
+            android:noHistory="true"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".setupActivity"
             android:label="@string/app_name"
-            android:theme="@style/WaveTheme">
-        </activity>
-
+            android:theme="@style/WaveTheme"></activity>
         <activity
             android:name=".PostRunActivity"
             android:label="@string/app_name"
-            android:theme="@style/WaveTheme">
-        </activity>
-
+            android:theme="@style/WaveTheme"></activity>
         <activity
             android:name=".spotifyActivity"
             android:label="@string/app_name"
-            android:theme="@style/WaveTheme">
-        </activity>
-
+            android:theme="@style/WaveTheme"></activity>
         <activity
             android:name=".AuthActivity"
             android:label="@string/app_name"
-            android:theme="@style/WaveTheme">
-        </activity>
-
+            android:theme="@style/WaveTheme"></activity>
         <activity
             android:name=".genreSelection"
             android:label="@string/app_name"
-            android:theme="@style/WaveTheme"
-            android:noHistory="true">
-        </activity>
-
+            android:noHistory="true"
+            android:theme="@style/WaveTheme"></activity>
         <activity
             android:name=".OLDsignupActivity"
             android:label="@string/app_name"
-            android:theme="@style/WaveTheme">
-        </activity>
-
+            android:theme="@style/WaveTheme"></activity>
         <activity
             android:name=".DashboardActivity"
             android:label="Wave Fitness"
-            android:theme="@style/WaveTheme"
-            android:launchMode="singleTask">
-        </activity>
-
+            android:launchMode="singleTask"
+            android:theme="@style/WaveTheme"></activity>
         <activity
             android:name=".MusicPlayerActivity"
             android:label="Music Player"
-            android:theme="@style/WaveTheme.NoActionBar">
-        </activity>
-
+            android:theme="@style/WaveTheme.NoActionBar"></activity>
         <activity
             android:name=".DemoActivity"
             android:label="@string/title_activity_demo"
-            android:windowSoftInputMode="stateHidden">
-
-        </activity>
-
+            android:windowSoftInputMode="stateHidden"></activity>
         <activity
             android:name=".RunActivity"
-            android:launchMode="singleTop">
-        </activity>
-
-        <activity android:name="com.facebook.FacebookActivity"
-            android:configChanges=
-                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:launchMode="singleTop"></activity>
+        <activity android:name=".PreviousRunActivity"></activity>
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:label="@string/app_name" />
-
         <activity
             android:name="com.facebook.CustomTabActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".authentication.WebAuthResultActivity"
             android:theme="@android:style/Theme.Translucent.NoTitleBar">
@@ -126,13 +108,13 @@
                     android:scheme="testschema" />
             </intent-filter>
         </activity>
-
         <activity
             android:name="com.spotify.sdk.android.authentication.LoginActivity"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
-        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
-
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
@@ -142,14 +124,12 @@
 
         <!-- Pedometer -->
 
-        <service android:name=".pedometer.StepService"/>
+        <service android:name=".pedometer.StepService" />
 
-        <activity android:name=".Settings"
-            android:label="@string/activity_settings">
-        </activity>
-
+        <activity
+            android:name=".Settings"
+            android:label="@string/activity_settings"></activity>
 
     </application>
-
 
 </manifest>

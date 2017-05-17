@@ -172,7 +172,7 @@
                         fontPath="fonts/Montserrat-Bold.otf" />
                     <TextView
                         android:layout_width="wrap_content"
-                        android:id="@+id/metadataSubTitle"
+                        android:id="@+id/subtitleone"
                         android:layout_height="wrap_content"
                         android:textSize="8dp"
                         android:text="Error - No Data supplied!"
