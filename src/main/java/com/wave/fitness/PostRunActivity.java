@@ -86,8 +86,6 @@ public class PostRunActivity extends AppCompatActivity implements OnMapReadyCall
     @InjectView(R.id.metaDataTimeFive) TextView _time5;
 
 
-
-
     private HamburgerMenu menu;
     Toolbar toolbar;
 
