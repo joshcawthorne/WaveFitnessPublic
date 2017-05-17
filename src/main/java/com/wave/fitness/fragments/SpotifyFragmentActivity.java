@@ -98,6 +98,8 @@ import com.wave.fitness.runningEvent.TrackChangedEvent;
 import com.wave.fitness.runningEvent.UpdateRunStatEvent;
 import com.wave.fitness.spotifyActivity;
 
+import org.w3c.dom.Text;
+
 import at.favre.lib.dali.Dali;
 
 import static android.app.Activity.RESULT_OK;
@@ -152,6 +154,7 @@ public class SpotifyFragmentActivity extends Fragment implements
     private TextView mMetaDataSubtext;
     private TextView mMetaDataTime;
     private TextView mGenreData;
+    private TextView mMusicTitle;
     private EditText mSeekEditText;
     private ScrollView mStatusTextScrollView;
     private String currentPlaylist = "null";
@@ -453,7 +456,8 @@ public class SpotifyFragmentActivity extends Fragment implements
             mMetaDataTime.setText(durationStr);
 
             mGenreData.setText("You're listening to " + core.mMetadata.currentTrack.albumName);
-
+            //mMusicTitle = (TextView) v.findViewById(R.id.tracktitle);
+            musicTitle.setText(core.mMetadata.currentTrack)
             collapsingToolbarLayout = (CollapsingToolbarLayout) v.findViewById(R.id.collapsing_toolbar);
             collapsingToolbarLayout.setTitle(core.mMetadata.currentTrack.name + " - " + core.mMetadata.currentTrack.artistName);
             collapsingToolbarLayout.setCollapsedTitleTextColor(getResources().getColor(android.R.color.black));

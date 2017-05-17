@@ -15,6 +15,95 @@
         android:layout_weight=".80"
         android:orientation="vertical">
 
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:background="#EEE"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="5dp"
+            android:background="#EEE"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:layout_height="55dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical"
+                >
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:id="@+id/musiccomment"
+                    android:text="You're listening to"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="0dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="12dp"
+                    fontPath="fonts/Montserrat-SemiBold.otf"
+                    android:textAllCaps="true"
+                    android:textColor="#9e9e9e"
+                    android:layout_height="15dp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:text="Music"
+                    android:id="@+id/tracktitle"
+                    android:paddingLeft="15dp"
+                    android:textSize="30dp"
+                    android:includeFontPadding="false"
+                    fontPath="fonts/Montserrat-Bold.otf"
+                    android:textAllCaps="true"
+                    android:textColor="#000"
+                    android:layout_height="40dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="75dp"
+            android:gravity="clip_vertical|right|end"
+            android:background="#EEE"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center_vertical|right|end"
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="25dp">
+
+            <LinearLayout
+                android:layout_width="35dp"
+                android:layout_gravity="center_vertical|right|end"
+                android:gravity="clip_vertical|right|end"
+                android:layout_alignParentRight="true"
+                android:layout_height="35dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="0dp"
+                >
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/profile_image"
+                    android:layout_gravity="center_vertical|right|end"
+                    android:layout_width="35dp"
+                    android:gravity="clip_vertical|right|end"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="35dp"
+                    android:src="@drawable/temp_profile"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
