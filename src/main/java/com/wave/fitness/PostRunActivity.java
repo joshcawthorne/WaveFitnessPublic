@@ -164,7 +164,7 @@ public class PostRunActivity extends AppCompatActivity implements OnMapReadyCall
         _playBar4.setVisibility(LinearLayout.GONE);
         _playBar5.setVisibility(LinearLayout.GONE);
 
-        for(int i = 0; i<5; i++){
+        for(int i = 0; i < data.songs.size(); i++){
             Metadata.Track track = data.songs.get(i);
             final String durationStr =
                     String.format("\n %02d:%02d",
