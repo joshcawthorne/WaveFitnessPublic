@@ -52,7 +52,9 @@ public class PostRunActivity extends AppCompatActivity implements OnMapReadyCall
     @InjectView(R.id.calories) TextView _calories;
     @InjectView(R.id.distance) TextView _distance;
     @InjectView(R.id.steps_value) TextView _steps;
+
     @InjectView(R.id.shareFB) ImageView _shareFB;
+    @InjectView(R.id.shareTwitter) ImageView _shareTwitter;
 
     //Songlist
     @InjectView(R.id.playBar) LinearLayout _playBar1;
@@ -123,6 +125,12 @@ public class PostRunActivity extends AppCompatActivity implements OnMapReadyCall
                 onPostToFacebook();
             }
         });
+        _shareTwitter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onPostToTwitter();
+            }
+        });
 
 
         map = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
@@ -152,6 +160,16 @@ public class PostRunActivity extends AppCompatActivity implements OnMapReadyCall
                             "Total Steps " + String.valueOf(data.totalStep) + "\n" +
                             "Average Speed" + String.valueOf(data.avrspeed) + "\n" +
                             "Average Step Per Minute" + String.valueOf(data.avrspeed) + "#WaveFitness")
+                .socialChannel(Shareable.Builder.FACEBOOK)
+                .build();
+        shareAction.share();
+    }
+    protected void onPostToTwitter() {
+        Shareable shareAction = new Shareable.Builder(this)
+                .message("I've finished a " + String.valueOf(data.distance) + "Km run and burned " + String.valueOf(data.calories)+ "Calories! \n" +
+                        "Total Steps " + String.valueOf(data.totalStep) + "\n" +
+                        "Average Speed" + String.valueOf(data.avrspeed) + "\n" +
+                        "Average Step Per Minute" + String.valueOf(data.avrspeed) + "#WaveFitness")
                 .socialChannel(Shareable.Builder.TWITTER)
                 .build();
         shareAction.share();

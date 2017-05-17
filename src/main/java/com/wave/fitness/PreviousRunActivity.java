@@ -88,9 +88,9 @@ public class PreviousRunActivity extends AppCompatActivity {
 
     private void populateRunData(){
         Data_RunStatistic stat;
-        SimpleDateFormat parseFormat = new SimpleDateFormat("EEEE");
+        SimpleDateFormat parseFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
         Date date = new Date();
-/*
+
         stat = new Repo_RunStatistic(getApplicationContext()).getEntrybyID(lastRunId-9);
         date.setTime(stat.date);
 
@@ -116,7 +116,7 @@ public class PreviousRunActivity extends AppCompatActivity {
         date.setTime(stat.date);
         title5.setText("Run on " + parseFormat.format(date));
         subtitle5.setText("Click to view");
-*/
+
         stat = new Repo_RunStatistic(getApplicationContext()).getEntrybyID(lastRunId-4);
         date.setTime(stat.date);
         title6.setText("Run on " + parseFormat.format(date));
@@ -144,7 +144,7 @@ public class PreviousRunActivity extends AppCompatActivity {
     }
 
     private void injectOnClickListener(){
-/*
+
         bar1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -175,7 +175,7 @@ public class PreviousRunActivity extends AppCompatActivity {
                 startPostRunActivity(lastRunId - 5);
             }
         });
-        */
+
         bar6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
