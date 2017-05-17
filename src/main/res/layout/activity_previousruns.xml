@@ -1,0 +1,782 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:theme="@style/WaveTheme"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/wave_drawer_background"
+        android:textColor="@color/wave_drawer_primary_text"
+        android:titleTextColor="@color/wave_drawer_primary_text"
+        android:subtitleTextColor="@color/wave_drawer_primary_text"
+        android:elevation="4dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:background="#EEE"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="5dp"
+                android:background="#EEE"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="15dp"
+                    android:layout_height="55dp"
+                    android:layout_marginRight="5dp"
+                    android:orientation="vertical"
+                    >
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:id="@+id/statscomment"
+                        android:text="Track your progress"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="0dp"
+                        android:layout_marginTop="0dp"
+                        android:textSize="12dp"
+                        fontPath="fonts/Montserrat-SemiBold.otf"
+                        android:textAllCaps="true"
+                        android:textColor="#9e9e9e"
+                        android:layout_height="15dp" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:text="Previous runs: "
+                        android:id="@+id/stattitle"
+                        android:paddingLeft="15dp"
+                        android:ellipsize="marquee"
+                        android:fadingEdge="horizontal"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:scrollHorizontally="true"
+                        android:maxLines="1"
+                        android:textSize="20dp"
+                        android:includeFontPadding="false"
+                        fontPath="fonts/Montserrat-Bold.otf"
+                        android:textAllCaps="true"
+                        android:textColor="#000"
+                        android:layout_height="40dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="50dp"
+                android:layout_height="75dp"
+                android:gravity="clip_vertical|right|end"
+                android:background="#EEE"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center_vertical|right|end"
+                android:orientation="horizontal"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="25dp">
+
+                <LinearLayout
+                    android:layout_width="35dp"
+                    android:layout_gravity="center_vertical|right|end"
+                    android:gravity="clip_vertical|right|end"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="0dp"
+                    >
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/roundart"
+                        android:layout_gravity="center_vertical|right|end"
+                        android:layout_width="35dp"
+                        android:gravity="clip_vertical|right|end"
+                        android:layout_alignParentRight="true"
+                        android:layout_height="35dp"
+                        android:src="@drawable/temp_profile"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="#fff">
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bar1"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentBottom="true"
+                android:gravity="bottom"
+                android:layout_gravity="bottom"
+                android:background="#EEE"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_gravity="top|center"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:id="@+id/one"
+                    android:background="#000"
+                    android:text="1"
+                    android:textColor="#fff"
+                    fontPath="fonts/Montserrat-Bold.otf"
+                    android:textSize="50dp"
+                    android:textAlignment="center"
+                    android:maxWidth="150dp"
+                    android:maxHeight="150dp"/>
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical">
+                    <TextView
+                        android:layout_marginTop="0dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="17dp"
+                        android:text="Error 02"
+                        android:ellipsize="marquee"
+                        android:fadingEdge="horizontal"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:scrollHorizontally="true"
+                        android:maxLines="1"
+                        android:textSize="11dp"
+                        android:id="@+id/titleone"
+                        android:textColor="#000"
+                        android:layout_marginLeft="10dp"
+                        android:textAllCaps="true"
+                        fontPath="fonts/Montserrat-Bold.otf" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/metadataSubTitle"
+                        android:layout_height="wrap_content"
+                        android:textSize="8dp"
+                        android:text="Error - No Data supplied!"
+                        android:textColor="#b3b3b3"
+                        android:layout_marginLeft="10dp"
+                        fontPath="fonts/Montserrat-Regular.otf" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="#fff">
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bar2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="bottom"
+            android:layout_gravity="bottom"
+            android:background="#EEE"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_gravity="top|center"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:id="@+id/two"
+                android:background="#000"
+                android:text="2"
+                android:textColor="#fff"
+                fontPath="fonts/Montserrat-Bold.otf"
+                android:textSize="50dp"
+                android:textAlignment="center"
+                android:maxWidth="150dp"
+                android:maxHeight="150dp"/>
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical">
+                <TextView
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="17dp"
+                    android:text="Error 02"
+                    android:ellipsize="marquee"
+                    android:fadingEdge="horizontal"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:maxLines="1"
+                    android:textSize="11dp"
+                    android:id="@+id/titletwo"
+                    android:textColor="#000"
+                    android:layout_marginLeft="10dp"
+                    android:textAllCaps="true"
+                    fontPath="fonts/Montserrat-Bold.otf" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/subtitletwo"
+                    android:layout_height="wrap_content"
+                    android:textSize="8dp"
+                    android:text="Error - No Data supplied!"
+                    android:textColor="#b3b3b3"
+                    android:layout_marginLeft="10dp"
+                    fontPath="fonts/Montserrat-Regular.otf" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="#fff">
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bar3"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="bottom"
+            android:layout_gravity="bottom"
+            android:background="#EEE"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_gravity="top|center"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:id="@+id/three"
+                android:background="#000"
+                android:text="3"
+                android:textColor="#fff"
+                fontPath="fonts/Montserrat-Bold.otf"
+                android:textSize="50dp"
+                android:textAlignment="center"
+                android:maxWidth="150dp"
+                android:maxHeight="150dp"/>
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical">
+                <TextView
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="17dp"
+                    android:text="Error 02"
+                    android:ellipsize="marquee"
+                    android:fadingEdge="horizontal"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:maxLines="1"
+                    android:textSize="11dp"
+                    android:id="@+id/titlethree"
+                    android:textColor="#000"
+                    android:layout_marginLeft="10dp"
+                    android:textAllCaps="true"
+                    fontPath="fonts/Montserrat-Bold.otf" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/subtitlethree"
+                    android:layout_height="wrap_content"
+                    android:textSize="8dp"
+                    android:text="Error - No Data supplied!"
+                    android:textColor="#b3b3b3"
+                    android:layout_marginLeft="10dp"
+                    fontPath="fonts/Montserrat-Regular.otf" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="#fff">
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bar4"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="bottom"
+            android:layout_gravity="bottom"
+            android:background="#EEE"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_gravity="top|center"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:id="@+id/four"
+                android:background="#000"
+                android:text="4"
+                android:textColor="#fff"
+                fontPath="fonts/Montserrat-Bold.otf"
+                android:textSize="50dp"
+                android:textAlignment="center"
+                android:maxWidth="150dp"
+                android:maxHeight="150dp"/>
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical">
+                <TextView
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="17dp"
+                    android:text="Error 02"
+                    android:ellipsize="marquee"
+                    android:fadingEdge="horizontal"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:maxLines="1"
+                    android:textSize="11dp"
+                    android:id="@+id/titlefour"
+                    android:textColor="#000"
+                    android:layout_marginLeft="10dp"
+                    android:textAllCaps="true"
+                    fontPath="fonts/Montserrat-Bold.otf" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/subtitlefour"
+                    android:layout_height="wrap_content"
+                    android:textSize="8dp"
+                    android:text="Error - No Data supplied!"
+                    android:textColor="#b3b3b3"
+                    android:layout_marginLeft="10dp"
+                    fontPath="fonts/Montserrat-Regular.otf" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="#fff">
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bar5"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="bottom"
+            android:layout_gravity="bottom"
+            android:background="#EEE"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_gravity="top|center"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:id="@+id/five"
+                android:background="#000"
+                android:text="5"
+                android:textColor="#fff"
+                fontPath="fonts/Montserrat-Bold.otf"
+                android:textSize="50dp"
+                android:textAlignment="center"
+                android:maxWidth="150dp"
+                android:maxHeight="150dp"/>
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical">
+                <TextView
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="17dp"
+                    android:text="Error 02"
+                    android:ellipsize="marquee"
+                    android:fadingEdge="horizontal"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:maxLines="1"
+                    android:textSize="11dp"
+                    android:id="@+id/titlefive"
+                    android:textColor="#000"
+                    android:layout_marginLeft="10dp"
+                    android:textAllCaps="true"
+                    fontPath="fonts/Montserrat-Bold.otf" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/subtitlefive"
+                    android:layout_height="wrap_content"
+                    android:textSize="8dp"
+                    android:text="Error - No Data supplied!"
+                    android:textColor="#b3b3b3"
+                    android:layout_marginLeft="10dp"
+                    fontPath="fonts/Montserrat-Regular.otf" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="#fff">
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bar6"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="bottom"
+            android:layout_gravity="bottom"
+            android:background="#EEE"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_gravity="top|center"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:id="@+id/six"
+                android:background="#000"
+                android:text="6"
+                android:textColor="#fff"
+                fontPath="fonts/Montserrat-Bold.otf"
+                android:textSize="50dp"
+                android:textAlignment="center"
+                android:maxWidth="150dp"
+                android:maxHeight="150dp"/>
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical">
+                <TextView
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="17dp"
+                    android:text="Error 02"
+                    android:ellipsize="marquee"
+                    android:fadingEdge="horizontal"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:maxLines="1"
+                    android:textSize="11dp"
+                    android:id="@+id/titlesix"
+                    android:textColor="#000"
+                    android:layout_marginLeft="10dp"
+                    android:textAllCaps="true"
+                    fontPath="fonts/Montserrat-Bold.otf" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/subtitlesix"
+                    android:layout_height="wrap_content"
+                    android:textSize="8dp"
+                    android:text="Error - No Data supplied!"
+                    android:textColor="#b3b3b3"
+                    android:layout_marginLeft="10dp"
+                    fontPath="fonts/Montserrat-Regular.otf" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="#fff">
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bar7"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="bottom"
+            android:layout_gravity="bottom"
+            android:background="#EEE"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_gravity="top|center"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:id="@+id/one"
+                android:background="#000"
+                android:text="7"
+                android:textColor="#fff"
+                fontPath="fonts/Montserrat-Bold.otf"
+                android:textSize="50dp"
+                android:textAlignment="center"
+                android:maxWidth="150dp"
+                android:maxHeight="150dp"/>
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical">
+                <TextView
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="17dp"
+                    android:text="Error 02"
+                    android:ellipsize="marquee"
+                    android:fadingEdge="horizontal"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:maxLines="1"
+                    android:textSize="11dp"
+                    android:id="@+id/titleseven"
+                    android:textColor="#000"
+                    android:layout_marginLeft="10dp"
+                    android:textAllCaps="true"
+                    fontPath="fonts/Montserrat-Bold.otf" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/subtitleseven"
+                    android:layout_height="wrap_content"
+                    android:textSize="8dp"
+                    android:text="Error - No Data supplied!"
+                    android:textColor="#b3b3b3"
+                    android:layout_marginLeft="10dp"
+                    fontPath="fonts/Montserrat-Regular.otf" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="#fff">
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bar8"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="bottom"
+            android:layout_gravity="bottom"
+            android:background="#EEE"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_gravity="top|center"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:id="@+id/eight"
+                android:background="#000"
+                android:text="8"
+                android:textColor="#fff"
+                fontPath="fonts/Montserrat-Bold.otf"
+                android:textSize="50dp"
+                android:textAlignment="center"
+                android:maxWidth="150dp"
+                android:maxHeight="150dp"/>
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical">
+                <TextView
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="17dp"
+                    android:text="Error 02"
+                    android:ellipsize="marquee"
+                    android:fadingEdge="horizontal"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:maxLines="1"
+                    android:textSize="11dp"
+                    android:id="@+id/titleeight"
+                    android:textColor="#000"
+                    android:layout_marginLeft="10dp"
+                    android:textAllCaps="true"
+                    fontPath="fonts/Montserrat-Bold.otf" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/subtitleeither"
+                    android:layout_height="wrap_content"
+                    android:textSize="8dp"
+                    android:text="Error - No Data supplied!"
+                    android:textColor="#b3b3b3"
+                    android:layout_marginLeft="10dp"
+                    fontPath="fonts/Montserrat-Regular.otf" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="#fff">
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bar9"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="bottom"
+            android:layout_gravity="bottom"
+            android:background="#EEE"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_gravity="top|center"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:id="@+id/nine"
+                android:background="#000"
+                android:text="9"
+                android:textColor="#fff"
+                fontPath="fonts/Montserrat-Bold.otf"
+                android:textSize="50dp"
+                android:textAlignment="center"
+                android:maxWidth="150dp"
+                android:maxHeight="150dp"/>
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical">
+                <TextView
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="17dp"
+                    android:text="Error 02"
+                    android:ellipsize="marquee"
+                    android:fadingEdge="horizontal"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:maxLines="1"
+                    android:textSize="11dp"
+                    android:id="@+id/titlenine"
+                    android:textColor="#000"
+                    android:layout_marginLeft="10dp"
+                    android:textAllCaps="true"
+                    fontPath="fonts/Montserrat-Bold.otf" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/subtitlenine"
+                    android:layout_height="wrap_content"
+                    android:textSize="8dp"
+                    android:text="Error - No Data supplied!"
+                    android:textColor="#b3b3b3"
+                    android:layout_marginLeft="10dp"
+                    fontPath="fonts/Montserrat-Regular.otf" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="#fff">
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bar10"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="bottom"
+            android:layout_gravity="bottom"
+            android:background="#EEE"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_gravity="top|center"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:id="@+id/ten"
+                android:background="#000"
+                android:text="10"
+                android:textColor="#fff"
+                fontPath="fonts/Montserrat-Bold.otf"
+                android:textSize="50dp"
+                android:textAlignment="center"
+                android:maxWidth="150dp"
+                android:maxHeight="150dp"/>
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical">
+                <TextView
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="17dp"
+                    android:text="Error 02"
+                    android:ellipsize="marquee"
+                    android:fadingEdge="horizontal"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:maxLines="1"
+                    android:textSize="11dp"
+                    android:id="@+id/titleten"
+                    android:textColor="#000"
+                    android:layout_marginLeft="10dp"
+                    android:textAllCaps="true"
+                    fontPath="fonts/Montserrat-Bold.otf" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/subtitleten"
+                    android:layout_height="wrap_content"
+                    android:textSize="8dp"
+                    android:text="Error - No Data supplied!"
+                    android:textColor="#b3b3b3"
+                    android:layout_marginLeft="10dp"
+                    fontPath="fonts/Montserrat-Regular.otf" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="#fff">
+        </LinearLayout>
+
+    </LinearLayout>
+
+    </ScrollView>
+
+    </LinearLayout>

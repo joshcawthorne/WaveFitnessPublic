@@ -252,7 +252,7 @@
 
                     <de.hdodenhof.circleimageview.CircleImageView
                         xmlns:app="http://schemas.android.com/apk/res-auto"
-                        android:id="@+id/roundart"
+                        android:id="@+id/profilepicture"
                         android:layout_gravity="center_vertical|right|end"
                         android:layout_width="35dp"
                         android:gravity="clip_vertical|right|end"
