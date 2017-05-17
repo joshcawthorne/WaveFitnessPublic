@@ -15,13 +15,12 @@ import android.widget.GridLayout;
 import android.widget.ImageView;
 
 import com.google.gson.Gson;
-import com.rogalabs.lib.model.SocialUser;
 
-import java.io.IOException;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class genreSelection extends AppCompatActivity {
+
+    /* Class to generate a users genre selection */
 
     SpotifyCore core;
     private HamburgerMenu menu;
@@ -77,7 +76,7 @@ public class genreSelection extends AppCompatActivity {
                 progressDialog.setMessage("Building your mixtape...");
                 progressDialog.show();
 
-                startActivity(new Intent(genreSelection.this, spotifyActivity.class));
+                startActivity(new Intent(genreSelection.this, fragmentBaseActivity.class));
                 String test = "";
                 for(SpotifyPlaylists.Genre g : SpotifyPlaylists.Genre.values()){
                     test = test + core.selectedGenre.get(g).toString() + ", ";

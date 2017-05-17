@@ -1,9 +1,6 @@
 package com.wave.fitness;
 
 import com.spotify.sdk.android.player.Metadata;
-/**
- * Created by s6236422 on 10/05/2017.
- */
 
 public class SongNode {
     private Metadata.Track trackdata;

@@ -15,6 +15,8 @@ import android.widget.Toast;
 
 public class SplashActivity extends Activity implements Animation.AnimationListener {
 
+    /* Class to create a loading splash screen */
+
     Animation animFadein;
 
     @Override

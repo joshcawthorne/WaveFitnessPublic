@@ -19,14 +19,9 @@ import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 import com.rogalabs.lib.model.SocialUser;
 
-
-/**
- * Created by s6236422 on 10/05/2017.
- */
-
-
-
 public class HamburgerMenu {
+
+    /* Class to create global hamburger menu */
     
     public AccountHeader header;
     public Drawer menu;
@@ -36,12 +31,10 @@ public class HamburgerMenu {
 
         header = new AccountHeaderBuilder()
                 .withActivity(activity)
-                //.withHeaderBackground(R.drawable.header)
                 .addProfiles(
                         new ProfileDrawerItem()
                                 .withName(user.getName())
                                 .withEmail(user.getEmail())
-                                .withIcon(activity.getResources().getDrawable(R.drawable.temp_profile)) // TODO: 10/05/2017 Replace with user.getIconURL using picasso
                 )
                 .withOnAccountHeaderListener(new AccountHeader.OnAccountHeaderListener() {
                     @Override
@@ -76,10 +69,10 @@ public class HamburgerMenu {
                                         activity.startActivity(new Intent(activity, DashboardActivity.class));
                                         break;
                                     case 2:
-                                        activity.startActivity(new Intent(activity, RunActivity.class));
+                                        activity.startActivity(new Intent(activity, genreSelection.class));
                                         break;
                                     case 3:
-                                        activity.startActivity(new Intent(activity, MusicPlayerActivity.class));
+                                        activity.startActivity(new Intent(activity, genreSelection.class));
                                         break;
                                     case 4:
                                         activity.startActivity(new Intent(activity, PreviousRunActivity.class));

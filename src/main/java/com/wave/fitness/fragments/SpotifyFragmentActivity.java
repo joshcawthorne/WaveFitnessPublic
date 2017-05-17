@@ -14,60 +14,31 @@
  */
 package com.wave.fitness.fragments;
 
-import android.app.AlertDialog;
 import android.app.KeyguardManager;
-import android.app.NotificationManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
-import android.graphics.Color;
-import android.media.Image;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
-import android.os.CountDownTimer;
-import android.provider.SyncStateContract;
-import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.mikepenz.materialdrawer.AccountHeader;
-import com.mikepenz.materialdrawer.AccountHeaderBuilder;
 import com.mikepenz.materialdrawer.Drawer;
-import com.mikepenz.materialdrawer.DrawerBuilder;
-import com.mikepenz.materialdrawer.model.DividerDrawerItem;
-import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
-import com.mikepenz.materialdrawer.model.ProfileDrawerItem;
-import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
-import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
-import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 import com.spotify.sdk.android.player.Config;
 import com.spotify.sdk.android.player.ConnectionStateCallback;
 import com.spotify.sdk.android.player.Connectivity;
@@ -84,7 +55,6 @@ import com.squareup.picasso.Transformation;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
@@ -96,11 +66,7 @@ import com.wave.fitness.SpotifyCore;
 import com.wave.fitness.SpotifyPlaylists;
 import com.wave.fitness.runningEvent.TrackChangedEvent;
 import com.wave.fitness.runningEvent.UpdateRunStatEvent;
-import com.wave.fitness.spotifyActivity;
 
-import org.w3c.dom.Text;
-
-import at.favre.lib.dali.Dali;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 import static android.app.Activity.RESULT_OK;
@@ -108,6 +74,8 @@ import static com.facebook.FacebookSdk.getApplicationContext;
 
 public class SpotifyFragmentActivity extends Fragment implements
         Player.NotificationCallback, ConnectionStateCallback{
+
+    /* Creates the entire music player fragment. */
 
     //Constants
 
@@ -120,12 +88,6 @@ public class SpotifyFragmentActivity extends Fragment implements
 
     public String TEST_PLAYLIST_URI = "";
 
-    //// TODO: 03/05/17 Create an array of liked/disliked songs via metadata, and then compare new songs to the array. If the song was previously disliked, skip it.
-
-    //// TODO: Toggle menu label on login, so that when a user is logged in, to then say "logout" and visaversa
-
-    //// TODO: Work out how to toggle fab icon on genre select.
-
     //Generate bool for genre switch
     boolean genreSwitchResume = false;
 
@@ -135,17 +97,16 @@ public class SpotifyFragmentActivity extends Fragment implements
     //These are UI controls, which can only be used after a user has logged into spotify.
     private static final int[] REQUIRES_INITIALIZED_STATE = {
             R.id.pause_button,
-            R.id.genre_switch_button,
+            //R.id.genre_switch_button,
     };
-
 
     //These are UI controls which can only be used once a song is playing.
     private static final int[] REQUIRES_PLAYING_STATE = {
             R.id.skip_next_button,
             R.id.skip_prev_button,
     };
-    public static final String TAG = "Music";
 
+    public static final String TAG = "Music";
 
     //Used to recieve info on a user's current network status (IE: Wireless, Offline)
     private BroadcastReceiver mNetworkStateReceiver;
@@ -154,15 +115,9 @@ public class SpotifyFragmentActivity extends Fragment implements
     private TextView mMetadataText;
     private TextView mMetaDataSubtext;
     private TextView mMetaDataTime;
-    private TextView mGenreData;
     private TextView mMusicTitle;
-    private EditText mSeekEditText;
-    private ScrollView mStatusTextScrollView;
     private CircleImageView profile_image;
     private String currentPlaylist = "null";
-    Drawer menu;
-    private TabLayout tabLayout;
-    private ViewPager viewPager;
 
     public String oldURL = "";
     private ArrayList<Metadata.Track> songHistory;
@@ -207,21 +162,15 @@ public class SpotifyFragmentActivity extends Fragment implements
 
         v = inflater.inflate(R.layout.activity_musicplayer, container, false);
 
-        //Button play = (Button) v.findViewById(R.id.pause_temp);
         ImageView playfab = (ImageView) v.findViewById(R.id.pause_button);
-        //Button skip = (Button) v.findViewById(R.id.skip_next_button);
-        //Button prev = (Button) v.findViewById(R.id.skip_prev_button);
-
         ImageView prevImg = (ImageView) v.findViewById(R.id.skip_prev_button);
         ImageView skipImg = (ImageView) v.findViewById(R.id.skip_next_button);
-
         skipImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onSkipToNextButtonClicked();
             }
         });
-
         prevImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -229,33 +178,12 @@ public class SpotifyFragmentActivity extends Fragment implements
             }
         });
 
-        /*skip.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onSkipToNextButtonClicked();
-            }
-        });*/
-
-        /*prev.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onSkipToPreviousButtonClicked();
-            }
-        });*/
-
-
-
-
         playfab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onPauseButtonClicked();
             }
         });
-
-        Toast.makeText(getActivity(), "This is a temporary layout for music.",
-                Toast.LENGTH_LONG).show();
-
         FloatingActionButton shuffleGenre = (FloatingActionButton) v.findViewById(R.id.switch_genre);
 
         shuffleGenre.setOnClickListener(new View.OnClickListener() {
@@ -287,10 +215,7 @@ public class SpotifyFragmentActivity extends Fragment implements
         mMetadataText = (TextView) getView().findViewById(R.id.metadataTitle);
         mMetaDataSubtext = (TextView) getView().findViewById(R.id.metadataSubTitle);
         mMetaDataTime = (TextView) getView().findViewById(R.id.metaDataTime);
-        mStatusTextScrollView = (ScrollView) getView().findViewById(R.id.status_text_container);
-        // = (TextView) getView().findViewById(R.id.currentgenre);
         mMetadataText.setSelected(true);
-
 
         collapsingToolbarLayout = (CollapsingToolbarLayout) v.findViewById(R.id.collapsing_toolbar);
         collapsingToolbarLayout.setTitle("Error - No data supplied");
@@ -299,8 +224,6 @@ public class SpotifyFragmentActivity extends Fragment implements
         collapsingToolbarLayout.setBackgroundColor(getResources().getColor(R.color.wavePrimary));
 
         updateView();
-
-
 
         final ImageView fab = (ImageView) getView().findViewById(R.id.pause_button);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -353,11 +276,8 @@ public class SpotifyFragmentActivity extends Fragment implements
                 }
             }
         },new IntentFilter("android.intent.action.USER_PRESENT"));
-
         updateView();
-
     }
-
 
     private Connectivity getNetworkConnectivity(Context context) {
         ConnectivityManager connectivityManager;
@@ -370,7 +290,6 @@ public class SpotifyFragmentActivity extends Fragment implements
         }
     }
 
-
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
         if(requestCode == SPOTIFY_LOGIN){
@@ -382,10 +301,10 @@ public class SpotifyFragmentActivity extends Fragment implements
     }
 
     private void createPlayer() {
+
         // Once we have obtained an authorization token, we can proceed with creating a Player.
 
         logStatus("Got authentication token");
-     //   if (core.mPlayer == null) {
             Config playerConfig = new Config(getApplicationContext(), core.authResponse.getAccessToken(), CLIENT_ID);
             core.mPlayer = Spotify.getPlayer(playerConfig, this, new SpotifyPlayer.InitializationObserver() {
                 @Override
@@ -405,9 +324,6 @@ public class SpotifyFragmentActivity extends Fragment implements
                     logStatus("Error in initialization: " + error.getMessage());
                 }
             });
-        //} else {
-         //   core.mPlayer.login(core.authResponse.getAccessToken());
-        //}
     }
 
     //UI
@@ -416,21 +332,9 @@ public class SpotifyFragmentActivity extends Fragment implements
         boolean loggedIn = isLoggedIn();
 
         final ImageView coverArtView = (ImageView) getView().findViewById(R.id.cover_art);
-        //final ImageView coverArtViewTwo = (ImageView) getView().findViewById(R.id.cover_art_two);
-        //final ImageView coverArtBlur = (ImageView) getView().findViewById(R.id.cover_art_blur);
         final ImageView coverArtSmall = (ImageView) getView().findViewById(R.id.cover_art_small);
         CircleImageView roundcoveart = (CircleImageView) getView().findViewById(R.id.roundart);
 
-        // Login button should be the inverse of the logged in state
-        //Button loginButton = (Button) findViewById(R.id.login_button);
-        //loginButton.setText(loggedIn ? R.string.logout_button_label : R.string.login_button_label);
-
-        // Set enabled for all widgets which depend on initialized state
-        for (int id : REQUIRES_INITIALIZED_STATE) {
-        //    findViewById(id).setEnabled(loggedIn);
-        }
-
-        // Same goes for the playing state
         boolean playing = loggedIn && core.mCurrentPlaybackState != null && core.mCurrentPlaybackState.isPlaying;
         for (int id : REQUIRES_PLAYING_STATE) {
             getView().findViewById(id).setEnabled(playing);
@@ -463,7 +367,6 @@ public class SpotifyFragmentActivity extends Fragment implements
             mMetaDataSubtext.setText(core.mMetadata.currentTrack.artistName);
             mMetaDataTime.setText(durationStr);
 
-            //mGenreData.setText("You're listening to " + core.mMetadata.currentTrack.albumName);
             mMusicTitle = (TextView) v.findViewById(R.id.tracktitle);
             mMusicTitle.setText(core.mMetadata.currentTrack.artistName);
             collapsingToolbarLayout = (CollapsingToolbarLayout) v.findViewById(R.id.collapsing_toolbar);
@@ -499,11 +402,9 @@ public class SpotifyFragmentActivity extends Fragment implements
                     .transform(new Transformation() {
                         @Override
                         public Bitmap transform(Bitmap source) {
-                            // really ugly darkening trick
                             final Bitmap copy = source.copy(source.getConfig(), true);
                             source.recycle();
                             final Canvas canvas = new Canvas(copy);
-                            //canvas.drawColor(0xbb000000);
                             return copy;
                         }
 
@@ -519,11 +420,9 @@ public class SpotifyFragmentActivity extends Fragment implements
                     .transform(new Transformation() {
                         @Override
                         public Bitmap transform(Bitmap source) {
-                            // really ugly darkening trick
                             final Bitmap copy = source.copy(source.getConfig(), true);
                             source.recycle();
                             final Canvas canvas = new Canvas(copy);
-                            //canvas.drawColor(0xbb000000);
                             return copy;
                         }
 
@@ -542,10 +441,6 @@ public class SpotifyFragmentActivity extends Fragment implements
             coverArtView.setVisibility(View.INVISIBLE);
             coverArtSmall.setBackground(null);
         }
-    }
-
-    public void progressBar(long songLength){
-
     }
 
     private boolean isLoggedIn() {
@@ -574,11 +469,6 @@ public class SpotifyFragmentActivity extends Fragment implements
 
     public void onSkipToNextButtonClicked() {
         core.mPlayer.skipToNext(mOperationCallback);
-    }
-
-
-    public void toggleFab(FloatingActionButton fab) {
-        fab.setImageDrawable(getResources().getDrawable(R.drawable.pause));
     }
 
     public void setGenre() {
@@ -610,11 +500,9 @@ public class SpotifyFragmentActivity extends Fragment implements
                 .transform(new Transformation() {
                     @Override
                     public Bitmap transform(Bitmap source) {
-                        // really ugly darkening trick
                         final Bitmap copy = source.copy(source.getConfig(), true);
                         source.recycle();
                         final Canvas canvas = new Canvas(copy);
-                        //canvas.drawColor(0xbb000000);
                         return copy;
                     }
 

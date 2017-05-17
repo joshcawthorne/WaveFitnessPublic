@@ -9,6 +9,8 @@ import java.util.List;
 
 public class SpotifyPlaylists {
 
+    /* Class containing all the music Wave Plays */
+
     public enum Genre{
         POP, CLASSICAL, ELECTRONIC, FUNK, ROCK, JAZZFUSION, INDIEROCK, HITS
     }

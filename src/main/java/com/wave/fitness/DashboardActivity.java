@@ -11,26 +11,23 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
-import com.makeramen.roundedimageview.RoundedImageView;
 import com.rogalabs.lib.model.SocialUser;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Transformation;
-import com.wave.fitness.fragments.SpotifyFragmentActivity;
 
 import java.util.Date;
 import java.util.Random;
 
 import de.hdodenhof.circleimageview.CircleImageView;
-import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class DashboardActivity extends AppCompatActivity implements Animation.AnimationListener {
+
+    /* Class that creates the Dashboard */
 
     private HamburgerMenu menu;
 
@@ -174,21 +171,21 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
 
 
     public void onMusicStart() {
-        Intent a = new Intent(this, spotifyActivity.class);
+        Intent a = new Intent(this, fragmentBaseActivity.class);
         a.putExtra("frgToLoad", "FRAGMENT_A");
 
         // Now start your activity
         startActivity(a);
     }
     public void onMapsStart() {
-        Intent a = new Intent(this, spotifyActivity.class);
+        Intent a = new Intent(this, fragmentBaseActivity.class);
         a.putExtra("frgToLoad", "FRAGMENT_A");
 
         // Now start your activity
         startActivity(a);
     }
     public void onStatsStart() {
-        Intent a = new Intent(this, spotifyActivity.class);
+        Intent a = new Intent(this, fragmentBaseActivity.class);
         a.putExtra("frgToLoad", "FRAGMENT_C");
 
         // Now start your activity
@@ -203,37 +200,37 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
     public void getMoving(View view) {
         core.dashboardCard = true;
         core.chosenPlaylist = "spotify:user:spotify:playlist:37i9dQZF1DX1gcrZ1xC96D";
-        startActivity(new Intent(DashboardActivity.this, spotifyActivity.class));
+        startActivity(new Intent(DashboardActivity.this, fragmentBaseActivity.class));
     }
 
     public void edSheeran(View view) {
         core.dashboardCard = true;
         core.chosenPlaylist = "spotify:album:3T4tUhGYeRNVUGevb0wThu";
-        startActivity(new Intent(DashboardActivity.this, spotifyActivity.class));
+        startActivity(new Intent(DashboardActivity.this, fragmentBaseActivity.class));
     }
 
     public void cleanBandit(View view) {
         core.dashboardCard = true;
         core.chosenPlaylist = "spotify:album:4b13SJlne61y53KSEwuQtD";
-        startActivity(new Intent(DashboardActivity.this, spotifyActivity.class));
+        startActivity(new Intent(DashboardActivity.this, fragmentBaseActivity.class));
     }
 
     public void massiveDanceHits(View view) {
         core.dashboardCard = true;
         core.chosenPlaylist = "spotify:user:ministryofsounduk:playlist:7FUhHHA0zXAPVsJdDrNxNs";
-        startActivity(new Intent(DashboardActivity.this, spotifyActivity.class));
+        startActivity(new Intent(DashboardActivity.this, fragmentBaseActivity.class));
     }
 
     public void teenPopParty(View view) {
         core.dashboardCard = true;
         core.chosenPlaylist = "spotify:user:spotify:playlist:37i9dQZF1DX9bAf4c66TGs";
-        startActivity(new Intent(DashboardActivity.this, spotifyActivity.class));
+        startActivity(new Intent(DashboardActivity.this, fragmentBaseActivity.class));
     }
 
     public void noisesAfterDark(View view) {
         core.dashboardCard = true;
         core.chosenPlaylist = "spotify:user:spotify:playlist:37i9dQZF1DX4fxf4OrMhXb";
-        startActivity(new Intent(DashboardActivity.this, spotifyActivity.class));
+        startActivity(new Intent(DashboardActivity.this, fragmentBaseActivity.class));
     }
 
     private void updateProfilePic(){

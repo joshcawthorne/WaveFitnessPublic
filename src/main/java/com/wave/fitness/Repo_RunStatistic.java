@@ -14,11 +14,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * Created by s6236422 on 10/05/2017.
- */
-
 public class Repo_RunStatistic {
+
+    /* Class to generate database for run statistics */
+
     private DBHelper dbHelper;
 
     public Repo_RunStatistic(Context context) {

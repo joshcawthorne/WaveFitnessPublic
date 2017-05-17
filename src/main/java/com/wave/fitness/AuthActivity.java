@@ -33,6 +33,8 @@ import static com.spotify.sdk.android.authentication.LoginActivity.REQUEST_CODE;
 public class AuthActivity extends AppCompatActivity implements
         Player.NotificationCallback, ConnectionStateCallback{
 
+    /* Authenticates a users Spotify Account */
+
     private static final String TAG = null;
 
 

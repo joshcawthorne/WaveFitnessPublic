@@ -14,6 +14,9 @@ import java.util.List;
  */
 
 public class Data_RunStatistic {
+
+    /* Creates database for running stats. */
+
     // Labels table name
     public static final String TABLE = "RunStatistic";
 

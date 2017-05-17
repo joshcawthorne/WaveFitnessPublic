@@ -42,6 +42,8 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class PedometerFragment extends android.support.v4.app.Fragment {
 
+    /* Creates fragment that tracks all of the users running and workout stats. */
+
     private static final String TAG = "Pedometer";
     private SharedPreferences mSettings;
     private PedometerSettings mPedometerSettings;

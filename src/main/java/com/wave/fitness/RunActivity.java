@@ -152,9 +152,8 @@ public class RunActivity extends AppCompatActivity implements OnMapReadyCallback
 
         AccountHeader headerResult = new AccountHeaderBuilder()
                 .withActivity(this)
-                //.withHeaderBackground(R.drawable.header)
                 .addProfiles(
-                        new ProfileDrawerItem().withName("Test").withEmail("test@gmail.com")/*.withIcon(getResources().getDrawable(R.drawable.profile))*/
+                        new ProfileDrawerItem().withName("Test").withEmail("test@gmail.com")
                 )
                 .withOnAccountHeaderListener(new AccountHeader.OnAccountHeaderListener() {
                     @Override
@@ -180,7 +179,7 @@ public class RunActivity extends AppCompatActivity implements OnMapReadyCallback
                             @Override
                             public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
                                 // do something with the clicked item :D
-                                startActivity(new Intent(RunActivity.this, DemoActivity.class));
+                                startActivity(new Intent(RunActivity.this, genreSelection.class));
                                 return true;
                             }
                         }
@@ -325,7 +324,7 @@ public class RunActivity extends AppCompatActivity implements OnMapReadyCallback
     @Override
     public void onConnected(@Nullable Bundle bundle) {
         mLocationRequest = new LocationRequest();
-        mLocationRequest.setInterval(1000); //to be adjusted later, maybe as a setting
+        mLocationRequest.setInterval(1000);
         mLocationRequest.setFastestInterval(1000);
         mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
         Log.d("API", "Location Request Created");
@@ -366,9 +365,6 @@ public class RunActivity extends AppCompatActivity implements OnMapReadyCallback
                     lineOpt.visible(true);
                     mMap.addPolyline(lineOpt);
 
-                    //For testing only
-                    //speedView.setText("Speed: " + pedo.getSpeed());
-
                 } else {
                     mMap.clear();
                 }
@@ -407,9 +403,6 @@ public class RunActivity extends AppCompatActivity implements OnMapReadyCallback
             Toast.makeText(this, "Run Finished!", Toast.LENGTH_LONG).show();
             chrono.stop();
             Log.d("RUN", "Run Tracking Stopped");
-
-            //setContentView(R.layout.post_run); //Start the Post Run Screen (Just displays the layout, doesn't change to the PostRun activity)
-
         } else {
             Toast.makeText(this, "Run Started!",
                     Toast.LENGTH_LONG).show();

@@ -17,11 +17,10 @@ import java.util.HashMap;
 
 import static com.wave.fitness.SpotifyPlaylists.*;
 
-/**
- * Created by s6236422 on 08/05/2017.
- */
-
 public class SpotifyCore extends Application {
+
+    /* Class that allows us to pass data between clases */
+
     public SpotifyPlayer mPlayer;
     public PlaybackState mCurrentPlaybackState;
     public Metadata mMetadata;

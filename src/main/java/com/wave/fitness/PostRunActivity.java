@@ -40,6 +40,8 @@ import static com.google.android.gms.R.id.toolbar;
 
 public class PostRunActivity extends AppCompatActivity implements OnMapReadyCallback {
 
+    /* Class to generate previous runs */
+
     private SupportMapFragment map;
     private SharedPreferences prefs = null;
     private Repo_RunStatistic repo;

@@ -8,8 +8,6 @@ import android.content.res.ColorStateList;
 import android.location.Location;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.design.widget.AppBarLayout;
-import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -22,8 +20,6 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.FrameLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,7 +35,9 @@ import com.wave.fitness.runningEvent.StartRunEvent;
 import com.wave.fitness.runningEvent.TrackChangedEvent;
 import com.wave.fitness.runningEvent.UpdateRunStatEvent;
 
-public class spotifyActivity extends AppCompatActivity {
+public class fragmentBaseActivity extends AppCompatActivity {
+
+    /* Base clas to hold all fragments in a single, tabbed, layout */
 
     private Toolbar toolbar;
     private TabLayout tabLayout;
@@ -53,7 +51,7 @@ public class spotifyActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_spotify);
+        setContentView(R.layout.activity_fragment_base);
 
         core = (SpotifyCore) getApplicationContext();
         core.isRunning = false;
@@ -67,7 +65,7 @@ public class spotifyActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(core.isRunning){
-                    final ProgressDialog progressDialog = new ProgressDialog(spotifyActivity.this,
+                    final ProgressDialog progressDialog = new ProgressDialog(fragmentBaseActivity.this,
                             R.style.DialogBox);
                     progressDialog.setIndeterminate(true);
                     progressDialog.setMessage("Saving your run...");
@@ -174,7 +172,7 @@ public class spotifyActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(spotifyActivity.this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(fragmentBaseActivity.this);
         builder.setMessage("You're mid-run, if you quit now you'll lose your progress!").setPositiveButton("Quit", dialogClickListener)
                 .setNegativeButton("Don't quit", dialogClickListener).show();
     }
@@ -183,7 +181,7 @@ public class spotifyActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                AlertDialog.Builder builder = new AlertDialog.Builder(spotifyActivity.this);
+                AlertDialog.Builder builder = new AlertDialog.Builder(fragmentBaseActivity.this);
                 builder.setMessage("You're mid-run, if you quit now you'll lose your progress!").setPositiveButton("Quit", dialogClickListener)
                         .setNegativeButton("Don't quit", dialogClickListener).show();
                 return true;

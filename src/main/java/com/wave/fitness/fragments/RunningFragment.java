@@ -1,45 +1,20 @@
 package com.wave.fitness.fragments;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
-
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import android.content.ComponentName;
-import android.content.Context;
-import android.content.Intent;
-import android.content.ServiceConnection;
-import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.location.Location;
-import android.os.Bundle;
 import android.os.Handler;
-import android.os.IBinder;
-import android.os.Message;
-import android.os.SystemClock;
-import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.Chronometer;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationListener;
@@ -48,21 +23,18 @@ import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.PolylineOptions;
-
 import com.wave.fitness.RouteNode;
-
 import com.wave.fitness.R;
-
 import java.util.ArrayList;
-
 import static com.wave.fitness.R.id.map;
 
 public class RunningFragment extends Fragment implements OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, LocationListener {
+
+    /* Creates the map fragment, required to help track a users location */
 
     //Pedometer code from package name.begi.levente.pedometer
     private static final String TAG = "Run";
@@ -251,15 +223,11 @@ public class RunningFragment extends Fragment implements OnMapReadyCallback, Goo
 
     public void toggleTracking(View _view) {
         if (tracking) {
-            Toast.makeText(getActivity(), "Run Finished!", Toast.LENGTH_LONG).show();
             Log.d("RUN", "Run Tracking Stopped");
 
             //setContentView(R.layout.post_run); //Start the Post Run Screen (Just displays the layout, doesn't change to the PostRun activity)
 
         } else {
-            Toast.makeText(getActivity(), "Run Started!",
-                    Toast.LENGTH_LONG).show();
-
             route = new ArrayList<RouteNode>();
             route.add(new RouteNode(lastKnownLocation));
 

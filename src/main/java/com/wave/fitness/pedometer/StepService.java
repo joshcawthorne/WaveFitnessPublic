@@ -35,7 +35,6 @@ import android.os.IBinder;
 import android.os.PowerManager;
 import android.preference.PreferenceManager;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.wave.fitness.R;
 import com.wave.fitness.RunActivity;
@@ -52,6 +51,7 @@ import com.wave.fitness.RunActivity;
  * interact with the user, rather than doing something more disruptive such as
  * calling startActivity().
  */
+
 public class StepService extends Service {
 	private static final String TAG = "pedometer.StepService";
     private SharedPreferences mSettings;
@@ -145,9 +145,6 @@ public class StepService extends Service {
 
         // Start voice
         reloadSettings();
-
-        // Tell the user we started.
-        Toast.makeText(this, getText(R.string.started), Toast.LENGTH_SHORT).show();
     }
     
     @Override
@@ -180,9 +177,6 @@ public class StepService extends Service {
         
         // Stop detecting
         mSensorManager.unregisterListener(mStepDetector);
-
-        // Tell the user we stopped.
-        Toast.makeText(this, getText(R.string.stopped), Toast.LENGTH_SHORT).show();
     }
 
     private void registerDetector() {
