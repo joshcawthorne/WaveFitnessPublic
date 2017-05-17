@@ -158,12 +158,13 @@ public class SpotifyFragmentActivity extends Fragment implements
     private TextView mMusicTitle;
     private EditText mSeekEditText;
     private ScrollView mStatusTextScrollView;
+    private CircleImageView profile_image;
     private String currentPlaylist = "null";
     Drawer menu;
     private TabLayout tabLayout;
     private ViewPager viewPager;
-    public String oldURL = "";
 
+    public String oldURL = "";
     private ArrayList<Metadata.Track> songHistory;
     private void addSongToHistory(){
         songHistory.add(core.mMetadata.prevTrack);
@@ -241,6 +242,9 @@ public class SpotifyFragmentActivity extends Fragment implements
                 onSkipToPreviousButtonClicked();
             }
         });*/
+
+        profile_image = (CircleImageView) v.findViewById(R.id.profilepicture);
+        updateProfilePic();
 
         playfab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -596,6 +600,28 @@ public class SpotifyFragmentActivity extends Fragment implements
             TEST_PLAYLIST_URI = selectedSongs.get(new Random().nextInt(selectedSongs.size()));
             checkMusic();
         }
+    }
+
+    private void updateProfilePic(){
+        Picasso.with(getActivity())
+                .load(core.user.getPhotoUrl())
+                .transform(new Transformation() {
+                    @Override
+                    public Bitmap transform(Bitmap source) {
+                        // really ugly darkening trick
+                        final Bitmap copy = source.copy(source.getConfig(), true);
+                        source.recycle();
+                        final Canvas canvas = new Canvas(copy);
+                        //canvas.drawColor(0xbb000000);
+                        return copy;
+                    }
+
+                    @Override
+                    public String key() {
+                        return "darken";
+                    }
+                })
+                .into(profile_image);
     }
 
     public void changeGenre() {

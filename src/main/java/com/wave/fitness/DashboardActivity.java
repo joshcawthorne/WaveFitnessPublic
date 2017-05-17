@@ -3,6 +3,8 @@ package com.wave.fitness;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
 import android.icu.text.SimpleDateFormat;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -17,11 +19,14 @@ import android.widget.Toast;
 import com.google.gson.Gson;
 import com.makeramen.roundedimageview.RoundedImageView;
 import com.rogalabs.lib.model.SocialUser;
+import com.squareup.picasso.Picasso;
+import com.squareup.picasso.Transformation;
 import com.wave.fitness.fragments.SpotifyFragmentActivity;
 
 import java.util.Date;
 import java.util.Random;
 
+import de.hdodenhof.circleimageview.CircleImageView;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
@@ -33,6 +38,7 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
 
     Toolbar toolbar;
     SharedPreferences prefs = null;
+    CircleImageView profileImage;
 
     Animation animFadein;
 
@@ -49,6 +55,7 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         prefs = getSharedPreferences("com.wave.fitness", MODE_PRIVATE);
+        profileImage = (CircleImageView) findViewById(R.id.profile_image);
 
         if(prefs.getBoolean("firstrun", true)){
             startActivity(new Intent(DashboardActivity.this, setupActivity.class));
@@ -86,6 +93,7 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
 
         TextView curDate = (TextView)findViewById(R.id.dashDate);
         curDate.setText(prefixString + dashboardDate + ", " + core.firstName + endSentString);
+        updateProfilePic();
 
     }
 
@@ -226,5 +234,27 @@ public class DashboardActivity extends AppCompatActivity implements Animation.An
         core.dashboardCard = true;
         core.chosenPlaylist = "spotify:user:spotify:playlist:37i9dQZF1DX4fxf4OrMhXb";
         startActivity(new Intent(DashboardActivity.this, spotifyActivity.class));
+    }
+
+    private void updateProfilePic(){
+        Picasso.with(this)
+                .load(core.user.getPhotoUrl())
+                .transform(new Transformation() {
+                    @Override
+                    public Bitmap transform(Bitmap source) {
+                        // really ugly darkening trick
+                        final Bitmap copy = source.copy(source.getConfig(), true);
+                        source.recycle();
+                        final Canvas canvas = new Canvas(copy);
+                        //canvas.drawColor(0xbb000000);
+                        return copy;
+                    }
+
+                    @Override
+                    public String key() {
+                        return "darken";
+                    }
+                })
+                .into(profileImage);
     }
 }
