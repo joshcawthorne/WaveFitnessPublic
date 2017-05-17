@@ -76,8 +76,9 @@ public class PreviousRunActivity extends AppCompatActivity {
         lastRunId = getSharedPreferences("com.wave.fitness", MODE_PRIVATE).getInt("runID", 0);
 
         ButterKnife.inject(this);
-
         createHamburgerMenu();
+        populateRunData();
+        injectOnClickListener();
     }
 
     private void createHamburgerMenu(){
@@ -91,46 +92,54 @@ public class PreviousRunActivity extends AppCompatActivity {
         String dashboardDate = parseFormat.format(date);
 
         stat = new Repo_RunStatistic(getApplicationContext()).getEntrybyID(lastRunId-9);
-        title1.setText("Run on " + date);
+        date.setTime(stat.date);
+        title1.setText("Run on " + parseFormat.format(date));
         subtitle1.setText("Click to view");
 
         stat = new Repo_RunStatistic(getApplicationContext()).getEntrybyID(lastRunId-8);
-        title2.setText();
-        subtitle2.setText();
+        date.setTime(stat.date);
+        title2.setText("Run on " + parseFormat.format(date));
+        subtitle2.setText("Click to view");
 
         stat = new Repo_RunStatistic(getApplicationContext()).getEntrybyID(lastRunId-7);
-        title3.setText();
-        subtitle3.setText();
+        date.setTime(stat.date);
+        title3.setText("Run on " + parseFormat.format(date));
+        subtitle3.setText("Click to view");
 
         stat = new Repo_RunStatistic(getApplicationContext()).getEntrybyID(lastRunId-6);
-        title4.setText();
-        subtitle4.setText();
+        date.setTime(stat.date);
+        title4.setText("Run on " + parseFormat.format(date));
+        subtitle4.setText("Click to view");
 
         stat = new Repo_RunStatistic(getApplicationContext()).getEntrybyID(lastRunId-5);
-        title5.setText();
-        subtitle5.setText();
+        date.setTime(stat.date);
+        title5.setText("Run on " + parseFormat.format(date));
+        subtitle5.setText("Click to view");
 
         stat = new Repo_RunStatistic(getApplicationContext()).getEntrybyID(lastRunId-4);
-        title6.setText();
-        subtitle6.setText();
+        date.setTime(stat.date);
+        title6.setText("Run on " + parseFormat.format(date));
+        subtitle6.setText("Click to view");
 
         stat = new Repo_RunStatistic(getApplicationContext()).getEntrybyID(lastRunId-3);
-        title7.setText();
-        subtitle7.setText();
+        date.setTime(stat.date);
+        title7.setText("Run on " + parseFormat.format(date));
+        subtitle7.setText("Click to view");
 
         stat = new Repo_RunStatistic(getApplicationContext()).getEntrybyID(lastRunId-2);
-        title8.setText();
-        subtitle8.setText();
+        date.setTime(stat.date);
+        title8.setText("Run on " + parseFormat.format(date));
+        subtitle8.setText("Click to view");
 
         stat = new Repo_RunStatistic(getApplicationContext()).getEntrybyID(lastRunId-1);
-        title9.setText();
-        subtitle9.setText();
+        date.setTime(stat.date);
+        title9.setText("Run on " + parseFormat.format(date));
+        subtitle9.setText("Click to view");
 
         stat = new Repo_RunStatistic(getApplicationContext()).getEntrybyID(lastRunId);
-        title10.setText();
-        subtitle10.setText();
-
-
+        date.setTime(stat.date);
+        title10.setText("Run on " + parseFormat.format(date));
+        subtitle10.setText("Click to view");
     }
 
     private void injectOnClickListener(){
