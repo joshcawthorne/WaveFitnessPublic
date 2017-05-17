@@ -82,7 +82,7 @@ public class HamburgerMenu {
                                         activity.startActivity(new Intent(activity, MusicPlayerActivity.class));
                                         break;
                                     case 4:
-                                        Log.e("Menu","4");
+                                        activity.startActivity(new Intent(activity, PreviousRunActivity.class));
                                         break;
                                     case 5:
                                         activity.startActivity(new Intent(activity, Settings.class));

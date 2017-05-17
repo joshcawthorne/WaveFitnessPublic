@@ -23,123 +23,31 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="80dp"
-            android:background="#EEE"
-            android:orientation="horizontal">
-
             <LinearLayout
-                android:layout_width="300dp"
-                android:layout_height="90dp"
-                android:layout_marginTop="5dp"
-                android:background="#EEE"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-                <LinearLayout
-                    android:layout_width="200dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginTop="15dp"
-                    android:layout_height="55dp"
-                    android:layout_marginRight="5dp"
-                    android:orientation="vertical"
-                    >
-
-                    <android.support.v7.widget.AppCompatTextView
-                        android:layout_width="match_parent"
-                        android:id="@+id/statscomment"
-                        android:text="Keep Track: "
-                        android:paddingLeft="15dp"
-                        android:paddingTop="0dp"
-                        android:layout_marginTop="0dp"
-                        android:textSize="12dp"
-                        fontPath="fonts/Montserrat-SemiBold.otf"
-                        android:textAllCaps="true"
-                        android:textColor="#9e9e9e"
-                        android:layout_height="15dp" />
-
-                    <android.support.v7.widget.AppCompatTextView
-                        android:layout_width="match_parent"
-                        android:text="Your Run: "
-                        android:id="@+id/stattitle"
-                        android:paddingLeft="15dp"
-                        android:ellipsize="marquee"
-                        android:fadingEdge="horizontal"
-                        android:marqueeRepeatLimit="marquee_forever"
-                        android:scrollHorizontally="true"
-                        android:maxLines="1"
-                        android:textSize="20dp"
-                        android:includeFontPadding="false"
-                        fontPath="fonts/Montserrat-Bold.otf"
-                        android:textAllCaps="true"
-                        android:textColor="#000"
-                        android:layout_height="40dp" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="50dp"
-                android:layout_height="75dp"
-                android:gravity="clip_vertical|right|end"
-                android:background="#EEE"
-                android:layout_marginTop="5dp"
-                android:layout_gravity="center_vertical|right|end"
-                android:orientation="horizontal"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="25dp">
-
-                <LinearLayout
-                    android:layout_width="35dp"
-                    android:layout_gravity="center_vertical|right|end"
-                    android:gravity="clip_vertical|right|end"
-                    android:layout_alignParentRight="true"
-                    android:layout_height="35dp"
-                    android:layout_marginTop="0dp"
-                    android:layout_marginRight="0dp"
-                    >
-
-                    <de.hdodenhof.circleimageview.CircleImageView
-                        xmlns:app="http://schemas.android.com/apk/res-auto"
-                        android:id="@+id/roundart"
-                        android:layout_gravity="center_vertical|right|end"
-                        android:layout_width="35dp"
-                        android:gravity="clip_vertical|right|end"
-                        android:layout_alignParentRight="true"
-                        android:layout_height="35dp"
-                        android:src="@drawable/temp_profile"
-                        />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="vertical"
+                <fragment
+                    android:id="@+id/map"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="276dp"
+                    tools:context="teamcupcake.uk.ac.tees.wave.RunActivity" />
 
-                    <fragment
-                        android:id="@+id/map"
-                        android:name="com.google.android.gms.maps.SupportMapFragment"
-                        android:layout_width="match_parent"
-                        android:layout_height="276dp"
-                        tools:context="teamcupcake.uk.ac.tees.wave.RunActivity" />
+            </LinearLayout>
 
-                </LinearLayout>
-
-                </LinearLayout>
-
-
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layout_bg"
+                android:layout_margin="10dp">
 
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:paddingRight="15dp">
 
                     <LinearLayout
                         android:orientation="vertical"
@@ -178,7 +86,10 @@
                             android:layout_height="wrap_content"
                             android:id="@+id/time"
                             android:layout_weight="1"
-                            android:padding="10dp"
+                            android:paddingTop="-5dp"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
                             android:textAppearance="@android:style/TextAppearance.Material.Medium" />
 
                         <TextView
@@ -196,390 +107,401 @@
 
                 </LinearLayout>
 
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
                     <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
+                        <TextView
+                            android:text="Distance:"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/distancetext"
+                            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                            android:padding="10dp" />
 
-                            <TextView
-                                android:text="Distance:"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/distancetext"
-                                android:textAppearance="@android:style/TextAppearance.Material.Medium"
-                                android:padding="10dp" />
-
-                            <TextView
-                                android:text="Steps:"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/stepstext"
-                                android:layout_weight="1"
-                                android:textAppearance="@android:style/TextAppearance.Material.Medium"
-                                android:paddingBottom="10dp"
-                                android:paddingLeft="10dp"
-                                android:paddingRight="10dp" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
-
-                            <TextView
-                                android:text="Text"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/distance"
-                                android:layout_weight="1"
-                                android:textAppearance="@android:style/TextAppearance.Material.Medium"
-                                android:padding="10dp" />
-
-                            <TextView
-                                android:text="TIM"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/steps_value"
-                                android:layout_weight="1"
-                                android:textAppearance="@android:style/TextAppearance.Material.Medium"
-                                android:paddingBottom="10dp"
-                                android:paddingLeft="10dp"
-                                android:paddingRight="10dp" />
-                        </LinearLayout>
-
+                        <TextView
+                            android:text="Steps:"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/stepstext"
+                            android:layout_weight="1"
+                            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp" />
                     </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="30dp"
-                        android:src="@drawable/sharefacebook"
-                        android:layout_margin="5dp"
-                        android:id="@+id/shareFB"
-                        android:onClick="onp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/playBar"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:layout_alignParentBottom="true"
-                    android:gravity="bottom"
-                    android:layout_gravity="bottom"
-                    android:background="#EEE"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="60dp"
-                        android:layout_gravity="top|center"
-                        android:layout_height="match_parent"
-                        android:scaleType="centerCrop"
-                        android:id="@+id/cover_art_small"
-                        android:adjustViewBounds="true"
-                        android:background="#000"
-                        android:maxWidth="150dp"
-                        android:maxHeight="150dp"/>
                     <LinearLayout
-                        android:layout_width="150dp"
-                        android:layout_height="40dp"
                         android:orientation="vertical"
-                        android:layout_gravity="center_vertical">
-                        <TextView
-                            android:layout_marginTop="0dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="17dp"
-                            android:text="Error 02"
-                            android:ellipsize="marquee"
-                            android:fadingEdge="horizontal"
-                            android:marqueeRepeatLimit="marquee_forever"
-                            android:scrollHorizontally="true"
-                            android:maxLines="1"
-                            android:textSize="11dp"
-                            android:id="@+id/metadataTitle"
-                            android:textColor="#000"
-                            android:layout_marginLeft="10dp"
-                            android:textAllCaps="true"
-                            fontPath="fonts/Montserrat-Bold.otf" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:id="@+id/metadataSubTitle"
-                            android:layout_height="wrap_content"
-                            android:textSize="8dp"
-                            android:text="Error - No Data supplied!"
-                            android:textColor="#b3b3b3"
-                            android:layout_marginLeft="10dp"
-                            fontPath="fonts/Montserrat-Regular.otf" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="8dp"
-                            android:text="Please reboot Wave."
-                            android:textColor="#b3b3b3"
-                            android:layout_marginLeft="10dp"
-                            fontPath="fonts/Montserrat-Regular.otf"
-                            android:id="@+id/metaDataTime"/>
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
+                        <TextView
+                            android:text="Text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/distance"
+                            android:layout_weight="1"
+                            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                            android:padding="10dp" />
+
+                        <TextView
+                            android:text="TIM"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/steps_value"
+                            android:layout_weight="1"
+                            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp" />
                     </LinearLayout>
 
                 </LinearLayout>
-                <LinearLayout
-                    android:id="@+id/playBarTwo"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:layout_alignParentBottom="true"
-                    android:gravity="bottom"
-                    android:layout_gravity="bottom"
-                    android:background="#EEE"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="60dp"
-                        android:layout_gravity="top|center"
-                        android:layout_height="match_parent"
-                        android:scaleType="centerCrop"
-                        android:id="@+id/cover_art_smallTwo"
-                        android:adjustViewBounds="true"
-                        android:background="#000"
-                        android:maxWidth="150dp"
-                        android:maxHeight="150dp"/>
-                    <LinearLayout
-                        android:layout_width="150dp"
-                        android:layout_height="40dp"
-                        android:orientation="vertical"
-                        android:layout_gravity="center_vertical">
-                        <TextView
-                            android:layout_marginTop="0dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="17dp"
-                            android:text="Error 02"
-                            android:ellipsize="marquee"
-                            android:fadingEdge="horizontal"
-                            android:marqueeRepeatLimit="marquee_forever"
-                            android:scrollHorizontally="true"
-                            android:maxLines="1"
-                            android:textSize="11dp"
-                            android:id="@+id/metadataTitleTwo"
-                            android:textColor="#000"
-                            android:layout_marginLeft="10dp"
-                            android:textAllCaps="true"
-                            fontPath="fonts/Montserrat-Bold.otf" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:id="@+id/metadataSubTitleTwo"
-                            android:layout_height="wrap_content"
-                            android:textSize="8dp"
-                            android:text="Error - No Data supplied!"
-                            android:textColor="#b3b3b3"
-                            android:layout_marginLeft="10dp"
-                            fontPath="fonts/Montserrat-Regular.otf" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="8dp"
-                            android:text="Please reboot Wave."
-                            android:textColor="#b3b3b3"
-                            android:layout_marginLeft="10dp"
-                            fontPath="fonts/Montserrat-Regular.otf"
-                            android:id="@+id/metaDataTimeTwo"/>
-
-                    </LinearLayout>
-
-                </LinearLayout>
-                <LinearLayout
-                    android:id="@+id/playBarThree"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:layout_alignParentBottom="true"
-                    android:gravity="bottom"
-                    android:layout_gravity="bottom"
-                    android:background="#EEE"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="60dp"
-                        android:layout_gravity="top|center"
-                        android:layout_height="match_parent"
-                        android:scaleType="centerCrop"
-                        android:id="@+id/cover_art_smallThree"
-                        android:adjustViewBounds="true"
-                        android:background="#000"
-                        android:maxWidth="150dp"
-                        android:maxHeight="150dp"/>
-                    <LinearLayout
-                        android:layout_width="150dp"
-                        android:layout_height="40dp"
-                        android:orientation="vertical"
-                        android:layout_gravity="center_vertical">
-                        <TextView
-                            android:layout_marginTop="0dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="17dp"
-                            android:text="Error 02"
-                            android:ellipsize="marquee"
-                            android:fadingEdge="horizontal"
-                            android:marqueeRepeatLimit="marquee_forever"
-                            android:scrollHorizontally="true"
-                            android:maxLines="1"
-                            android:textSize="11dp"
-                            android:id="@+id/metadataTitleThree"
-                            android:textColor="#000"
-                            android:layout_marginLeft="10dp"
-                            android:textAllCaps="true"
-                            fontPath="fonts/Montserrat-Bold.otf" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:id="@+id/metadataSubTitleThree"
-                            android:layout_height="wrap_content"
-                            android:textSize="8dp"
-                            android:text="Error - No Data supplied!"
-                            android:textColor="#b3b3b3"
-                            android:layout_marginLeft="10dp"
-                            fontPath="fonts/Montserrat-Regular.otf" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="8dp"
-                            android:text="Please reboot Wave."
-                            android:textColor="#b3b3b3"
-                            android:layout_marginLeft="10dp"
-                            fontPath="fonts/Montserrat-Regular.otf"
-                            android:id="@+id/metaDataTimeThree"/>
-
-                    </LinearLayout>
-
-                </LinearLayout>
-                <LinearLayout
-                    android:id="@+id/playBarFour"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:layout_alignParentBottom="true"
-                    android:gravity="bottom"
-                    android:layout_gravity="bottom"
-                    android:background="#EEE"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="60dp"
-                        android:layout_gravity="top|center"
-                        android:layout_height="match_parent"
-                        android:scaleType="centerCrop"
-                        android:id="@+id/cover_art_smallFour"
-                        android:adjustViewBounds="true"
-                        android:background="#000"
-                        android:maxWidth="150dp"
-                        android:maxHeight="150dp"/>
-                    <LinearLayout
-                        android:layout_width="150dp"
-                        android:layout_height="40dp"
-                        android:orientation="vertical"
-                        android:layout_gravity="center_vertical">
-                        <TextView
-                            android:layout_marginTop="0dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="17dp"
-                            android:text="Error 02"
-                            android:ellipsize="marquee"
-                            android:fadingEdge="horizontal"
-                            android:marqueeRepeatLimit="marquee_forever"
-                            android:scrollHorizontally="true"
-                            android:maxLines="1"
-                            android:textSize="11dp"
-                            android:id="@+id/metadataTitleFour"
-                            android:textColor="#000"
-                            android:layout_marginLeft="10dp"
-                            android:textAllCaps="true"
-                            fontPath="fonts/Montserrat-Bold.otf" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:id="@+id/metadataSubTitleFour"
-                            android:layout_height="wrap_content"
-                            android:textSize="8dp"
-                            android:text="Error - No Data supplied!"
-                            android:textColor="#b3b3b3"
-                            android:layout_marginLeft="10dp"
-                            fontPath="fonts/Montserrat-Regular.otf" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="8dp"
-                            android:text="Please reboot Wave."
-                            android:textColor="#b3b3b3"
-                            android:layout_marginLeft="10dp"
-                            fontPath="fonts/Montserrat-Regular.otf"
-                            android:id="@+id/metaDataTimeFour"/>
-
-                    </LinearLayout>
-
-                </LinearLayout>
-                <LinearLayout
-                    android:id="@+id/playBarFive"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:layout_alignParentBottom="true"
-                    android:gravity="bottom"
-                    android:layout_gravity="bottom"
-                    android:background="#EEE"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="60dp"
-                        android:layout_gravity="top|center"
-                        android:layout_height="match_parent"
-                        android:scaleType="centerCrop"
-                        android:id="@+id/cover_art_smallFive"
-                        android:adjustViewBounds="true"
-                        android:background="#000"
-                        android:maxWidth="150dp"
-                        android:maxHeight="150dp"/>
-                    <LinearLayout
-                        android:layout_width="150dp"
-                        android:layout_height="40dp"
-                        android:orientation="vertical"
-                        android:layout_gravity="center_vertical">
-                        <TextView
-                            android:layout_marginTop="0dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="17dp"
-                            android:text="Error 02"
-                            android:ellipsize="marquee"
-                            android:fadingEdge="horizontal"
-                            android:marqueeRepeatLimit="marquee_forever"
-                            android:scrollHorizontally="true"
-                            android:maxLines="1"
-                            android:textSize="11dp"
-                            android:id="@+id/metadataTitleFive"
-                            android:textColor="#000"
-                            android:layout_marginLeft="10dp"
-                            android:textAllCaps="true"
-                            fontPath="fonts/Montserrat-Bold.otf" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:id="@+id/metadataSubTitleFive"
-                            android:layout_height="wrap_content"
-                            android:textSize="8dp"
-                            android:text="Error - No Data supplied!"
-                            android:textColor="#b3b3b3"
-                            android:layout_marginLeft="10dp"
-                            fontPath="fonts/Montserrat-Regular.otf" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="8dp"
-                            android:text="Please reboot Wave."
-                            android:textColor="#b3b3b3"
-                            android:layout_marginLeft="10dp"
-                            fontPath="fonts/Montserrat-Regular.otf"
-                            android:id="@+id/metaDataTimeFive"/>
-
-                    </LinearLayout>
 
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:src="@drawable/sharefacebook"
+                    android:layout_margin="5dp"
+                    android:id="@+id/shareFB"
+                    android:onClick="onp" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:src="@drawable/twitter"
+                    android:layout_margin="5dp"
+                    android:id="@+id/shareTwitter"
+                    android:onClick="onp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/playBar"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentBottom="true"
+                android:gravity="bottom"
+                android:layout_gravity="bottom"
+                android:background="#EEE"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_gravity="top|center"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:id="@+id/cover_art_small"
+                    android:adjustViewBounds="true"
+                    android:background="#000"
+                    android:maxWidth="150dp"
+                    android:maxHeight="150dp"/>
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical">
+                    <TextView
+                        android:layout_marginTop="0dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="17dp"
+                        android:text="Error 02"
+                        android:ellipsize="marquee"
+                        android:fadingEdge="horizontal"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:scrollHorizontally="true"
+                        android:maxLines="1"
+                        android:textSize="11dp"
+                        android:id="@+id/metadataTitle"
+                        android:textColor="#000"
+                        android:layout_marginLeft="10dp"
+                        android:textAllCaps="true"
+                        fontPath="fonts/Montserrat-Bold.otf" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/metadataSubTitle"
+                        android:layout_height="wrap_content"
+                        android:textSize="8dp"
+                        android:text="Error - No Data supplied!"
+                        android:textColor="#b3b3b3"
+                        android:layout_marginLeft="10dp"
+                        fontPath="fonts/Montserrat-Regular.otf" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="8dp"
+                        android:text="Please reboot Wave."
+                        android:textColor="#b3b3b3"
+                        android:layout_marginLeft="10dp"
+                        fontPath="fonts/Montserrat-Regular.otf"
+                        android:id="@+id/metaDataTime"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/playBarTwo"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentBottom="true"
+                android:gravity="bottom"
+                android:layout_gravity="bottom"
+                android:background="#EEE"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_gravity="top|center"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:id="@+id/cover_art_smallTwo"
+                    android:adjustViewBounds="true"
+                    android:background="#000"
+                    android:maxWidth="150dp"
+                    android:maxHeight="150dp"/>
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical">
+                    <TextView
+                        android:layout_marginTop="0dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="17dp"
+                        android:text="Error 02"
+                        android:ellipsize="marquee"
+                        android:fadingEdge="horizontal"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:scrollHorizontally="true"
+                        android:maxLines="1"
+                        android:textSize="11dp"
+                        android:id="@+id/metadataTitleTwo"
+                        android:textColor="#000"
+                        android:layout_marginLeft="10dp"
+                        android:textAllCaps="true"
+                        fontPath="fonts/Montserrat-Bold.otf" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/metadataSubTitleTwo"
+                        android:layout_height="wrap_content"
+                        android:textSize="8dp"
+                        android:text="Error - No Data supplied!"
+                        android:textColor="#b3b3b3"
+                        android:layout_marginLeft="10dp"
+                        fontPath="fonts/Montserrat-Regular.otf" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="8dp"
+                        android:text="Please reboot Wave."
+                        android:textColor="#b3b3b3"
+                        android:layout_marginLeft="10dp"
+                        fontPath="fonts/Montserrat-Regular.otf"
+                        android:id="@+id/metaDataTimeTwo"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/playBarThree"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentBottom="true"
+                android:gravity="bottom"
+                android:layout_gravity="bottom"
+                android:background="#EEE"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_gravity="top|center"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:id="@+id/cover_art_smallThree"
+                    android:adjustViewBounds="true"
+                    android:background="#000"
+                    android:maxWidth="150dp"
+                    android:maxHeight="150dp"/>
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical">
+                    <TextView
+                        android:layout_marginTop="0dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="17dp"
+                        android:text="Error 02"
+                        android:ellipsize="marquee"
+                        android:fadingEdge="horizontal"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:scrollHorizontally="true"
+                        android:maxLines="1"
+                        android:textSize="11dp"
+                        android:id="@+id/metadataTitleThree"
+                        android:textColor="#000"
+                        android:layout_marginLeft="10dp"
+                        android:textAllCaps="true"
+                        fontPath="fonts/Montserrat-Bold.otf" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/metadataSubTitleThree"
+                        android:layout_height="wrap_content"
+                        android:textSize="8dp"
+                        android:text="Error - No Data supplied!"
+                        android:textColor="#b3b3b3"
+                        android:layout_marginLeft="10dp"
+                        fontPath="fonts/Montserrat-Regular.otf" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="8dp"
+                        android:text="Please reboot Wave."
+                        android:textColor="#b3b3b3"
+                        android:layout_marginLeft="10dp"
+                        fontPath="fonts/Montserrat-Regular.otf"
+                        android:id="@+id/metaDataTimeThree"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/playBarFour"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentBottom="true"
+                android:gravity="bottom"
+                android:layout_gravity="bottom"
+                android:background="#EEE"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_gravity="top|center"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:id="@+id/cover_art_smallFour"
+                    android:adjustViewBounds="true"
+                    android:background="#000"
+                    android:maxWidth="150dp"
+                    android:maxHeight="150dp"/>
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical">
+                    <TextView
+                        android:layout_marginTop="0dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="17dp"
+                        android:text="Error 02"
+                        android:ellipsize="marquee"
+                        android:fadingEdge="horizontal"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:scrollHorizontally="true"
+                        android:maxLines="1"
+                        android:textSize="11dp"
+                        android:id="@+id/metadataTitleFour"
+                        android:textColor="#000"
+                        android:layout_marginLeft="10dp"
+                        android:textAllCaps="true"
+                        fontPath="fonts/Montserrat-Bold.otf" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/metadataSubTitleFour"
+                        android:layout_height="wrap_content"
+                        android:textSize="8dp"
+                        android:text="Error - No Data supplied!"
+                        android:textColor="#b3b3b3"
+                        android:layout_marginLeft="10dp"
+                        fontPath="fonts/Montserrat-Regular.otf" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="8dp"
+                        android:text="Please reboot Wave."
+                        android:textColor="#b3b3b3"
+                        android:layout_marginLeft="10dp"
+                        fontPath="fonts/Montserrat-Regular.otf"
+                        android:id="@+id/metaDataTimeFour"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/playBarFive"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentBottom="true"
+                android:gravity="bottom"
+                android:layout_gravity="bottom"
+                android:background="#EEE"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_gravity="top|center"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:id="@+id/cover_art_smallFive"
+                    android:adjustViewBounds="true"
+                    android:background="#000"
+                    android:maxWidth="150dp"
+                    android:maxHeight="150dp"/>
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical">
+                    <TextView
+                        android:layout_marginTop="0dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="17dp"
+                        android:text="Error 02"
+                        android:ellipsize="marquee"
+                        android:fadingEdge="horizontal"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:scrollHorizontally="true"
+                        android:maxLines="1"
+                        android:textSize="11dp"
+                        android:id="@+id/metadataTitleFive"
+                        android:textColor="#000"
+                        android:layout_marginLeft="10dp"
+                        android:textAllCaps="true"
+                        fontPath="fonts/Montserrat-Bold.otf" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/metadataSubTitleFive"
+                        android:layout_height="wrap_content"
+                        android:textSize="8dp"
+                        android:text="Error - No Data supplied!"
+                        android:textColor="#b3b3b3"
+                        android:layout_marginLeft="10dp"
+                        fontPath="fonts/Montserrat-Regular.otf" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="8dp"
+                        android:text="Please reboot Wave."
+                        android:textColor="#b3b3b3"
+                        android:layout_marginLeft="10dp"
+                        fontPath="fonts/Montserrat-Regular.otf"
+                        android:id="@+id/metaDataTimeFive"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
     </ScrollView>
 </LinearLayout>

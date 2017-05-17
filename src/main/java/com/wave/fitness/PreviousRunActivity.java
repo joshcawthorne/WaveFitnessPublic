@@ -5,6 +5,7 @@ import android.icu.text.SimpleDateFormat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -89,10 +90,10 @@ public class PreviousRunActivity extends AppCompatActivity {
         Data_RunStatistic stat;
         SimpleDateFormat parseFormat = new SimpleDateFormat("EEEE");
         Date date = new Date();
-        String dashboardDate = parseFormat.format(date);
-
+/*
         stat = new Repo_RunStatistic(getApplicationContext()).getEntrybyID(lastRunId-9);
         date.setTime(stat.date);
+
         title1.setText("Run on " + parseFormat.format(date));
         subtitle1.setText("Click to view");
 
@@ -115,7 +116,7 @@ public class PreviousRunActivity extends AppCompatActivity {
         date.setTime(stat.date);
         title5.setText("Run on " + parseFormat.format(date));
         subtitle5.setText("Click to view");
-
+*/
         stat = new Repo_RunStatistic(getApplicationContext()).getEntrybyID(lastRunId-4);
         date.setTime(stat.date);
         title6.setText("Run on " + parseFormat.format(date));
@@ -143,6 +144,7 @@ public class PreviousRunActivity extends AppCompatActivity {
     }
 
     private void injectOnClickListener(){
+/*
         bar1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -173,6 +175,7 @@ public class PreviousRunActivity extends AppCompatActivity {
                 startPostRunActivity(lastRunId - 5);
             }
         });
+        */
         bar6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -194,13 +197,15 @@ public class PreviousRunActivity extends AppCompatActivity {
         bar9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startPostRunActivity(lastRunId - 1;
+                startPostRunActivity(lastRunId - 1);
             }
         });
+
         bar10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startPostRunActivity(lastRunId);
+                Log.e("prev", "click 10");
             }
         });
     }
@@ -208,5 +213,6 @@ public class PreviousRunActivity extends AppCompatActivity {
     private void startPostRunActivity(int runId){
         Intent postRun = new Intent(this, PostRunActivity.class);
         postRun.putExtra("runID", runId);
+        this.startActivity(postRun);
     }
 }
