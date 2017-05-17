@@ -1,6 +1,7 @@
 package com.wave.fitness;
 
 import android.content.Intent;
+import android.icu.text.SimpleDateFormat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -85,10 +86,13 @@ public class PreviousRunActivity extends AppCompatActivity {
 
     private void populateRunData(){
         Data_RunStatistic stat;
+        SimpleDateFormat parseFormat = new SimpleDateFormat("EEEE");
+        Date date = new Date();
+        String dashboardDate = parseFormat.format(date);
 
         stat = new Repo_RunStatistic(getApplicationContext()).getEntrybyID(lastRunId-9);
-        title1.setText();
-        subtitle1.setText();
+        title1.setText("Run on " + date);
+        subtitle1.setText("Click to view");
 
         stat = new Repo_RunStatistic(getApplicationContext()).getEntrybyID(lastRunId-8);
         title2.setText();

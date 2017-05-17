@@ -132,115 +132,69 @@
 
                 </LinearLayout>
 
+                </LinearLayout>
+
+
+
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/layout_bg"
-                    android:layout_margin="10dp">
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
 
                     <LinearLayout
-                        android:id="@+id/row_1"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:background="#fff"
                         android:orientation="vertical"
-                        android:paddingBottom="@dimen/row_spacing">
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
-                        <LinearLayout
+                        <TextView
+                            android:text="Time:  "
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:elevation="3dp">
+                            android:layout_height="wrap_content"
+                            android:id="@+id/timetext"
+                            android:layout_weight="1"
+                            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                            android:padding="10dp" />
 
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:id="@+id/time"
-                                android:textSize="60dp"
-                                android:layout_gravity="center"
-                                android:gravity="center"
-                                android:includeFontPadding="false"
-                                fontPath="fonts/Montserrat-Bold.otf"
-                                android:textAllCaps="true"
-                                android:textColor="#000"/>
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:id="@+id/distancerunsub"
-                                android:text="total steps"
-                                android:textSize="15dp"
-                                android:layout_gravity="center"
-                                android:gravity="center"
-                                android:layout_marginBottom="20dp"
-                                android:includeFontPadding="false"
-                                fontPath="fonts/Montserrat-Bold.otf"
-                                android:textAllCaps="true"
-                                android:textColor="#9e9e9e"/>
-
-                        </LinearLayout>
+                        <TextView
+                            android:text="Calories:"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/caloriestext"
+                            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                            android:paddingLeft="10dp"
+                            android:paddingBottom="10dp"
+                            android:paddingRight="10dp" />
 
                     </LinearLayout>
 
                     <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
-                        <LinearLayout
-                            android:orientation="vertical"
+                        <TextView
+                            android:text="Text"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent">
+                            android:layout_height="wrap_content"
+                            android:id="@+id/time"
+                            android:layout_weight="1"
+                            android:padding="10dp"
+                            android:textAppearance="@android:style/TextAppearance.Material.Medium" />
 
-                            <TextView
-                                android:text="Time:  "
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/timetext"
-                                android:layout_weight="1"
-                                android:textAppearance="@android:style/TextAppearance.Material.Medium"
-                                android:padding="10dp" />
-
-                            <TextView
-                                android:text="Calories:"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/caloriestext"
-                                android:textAppearance="@android:style/TextAppearance.Material.Medium"
-                                android:paddingLeft="10dp"
-                                android:paddingBottom="10dp"
-                                android:paddingRight="10dp" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:orientation="vertical"
+                        <TextView
+                            android:text="Text"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent">
-
-                            <TextView
-                                android:text="Text"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/time"
-                                android:layout_weight="1"
-                                android:padding="10dp"
-                                android:textAppearance="@android:style/TextAppearance.Material.Medium" />
-
-                            <TextView
-                                android:text="Text"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/calories"
-                                android:layout_weight="1"
-                                android:textAppearance="@android:style/TextAppearance.Material.Medium"
-                                android:paddingBottom="10dp"
-                                android:paddingLeft="10dp"
-                                android:paddingRight="10dp" />
-
-                        </LinearLayout>
+                            android:layout_height="wrap_content"
+                            android:id="@+id/calories"
+                            android:layout_weight="1"
+                            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp" />
 
                     </LinearLayout>
+
+                </LinearLayout>
 
                     <LinearLayout
                         android:orientation="horizontal"
@@ -299,8 +253,6 @@
                         </LinearLayout>
 
                     </LinearLayout>
-
-                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -628,7 +580,6 @@
 
                     </LinearLayout>
 
-                </LinearLayout>
-        </LinearLayout>
+            </LinearLayout>
     </ScrollView>
 </LinearLayout>

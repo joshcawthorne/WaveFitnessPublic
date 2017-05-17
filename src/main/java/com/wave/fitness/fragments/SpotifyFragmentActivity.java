@@ -243,8 +243,8 @@ public class SpotifyFragmentActivity extends Fragment implements
             }
         });*/
 
-        profile_image = (CircleImageView) v.findViewById(R.id.profilepicture);
-        updateProfilePic();
+
+
 
         playfab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -272,6 +272,7 @@ public class SpotifyFragmentActivity extends Fragment implements
 
         core = ((SpotifyCore)getApplicationContext());
         songHistory = new ArrayList<Metadata.Track>();
+        profile_image = (CircleImageView) v.findViewById(R.id.profile_image);
 
         if(!core.isLoggedIn){
             startActivityForResult(new Intent(getActivity(), AuthActivity.class), SPOTIFY_LOGIN);
@@ -280,6 +281,7 @@ public class SpotifyFragmentActivity extends Fragment implements
             createPlayer();
 
         }
+        updateProfilePic();
 
         // Get a reference to any UI widgets that will be needed.
         mMetadataText = (TextView) getView().findViewById(R.id.metadataTitle);
