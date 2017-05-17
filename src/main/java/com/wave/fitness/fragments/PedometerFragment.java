@@ -5,6 +5,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -21,6 +23,8 @@ import android.widget.TextView;
 
 import com.squareup.otto.Produce;
 import com.squareup.otto.Subscribe;
+import com.squareup.picasso.Picasso;
+import com.squareup.picasso.Transformation;
 import com.wave.fitness.BusProvider;
 import com.wave.fitness.R;
 import com.wave.fitness.SpotifyCore;
@@ -32,6 +36,8 @@ import com.wave.fitness.runningEvent.LocationChangedEvent;
 import com.wave.fitness.runningEvent.StartRunEvent;
 import com.wave.fitness.runningEvent.TrackChangedEvent;
 import com.wave.fitness.runningEvent.UpdateRunStatEvent;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 
 public class PedometerFragment extends android.support.v4.app.Fragment {
@@ -62,6 +68,8 @@ public class PedometerFragment extends android.support.v4.app.Fragment {
      */
     private boolean mIsRunning;
 
+    private CircleImageView _profilePic;
+
     private SpotifyCore core;
 
 
@@ -83,6 +91,7 @@ public class PedometerFragment extends android.support.v4.app.Fragment {
         mPaceValue = 0;
 
         core = (SpotifyCore) getActivity().getApplicationContext();
+
 
         mUtils = Utils.getInstance();
 
@@ -197,6 +206,9 @@ public class PedometerFragment extends android.support.v4.app.Fragment {
 
 
         displayDesiredPaceOrSpeed();
+
+        _profilePic = (CircleImageView) getView().findViewById(R.id.roundart);
+        updateProfilePic();
     }
 
     private void displayDesiredPaceOrSpeed() {
@@ -411,6 +423,28 @@ public class PedometerFragment extends android.support.v4.app.Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+
+    private void updateProfilePic(){
+        Picasso.with(getActivity())
+                .load(core.user.getPhotoUrl())
+                .transform(new Transformation() {
+                    @Override
+                    public Bitmap transform(Bitmap source) {
+                        // really ugly darkening trick
+                        final Bitmap copy = source.copy(source.getConfig(), true);
+                        source.recycle();
+                        final Canvas canvas = new Canvas(copy);
+                        //canvas.drawColor(0xbb000000);
+                        return copy;
+                    }
+
+                    @Override
+                    public String key() {
+                        return "darken";
+                    }
+                })
+                .into(_profilePic);
     }
     /***
      * *
