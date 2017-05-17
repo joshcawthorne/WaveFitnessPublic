@@ -50,69 +50,50 @@ android {
 }
 
 dependencies {
-
-
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-
     //Android support
     compile 'com.android.support:support-annotations:25.2.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.google.android.gms:play-services-maps:10.2.1'
     compile 'com.android.support:design:25.2.0'
     compile 'com.google.android.gms:play-services:10.2.1'
-    compile 'com.android.support:recyclerview-v7:22.0.+'
-
     //Spotify
     compile 'com.spotify.android:auth:1.0.0-alpha'
     compile 'com.spotify.sdk:spotify-player-24-noconnect-2.20b@aar'
     compile 'com.squareup.picasso:picasso:2.5.2'
-
     //Graphview
     compile 'com.jjoe64:graphview:4.2.1'
-
     //MaterialDrawer
     compile('com.mikepenz:materialdrawer:5.9.1@aar') {
         transitive = true
     }
-
     //Shareble
     compile 'com.github.robertsimoes:Shareable:0.1.0'
     //Social login
     compile 'com.github.RogaLabs:social-login:+'
-
     //Otto Event Bus
     compile 'com.squareup:otto:1.3.8'
-
     //Facebook SDK
     compile 'com.facebook.android:facebook-android-sdk:4.0.1'
     //GSON library
     compile 'com.google.code.gson:gson:2.3.1'
-
     //Rounded Images
     compile 'com.makeramen:roundedimageview:2.3.0'
-
     //Test
     androidTestCompile 'org.hamcrest:hamcrest-core:1.3'
-
     //Calligraphy custom fonts
     compile 'uk.co.chrisjenx:calligraphy:2.2.0'
-
     //CIRCLE IMAGE VIEW
     compile 'de.hdodenhof:circleimageview:2.1.0'
-
     //Butterknife
     compile 'com.jakewharton:butterknife:6.1.0'
-
     //Android Universal Image Loader
-    compile'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
-
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
     //Dali
     compile 'at.favre.lib:dali:0.3.4'
-
-
     compile 'com.android.support:cardview-v7:25.3.1'
 }
 

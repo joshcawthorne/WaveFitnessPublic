@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="materialdrawer-5.9.1">
     <CLASSES>
-      <root url="file://$USER_HOME$/.android/build-cache/15096bc6afba1aba5aedf130cd8f18621ffdd55e/output/res" />
-      <root url="jar://$USER_HOME$/.android/build-cache/15096bc6afba1aba5aedf130cd8f18621ffdd55e/output/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.android/build-cache/59c45803b7e5953255d41c841139a5fe2479fae3/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/59c45803b7e5953255d41c841139a5fe2479fae3/output/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
