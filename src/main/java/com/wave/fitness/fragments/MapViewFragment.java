@@ -121,8 +121,8 @@ public class MapViewFragment extends Fragment implements OnMapReadyCallback, Goo
 
         mMapView.onResume();// needed to get the map to display immediately
 
-        btn = (FloatingActionButton) v.findViewById(R.id.toggleTrackButton);
-        btn.setOnClickListener(this);
+        //btn = (FloatingActionButton) v.findViewById(R.id.toggleTrackButton);
+        //btn.setOnClickListener(this);
 
         try {
             MapsInitializer.initialize(getActivity().getApplicationContext());

@@ -101,6 +101,7 @@ import com.wave.fitness.spotifyActivity;
 import org.w3c.dom.Text;
 
 import at.favre.lib.dali.Dali;
+import de.hdodenhof.circleimageview.CircleImageView;
 
 import static android.app.Activity.RESULT_OK;
 import static com.facebook.FacebookSdk.getApplicationContext;
@@ -206,7 +207,7 @@ public class SpotifyFragmentActivity extends Fragment implements
         v = inflater.inflate(R.layout.activity_musicplayer, container, false);
 
         //Button play = (Button) v.findViewById(R.id.pause_temp);
-        FloatingActionButton playfab = (FloatingActionButton) v.findViewById(R.id.pause_button);
+        ImageView playfab = (ImageView) v.findViewById(R.id.pause_button);
         //Button skip = (Button) v.findViewById(R.id.skip_next_button);
         //Button prev = (Button) v.findViewById(R.id.skip_prev_button);
 
@@ -251,7 +252,7 @@ public class SpotifyFragmentActivity extends Fragment implements
         Toast.makeText(getActivity(), "This is a temporary layout for music.",
                 Toast.LENGTH_LONG).show();
 
-        ImageView shuffleGenre = (ImageView) v.findViewById(R.id.switch_genre);
+        FloatingActionButton shuffleGenre = (FloatingActionButton) v.findViewById(R.id.switch_genre);
 
         shuffleGenre.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -281,7 +282,7 @@ public class SpotifyFragmentActivity extends Fragment implements
         mMetaDataSubtext = (TextView) getView().findViewById(R.id.metadataSubTitle);
         mMetaDataTime = (TextView) getView().findViewById(R.id.metaDataTime);
         mStatusTextScrollView = (ScrollView) getView().findViewById(R.id.status_text_container);
-        mGenreData = (TextView) getView().findViewById(R.id.currentgenre);
+        // = (TextView) getView().findViewById(R.id.currentgenre);
         mMetadataText.setSelected(true);
 
 
@@ -295,16 +296,16 @@ public class SpotifyFragmentActivity extends Fragment implements
 
 
 
-        final FloatingActionButton fab = (FloatingActionButton) getView().findViewById(R.id.pause_button);
+        final ImageView fab = (ImageView) getView().findViewById(R.id.pause_button);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (core.mCurrentPlaybackState != null && core.mCurrentPlaybackState.isPlaying) {
                     core.mPlayer.pause(mOperationCallback);
-                    fab.setImageDrawable(getResources().getDrawable(R.drawable.play));
+                    fab.setBackgroundResource(R.drawable.playic);
                 } else {
                     core.mPlayer.resume(mOperationCallback);
-                    fab.setImageDrawable(getResources().getDrawable(R.drawable.pause));
+                    fab.setBackgroundResource(R.drawable.pauseic);
                 }
             }
         });
@@ -412,6 +413,7 @@ public class SpotifyFragmentActivity extends Fragment implements
         //final ImageView coverArtViewTwo = (ImageView) getView().findViewById(R.id.cover_art_two);
         //final ImageView coverArtBlur = (ImageView) getView().findViewById(R.id.cover_art_blur);
         final ImageView coverArtSmall = (ImageView) getView().findViewById(R.id.cover_art_small);
+        CircleImageView roundcoveart = (CircleImageView) getView().findViewById(R.id.roundart);
 
         // Login button should be the inverse of the logged in state
         //Button loginButton = (Button) findViewById(R.id.login_button);
@@ -455,11 +457,11 @@ public class SpotifyFragmentActivity extends Fragment implements
             mMetaDataSubtext.setText(core.mMetadata.currentTrack.artistName);
             mMetaDataTime.setText(durationStr);
 
-            mGenreData.setText("You're listening to " + core.mMetadata.currentTrack.albumName);
-            //mMusicTitle = (TextView) v.findViewById(R.id.tracktitle);
-            musicTitle.setText(core.mMetadata.currentTrack)
+            //mGenreData.setText("You're listening to " + core.mMetadata.currentTrack.albumName);
+            mMusicTitle = (TextView) v.findViewById(R.id.tracktitle);
+            mMusicTitle.setText(core.mMetadata.currentTrack.artistName);
             collapsingToolbarLayout = (CollapsingToolbarLayout) v.findViewById(R.id.collapsing_toolbar);
-            collapsingToolbarLayout.setTitle(core.mMetadata.currentTrack.name + " - " + core.mMetadata.currentTrack.artistName);
+            collapsingToolbarLayout.setTitle(core.mMetadata.currentTrack.name);
             collapsingToolbarLayout.setCollapsedTitleTextColor(getResources().getColor(android.R.color.black));
             collapsingToolbarLayout.setExpandedTitleColor(getResources().getColor(android.R.color.white));
             collapsingToolbarLayout.setBackgroundColor(getResources().getColor(R.color.wavePrimary));
@@ -505,6 +507,26 @@ public class SpotifyFragmentActivity extends Fragment implements
                         }
                     })
                     .into(coverArtSmall);
+
+            Picasso.with(getActivity())
+                    .load(core.mMetadata.currentTrack.albumCoverWebUrl)
+                    .transform(new Transformation() {
+                        @Override
+                        public Bitmap transform(Bitmap source) {
+                            // really ugly darkening trick
+                            final Bitmap copy = source.copy(source.getConfig(), true);
+                            source.recycle();
+                            final Canvas canvas = new Canvas(copy);
+                            //canvas.drawColor(0xbb000000);
+                            return copy;
+                        }
+
+                        @Override
+                        public String key() {
+                            return "darken";
+                        }
+                    })
+                    .into(roundcoveart);
 
             progressBar(songLength);
             coverArtView.setVisibility(View.VISIBLE);
@@ -749,13 +771,20 @@ public class SpotifyFragmentActivity extends Fragment implements
 
     @Subscribe
     public void onRunDataUpdate(UpdateRunStatEvent event){
-        TextView speedcur = (TextView) v.findViewById(R.id.speedcur);
-        TextView distcur = (TextView) v.findViewById(R.id.distcur);
-        TextView calcur = (TextView) v.findViewById(R.id.calcur);
-        TextView curspeedcur = (TextView) v.findViewById(R.id.curspeedcur);
+
+        TextView stattitle = (TextView) v.findViewById(R.id.stattitle);
+        stattitle.setText(core.firstName + "'s Stats:");
+
+        TextView runlength = (TextView) v.findViewById(R.id.runlength);
+        runlength.setText(String.valueOf(event.mDistanceValue));
+
+        TextView speedcur = (TextView) v.findViewById(R.id.runspeed);
+        TextView calcur = (TextView) v.findViewById(R.id.calburnt);
+        TextView distancerun = (TextView) v.findViewById(R.id.distancerun);
+        TextView curspeedcur = (TextView) v.findViewById(R.id.runspeed);
         speedcur.setText(String.valueOf(event.mPaceValue));
-        distcur.setText(String.valueOf(event.mDistanceValue));
         calcur.setText(String.valueOf(event.mCaloriesValue));
         curspeedcur.setText(String.valueOf(event.mSpeedValue));
+        distancerun.setText(String.valueOf(event.mStepValue));
     }
 }

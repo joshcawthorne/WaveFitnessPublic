@@ -62,6 +62,8 @@ public class PedometerFragment extends android.support.v4.app.Fragment {
      */
     private boolean mIsRunning;
 
+    private SpotifyCore core;
+
 
     private OnFragmentInteractionListener mListener;
 
@@ -80,7 +82,7 @@ public class PedometerFragment extends android.support.v4.app.Fragment {
         mStepValue = 0;
         mPaceValue = 0;
 
-        //getActivity().setContentView(R.layout.main);
+        core = (SpotifyCore) getActivity().getApplicationContext();
 
         mUtils = Utils.getInstance();
 
@@ -137,6 +139,8 @@ public class PedometerFragment extends android.support.v4.app.Fragment {
         mSpeedValueView    = (TextView) getView().findViewById(R.id.speed_value);
         mCaloriesValueView = (TextView) getView().findViewById(R.id.calories_value);
         mDesiredPaceView   = (TextView) getView().findViewById(R.id.desired_pace_value);
+        TextView stattitle = (TextView) getView().findViewById(R.id.stattitle);
+        stattitle.setText(core.firstName + "'s Stats:");
 
         mIsMetric = mPedometerSettings.isMetric();
         ((TextView) getView().findViewById(R.id.distance_units)).setText(getString(

@@ -23,7 +23,7 @@
 
         <LinearLayout
             android:layout_width="300dp"
-            android:layout_height="75dp"
+            android:layout_height="90dp"
             android:layout_marginTop="5dp"
             android:background="#EEE"
             android:orientation="vertical">
@@ -31,7 +31,7 @@
             <LinearLayout
                 android:layout_width="300dp"
                 android:layout_gravity="center_vertical"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="15dp"
                 android:layout_height="55dp"
                 android:layout_marginRight="5dp"
                 android:orientation="vertical"
@@ -40,7 +40,7 @@
                 <android.support.v7.widget.AppCompatTextView
                     android:layout_width="match_parent"
                     android:id="@+id/musiccomment"
-                    android:text="You're listening to"
+                    android:text="You're listening to: "
                     android:paddingLeft="15dp"
                     android:paddingTop="0dp"
                     android:layout_marginTop="5dp"
@@ -55,7 +55,12 @@
                     android:text="Music"
                     android:id="@+id/tracktitle"
                     android:paddingLeft="15dp"
-                    android:textSize="30dp"
+                    android:ellipsize="marquee"
+                    android:fadingEdge="horizontal"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:maxLines="1"
+                    android:textSize="20dp"
                     android:includeFontPadding="false"
                     fontPath="fonts/Montserrat-Bold.otf"
                     android:textAllCaps="true"
@@ -89,7 +94,7 @@
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:id="@+id/profile_image"
+                    android:id="@+id/roundart"
                     android:layout_gravity="center_vertical|right|end"
                     android:layout_width="35dp"
                     android:gravity="clip_vertical|right|end"
@@ -109,10 +114,10 @@
             android:layout_height="match_parent"
             android:orientation="horizontal"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="20dp"
             android:layout_marginRight="30dp"
             android:layout_marginLeft="30dp"
-            android:background="@color/wave_drawer_background"
+            android:background="#EEE"
             android:layout_weight=".80"
             android:elevation="5dp"
             android:gravity="center_horizontal"
@@ -120,25 +125,15 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
+                android:background="#EEE"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:layout_gravity="center_horizontal"
                 android:gravity="center_horizontal">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/currentgenre"
-                    fontPath="fonts/Montserrat-Bold.otf"
-                    android:textSize="10dp"
-                    android:textColor="@color/wave_drawer_primary_text"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="7dp"
-                    android:textAlignment="center"
-                    />
-
                 <LinearLayout
                     android:layout_width="match_parent"
+                    android:background="#2196F3"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:layout_gravity="center_horizontal"
@@ -151,17 +146,16 @@
                             android:padding="2dp"
                             android:layout_margin="5dp"
                             android:background="?android:attr/selectableItemBackground"
-                            android:src="@drawable/previous"
+                            android:src="@drawable/previousic"
                             android:onClick="onSkipToPreviousButtonClicked"/>
 
                         <ImageView
-                            android:id="@+id/switch_genre"
+                            android:id="@+id/pause_button"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:padding="2dp"
                             android:layout_margin="5dp"
-                            android:background="?android:attr/selectableItemBackground"
-                            android:src="@drawable/diceblack" />
+                            android:background="@drawable/pauseic"/>
 
                         <ImageView
                             android:id="@+id/skip_next_button"
@@ -170,7 +164,7 @@
                             android:padding="2dp"
                             android:layout_margin="5dp"
                             android:background="?android:attr/selectableItemBackground"
-                            android:src="@drawable/next"
+                            android:src="@drawable/skipic"
                             android:onClick="onSkipToNextButtonClicked"/>
 
                 </LinearLayout>
@@ -179,155 +173,343 @@
 
         </android.support.v7.widget.CardView>
 
-        <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:columnCount="2"
-            android:orientation="horizontal"></GridLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:background="#EEE"
+            android:orientation="horizontal">
 
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginRight="30dp"
-                android:layout_marginLeft="30dp"
-                android:background="@color/wave_drawer_background"
-                android:layout_weight=".80"
-                android:elevation="5dp"
-                android:gravity="center_horizontal"
-                android:layout_gravity="center_horizontal">
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="5dp"
+                android:background="#EEE"
+                android:orientation="vertical">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="300dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="15dp"
+                    android:layout_height="55dp"
+                    android:layout_marginRight="5dp"
                     android:orientation="vertical"
-                    android:layout_gravity="center_horizontal"
-                    android:gravity="center_horizontal">
+                    >
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/speedtext"
-                        android:text="Current Speed: "/>
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:id="@+id/statscomment"
+                        android:text="Keep Track: "
+                        android:paddingLeft="15dp"
+                        android:paddingTop="0dp"
+                        android:layout_marginTop="5dp"
+                        android:textSize="12dp"
+                        fontPath="fonts/Montserrat-SemiBold.otf"
+                        android:textAllCaps="true"
+                        android:textColor="#9e9e9e"
+                        android:layout_height="15dp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/speedcur"/>
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:text=""
+                        android:id="@+id/stattitle"
+                        android:paddingLeft="15dp"
+                        android:ellipsize="marquee"
+                        android:fadingEdge="horizontal"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:scrollHorizontally="true"
+                        android:maxLines="1"
+                        android:textSize="20dp"
+                        android:includeFontPadding="false"
+                        fontPath="fonts/Montserrat-Bold.otf"
+                        android:textAllCaps="true"
+                        android:textColor="#000"
+                        android:layout_height="40dp" />
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginLeft="30dp"
-            android:background="@color/wave_drawer_background"
-            android:layout_weight=".80"
-            android:elevation="5dp"
-            android:gravity="center_horizontal"
-            android:layout_gravity="center_horizontal">
+            </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center_horizontal">
+                android:layout_width="fill_parent"
+                android:layout_height="75dp"
+                android:gravity="clip_vertical|right|end"
+                android:background="#EEE"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center_vertical|right|end"
+                android:orientation="horizontal"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="25dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/caltext"
-                    android:text="Calories Burnt: "/>
+                <LinearLayout
+                    android:layout_width="35dp"
+                    android:layout_gravity="center_vertical|right|end"
+                    android:gravity="clip_vertical|right|end"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="0dp"
+                    >
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/calcur"/>
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/roundart"
+                        android:layout_gravity="center_vertical|right|end"
+                        android:layout_width="35dp"
+                        android:gravity="clip_vertical|right|end"
+                        android:layout_alignParentRight="true"
+                        android:layout_height="35dp"
+                        android:src="@drawable/temp_profile"
+                        />
+
+                </LinearLayout>
 
             </LinearLayout>
 
-        </android.support.v7.widget.CardView>
+        </LinearLayout>
 
-        <android.support.v7.widget.CardView
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="#fff"></LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginLeft="30dp"
-            android:background="@color/wave_drawer_background"
-            android:layout_weight=".80"
-            android:elevation="5dp"
-            android:gravity="center_horizontal"
-            android:layout_gravity="center_horizontal">
+            android:orientation="vertical"
+            android:elevation="3dp">
 
-            <LinearLayout
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center_horizontal">
+                android:id="@+id/distanceruntitle"
+                android:text="You've taken"
+                android:textSize="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                fontPath="fonts/Montserrat-Bold.otf"
+                android:textAllCaps="true"
+                android:textColor="#9e9e9e"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/disttext"
-                    android:text="Distance Run: "/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/distancerun"
+                android:textSize="60dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                fontPath="fonts/Montserrat-Bold.otf"
+                android:textAllCaps="true"
+                android:textColor="#000"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/distcur"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/distancerunsub"
+                android:text="total steps"
+                android:textSize="15dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginBottom="20dp"
+                android:includeFontPadding="false"
+                fontPath="fonts/Montserrat-Bold.otf"
+                android:textAllCaps="true"
+                android:textColor="#9e9e9e"/>
 
-            </LinearLayout>
+        </LinearLayout>
 
-        </android.support.v7.widget.CardView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="#fff"></LinearLayout>
 
-        <android.support.v7.widget.CardView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginLeft="30dp"
-            android:background="@color/wave_drawer_background"
-            android:layout_weight=".80"
-            android:elevation="5dp"
-            android:gravity="center_horizontal"
-            android:layout_gravity="center_horizontal">
+            android:orientation="vertical"
+            android:elevation="3dp">
 
-            <LinearLayout
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center_horizontal">
+                android:id="@+id/runlengthtitle"
+                android:text="You've run"
+                android:textSize="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                fontPath="fonts/Montserrat-Bold.otf"
+                android:textAllCaps="true"
+                android:textColor="#9e9e9e"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/curspeedcurtext"
-                    android:text="Current Speed: "/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/runlength"
+                android:textSize="60dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                fontPath="fonts/Montserrat-Bold.otf"
+                android:textAllCaps="true"
+                android:textColor="#000"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/curspeedcur"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/runlengthtitle"
+                android:text="Miles"
+                android:textSize="15dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginBottom="20dp"
+                android:includeFontPadding="false"
+                fontPath="fonts/Montserrat-Bold.otf"
+                android:textAllCaps="true"
+                android:textColor="#9e9e9e"/>
 
-            </LinearLayout>
+        </LinearLayout>
 
-        </android.support.v7.widget.CardView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="#fff"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:elevation="3dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/runspeedtitle"
+                android:text="You're running at"
+                android:textSize="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                fontPath="fonts/Montserrat-Bold.otf"
+                android:textAllCaps="true"
+                android:textColor="#9e9e9e"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/runspeed"
+                android:textSize="60dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                fontPath="fonts/Montserrat-Bold.otf"
+                android:textAllCaps="true"
+                android:textColor="#000"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/runspeedsub"
+                android:text="steps per minute"
+                android:textSize="15dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                fontPath="fonts/Montserrat-Bold.otf"
+                android:textAllCaps="true"
+                android:textColor="#9e9e9e"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="#fff"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:elevation="3dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/calburntitle"
+                android:text="You've burnt"
+                android:textSize="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                fontPath="fonts/Montserrat-Bold.otf"
+                android:textAllCaps="true"
+                android:textColor="#9e9e9e"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/calburnt"
+                android:textSize="60dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                fontPath="fonts/Montserrat-Bold.otf"
+                android:textAllCaps="true"
+                android:textColor="#000"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/calburnsub"
+                android:text="calories"
+                android:textSize="15dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                fontPath="fonts/Montserrat-Bold.otf"
+                android:textAllCaps="true"
+                android:textColor="#9e9e9e"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="#fff">
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:elevation="3dp"
+            android:background="#fff">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/calburntitle"
+                android:text="You've burnt"
+                android:textSize="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                fontPath="fonts/Montserrat-Bold.otf"
+                android:textAllCaps="true"
+                android:textColor="#fff"/>
+
+        </LinearLayout>
 
     </LinearLayout>
 

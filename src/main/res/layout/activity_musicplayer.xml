@@ -53,14 +53,14 @@
     <include layout="@layout/activity_music_toolbar"/>
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/pause_button"
+        android:id="@+id/switch_genre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/fab_margin"
         app:backgroundTint="@color/wavePrimary"
         app:layout_anchor="@id/app_bar"
         app:layout_anchorGravity="bottom|end"
-        app:srcCompat="@drawable/pause"/>
+        app:srcCompat="@drawable/dicewhite"/>
 
 </android.support.design.widget.CoordinatorLayout>
 
