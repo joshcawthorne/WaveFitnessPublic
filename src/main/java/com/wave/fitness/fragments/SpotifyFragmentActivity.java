@@ -433,7 +433,6 @@ public class SpotifyFragmentActivity extends Fragment implements
                     })
                     .into(roundcoveart);
 
-            progressBar(songLength);
             coverArtView.setVisibility(View.VISIBLE);
 
         } else {
@@ -576,23 +575,6 @@ public class SpotifyFragmentActivity extends Fragment implements
 
     public void onToggleRepeatButtonClicked(View view) {
         core.mPlayer.setRepeat(mOperationCallback, !core.mCurrentPlaybackState.isRepeating);
-    }
-
-    public void onSeekButtonClicked(View view) {
-        final Integer seek = Integer.valueOf(mSeekEditText.getText().toString());
-        core.mPlayer.seekToPosition(mOperationCallback, seek);
-    }
-
-    public void onLowBitrateButtonPressed(View view) {
-        core.mPlayer.setPlaybackBitrate(mOperationCallback, PlaybackBitrate.BITRATE_LOW);
-    }
-
-    public void onNormalBitrateButtonPressed(View view) {
-        core.mPlayer.setPlaybackBitrate(mOperationCallback, PlaybackBitrate.BITRATE_NORMAL);
-    }
-
-    public void onHighBitrateButtonPressed(View view) {
-        core.mPlayer.setPlaybackBitrate(mOperationCallback, PlaybackBitrate.BITRATE_HIGH);
     }
 
     //Callback Methods
